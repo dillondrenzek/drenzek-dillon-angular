@@ -1,5 +1,5 @@
 //- Pure Angular App Template
-//- version 3.1
+//- version 4.0
 
 doctype
 html(lang="en" ng-app="DrenzekDillon")
@@ -10,17 +10,16 @@ html(lang="en" ng-app="DrenzekDillon")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
 		//- link(rel="stylesheet" href="/font-awesome/css/font-awesome.min.css")
-		//- link(rel="stylesheet" href="/css/base.css")
+		link(rel="stylesheet" href="/css/main.css")
 		//- link(rel="stylesheet" href="/css/the-work-of.css")
 		//- link(rel="stylesheet" href="/css/angular.css")
 		
 		//- link(rel="stylesheet" href="/css/ImageModal.css")
 
+
 		//- Vendor Scripts 
 		script(src="/angular/angular.min.js")
 		script(src="/angular-route/angular-route.min.js")
-
-		//- script(src="/js/angularApp.js")
 
 
 		//- Google Analytics
@@ -35,8 +34,11 @@ html(lang="en" ng-app="DrenzekDillon")
 
 	body
 		.site-container
-			a(href="#/") Home
-			a(href="#/projects") List Projects
+			.fixed
+				.site-title
+					a(href="#/") Home
+					a(href="#/projects") List Projects
+					a(href="#/skills") List Skills
 			.page
 				div(ng-view)
 			

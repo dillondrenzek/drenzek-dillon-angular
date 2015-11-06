@@ -1,0 +1,62 @@
+//- Pure Angular App Template
+//- version 3.1
+
+doctype
+html(lang="en" ng-app="DrenzekDillon")
+	head
+		//- TODO: Change
+		title v4.0 - Angular
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		//- link(rel="stylesheet" href="/font-awesome/css/font-awesome.min.css")
+		//- link(rel="stylesheet" href="/css/base.css")
+		//- link(rel="stylesheet" href="/css/the-work-of.css")
+		//- link(rel="stylesheet" href="/css/angular.css")
+		
+		//- link(rel="stylesheet" href="/css/ImageModal.css")
+
+		//- Vendor Scripts 
+		script(src="/angular/angular.min.js")
+		script(src="/angular-route/angular-route.min.js")
+
+		//- script(src="/js/angularApp.js")
+
+
+		//- Google Analytics
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-67261358-1', 'auto');
+			ga('send', 'pageview');
+
+
+	body
+		.site-container
+			a(href="#/") Home
+			a(href="#/projects") List Projects
+			.page
+				div(ng-view)
+			
+
+		//- Angular
+
+		//- App 
+		script(src="/js/app.js")
+
+		//- Controllers
+		script(src="/js/controllers/project-create-controller.js")
+		script(src="/js/controllers/project-edit-controller.js")
+		script(src="/js/controllers/project-list-controller.js")
+		script(src="/js/controllers/project-show-controller.js")
+		script(src="/js/controllers/skill-create-controller.js")
+		script(src="/js/controllers/skill-edit-controller.js")
+		script(src="/js/controllers/skill-list-controller.js")
+		script(src="/js/controllers/skill-show-controller.js")
+
+		//- Routes
+		script(src="/js/routes.js")
+
+

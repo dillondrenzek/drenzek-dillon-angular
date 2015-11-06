@@ -1,0 +1,27 @@
+{
+  "name": "drenzek-dillon-angular",
+  "version": "4.0.0",
+  "description": "Pure Angular app",
+  "main": "server.js",
+  "scripts": {
+    "test": "protractor spec.js",
+    "start": "node-dev server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dillondrenzek/drenzek-dillon-angular.git"
+  },
+  "author": "Dillon Drenzek <dillon@drenzek.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dillondrenzek/drenzek-dillon-angular/issues"
+  },
+  "homepage": "https://github.com/dillondrenzek/drenzek-dillon-angular",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "node-dev": "^2.7.1"
+  }
+}

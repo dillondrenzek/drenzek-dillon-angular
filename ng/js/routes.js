@@ -8,15 +8,57 @@ angular.module('DrenzekDillon')
 		templateUrl: '/templates/pages/index.html'
 	})
 
+
+
+	// PROJECTS
+
 	// List Projects
 	.when('/projects', {
 		templateUrl: '/templates/pages/projects/index.html'
 	})
 
+	// Create Project
+	.when('/projects/create', {
+		// templateUrl: '/templates/pages/projects/create.html'
+	})
+
+	// Show Project
+	.when('/projects/show', {
+		// templateUrl: '/templates/pages/projects/show.html'
+	})
+
+	// Show Project
+	.when('/projects/edit', {
+		// templateUrl: '/templates/pages/projects/edit.html'
+	})
+
+
+
+	// PROJECTS
+
 	// List Skills
 	.when('/skills', {
 		templateUrl: '/templates/pages/skills/index.html'
 	})
+
+	// Create Skill
+	.when('/skills/create', {
+		// templateUrl: '/templates/pages/skills/create.html'
+	})
+
+	// Show Skill
+	.when('/skills/show', {
+		// templateUrl: '/templates/pages/skills/show.html'
+	})
+
+	// Show Skill
+	.when('/skills/edit', {
+		// templateUrl: '/templates/pages/skills/edit.html'
+	})
+
+	
+
+	// 404 NOT FOUND
 
 	// Otherwise
 	.otherwise({

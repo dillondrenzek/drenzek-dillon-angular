@@ -2,6 +2,7 @@
 <table>
 	<!-- header row-->
 	<tr>
+		<th>Permalink</th>
 		<th>Title</th>
 		<th>Type</th>
 		<th>Skills</th>
@@ -13,6 +14,7 @@
 
 	<!-- project row -->
 	<tr ng-repeat="project in projects">
+		<td><a ng-href="#/projects/{{project.permalink}}">{{project.permalink}}</a></td>
 		<td>{{project.title}}</td>
 		<td>{{project.type}}</td>
 		<td>{{project.skills}}</td>

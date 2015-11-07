@@ -31,7 +31,7 @@ angular.module('DrenzekDillon')
 	})
 
 	// Show Project
-	.when('/projects/show', {
+	.when('/projects/:permalink', {
 		controller: 'ProjectShowCtrl',
 		templateUrl: '/templates/pages/projects/show.html'
 	})

@@ -14,23 +14,28 @@ angular.module('DrenzekDillon')
 
 	// List Projects
 	.when('/projects', {
-		templateUrl: '/templates/pages/projects/index.html'
+		controller: 'ProjectListCtrl'
+		templateUrl: '/templates/pages/projects/index.html',
+		
 	})
 
-	// Create Project
-	.when('/projects/create', {
-		// templateUrl: '/templates/pages/projects/create.html'
-	})
+	// // Create Project
+	// .when('/projects/create', {
+	// 	controller: 'ProjectCreateCtrl',
+	// 	templateUrl: '/templates/pages/projects/create.html'
+	// })
 
-	// Show Project
-	.when('/projects/show', {
-		// templateUrl: '/templates/pages/projects/show.html'
-	})
+	// // Show Project
+	// .when('/projects/show', {
+	// 	controller: 'ProjectShowCtrl',
+	// 	templateUrl: '/templates/pages/projects/show.html'
+	// })
 
-	// Show Project
-	.when('/projects/edit', {
-		// templateUrl: '/templates/pages/projects/edit.html'
-	})
+	// // Show Project
+	// .when('/projects/edit', {
+	// 	controller: 'ProjectEditCtrl',
+	// 	templateUrl: '/templates/pages/projects/edit.html'
+	// })
 
 
 
@@ -38,23 +43,28 @@ angular.module('DrenzekDillon')
 
 	// List Skills
 	.when('/skills', {
+		controller: 'SkillListCtrl',
 		templateUrl: '/templates/pages/skills/index.html'
+		
 	})
 
-	// Create Skill
-	.when('/skills/create', {
-		// templateUrl: '/templates/pages/skills/create.html'
-	})
+	// // Create Skill
+	// .when('/skills/create', {
+	// 	controller: 'SkillCreateCtrl',
+	// 	templateUrl: '/templates/pages/skills/create.html'
+	// })
 
-	// Show Skill
-	.when('/skills/show', {
-		// templateUrl: '/templates/pages/skills/show.html'
-	})
+	// // Show Skill
+	// .when('/skills/show', {
+	// 	controller: 'SkillShowCtrl',
+	// 	templateUrl: '/templates/pages/skills/show.html'
+	// })
 
-	// Show Skill
-	.when('/skills/edit', {
-		// templateUrl: '/templates/pages/skills/edit.html'
-	})
+	// // Show Skill
+	// .when('/skills/edit', {
+	// 	controller: 'SkillEditCtrl',
+	// 	templateUrl: '/templates/pages/skills/edit.html'
+	// })
 
 	
 

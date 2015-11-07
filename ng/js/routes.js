@@ -56,7 +56,7 @@ angular.module('DrenzekDillon')
 	// Index Skills (just a simple table, later the admin interface)
 	.when('/skills/index', {
 		controller: 'SkillsListCtrl',
-		templateUrl: '/templates/pages/projects/index.html'
+		templateUrl: '/templates/pages/skills/index.html'
 	})
 
 	// Create Skill

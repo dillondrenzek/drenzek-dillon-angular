@@ -58,3 +58,8 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
   - SkillCreateCtrl (Not Implemented)
   - SkillShowCtrl (Not Implemented)
   - SkillEditCtrl (Not Implemented)
+
+----
+
+## Testing
+Using Protractor.js

@@ -4,7 +4,7 @@
   "description": "Pure Angular app",
   "main": "server.js",
   "scripts": {
-    "test": "protractor spec.js",
+    "test": "protractor spec/config.js",
     "start": "node-dev server.js"
   },
   "repository": {

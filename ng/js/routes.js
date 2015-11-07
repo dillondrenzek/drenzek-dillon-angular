@@ -49,27 +49,33 @@ angular.module('DrenzekDillon')
 	// List Skills
 	.when('/skills', {
 		controller: 'SkillListCtrl',
-		templateUrl: '/templates/pages/skills/index.html'
+		templateUrl: '/templates/pages/skills/list.html'
 		
 	})
 
-	// // Create Skill
-	// .when('/skills/create', {
-	// 	controller: 'SkillCreateCtrl',
-	// 	templateUrl: '/templates/pages/skills/create.html'
-	// })
+	// Index Skills (just a simple table, later the admin interface)
+	.when('/skills/index', {
+		controller: 'SkillsListCtrl',
+		templateUrl: '/templates/pages/projects/index.html'
+	})
 
-	// // Show Skill
-	// .when('/skills/show', {
-	// 	controller: 'SkillShowCtrl',
-	// 	templateUrl: '/templates/pages/skills/show.html'
-	// })
+	// Create Skill
+	.when('/skills/create', {
+		controller: 'SkillCreateCtrl',
+		templateUrl: '/templates/pages/skills/create.html'
+	})
 
-	// // Show Skill
-	// .when('/skills/edit', {
-	// 	controller: 'SkillEditCtrl',
-	// 	templateUrl: '/templates/pages/skills/edit.html'
-	// })
+	// Show Skill
+	.when('/skills/show', {
+		controller: 'SkillShowCtrl',
+		templateUrl: '/templates/pages/skills/show.html'
+	})
+
+	// Show Skill
+	.when('/skills/edit', {
+		controller: 'SkillEditCtrl',
+		templateUrl: '/templates/pages/skills/edit.html'
+	})
 
 	
 

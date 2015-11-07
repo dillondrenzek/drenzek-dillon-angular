@@ -43,4 +43,18 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
       - Skills (large, medium, small)
       - Projects (large, medium, small)
 
+--------
 
+## App Controllers
+
+- Projects CRUD `controllers/`
+  - ProjectListCtrl (Not Implemented)
+  - ProjectCreateCtrl (Not Implemented)
+  - ProjectShowCtrl (Not Implemented)
+  - ProjectEditCtrl (Not Implemented)
+
+- Skills CRUD `controllers/`
+  - SkillListCtrl (Not Implemented)
+  - SkillCreateCtrl (Not Implemented)
+  - SkillShowCtrl (Not Implemented)
+  - SkillEditCtrl (Not Implemented)

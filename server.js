@@ -124,9 +124,11 @@ api.put('/skills/:id', function(req,res){res.json({}); });
 api.delete('/skills/:id', function(req,res){res.json({}); });
 
 
-
 app.use('/api', api);
 
+app.get('/resume', function(req, res){
+	res.send('resume.pdf');
+})
 
 app.use('/', function(req, res){
 	res.render('angular');

@@ -28,6 +28,7 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
 ---------
 
 ## App Components
+Probably convertible to directives later on
 
     - Page
       - Page Columns (left, center, right, fixed, scroll)
@@ -40,22 +41,22 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
       - List
       - Filter Control
     - Models
-      - Skills (large, medium, small)
-      - Projects (large, medium, small)
+      - Skills (large, medium, small, table)
+      - Projects (large, medium, small, table)
 
 --------
 
 ## App Controllers
 
 - Projects CRUD `controllers/`
-  - ProjectListCtrl (Not Implemented)
-  - ProjectCreateCtrl (Not Implemented)
-  - ProjectShowCtrl (Not Implemented)
+  - ProjectListCtrl
+  - ProjectCreateCtrl
+  - ProjectShowCtrl
   - ProjectEditCtrl (Not Implemented)
 
 - Skills CRUD `controllers/`
-  - SkillListCtrl (Not Implemented)
-  - SkillCreateCtrl (Not Implemented)
+  - SkillListCtrl 
+  - SkillCreateCtrl 
   - SkillShowCtrl (Not Implemented)
   - SkillEditCtrl (Not Implemented)
 

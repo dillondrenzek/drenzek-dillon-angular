@@ -14,28 +14,33 @@ angular.module('DrenzekDillon')
 
 	// List Projects
 	.when('/projects', {
-		controller: 'ProjectListCtrl'
-		templateUrl: '/templates/pages/projects/index.html',
-		
+		controller: 'ProjectListCtrl',
+		templateUrl: '/templates/pages/projects/list.html'
 	})
 
-	// // Create Project
-	// .when('/projects/create', {
-	// 	controller: 'ProjectCreateCtrl',
-	// 	templateUrl: '/templates/pages/projects/create.html'
-	// })
+	// Index Projects (just a simple table, later the admin interface)
+	.when('/projects/index', {
+		controller: 'ProjectListCtrl',
+		templateUrl: '/templates/pages/projects/index.html'
+	})
 
-	// // Show Project
-	// .when('/projects/show', {
-	// 	controller: 'ProjectShowCtrl',
-	// 	templateUrl: '/templates/pages/projects/show.html'
-	// })
+	// Create Project
+	.when('/projects/create', {
+		controller: 'ProjectCreateCtrl',
+		templateUrl: '/templates/pages/projects/create.html'
+	})
 
-	// // Show Project
-	// .when('/projects/edit', {
-	// 	controller: 'ProjectEditCtrl',
-	// 	templateUrl: '/templates/pages/projects/edit.html'
-	// })
+	// Show Project
+	.when('/projects/show', {
+		controller: 'ProjectShowCtrl',
+		templateUrl: '/templates/pages/projects/show.html'
+	})
+
+	// Show Project
+	.when('/projects/edit', {
+		controller: 'ProjectEditCtrl',
+		templateUrl: '/templates/pages/projects/edit.html'
+	})
 
 
 

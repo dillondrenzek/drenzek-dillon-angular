@@ -171,12 +171,8 @@ img.portrait {
   border-top: 1px solid #ddd;
 }
 .project {
-  background: #fff;
   position: relative;
   margin-left: 10px;
-  border: 1px solid #ddd;
-  border-left: 3px solid #ddd;
-  margin-bottom: 20px;
 }
 .project header {
   background: #fff;

@@ -192,3 +192,32 @@ img.portrait {
 .page section:not(.page section.title) {
   margin-bottom: 20px;
 }
+.project {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
+  margin-bottom: 20px;
+}
+.project header {
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .project header {
+    width: 100%;
+  }
+}
+.project header h4.primary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #303030;
+  letter-spacing: -0.027916em;
+  text-align: left;
+  line-height: 1em;
+}
+@media (min-width: 768px) {
+  .project header h4.primary {
+    width: 100%;
+  }
+}

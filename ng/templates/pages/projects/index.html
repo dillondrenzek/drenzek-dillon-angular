@@ -1,1 +1,24 @@
 <h3>Index Projects</h3>
+<table>
+	<!-- header row-->
+	<tr>
+		<th>Title</th>
+		<th>Type</th>
+		<th>Skills</th>
+		<th>Bullet Points</th>
+		<th>imageUrls</th>
+		<th>launchUrl</th>
+		<th>githubUrl</th>
+	</tr>
+
+	<!-- project row -->
+	<tr ng-repeat="project in projects">
+		<td>{{project.title}}</td>
+		<td>{{project.type}}</td>
+		<td>{{project.skills}}</td>
+		<td>{{project.bulletPoints}}</td>
+		<td>{{project.imageUrls}}</td>
+		<td>{{project.launchUrl}}</td>
+		<td>{{project.githubUrl}}</td>
+	</tr>
+</table>

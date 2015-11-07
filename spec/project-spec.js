@@ -27,3 +27,13 @@ describe('Project Templates & Controllers', function() {
 
 
 });
+
+
+
+// describe('Project API', function(){
+
+//   describe('GET Projects', function(){
+
+//   });
+
+// });

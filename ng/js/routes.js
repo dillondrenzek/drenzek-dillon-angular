@@ -5,6 +5,7 @@ angular.module('DrenzekDillon')
 
 	// Index Page
 	.when('/', {
+		controller: 'HomepageCtrl',
 		templateUrl: '/templates/pages/index.html'
 	})
 

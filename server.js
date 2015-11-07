@@ -118,7 +118,7 @@ api.get('/skills', function(req,res){
 		"Python"
 		]); 
 });
-api.get('/skills/:id', function(req,res){res.json({}); });
+api.get('/skills/:id', function(req,res){ res.json({}); });
 api.post('/skills/:id', function(req,res){res.json({}); });
 api.put('/skills/:id', function(req,res){res.json({}); });
 api.delete('/skills/:id', function(req,res){res.json({}); });

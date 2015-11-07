@@ -50,7 +50,23 @@ api.put('/projects/:id', function(req,res){res.json({}); });
 api.delete('/projects/:id', function(req,res){res.json({}); });
 
 api.get('/skills', function(req,res){
-	res.json({}); 
+	res.json([
+		"HTML/CSS", 
+		"JavaScript", 
+		"jQuery", 
+		"Stylus", 
+		"MongoDB", 
+		"Node.js", 
+		"Angular.js", 
+		"Photoshop", 
+		"Illustrator", 
+		"Sketch", 
+		"InDesign",
+		"programming",
+		"Objective-C", 
+		"C/C++", 
+		"Python"
+		]); 
 });
 api.get('/skills/:id', function(req,res){res.json({}); });
 api.post('/skills/:id', function(req,res){res.json({}); });

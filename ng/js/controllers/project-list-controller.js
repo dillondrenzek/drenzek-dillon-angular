@@ -11,5 +11,7 @@ angular.module('DrenzekDillon')
 			console.log('list projects:', data);
 
 			$scope.projects = data;
+		}).error(function(err){
+			console.error('error:', err);
 		});
 	}]);

@@ -16,3 +16,11 @@
 	display: inline-block;
 	padding-right: 15px;
 }
+
+table {
+	border: 1px solid black;
+}
+
+td {
+	border: 1px solid gray;
+}

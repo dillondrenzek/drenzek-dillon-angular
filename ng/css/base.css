@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 200;
+  src: url("../../fonts/FiraSans-Light.woff") format('woff'), url("../../fonts/FiraSans-Light.ttf") format('truetype'), url("../../fonts/FiraSans-Light.eot");
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 400;
+  src: url("../../fonts/FiraSans-Regular.woff") format('woff'), url("../../fonts/FiraSans-Regular.ttf") format('truetype'), url("../../fonts/FiraSans-Regular.eot");
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 700;
+  src: url("../../fonts/FiraSans-Bold.woff") format('woff'), url("../../fonts/FiraSans-Bold.ttf") format('truetype'), url("../../fonts/FiraSans-Bold.eot");
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: url("../img/grassy-field.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  letter-spacing: -1px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #b23b23;
+  font-weight: 400;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style-type: none;
+}
+img.landscape {
+  width: 100%;
+  height: auto;
+}
+img.portrait {
+  height: 100%;
+  width: auto;
+}
+.fixed {
+  position: fixed;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: url("../images/grassy-field.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  letter-spacing: -1px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #b23b23;
+  font-weight: 400;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style-type: none;
+}

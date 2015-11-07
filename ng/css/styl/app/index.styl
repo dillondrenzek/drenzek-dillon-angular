@@ -1,5 +1,5 @@
 // App Style Index
-// v3.0.1
+// v4.0
 
 //- Style & Color Constants
 @import 'constants'
@@ -12,3 +12,39 @@
 
 //- Generic Mixins
 @import 'mixin'
+
+
+
+*,
+*:before,
+*:after
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	margin 0
+	padding 0
+	
+html
+	CoverBackground('../img/grassy-field.jpeg')
+	FiraSans(16px, 400, Black, -1px, left)
+
+a
+	text-decoration none
+	color Red
+	font-weight 400
+	&:hover
+		text-decoration underline
+		
+li
+	list-style-type none
+
+img.landscape
+	width 100%
+	height auto
+img.portrait
+	height 100%
+	width auto
+
+.fixed
+	position fixed
+

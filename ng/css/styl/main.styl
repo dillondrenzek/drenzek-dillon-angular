@@ -1,1 +1,117 @@
 @import 'app'
+
+.site-title
+	Width-SM(12)
+	z-index 10
+	position fixed
+	top 0
+	left 0
+	height SiteTopMargin
+	// background black
+
+
+
+// Page
+.page
+	Width-SM(12)
+	position relative
+	display block
+	margin-top 36px
+	
+// Page Columns
+.page-column
+	background White
+	position relative
+	display inline-block
+	vertical-align top
+.page-column.quarter
+	Width-SM(3)
+.page-column.half
+	Width-SM(6)
+	
+// Logo
+#logo
+	position relative
+	z-index 101
+	top 0
+	left 0
+	width 130px
+	height 174px
+	font-size 31.32px
+	background Red
+	text-align left
+	h1
+		FiraSans(1em, 700, White, -0.05em, left)
+		line-height 0.83333em
+		text-shadow 1px 1px 1px rgba(Black, 0.5)
+		NoSelect()
+		position absolute
+		left 0.270833em
+		bottom 0.6666667em
+		// z-index 102
+	.subtitle
+		FiraSans(0.25em, 400, LtRed, 0.1em, left)
+		text-transform uppercase
+		NoSelect()
+		position absolute
+		left 1.25em
+		bottom 1.125em
+		// z-index 102
+	.login
+		FiraSans(0.25em, 400, Red, 0.1em, left)
+		text-transform uppercase
+		position absolute
+		top 40px
+		left StandardPadding
+		cursor pointer
+		&:hover
+			color LtRed
+
+// Social Media Links
+#social-media
+	width 130px
+	list-style-type none
+	li
+		display inline-block
+		width 25%
+		a
+			padding-top StandardPadding
+			width 100%
+			display block
+			text-align center
+		i
+			font-size 18px
+
+// Page Sections
+.page
+	background White
+	section
+		Width-SM(12)
+		padding 0 StandardPadding
+		header
+			padding-left StandardPadding
+			border-top 1px solid Light
+		
+		// Section Types
+		&:not(&.title)
+			margin-bottom ThickPadding
+		// &.title
+		// &.paragraph
+		// &.list
+		// &.control
+		
+// // Model Representations
+// // Projects
+// .project
+// .project.large
+// .project.medium
+// .project.small
+// .project.table
+// // Skills
+// .skill
+// .skill.large
+// .skill.medium
+// .skill.small
+// .skill.table
+
+

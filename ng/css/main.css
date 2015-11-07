@@ -13,3 +13,182 @@
   font-weight: 700;
   src: url("../../fonts/FiraSans-Bold.woff") format('woff'), url("../../fonts/FiraSans-Bold.ttf") format('truetype'), url("../../fonts/FiraSans-Bold.eot");
 }
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: url("../img/grassy-field.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  letter-spacing: -1px;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #b23b23;
+  font-weight: 400;
+}
+a:hover {
+  text-decoration: underline;
+}
+li {
+  list-style-type: none;
+}
+img.landscape {
+  width: 100%;
+  height: auto;
+}
+img.portrait {
+  height: 100%;
+  width: auto;
+}
+.fixed {
+  position: fixed;
+}
+.site-title {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: SiteTopMargin;
+}
+@media (min-width: 768px) {
+  .site-title {
+    width: 100%;
+  }
+}
+.page {
+  position: relative;
+  display: block;
+  margin-top: 36px;
+}
+@media (min-width: 768px) {
+  .page {
+    width: 100%;
+  }
+}
+.page-column {
+  background: #fafafa;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+@media (min-width: 768px) {
+  .page-column.quarter {
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .page-column.half {
+    width: 50%;
+  }
+}
+#logo {
+  position: relative;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 174px;
+  font-size: 31.32px;
+  background: #b23b23;
+  text-align: left;
+}
+#logo h1 {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: #fafafa;
+  letter-spacing: -0.05em;
+  text-align: left;
+  line-height: 0.83333em;
+  text-shadow: 1px 1px 1px rgba(48,48,48,0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  position: absolute;
+  left: 0.270833em;
+  bottom: 0.6666667em;
+}
+#logo .subtitle {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.25em;
+  font-weight: 400;
+  color: #f2caa0;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  position: absolute;
+  left: 1.25em;
+  bottom: 1.125em;
+}
+#logo .login {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.25em;
+  font-weight: 400;
+  color: #b23b23;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  cursor: pointer;
+}
+#logo .login:hover {
+  color: #f2caa0;
+}
+#social-media {
+  width: 130px;
+  list-style-type: none;
+}
+#social-media li {
+  display: inline-block;
+  width: 25%;
+}
+#social-media li a {
+  padding-top: 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+#social-media li i {
+  font-size: 18px;
+}
+.page {
+  background: #fafafa;
+}
+.page section {
+  padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .page section {
+    width: 100%;
+  }
+}
+.page section header {
+  padding-left: 10px;
+  border-top: 1px solid #ddd;
+}
+.page section:not(.page section.title) {
+  margin-bottom: 20px;
+}

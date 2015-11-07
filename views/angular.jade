@@ -9,7 +9,7 @@ html(lang="en" ng-app="DrenzekDillon")
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
-		//- link(rel="stylesheet" href="/font-awesome/css/font-awesome.min.css")
+		link(rel="stylesheet" href="/font-awesome/css/font-awesome.min.css")
 		link(rel="stylesheet" href="/css/main.css")
 		//- link(rel="stylesheet" href="/css/the-work-of.css")
 		//- link(rel="stylesheet" href="/css/angular.css")
@@ -32,10 +32,47 @@ html(lang="en" ng-app="DrenzekDillon")
 			ga('send', 'pageview');
 
 
+
+
 	body
 		.site-container
-			.fixed
-				.site-title
+			.fixed.site-title
+					
+				//- <!-- Logo -->
+				#logo
+					a(href="/" title="")
+						h1 Dillon Drenzek
+						.subtitle Up & Coming Developer
+				//- <!-- Social Media Links -->
+				ul(id="social-media")
+					//- <!-- GitHub -->
+					li
+						a(href="https://github.com/dillondrenzek")
+							i.fa.fa-github
+					//- !-- LinkedIn -->
+					li
+						a(href="https://www.linkedin.com/in/dillondrenzek")
+							i.fa.fa-linkedin
+					//- <!-- Behance -->
+					li
+						a(href="https://behance.net/dillondrenzek/")
+							i.fa.fa-behance
+					//- <!-- Twitter -->
+					li
+						a(href="https://twitter.com/DrEnzek")
+							i.fa.fa-twitter
+
+				//- <!-- Nav Links -->
+				nav
+					ul
+						//- <!-- Resume -->
+						li: a(href="/resume") Resume
+						//- <!-- Project List -->
+						li: a(href="#/projects") Projects
+						//- <!-- Skill List -->
+						li: a(href="#/skills") Skills
+
+				.debug-links
 					a(href="#/") Home
 					br
 					a(href="#/projects") Projects
@@ -49,8 +86,10 @@ html(lang="en" ng-app="DrenzekDillon")
 					a(href="#/skills/show") Show
 					a(href="#/skills/edit") Edit
 					a(href="#/skills/index") Index
+
 			.page
 				div(ng-view)
+
 			
 
 		//- Angular

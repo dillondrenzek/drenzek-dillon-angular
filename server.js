@@ -21,7 +21,7 @@ api.get('/projects', function(req,res){	res.json(
 			"skills": ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
 			"bulletPoints": ['Major project in senior Capstone class at CU',
 			'How I fell in love with Node.js & server-side JavaScript', 'Utilized graph database Neo4j'],
-			"imageUrls": ['images/capstone-portfolio-1.jpg']
+			"imageUrls": ['img/capstone-portfolio-1.jpg']
 		},{
 			"permalink": "native",
 			"title": 'Native',
@@ -34,7 +34,7 @@ api.get('/projects', function(req,res){	res.json(
 			"type": 'Website',
 			"skills": ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
 			"bulletPoints": ['Blog I built abroad in Denmark to Practice Angular.js', 'Uses Mongoose to help interface with MongoDB', 'Has an Admin interface with authentication'],
-			"imageUrls": ['images/drenzek-does-denmark.png'],
+			"imageUrls": ['img/drenzek-does-denmark.png'],
 			"launchUrl": 'http://denmark.drenzek.com',
 			"githubUrl": 'https://github.com/dillondrenzek/drenzek-does-denmark'
 		},{
@@ -43,7 +43,7 @@ api.get('/projects', function(req,res){	res.json(
 			"type": 'Branding, Website',
 			"skills": ['Photoshop', 'Illustrator', 'InDesign', 'HTML/CSS', 'Node.js'],
 			"bulletPoints": ['Rebranding of Copenhagen\'s premiere fashion shop', 'Completed Summer of 2015 during study abroad in Denmark', 'Website serves as case study'],
-			"imageUrls": ['images/storm.jpg']
+			"imageUrls": ['img/storm.jpg']
 		}
 	]); 
 
@@ -61,7 +61,7 @@ api.get('/projects/:permalink', function(req,res){
 			"skills": ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
 			"bulletPoints": ['Major project in senior Capstone class at CU',
 			'How I fell in love with Node.js & server-side JavaScript', 'Utilized graph database Neo4j'],
-			"imageUrls": ['images/capstone-portfolio-1.jpg']
+			"imageUrls": ['img/capstone-portfolio-1.jpg']
 		}); 
 	} else if (req.params.permalink === 'native') {
 		res.json({
@@ -78,7 +78,7 @@ api.get('/projects/:permalink', function(req,res){
 			"type": 'Branding, Website',
 			"skills": ['Photoshop', 'Illustrator', 'InDesign', 'HTML/CSS', 'Node.js'],
 			"bulletPoints": ['Rebranding of Copenhagen\'s premiere fashion shop', 'Completed Summer of 2015 during study abroad in Denmark', 'Website serves as case study'],
-			"imageUrls": ['images/storm.jpg']
+			"imageUrls": ['img/storm.jpg']
 		}); 
 	} else if (req.params.permalink === 'drenzek-does-denmark') {
 		res.json({
@@ -87,7 +87,7 @@ api.get('/projects/:permalink', function(req,res){
 			"type": 'Website',
 			"skills": ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
 			"bulletPoints": ['Blog I built abroad in Denmark to Practice Angular.js', 'Uses Mongoose to help interface with MongoDB', 'Has an Admin interface with authentication'],
-			"imageUrls": ['images/drenzek-does-denmark.png'],
+			"imageUrls": ['img/drenzek-does-denmark.png'],
 			"launchUrl": 'http://denmark.drenzek.com',
 			"githubUrl": 'https://github.com/dillondrenzek/drenzek-does-denmark'
 		}); 

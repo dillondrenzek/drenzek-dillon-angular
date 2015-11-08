@@ -1,43 +1,45 @@
-<!-- Project Header -->
-<header>
-	<!-- Project Title -->
-	<a ng-href="#/projects/{{project.permalink}}" ng-if="project.permalink">
-		<h4 class="primary">
-			{{project.title}}
-		</h4>
-	</a>
-	<h4 class="primary" ng-if="!project.permalink">
-		{{project.title}}
-	</h4>
+<section class="title">
+	<!-- Project Header -->
+	<header>
+		<!-- Project Title -->
+		<div class="title">
 
-	<!-- Project Type -->
-	<ul>
-		<li class="type" ng-show="project.type">{{project.type}}</li>
-	</ul>
+			<h4 class="primary">
+				{{project.title}}
+			</h4>
 
-	<!-- Project Action Links -->
-	<ul class="links">
-		<!-- View on Github -->
-		<li>
-			<a 	ng-href="project.githubUrl"
-				ng-show="project.githubUrl" 
-				title="View on GitHub">
-				<i class="fa fa-github-square">ICON</i>
-				<p>Github</p>
-			</a>
-		</li>
+			<!-- Project Type -->
+			<ul class="descriptors">
+				<li class="type" ng-show="project.type">{{project.type}}</li>
+			</ul>
+		</div>
 
-		<!-- Launch Project -->
-		<li>
-			<a 	ng-href="project.launchUrl"
-				ng-show="project.launchUrl" 
-				title="Launch Project">
-				<i class="fa fa-external-link-square">ICON</i>
-				<p>Launch</p>
-			</a>
-		</li>
-	</ul>
-</header>
+		<!-- Project Action Links -->
+		<ul class="links">
+			<!-- View on Github -->
+			<li>
+				<a 	ng-href="project.githubUrl"
+					ng-show="project.githubUrl" 
+					title="View on GitHub">
+					<i class="fa fa-github-square">ICON</i>
+					<p>Github</p>
+				</a>
+			</li>
+
+			<!-- Launch Project -->
+			<li>
+				<a 	ng-href="project.launchUrl"
+					ng-show="project.launchUrl" 
+					title="Launch Project">
+					<i class="fa fa-external-link-square">ICON</i>
+					<p>Launch</p>
+				</a>
+			</li>
+		</ul>
+	</header>
+</section>
+
+
 
 <!-- Project Body -->
 <div 	class="body"

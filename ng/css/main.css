@@ -21,6 +21,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 html {
   background: url("../img/grassy-field.jpeg") no-repeat center center fixed;
@@ -74,9 +75,28 @@ table td {
   position: fixed;
   z-index: 100;
 }
+#site-border {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background: #000;
+  height: 36px;
+}
+#site-title {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 25%;
+  width: 130px;
+  -webkit-transform: translateX(-140px);
+  transform: translateX(-140px);
+}
 .page {
   float: left;
-  position: relative;
+  z-index: 0;
+  background: #fafafa;
+  margin-top: 36px;
 }
 @media (min-width: 768px) {
   .page {
@@ -85,6 +105,8 @@ table td {
 }
 .page-column {
   float: left;
+  display: inline-block;
+  vertical-align: top;
   min-height: 1px;
 }
 @media (min-width: 768px) {
@@ -108,10 +130,6 @@ table td {
   }
 }
 #logo {
-  position: relative;
-  z-index: 101;
-  top: 0;
-  left: 0;
   width: 130px;
   height: 174px;
   font-size: 31.32px;
@@ -186,9 +204,6 @@ table td {
 #social-media li i {
   font-size: 18px;
 }
-.page {
-  background: #fafafa;
-}
 .page section {
   padding: 0 10px;
 }
@@ -204,22 +219,63 @@ table td {
 .page section:not(.page section.title) {
   margin-bottom: 20px;
 }
+.page section.title {
+  height: 138px;
+}
+.page section.title h2 {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #303030;
+  letter-spacing: -0.03125em;
+  text-align: left;
+  line-height: 1.395833em;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
 .project {
+  position: relative;
+  display: block;
   background: #fff;
   border: 1px solid #ddd;
   border-left: 3px solid #ddd;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .project {
+    width: 100%;
+  }
+}
+.project:before,
+.project:after {
+  content: "";
+  display: table;
+}
+.project:after {
+  clear: both;
+}
 .project header {
-  border-top: none;
+  position: relative;
+  border-top: none !important;
   border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  float: left;
 }
 @media (min-width: 768px) {
   .project header {
     width: 100%;
   }
 }
-.project header h4.primary {
+.project header .title {
+  float: left;
+}
+@media (min-width: 768px) {
+  .project header .title {
+    width: 83.33333333%;
+  }
+}
+.project header .title .primary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
@@ -228,8 +284,135 @@ table td {
   text-align: left;
   line-height: 1em;
 }
+.project header .title a.primary:hover {
+  color: #b23b23;
+}
+.project header .links {
+  float: left;
+}
 @media (min-width: 768px) {
-  .project header h4.primary {
+  .project header .links {
+    width: 16.66666667%;
+  }
+}
+.project header .links li {
+  display: block;
+}
+.project .type {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: left;
+}
+.project a.external {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: right;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+.project a.external>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+.project a.external i {
+  margin-right: 5px;
+  color: #303030;
+}
+.project a.external p {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #303030;
+}
+.project a.external:hover i {
+  color: #b23b23;
+}
+.project a.external:hover p {
+  color: #b23b23;
+  text-decoration: underline;
+}
+.project a.external:active i {
+  color: #b23b23;
+}
+.project a.external:active p {
+  color: #b23b23;
+}
+.project .body {
+  padding: 0 10px;
+  float: left;
+}
+@media (min-width: 768px) {
+  .project .body {
+    width: 50%;
+  }
+}
+.project figure {
+  float: right;
+}
+@media (min-width: 768px) {
+  .project figure {
+    width: 50%;
+  }
+}
+.project figure img {
+  display: block;
+}
+@media (min-width: 768px) {
+  .project figure img {
     width: 100%;
   }
+}
+.project ul.skills {
+  padding: 10px 0;
+}
+@media (min-width: 768px) {
+  .project ul.skills {
+    width: 100%;
+  }
+}
+.project ul.skills>* {
+  display: inline-block;
+}
+.project ul.skills li {
+  display: inline-block;
+  margin: 10px;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 1.25px 5px;
+  border-radius: 5px;
+  border: solid 1px #ddd;
+}
+.project ul.skills li.skill {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: right;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 400;
+  font-size: 0.65rem;
+  line-height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin: 2px;
+}
+.project ul.bullets li.project-bullet {
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  list-style-type: circle;
 }

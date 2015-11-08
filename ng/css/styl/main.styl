@@ -1,26 +1,45 @@
 @import 'app'
 
-// .site-title
-// 	// Width-SM(12)
-// 	z-index 10
-// 	position fixed
-// 	top 0
-// 	left 0
-// 	height SiteTopMargin
-// 	// background black
+LogoHeight = 174px
+SiteBorderHeight = 36px
+SiteTitleWidth = 130px
+SiteTitleMargin = 10px
+SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 
+// Site Border
+#site-border
+	// float left
+	position fixed
+	z-index 100
+	top 0
+	width 100%
+	background black
+	height SiteBorderHeight
 
+// Site Title
+#site-title
+	position fixed
+	z-index 100
+	top 0
+	left 25%
+	width SiteTitleWidth
+	TranslateX(SiteTitleTranslation)
 
 // Page
 .page
 	Width-SM(12)
+	// position relative
 	float left
-	position relative
-	// margin-top 36px
+	z-index 0
+	background White
+	margin-top SiteBorderHeight
 	
 // Page Columns
 .page-column
+	// position relative
 	float left
+	display inline-block
+	vertical-align top
 	min-height 1px
 .page-column.quarter
 	Width-SM(3)
@@ -35,12 +54,8 @@
 	
 // Logo
 #logo
-	position relative
-	z-index 101
-	top 0
-	left 0
-	width 130px
-	height 174px
+	width SiteTitleWidth
+	height LogoHeight
 	font-size 31.32px
 	background Red
 	text-align left
@@ -88,7 +103,6 @@
 
 // Page Sections
 .page
-	background White
 	section
 		Width-SM(12)
 		padding 0 StandardPadding
@@ -99,7 +113,14 @@
 		// Section Types
 		&:not(&.title)
 			margin-bottom ThickPadding
-		// &.title
+		&.title
+			height LogoHeight - SiteBorderHeight
+			h2
+				Char-PageTitle()
+				position absolute
+				bottom 0
+				left StandardPadding
+			
 		// &.paragraph
 		// &.list
 		// &.control
@@ -107,17 +128,132 @@
 // Model Representations
 // Projects
 .project
+	Width-SM(12)
+	position relative
+	display block
 	background white
 	border 1px solid Light
 	border-left 3px solid Light
+	// margin-left StandardPadding
 	margin-bottom ThickPadding
+	
+	// Clearfix
+	&:before,
+	&:after
+		content ""
+		display table
+	&:after
+		clear both
+	
+	
 	header
+		position relative
 		Width-SM(12)
-		border-top none
+		border-top none !important
 		border-bottom 1px solid Light
-		h4.primary
+		padding StandardPadding 0
+		float left
+
+		.title
+			float left
+			Width-SM(10)
+			.primary
+				Char-MediumItemPrimary()
+			a.primary:hover
+				color Red
+
+		.links
+			float left
+			Width-SM(2)
+			li
+				display block
+					
+	.type
+		Char-HeaderLinks()
+		font-weight 400
+		text-align left
+
+	a.external
+		Char-HeaderLinks()
+		text-transform uppercase
+		&>*
+			display inline-block
+			vertical-align middle
+		i
+			margin-right ThinPadding
+			color Black
+		p
+			font-weight 700
+			font-size 0.75rem
+			color Black
+		&:hover
+			i
+				color Red
+			p
+				color Red
+				text-decoration underline
+		&:active
+			i
+				color Red
+			p
+				color Red	
+	.body
+		padding 0 StandardPadding
+		Width-SM(6)
+		float left
+
+	figure
+		Width-SM(6)
+		float right	
+		img
+			display block
 			Width-SM(12)
-			Char-MediumItemPrimary()
+
+	ul.skills
+		// margin-left StandardPadding
+		padding StandardPadding 0
+		// background White
+		Width-SM(12)
+		&>*
+			display inline-block
+		li
+			display inline-block
+			// padding-right ThinPadding
+			margin StandardPadding
+			margin-left 0
+			margin-bottom 0
+			padding (ThinPadding/4) ThinPadding
+			border-radius 5px
+			border solid 1px Light
+		li.skill
+			// position relative
+			Char-HeaderLinks()
+			color Dark
+			font-weight 400
+			font-size 0.65rem
+			// padding 0
+			line-height auto
+			padding-top 0
+			padding-bottom 0
+			margin-bottom 0
+			margin-top 0
+			margin 2px
+
+	ul.bullets
+		li.project-bullet
+			// text-transform uppercase
+			// font-style italic
+			font-weight 400
+			font-size 0.95rem
+			// font-size 0.75rem
+			letter-spacing 0em
+			// margin-top 0
+			margin-bottom StandardPadding
+			margin-left ThickPadding
+			// margin 0
+			// padding-left StandardPadding
+			list-style-type circle
+
 // .project.large
 // .project.medium
 // .project.small

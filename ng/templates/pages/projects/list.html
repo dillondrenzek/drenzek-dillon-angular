@@ -1,54 +1,62 @@
 <div class="page-column most">
 
-<h3>List Projects</h3>
+<section class="title">
+	<h2>List Projects</h2>
+</section>
+
+<section>
+	
 
 <!-- Large Project -->
 <div class="project large" ng-repeat="project in projects">
 
 	<!-- Project Header -->
 	<header>
+
 		<!-- Project Title -->
-		<a ng-href="#/projects/{{project.permalink}}" ng-if="project.permalink">
-			<h4 class="primary">
+		<div class="title">
+			<a class="primary" 
+				ng-href="#/projects/{{project.permalink}}"
+				ng-if="project.permalink">{{project.title}}</a>
+
+			<h4 class="primary" ng-if="!project.permalink">
 				{{project.title}}
 			</h4>
-		</a>
-		<h4 class="primary" ng-if="!project.permalink">
-			{{project.title}}
-		</h4>
 
-		<!-- Project Type -->
-		<ul>
-			<li class="type" ng-show="project.type">{{project.type}}</li>
-		</ul>
+			<!-- Project Type -->
+			<ul class="descriptors">
+				<li class="type" ng-show="project.type">{{project.type}}</li>
+			</ul>
+		</div>
+		
 
 		<!-- Project Action Links -->
 		<ul class="links">
 			<!-- View on Github -->
 			<li>
-				<a 	ng-href="project.githubUrl"
+				<a 	class="external"
+					ng-href="project.githubUrl"
 					ng-show="project.githubUrl" 
-					title="View on GitHub">
-					<i class="fa fa-github-square">ICON</i>
-					<p>Github</p>
+					title="View on GitHub"><i class="fa fa-github-square"></i><p>Github</p>
 				</a>
 			</li>
 
 			<!-- Launch Project -->
 			<li>
-				<a 	ng-href="project.launchUrl"
+				<a 	class="external"
+					ng-href="project.launchUrl"
 					ng-show="project.launchUrl" 
-					title="Launch Project">
-					<i class="fa fa-external-link-square">ICON</i>
-					<p>Launch</p>
+					title="Launch Project"><i class="fa fa-external-link-square"></i><p>Launch</p>
 				</a>
 			</li>
 		</ul>
+
+		
 	</header>
 
 	<!-- Project Body -->
-	<div 	class="body"
-			ng-show="project.bulletPoints || project.skills">
+	<div class="body"
+		ng-show="project.bulletPoints || project.skills">
 
 		<!-- Project Skills -->
 		<ul class="skills"
@@ -72,6 +80,8 @@
 	</figure>
 
 </div>
+
+</section>
 
 </div>
 

@@ -46,6 +46,9 @@ a:hover {
 li {
   list-style-type: none;
 }
+img {
+  display: block;
+}
 img.landscape {
   width: 100%;
   height: auto;
@@ -54,25 +57,26 @@ img.portrait {
   height: 100%;
   width: auto;
 }
+table {
+  border: 1px solid #ddd;
+  font-size: 12px;
+}
+table tbody {
+  display: block;
+}
+table th {
+  border-bottom: 3px solid #555;
+}
+table td {
+  border: 1px solid #555;
+}
 .fixed {
   position: fixed;
-}
-.site-title {
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: SiteTopMargin;
-}
-@media (min-width: 768px) {
-  .site-title {
-    width: 100%;
-  }
+  z-index: 100;
 }
 .page {
+  float: left;
   position: relative;
-  display: block;
-  margin-top: 36px;
 }
 @media (min-width: 768px) {
   .page {
@@ -80,10 +84,8 @@ img.portrait {
   }
 }
 .page-column {
-  background: #fafafa;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
+  float: left;
+  min-height: 1px;
 }
 @media (min-width: 768px) {
   .page-column.quarter {
@@ -93,6 +95,16 @@ img.portrait {
 @media (min-width: 768px) {
   .page-column.half {
     width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-column.most {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .page-column.full {
+    width: 100%;
   }
 }
 #logo {

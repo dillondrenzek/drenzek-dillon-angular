@@ -1,5 +1,6 @@
 var express = require('express')
-	, path = require('path');
+	, path = require('path')
+	, Projects = require('./db/seed-projects');
 
 var app = express();
 
@@ -18,37 +19,10 @@ var api = express();
 
 api.get('/projects', function(req,res){	res.json(
 	[
-		{
-			"permalink": "capstone-portfolio",
-			"title": 'Capstone Portfolio',
-			"type": 'Website',
-			"skills": ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
-			"bulletPoints": ['Major project in senior Capstone class at CU',
-			'How I fell in love with Node.js & server-side JavaScript', 'Utilized graph database Neo4j'],
-			"imageUrls": ['img/capstone-portfolio-1.jpg']
-		},{
-			"permalink": "native",
-			"title": 'Native',
-			"type": 'iOS App',
-			"skills": ['Objective-C', 'Sketch'],
-			"bulletPoints": ['I implemented pixel-perfect views from mockups', 'Helped define product requirements','Participated in Techstars Boulder', 'Company still running in CO named Pana']
-		},{
-			"permalink": "drenzek-does-denmark",
-			"title": 'Drenzek Does Denmark',
-			"type": 'Website',
-			"skills": ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
-			"bulletPoints": ['Blog I built abroad in Denmark to Practice Angular.js', 'Uses Mongoose to help interface with MongoDB', 'Has an Admin interface with authentication'],
-			"imageUrls": ['img/drenzek-does-denmark.png'],
-			"launchUrl": 'http://denmark.drenzek.com',
-			"githubUrl": 'https://github.com/dillondrenzek/drenzek-does-denmark'
-		},{
-			"permalink": "storm-case-study",
-			"title": 'Storm Branding & Case Study',
-			"type": 'Branding, Website',
-			"skills": ['Photoshop', 'Illustrator', 'InDesign', 'HTML/CSS', 'Node.js'],
-			"bulletPoints": ['Rebranding of Copenhagen\'s premiere fashion shop', 'Completed Summer of 2015 during study abroad in Denmark', 'Website serves as case study'],
-			"imageUrls": ['img/storm.jpg']
-		}
+		Projects['capstonePortfolio'],
+		Projects['drenzekDoesDenmark'],
+		Projects['native'],
+		Projects['stormCaseStudy']
 	]); 
 
 });
@@ -58,43 +32,13 @@ api.get('/projects/:permalink', function(req,res){
 
 	// TODO: this will be fixed with MongoDB
 	if (req.params.permalink === 'capstone-portfolio') {
-		res.json({
-			"permalink": "capstone-portfolio",
-			"title": 'Capstone Portfolio',
-			"type": 'Website',
-			"skills": ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
-			"bulletPoints": ['Major project in senior Capstone class at CU',
-			'How I fell in love with Node.js & server-side JavaScript', 'Utilized graph database Neo4j'],
-			"imageUrls": ['img/capstone-portfolio-1.jpg']
-		}); 
+		res.json(Projects['capstonePortfolio']); 
 	} else if (req.params.permalink === 'native') {
-		res.json({
-			"permalink": "native",
-			"title": 'Native',
-			"type": 'iOS App',
-			"skills": ['Objective-C', 'Sketch'],
-			"bulletPoints": ['I implemented pixel-perfect views from mockups', 'Helped define product requirements','Participated in Techstars Boulder', 'Company still running in CO named Pana']
-		}); 
+		res.json(Projects['native']); 
 	} else if (req.params.permalink === 'storm-case-study') {
-		res.json({
-			"permalink": "storm-case-study",
-			"title": 'Storm Branding & Case Study',
-			"type": 'Branding, Website',
-			"skills": ['Photoshop', 'Illustrator', 'InDesign', 'HTML/CSS', 'Node.js'],
-			"bulletPoints": ['Rebranding of Copenhagen\'s premiere fashion shop', 'Completed Summer of 2015 during study abroad in Denmark', 'Website serves as case study'],
-			"imageUrls": ['img/storm.jpg']
-		}); 
+		res.json(Projects['stormCaseStudy']); 
 	} else if (req.params.permalink === 'drenzek-does-denmark') {
-		res.json({
-			"permalink": "drenzek-does-denmark",
-			"title": 'Drenzek Does Denmark',
-			"type": 'Website',
-			"skills": ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
-			"bulletPoints": ['Blog I built abroad in Denmark to Practice Angular.js', 'Uses Mongoose to help interface with MongoDB', 'Has an Admin interface with authentication'],
-			"imageUrls": ['img/drenzek-does-denmark.png'],
-			"launchUrl": 'http://denmark.drenzek.com',
-			"githubUrl": 'https://github.com/dillondrenzek/drenzek-does-denmark'
-		}); 
+		res.json(Projects['drenzekDoesDenmark']); 
 	} 
 	
 });

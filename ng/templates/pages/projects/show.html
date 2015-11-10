@@ -1,4 +1,6 @@
 <div class="column">
+
+<!-- Page Title -->
 <section class="page-title">
 		
 		<div class="title column">
@@ -40,10 +42,7 @@
 	<!-- </header> -->
 </section>
 
-
-
-
-
+<!-- Title Detail -->
 <section class="two-column">
 	
 	<div class="column">
@@ -73,11 +72,71 @@
 </section>
 
 
+<!-- Body Sections -->
+<section ng-repeat="section in project.sections"
+	ng-class="section.type">
 
-<!-- Test three column section -->
+	<!-- Section Header -->
+	<header class="section-title"
+		ng-show="section.title || section.headerLinks">
+
+		<!-- Section title -->
+		<div class="title">
+			<h3 class="primary">{{section.title}}</h3>
+		</div>
+
+		<!-- Header Links -->
+		<ul class="links" ng-show="section.headerLinks">
+
+			<li class="link" 
+				ng-repeat="link in section.headerLinks">
+				<a ng-href="{{link.href}}">
+					<i class="fa {{link.icon}}"
+						ng-show="link.icon"></i>
+					<p>{{link.label}}</p>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+	<!-- Section columns -->
+	<div class="column"
+		ng-repeat="column in section.columns">
+		
+		<!-- Section Title (Optional) -->
+		<div class="column-title" ng-show="column.title">
+			<div class="title">
+				<h4 class="primary">{{column.title.primary}}</h4>
+				<h5 class="secondary">{{column.title.secondary}}</h5>
+			</div>
+		</div>
+
+		<!-- Section Paragraph (Optional) -->
+		<p ng-show="column.p">{{column.p}}</p>
+
+		<!-- Section Figure (Optional) -->
+		<figure ng-show="column.figure">
+			<img src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}">
+			{{column.figure.html}}
+			
+		</figure>
+
+	</div>
+	
+</section>
+
+
+
+
+
+
+
+
+<!--
+
 <section class="three-column">
 
-	<!-- Section title -->
+	<!-- Section title 
 	<header class="section-title">
 		<div class="title">
 			<h3 class="primary">Test Section Title</h3>
@@ -90,7 +149,7 @@
 		</ul>
 	</header>
 
-	<!-- Columns -->
+	<!-- Columns
 	<figure class="column">
 		<img ng-repeat="url in project.imageUrls" 
 		ng-src="{{url}}">
@@ -118,16 +177,16 @@
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
 	</div>
 
-	
+
 
 </section>
 
 
 
-<!-- Test three column section -->
+<!-- Test three column section
 <section class="three-column">
 
-	<!-- Section title -->
+	<!-- Section title
 	<header class="section-title">
 		<div class="title">
 			<h3 class="primary">Test Section Title</h3>
@@ -140,7 +199,7 @@
 		</ul>
 	</header>
 
-	<!-- Columns -->
+	<!-- Columns 
 	<div class="column">
 		<div class="column-title">
 			<div class="title">
@@ -158,7 +217,7 @@
 	</div>
 
 </section>
-
+-->
 </div>
 
 

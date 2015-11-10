@@ -514,6 +514,7 @@ ul.skills li.skill {
 }
 ul.bullets {
   padding: 20px;
+  padding-top: 0;
 }
 ul.bullets li.bullet {
   margin-bottom: 20px;

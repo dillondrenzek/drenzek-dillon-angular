@@ -9,6 +9,10 @@ app.use(express.static(__dirname + '/ng'));
 app.use(express.static(__dirname + '/bower_components'));
 
 
+app.get('/mobile', function(req, res){
+	res.render('mobile');
+});
+
 // API Routes
 var api = express();
 

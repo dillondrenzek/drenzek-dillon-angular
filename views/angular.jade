@@ -31,10 +31,21 @@ html(lang="en" ng-app="DrenzekDillon")
 			ga('create', 'UA-67261358-1', 'auto');
 			ga('send', 'pageview');
 
+		//- Catch Mobile Browsers
+		script.
+			(function(){
+				if ((screen.width < 768) ||
+					(window.innerWidth && window.innerWidth < 768)) {
+					window.location.replace("http://localhost:8081/mobile");
+				}
+			})();
 
 
 
 	body
+
+
+
 		#site-border
 		#site-title
 				
@@ -72,7 +83,7 @@ html(lang="en" ng-app="DrenzekDillon")
 					//- <!-- Skill List -->
 					//- li: a(href="#/skills") Skills
 					//- <!-- Home -->
-					//- li: a(href="#/") Home
+					li: a(href="#/") Home
 
 			.debug-links
 				a(href="#/") Home

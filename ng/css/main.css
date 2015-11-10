@@ -527,10 +527,6 @@ section {
 section.page-title {
   border-top: 0;
 }
-ul.skills li.skill {
-  border-radius: 3px;
-  border: 1px solid #ddd;
-}
 .project {
   background: #fff;
   border: 1px solid #ddd;
@@ -625,6 +621,11 @@ figure img {
   width: 100%;
 }
 .skill.small {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+.skill.small a,
+.skill.small p {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.65rem;
   font-weight: 400;
@@ -634,6 +635,11 @@ figure img {
   text-transform: uppercase;
 }
 .skill.medium {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+.skill.medium a,
+.skill.medium p {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -641,4 +647,17 @@ figure img {
   letter-spacing: 0.0714285em;
   text-align: left;
   text-transform: uppercase;
+}
+.skill.large {
+  border: none;
+  width: 100%;
+}
+.skill.large a,
+.skill.large p {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #303030;
+  letter-spacing: -0.027916em;
+  text-align: left;
 }

@@ -390,10 +390,10 @@ section.page-title
 	border-top 0
 	
 
-ul.skills
-	li.skill
-		border-radius 3px
-		border 1px solid Light
+// ul.skills
+// 	li.skill
+// 		border-radius 3px
+// 		border 1px solid Light
 
 
 .project
@@ -461,10 +461,23 @@ figure
 
 
 .skill.small
-	Char-SmallSkillTitle()
+	border-radius 3px
+	border 1px solid Light
+	a, p
+		Char-SmallSkillTitle()
 	
 .skill.medium
-	Char-MediumSkillTitle()
+	border-radius 3px
+	border 1px solid Light
+	a, p
+		Char-MediumSkillTitle()
+		
+.skill.large
+	border none
+	width 100%
+	
+	a, p
+		Char-LargeSkillTitle()
 	
 
 

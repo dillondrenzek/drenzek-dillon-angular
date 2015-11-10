@@ -50,10 +50,8 @@
 		<!-- Project Skills -->
 		<ul class="skills"
 			ng-show="project.skills">
-			<li class="skill"
-				ng-repeat="skill in project.skills">
-				<a href="#/skills/show">{{skill}}</a>
-			</li>
+			<skill-medium skill="skill"
+				ng-repeat="skill in project.skills"></skill-medium>
 		</ul>
 
 		<!-- Project Bullet Points -->

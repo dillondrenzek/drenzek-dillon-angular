@@ -204,36 +204,6 @@ table td {
 #social-media li i {
   font-size: 18px;
 }
-.page section {
-  padding: 0 10px;
-}
-@media (min-width: 768px) {
-  .page section {
-    width: 100%;
-  }
-}
-.page section header {
-  padding-left: 10px;
-  border-top: 1px solid #ddd;
-}
-.page section:not(.page section.title) {
-  margin-bottom: 20px;
-}
-.page section.title {
-  height: 138px;
-}
-.page section.title h2 {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #303030;
-  letter-spacing: -0.03125em;
-  text-align: left;
-  line-height: 1.395833em;
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-}
 .project {
   position: relative;
   display: block;
@@ -301,10 +271,10 @@ table td {
 .project .type {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   font-weight: 400;
   text-align: left;
@@ -312,10 +282,10 @@ table td {
 .project a.external {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   text-transform: uppercase;
 }
@@ -393,10 +363,10 @@ table td {
 .project ul.skills li.skill {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   color: #555;
   font-weight: 400;
@@ -415,4 +385,221 @@ table td {
   margin-bottom: 10px;
   margin-left: 20px;
   list-style-type: circle;
+}
+@media (min-width: 768px) {
+  .quarter {
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .third {
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .half {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .most {
+    width: 75%;
+  }
+}
+/* 
+	Page Structure 
+					*/
+.page {
+  width: 100%;
+  display: block;
+}
+.page:before,
+.page:after {
+  display: table;
+  content: "";
+}
+.page:after {
+  clear: both;
+}
+section {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+section:before,
+section:after {
+  display: table;
+  content: "";
+}
+section:after {
+  clear: both;
+}
+.page-title {
+  height: 137px;
+  margin-bottom: 0;
+}
+.section-title {
+  padding: 20px 0;
+}
+.section-title:before,
+.section-title:after {
+  display: table;
+  content: "";
+}
+.section-title:after {
+  clear: both;
+}
+.column {
+  min-height: 1px;
+  float: left;
+  padding-left: 10px;
+}
+.three-column > .column {
+  width: 33.33333%;
+}
+.two-column > .column {
+  width: 50%;
+}
+.page-title .title {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 80%;
+}
+.page-title .links {
+  position: absolute;
+  left: 80%;
+  bottom: 10px;
+  width: 20%;
+}
+.section-title .title {
+  float: left;
+  width: 80%;
+}
+.section-title .links {
+  float: left;
+  width: 20%;
+}
+ul.links li.link {
+  display: block;
+  margin-top: 10px;
+}
+ul.links li.link:nth-child(1) {
+  margin-top: 0;
+}
+ul.links i {
+  margin-right: 10px;
+}
+ul.links a>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.skills {
+  padding: 10px;
+  padding-left: 0;
+}
+ul.skills:before,
+ul.skills:after {
+  display: table;
+  content: "";
+}
+ul.skills:after {
+  clear: both;
+}
+ul.skills li.skill {
+  float: left;
+  margin: 5px;
+  padding: 0 5px;
+}
+ul.bullets {
+  padding: 20px;
+}
+ul.bullets li.bullet {
+  margin-bottom: 20px;
+}
+/*
+	Page Styles
+				*/
+section {
+  border-top: 1px solid #ddd;
+}
+section.page-title {
+  border-top: 0;
+}
+ul.skills li.skill {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+/*   
+	Character Styles  
+						*/
+.page-title .primary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #303030;
+  letter-spacing: -0.03125em;
+  text-align: left;
+  line-height: 1em;
+}
+.page-title .secondary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.section-title .primary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 200;
+  color: #555;
+  letter-spacing: 0.125em;
+  text-align: left;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.section-title .secondary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #303030;
+  letter-spacing: 0.140625em;
+  text-align: left;
+}
+ul.links li.link p {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
+}
+ul.skills li.skill a {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 400;
+}
+ul.bullets li.bullet {
+  list-style-position: outside;
+  list-style-type: circle;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: -0.027916em;
+  text-align: left;
+}
+figure img {
+  width: 100%;
 }

@@ -1,67 +1,156 @@
-<section class="title">
-	<!-- Project Header -->
-	<header>
-		<!-- Project Title -->
-		<div class="title">
 
-			<h4 class="primary">
+<section class="page-title">
+		
+		<div class="title column">
+			<!-- Project Title -->
+			<h2 class="primary">
 				{{project.title}}
-			</h4>
+			</h2>
 
 			<!-- Project Type -->
 			<ul class="descriptors">
-				<li class="type" ng-show="project.type">{{project.type}}</li>
+				<li ng-show="project.type">
+					<p class="secondary">{{project.type}}</p>
+				</li>
 			</ul>
 		</div>
 
-		<!-- Project Action Links -->
-		<ul class="links">
+
+		<ul class="links column">
 			<!-- View on Github -->
-			<li>
-				<a 	ng-href="project.githubUrl"
+			<li class="link">
+				<a ng-href="project.githubUrl"
 					ng-show="project.githubUrl" 
 					title="View on GitHub">
-					<i class="fa fa-github-square">ICON</i>
+					<i class="fa fa-github-square"></i>
 					<p>Github</p>
 				</a>
 			</li>
 
 			<!-- Launch Project -->
-			<li>
-				<a 	ng-href="project.launchUrl"
+			<li class="link">
+				<a ng-href="project.launchUrl"
 					ng-show="project.launchUrl" 
 					title="Launch Project">
-					<i class="fa fa-external-link-square">ICON</i>
+					<i class="fa fa-external-link-square"></i>
 					<p>Launch</p>
 				</a>
 			</li>
 		</ul>
-	</header>
+	<!-- </header> -->
 </section>
 
 
 
-<!-- Project Body -->
-<div 	class="body"
-		ng-show="project.bulletPoints || project.skills">
 
-	<!-- Project Skills -->
-	<ul class="skills"
-		ng-show="project.skills">
-		<li class="skill"
-			ng-repeat="skill in project.skills">{{skill}}</li>
-	</ul>
 
-	<!-- Project Bullet Points -->
-	<ul class="bullets">
-		<li class="project-bullet"
-			ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
-	</ul>
+<section class="two-column">
 	
-</div>
+	<div class="column">
+		<!-- Project Skills -->
+		<ul class="skills"
+			ng-show="project.skills">
+			<li class="skill"
+				ng-repeat="skill in project.skills">
+				<a href="#/skills/show">{{skill}}</a>
+			</li>
+		</ul>
 
-<!-- Project Figure -->
-<figure ng-show="project.imageUrls">
-	<img ng-repeat="url in project.imageUrls" 
+		<!-- Project Bullet Points -->
+		<ul class="bullets"
+			ng-show="project.bulletPoints">
+			<li class="bullet"
+				ng-repeat="bullet in project.bulletPoints">
+				{{bullet}}
+			</li>
+		</ul>
+	</div>
+
+	<figure class="column"
+		ng-show="project.imageUrls">
+		<img ng-repeat="url in project.imageUrls" 
 		ng-src="{{url}}">
-</figure>
+	</figure>
+
+</section>
+
+
+
+<!-- Test three column section -->
+<section class="three-column">
+
+	<!-- Section title -->
+	<header class="section-title">
+		<div class="title">
+			<h3 class="primary">Test Section Title</h3>
+		</div>
+		<ul class="links">
+			<li class="link"><a href="#">
+				<i class="fa fa-circle"></i>
+				<p>Test Link</p>
+			</a></li>
+		</ul>
+	</header>
+
+	<!-- Columns -->
+	<figure class="column">
+		<img ng-repeat="url in project.imageUrls" 
+		ng-src="{{url}}">
+	</figure>
+	<div class="column">
+		<div class="column-title">
+			<div class="title">
+				<h4 class="primary">Test Column Title</h4>
+				<h5 class="secondary">Secondary</h4>
+			</div>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+	</div>
+	
+
+	<div class="column">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+	</div>
+
+</section>
+
+
+
+<!-- Test three column section -->
+<section class="three-column">
+
+	<!-- Section title -->
+	<header class="section-title">
+		<div class="title">
+			<h3 class="primary">Test Section Title</h3>
+		</div>
+		<ul class="links">
+			<li class="link"><a href="#">
+				<i class="fa fa-circle"></i>
+				<p>Test Link</p>
+			</a></li>
+		</ul>
+	</header>
+
+	<!-- Columns -->
+	<div class="column">
+		<div class="column-title">
+			<div class="title">
+				<h4 class="primary">Test Column Title</h4>
+				<h5 class="secondary">Secondary</h4>
+			</div>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+	</div>
+	<div class="column">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+	</div>
+	<div class="column">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+	</div>
+
+</section>
+
+
+
+

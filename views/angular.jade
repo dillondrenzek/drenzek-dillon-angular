@@ -87,9 +87,9 @@ html(lang="en" ng-app="DrenzekDillon")
 				a(href="#/skills/edit") Edit
 				a(href="#/skills/index") Index
 
-		.page
-			.page-column.quarter
-			.page-column.most(ng-view)
+		.page.row
+			.column.quarter
+			.column.most(ng-view)
 
 			
 
@@ -108,6 +108,9 @@ html(lang="en" ng-app="DrenzekDillon")
 		script(src="/js/controllers/skill-edit-controller.js")
 		script(src="/js/controllers/skill-list-controller.js")
 		script(src="/js/controllers/skill-show-controller.js")
+
+		//- Directives
+		script(src="/js/directives/projects.js")
 
 		//- Routes
 		script(src="/js/routes.js")

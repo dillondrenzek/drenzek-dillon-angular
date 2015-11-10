@@ -28,3 +28,11 @@ InlineChildren($align)
 	&>*
 		display inline-block
 		vertical-align $align
+		
+Clearfix()
+	&:before,
+	&:after
+		display table
+		content ""
+	&:after
+		clear both

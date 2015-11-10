@@ -101,30 +101,9 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 		i
 			font-size 18px
 
-// Page Sections
-.page
-	section
-		Width-SM(12)
-		padding 0 StandardPadding
-		header
-			padding-left StandardPadding
-			border-top 1px solid Light
-		
-		// Section Types
-		&:not(&.title)
-			margin-bottom ThickPadding
-		&.title
-			height LogoHeight - SiteBorderHeight
-			h2
-				Char-PageTitle()
-				position absolute
-				bottom 0
-				left StandardPadding
-			
-		// &.paragraph
-		// &.list
-		// &.control
-		
+
+
+
 // Model Representations
 // Projects
 .project
@@ -264,5 +243,183 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 // .skill.medium
 // .skill.small
 // .skill.table
+
+
+
+
+
+// New Page Layout
+
+.quarter
+	Width-SM(3)
+.third
+	Width-SM(4)
+.half
+	Width-SM(6)
+.most
+	Width-SM(9)
+
+
+
+/* 
+	Page Structure 
+					*/
+
+// Column Containers
+.page
+	width 100%
+	display block
+	Clearfix()
+	
+section
+	display block
+	width 100%
+	padding-left StandardPadding
+	margin-bottom 50px
+	Clearfix()
+
+.page-title
+	height 137px
+	margin-bottom 0
+	
+.section-title
+	padding ThickPadding 0
+	Clearfix()
+
+
+
+// Columns
+.column
+	min-height 1px
+	float left
+	padding-left StandardPadding
+
+.three-column > .column
+	width 33.33333%
+
+.two-column > .column
+	width 50%
+	
+
+	
+// Column Content
+
+// Page Title
+.page-title .title
+	position absolute
+	left 0
+	bottom StandardPadding
+	width 80%
+	
+.page-title .links
+	position absolute
+	left 80%
+	bottom StandardPadding
+	width 20%
+	
+.section-title .title
+	float left 
+	width 80%
+
+.section-title .links 
+	float left
+	width 20%
+
+
+// Links List
+ul.links
+	li.link
+		display block
+		margin-top StandardPadding
+		&:nth-child(1) // First Child
+			margin-top 0
+	i
+		margin-right StandardPadding
+	a
+		InlineChildren(middle)
+
+// Skills List
+ul.skills
+	padding StandardPadding
+	padding-left 0
+	Clearfix()
+	li.skill
+		float left
+		margin ThinPadding
+		padding 0 ThinPadding
+
+ul.bullets
+	padding ThickPadding
+	li.bullet
+		margin-bottom ThickPadding
+
+
+
+/*
+	Page Styles
+				*/
+section
+	border-top 1px solid Light
+	
+section.page-title
+	border-top 0
+	
+
+ul.skills
+	li.skill
+		border-radius 3px
+		border 1px solid Light
+
+
+
+
+
+
+/*   
+	Character Styles  
+						*/
+
+// Page Title
+.page-title
+	.primary
+		Char-PageTitle()
+		line-height 1em
+	.secondary
+		Char-PageSubtitle()
+		
+// Section Title
+.section-title
+	.primary
+		Char-SectionTitle()
+	.secondary
+		Char-SectionSubtitle()
+
+// Links List
+ul.links
+	li.link
+		p
+			Char-HeaderLinks()
+
+// Skills List
+ul.skills
+	li.skill
+		a
+			Char-HeaderLinks()
+			color Dark
+			font-weight 400
+
+// Project Bullet Points
+ul.bullets
+	li.bullet
+		list-style-position outside
+		list-style-type circle
+		// padding-left StandardPadding
+		Char-BulletPoints()
+
+		
+
+figure
+	img
+		width 100%
 
 

@@ -1,0 +1,73 @@
+<!-- Medium Project -->
+<div class="project medium">
+
+	<!-- Project Header -->
+	<header>
+
+		<!-- Project Title -->
+		<div class="title">
+			<a class="primary" 
+				ng-href="#/projects/{{project.permalink}}"
+				ng-if="project.permalink">{{project.title}}</a>
+
+			<h4 class="primary" ng-if="!project.permalink">
+				{{project.title}}
+			</h4>
+
+			<!-- Project Type -->
+			<ul class="descriptors">
+				<li class="type" ng-show="project.type">{{project.type}}</li>
+			</ul>
+		</div>
+		
+
+		<!-- Project Action Links -->
+		<ul class="links">
+			<!-- View on Github -->
+			<li>
+				<a 	class="external"
+					ng-href="project.githubUrl"
+					ng-show="project.githubUrl" 
+					title="View on GitHub"><i class="fa fa-github-square"></i><p>Github</p>
+				</a>
+			</li>
+
+			<!-- Launch Project -->
+			<li>
+				<a 	class="external"
+					ng-href="project.launchUrl"
+					ng-show="project.launchUrl" 
+					title="Launch Project"><i class="fa fa-external-link-square"></i><p>Launch</p>
+				</a>
+			</li>
+		</ul>
+
+		
+	</header>
+
+	<!-- Project Body -->
+	<div class="body"
+		ng-show="project.bulletPoints || project.skills">
+
+		<!-- Project Skills -->
+		<ul class="skills"
+			ng-show="project.skills">
+			<li class="skill"
+				ng-repeat="skill in project.skills">{{skill}}</li>
+		</ul>
+
+		<!-- Project Bullet Points -->
+		<ul class="bullets">
+			<li class="project-bullet"
+				ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
+		</ul>
+		
+	</div>
+
+	<!-- Project Figure -->
+	<figure ng-show="project.imageUrls">
+		<img ng-repeat="url in project.imageUrls" 
+			ng-src="{{url}}">
+	</figure>
+
+</div>

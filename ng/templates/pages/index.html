@@ -1,98 +1,30 @@
 <div class="page-column most">
-	
 
-<!-- Title Section -->
-<section class="title">
-	<h2>, The Work Of</h2>
-</section>
+	<!-- Title Section -->
+	<section class="title">
+		<h2>, The Work Of</h2>
+	</section>
 
-<!-- "Word From The Author" Paragraph Section -->
-<section class="paragraph">
-	<header>
-		<h3>A Word From The Author...</h3>
-	</header>
-	<p>I'm psyched you're here! I'm an Up & Coming Web Developer and this is my little corner of the Internet. Ever since I was a kid, I've played with data of all sorts and looked for creative ways to display that information. Some of my earliest inspirations were the scoreboards on TV during sporting events, so I guess you could say this is my personal "scoreboard." I've taken my resume, and my portfolio and turned it into a scoreboard of my skills and projects. Play around and see what you can find and then drop me a note at dillon@drenzek.com!<br><br> Cheers,<br>Dillon</p>
-</section>
-
-<!-- "Featured Projects" Medium Project List Section -->
-<section class="list">
-	<header>
-		<h3>Featured Projects</h3>
-	</header>
-
-	<!-- Medium Project -->
-	<div class="project medium" ng-repeat="project in projects">
-
-		<!-- Project Header -->
+	<!-- "Word From The Author" Paragraph Section -->
+	<section class="paragraph">
 		<header>
-			<!-- Project Title -->
-			<a ng-href="#/projects/{{project.permalink}}" ng-if="project.permalink">
-				<h4 class="primary">
-					{{project.title}}
-				</h4>
-			</a>
-			<h4 class="primary" ng-if="!project.permalink">
-				{{project.title}}
-			</h4>
+			<h3>A Word From The Author...</h3>
+		</header>
+		<p>I'm psyched you're here! I'm an Up & Coming Web Developer and this is my little corner of the Internet. Ever since I was a kid, I've played with data of all sorts and looked for creative ways to display that information. Some of my earliest inspirations were the scoreboards on TV during sporting events, so I guess you could say this is my personal "scoreboard." I've taken my resume, and my portfolio and turned it into a scoreboard of my skills and projects. Play around and see what you can find and then drop me a note at dillon@drenzek.com!<br><br> Cheers,<br>Dillon</p>
+	</section>
 
-			<!-- Project Type -->
-			<ul>
-				<li class="type" ng-show="project.type">{{project.type}}</li>
-			</ul>
-
-			<!-- Project Action Links -->
-			<ul class="links">
-				<!-- View on Github -->
-				<li>
-					<a 	ng-href="project.githubUrl"
-						ng-show="project.githubUrl" 
-						title="View on GitHub">
-						<i class="fa fa-github-square">ICON</i>
-						<p>Github</p>
-					</a>
-				</li>
-
-				<!-- Launch Project -->
-				<li>
-					<a 	ng-href="project.launchUrl"
-						ng-show="project.launchUrl" 
-						title="Launch Project">
-						<i class="fa fa-external-link-square">ICON</i>
-						<p>Launch</p>
-					</a>
-				</li>
-			</ul>
+	<!-- "Featured Projects" Medium Project List Section -->
+	<section class="list">
+		<header>
+			<h3>Featured Projects</h3>
 		</header>
 
-		<!-- Project Body -->
-		<div 	class="body"
-				ng-show="project.bulletPoints || project.skills">
-
-			<!-- Project Skills -->
-			<ul class="skills"
-				ng-show="project.skills">
-				<li class="skill"
-					ng-repeat="skill in project.skills">{{skill}}</li>
-			</ul>
-
-			<!-- Project Bullet Points -->
-			<ul class="bullets">
-				<li class="project-bullet"
-					ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
-			</ul>
-			
-		</div>
-
-		<!-- Project Figure -->
-		<figure ng-show="project.imageUrls">
-			<img ng-repeat="url in project.imageUrls" 
-				ng-src="{{url}}">
-		</figure>
-
-	</div>
-</section>
+		<!-- Medium Project -->
+		<project-medium ng-repeat="project in projects" project="project"></project-medium>
+	</section>
 	
 </div>	
+
 
 
 <!-- Page Column Right -->

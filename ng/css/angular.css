@@ -295,10 +295,10 @@ img.portrait {
 .project ul.skills li.skill {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   color: #555;
   font-weight: 400;
@@ -313,10 +313,10 @@ img.portrait {
 .project .type {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   font-weight: 400;
 }

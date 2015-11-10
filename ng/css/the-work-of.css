@@ -139,10 +139,10 @@ li {
 .page section header a {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   float: right;
 }
@@ -157,7 +157,6 @@ li {
   color: #303030;
   letter-spacing: -0.03125em;
   text-align: left;
-  line-height: 1.395833em;
   position: absolute;
   bottom: 0;
   left: 10px;
@@ -165,10 +164,10 @@ li {
 .page section.title a {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   display: block;
   position: relative;
@@ -221,10 +220,10 @@ li {
 .page section.list-3-column .project .title a {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #b23b23;
   letter-spacing: 0.0714285em;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   font-weight: 700;
 }

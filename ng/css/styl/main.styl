@@ -88,7 +88,7 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 
 // Social Media Links
 #social-media
-	width 130px
+	width SiteTitleWidth
 	list-style-type none
 	li
 		display inline-block
@@ -235,6 +235,23 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 
 
 
+
+// Site 
+nav
+	margin-top StandardPadding
+	width SiteTitleWidth
+
+	a
+		Char-SiteNavLinks()
+		display block
+		width 100%
+		text-transform uppercase
+		padding ThinPadding
+		&:hover
+			color Red
+		
+.debug-links
+	display none
 
 
 // New Page Layout
@@ -407,6 +424,13 @@ ul.skills
 		Char-SectionTitle()
 	.secondary
 		Char-SectionSubtitle()
+		
+// Column Title
+.column-title
+	.primary
+		Char-ColumnTitle()
+	.secondary
+		Char-ColumnSubtitle()
 
 // Links List
 ul.links

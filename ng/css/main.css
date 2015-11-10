@@ -382,6 +382,28 @@ table td {
   margin-left: 20px;
   list-style-type: circle;
 }
+nav {
+  margin-top: 10px;
+  width: 130px;
+}
+nav a {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: center;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 5px;
+}
+nav a:hover {
+  color: #b23b23;
+}
+.debug-links {
+  display: none;
+}
 @media (min-width: 768px) {
   .quarter {
     width: 25%;
@@ -589,6 +611,24 @@ ul.skills li.skill {
   color: #303030;
   letter-spacing: 0.140625em;
   text-align: left;
+}
+.column-title .primary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b23b23;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.column-title .secondary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #303030;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
 }
 ul.links li.link p {
   font-family: 'Fira Sans', Helvetica, sans-serif;

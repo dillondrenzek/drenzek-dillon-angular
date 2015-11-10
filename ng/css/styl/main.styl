@@ -110,19 +110,8 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 	Width-SM(12)
 	position relative
 	display block
-	background white
-	border 1px solid Light
-	border-left 3px solid Light
-	// margin-left StandardPadding
-	margin-bottom ThickPadding
 	
-	// Clearfix
-	&:before,
-	&:after
-		content ""
-		display table
-	&:after
-		clear both
+	Clearfix()
 	
 	
 	header
@@ -282,10 +271,13 @@ section
 	height 137px
 	margin-bottom 0
 	
-.section-title
+.section-title,
+.project-title
 	padding ThickPadding 0
 	Clearfix()
-
+	
+.project-title
+	padding-left StandardPadding
 
 
 // Columns
@@ -324,7 +316,18 @@ section
 .section-title .links 
 	float left
 	width 20%
+	
+.project-title .title
+	padding-left StandardPadding
+	float left
+	width 80%
+	
+.project-title .links
+	float left
+	width 20%
 
+.project
+	margin-bottom ThickPadding
 
 // Links List
 ul.links
@@ -355,6 +358,10 @@ ul.bullets
 
 
 
+
+
+
+
 /*
 	Page Styles
 				*/
@@ -369,6 +376,13 @@ ul.skills
 	li.skill
 		border-radius 3px
 		border 1px solid Light
+
+
+.project
+	background white
+	border 1px solid Light
+	border-left 3px solid Light
+	
 
 
 

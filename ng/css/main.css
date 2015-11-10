@@ -207,10 +207,6 @@ table td {
 .project {
   position: relative;
   display: block;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-left: 3px solid #ddd;
-  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .project {
@@ -219,8 +215,8 @@ table td {
 }
 .project:before,
 .project:after {
-  content: "";
   display: table;
+  content: "";
 }
 .project:after {
   clear: both;
@@ -439,16 +435,23 @@ section:after {
   height: 137px;
   margin-bottom: 0;
 }
-.section-title {
+.section-title,
+.project-title {
   padding: 20px 0;
 }
 .section-title:before,
-.section-title:after {
+.project-title:before,
+.section-title:after,
+.project-title:after {
   display: table;
   content: "";
 }
-.section-title:after {
+.section-title:after,
+.project-title:after {
   clear: both;
+}
+.project-title {
+  padding-left: 10px;
 }
 .column {
   min-height: 1px;
@@ -480,6 +483,18 @@ section:after {
 .section-title .links {
   float: left;
   width: 20%;
+}
+.project-title .title {
+  padding-left: 10px;
+  float: left;
+  width: 80%;
+}
+.project-title .links {
+  float: left;
+  width: 20%;
+}
+.project {
+  margin-bottom: 20px;
 }
 ul.links li.link {
   display: block;
@@ -530,6 +545,11 @@ section.page-title {
 ul.skills li.skill {
   border-radius: 3px;
   border: 1px solid #ddd;
+}
+.project {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
 }
 /*   
 	Character Styles  

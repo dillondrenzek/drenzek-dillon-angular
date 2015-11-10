@@ -126,9 +126,11 @@ api.delete('/skills/:id', function(req,res){res.json({}); });
 
 app.use('/api', api);
 
-app.get('/resume', function(req, res){
-	res.send('resume.pdf');
-})
+// app.get('/resume', function(req, res){
+// 	res.send('resume.pdf');
+// });
+
+app.use('/resume', express.static(__dirname + '/pdf/dillon-drenzek-resume.pdf'));
 
 app.use('/', function(req, res){
 	res.render('angular');

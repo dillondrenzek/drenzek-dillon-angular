@@ -336,44 +336,6 @@ table td {
     width: 100%;
   }
 }
-.project ul.skills {
-  padding: 10px 0;
-}
-@media (min-width: 768px) {
-  .project ul.skills {
-    width: 100%;
-  }
-}
-.project ul.skills>* {
-  display: inline-block;
-}
-.project ul.skills li {
-  display: inline-block;
-  margin: 10px;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding: 1.25px 5px;
-  border-radius: 5px;
-  border: solid 1px #ddd;
-}
-.project ul.skills li.skill {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #b23b23;
-  letter-spacing: 0.0714285em;
-  text-align: left;
-  text-transform: uppercase;
-  color: #555;
-  font-weight: 400;
-  font-size: 0.65rem;
-  line-height: auto;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  margin: 2px;
-}
 .project ul.bullets li.project-bullet {
   font-weight: 400;
   font-size: 0.95rem;
@@ -644,12 +606,10 @@ ul.skills li.skill a {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #b23b23;
+  color: #555;
   letter-spacing: 0.0714285em;
   text-align: left;
   text-transform: uppercase;
-  color: #555;
-  font-weight: 400;
 }
 ul.bullets li.bullet {
   list-style-position: outside;
@@ -663,4 +623,22 @@ ul.bullets li.bullet {
 }
 figure img {
   width: 100%;
+}
+.skill.small {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.skill.medium {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
 }

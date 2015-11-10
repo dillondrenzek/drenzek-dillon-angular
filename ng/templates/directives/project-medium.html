@@ -54,8 +54,10 @@
 		<!-- Project Skills -->
 		<ul class="skills"
 			ng-show="project.skills">
-			<li class="skill"
-				ng-repeat="skill in project.skills">{{skill}}</li>
+
+			<!-- Small Skill Directive -->
+			<skill-small ng-repeat="skill in project.skills"
+				skill="skill">{{skill}}</skill-small>
 		</ul>
 
 		<!-- Project Bullet Points -->

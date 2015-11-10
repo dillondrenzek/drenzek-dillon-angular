@@ -177,35 +177,35 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 			display block
 			Width-SM(12)
 
-	ul.skills
-		// margin-left StandardPadding
-		padding StandardPadding 0
-		// background White
-		Width-SM(12)
-		&>*
-			display inline-block
-		li
-			display inline-block
-			// padding-right ThinPadding
-			margin StandardPadding
-			margin-left 0
-			margin-bottom 0
-			padding (ThinPadding/4) ThinPadding
-			border-radius 5px
-			border solid 1px Light
-		li.skill
-			// position relative
-			Char-HeaderLinks()
-			color Dark
-			font-weight 400
-			font-size 0.65rem
-			// padding 0
-			line-height auto
-			padding-top 0
-			padding-bottom 0
-			margin-bottom 0
-			margin-top 0
-			margin 2px
+	// ul.skills
+	// 	// margin-left StandardPadding
+	// 	padding StandardPadding 0
+	// 	// background White
+	// 	Width-SM(12)
+	// 	&>*
+	// 		display inline-block
+	// 	li
+	// 		display inline-block
+	// 		// padding-right ThinPadding
+	// 		margin StandardPadding
+	// 		margin-left 0
+	// 		margin-bottom 0
+	// 		padding (ThinPadding/4) ThinPadding
+	// 		border-radius 5px
+	// 		border solid 1px Light
+	// 	li.skill
+	// 		// position relative
+	// 		Char-HeaderLinks()
+	// 		color Dark
+	// 		font-weight 400
+	// 		font-size 0.65rem
+	// 		// padding 0
+	// 		line-height auto
+	// 		padding-top 0
+	// 		padding-bottom 0
+	// 		margin-bottom 0
+	// 		margin-top 0
+	// 		margin 2px
 
 	ul.bullets
 		li.project-bullet
@@ -443,9 +443,7 @@ ul.links
 ul.skills
 	li.skill
 		a
-			Char-HeaderLinks()
-			color Dark
-			font-weight 400
+			Char-MediumSkillTitle()
 
 // Project Bullet Points
 ul.bullets
@@ -460,5 +458,14 @@ ul.bullets
 figure
 	img
 		width 100%
+
+
+.skill.small
+	Char-SmallSkillTitle()
+	
+.skill.medium
+	Char-MediumSkillTitle()
+	
+
 
 

@@ -442,6 +442,7 @@ section:after {
   min-height: 1px;
   float: left;
   padding-left: 10px;
+  padding-bottom: 10px;
 }
 .three-column > .column {
   width: 33.33333%;

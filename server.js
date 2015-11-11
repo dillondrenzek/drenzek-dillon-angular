@@ -21,8 +21,8 @@ api.get('/projects', function(req,res){	res.json(
 	[
 		Projects['capstonePortfolio'],
 		Projects['drenzekDoesDenmark'],
-		Projects['native'],
-		Projects['stormCaseStudy']
+		// Projects['native'],
+		// Projects['stormCaseStudy']
 	]); 
 
 });

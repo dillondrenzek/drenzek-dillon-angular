@@ -1,6 +1,23 @@
 
 var projects = {
 
+	alwaysWondering: {
+		title: 'Cold For Now, But Always Wondering',
+		type: 'Artwork',
+		skills: ['Photoshop', 'Photography'],
+		bulletPoints: [
+			'A collage of photographs I took while experimenting with long-exposures',
+			'Featured in 2015 CU Honor\'s Journal',
+			'I\'m an artist too!'
+		],
+		imageUrls: [
+			'img/always-wondering.jpg'
+		],
+		behanceUrl: "https://www.behance.net/gallery/29680169/Cold-For-Now-Always-Wondering",
+		
+	},
+
+
 	// Drenzek Does Denmark
 	drenzekDoesDenmark: {
 		"permalink": 'drenzek-does-denmark',

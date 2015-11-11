@@ -589,10 +589,12 @@ p.quote {
   letter-spacing: 0.025em;
   text-align: left;
   line-height: 1.125em;
-  font-size: 1.1rem;
-  color: #303030;
+  letter-spacing: 0em;
+  font-size: 1rem;
+  color: #555;
   font-style: italic;
-  line-height: 1.325em;
+  font-weight: 400;
+  line-height: 1.5em;
 }
 .skill.small {
   background: #fff;
@@ -642,4 +644,7 @@ p.quote {
   background: #fff;
   border: 1px solid #ddd;
   border-left: 3px solid #ddd;
+}
+.project figure {
+  border-left: 1px solid #ddd;
 }

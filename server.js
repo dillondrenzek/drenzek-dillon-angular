@@ -79,22 +79,15 @@ api.get('/skills', function(req,res){
 			"Pencil & Paper"
 		],
 
-		workflow: [
-			"Git",
-			"Stylus",
-			"Sublime Text",
-			"UNIX Terminal",
-			"Sass",
-			"Gulp.js",
-		],
-
 		backEnd: [
 			"Node.js",
 			"MongoDB",
 			"Express.js",
 			"Jade",
 			"PHP",
-			"SQL"
+			"SQL",
+			"Haml",
+			"Ruby on Rails",
 		],
 		programming: [
 			"Objective-C",
@@ -104,7 +97,16 @@ api.get('/skills', function(req,res){
 			"Python",
 			"Java",
 			
-		], 
+		],
+
+		workflow: [
+			"Git",
+			"Stylus",
+			"UNIX Terminal",
+			"Sass",
+			"Gulp.js",
+		],
+
 		techConcepts: [
 			"Object-Orientation",
 			"Model-View-Controller",

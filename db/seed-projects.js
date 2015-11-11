@@ -105,6 +105,8 @@ var projects = {
 			'Love at first sight with Node.js', 
 			'Utilized graph database Neo4j'],
 		"imageUrls": ['img/capstone-portfolio-1.jpg'],
+		"launchUrl": "http://drenzek-capstone-portfolio.herokuapp.com/",
+		"githubUrl": "https://github.com/dillondrenzek/drenzek-capstone-portfolio",
 		"sections": [
 			{
 				type: "three-column",

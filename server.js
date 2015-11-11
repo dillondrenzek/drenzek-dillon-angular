@@ -50,23 +50,70 @@ api.put('/projects/:id', function(req,res){res.json({}); });
 api.delete('/projects/:id', function(req,res){res.json({}); });
 
 api.get('/skills', function(req,res){
-	res.json([
-		"HTML/CSS", 
-		"JavaScript", 
-		"jQuery", 
-		"Stylus", 
-		"MongoDB", 
-		"Node.js", 
-		"Angular.js", 
-		"Photoshop", 
-		"Illustrator", 
-		"Sketch", 
-		"InDesign",
-		"programming",
-		"Objective-C", 
-		"C/C++", 
-		"Python"
-		]); 
+	res.json(
+	{
+		best: [
+			"HTML/CSS", 
+			"Photoshop", 
+			"Illustrator",
+			"JavaScript", 
+			"jQuery", 
+			"Stylus", 
+			"MongoDB", 
+			"Node.js", 
+			"Angular.js",
+			"Objective-C",
+		],
+		frontEnd: [
+			"HTML(5)",
+			"CSS(3)",
+			"JavaScript",
+			"jQuery",
+			"Angular.js",
+		],
+		uiDesign: [
+			"Photoshop",
+			"Illustrator",
+			"Sketch",
+			"InDesign",
+			"Pencil & Paper"
+		],
+
+		workflow: [
+			"Git",
+			"Stylus",
+			"Sublime Text",
+			"UNIX Terminal",
+			"Sass",
+			"Gulp.js",
+		],
+
+		backEnd: [
+			"Node.js",
+			"MongoDB",
+			"Express.js",
+			"Jade",
+			"PHP",
+			"SQL"
+		],
+		programming: [
+			"Objective-C",
+			"Swift",
+			"C",
+			"C++",
+			"Python",
+			"Java",
+			
+		], 
+		techConcepts: [
+			"Object-Orientation",
+			"Model-View-Controller",
+			"REST APIs",
+			"AJAX"
+		]
+	}
+
+		); 
 });
 api.get('/skills/:id', function(req,res){ res.json({}); });
 api.post('/skills/:id', function(req,res){res.json({}); });

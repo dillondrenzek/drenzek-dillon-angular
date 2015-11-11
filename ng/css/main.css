@@ -493,7 +493,7 @@ figure img {
 .section-title .primary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1.45rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #555;
   letter-spacing: 0.125em;
   text-align: left;
@@ -589,9 +589,13 @@ p.quote {
   letter-spacing: 0.025em;
   text-align: left;
   line-height: 1.125em;
+  font-size: 1.1rem;
+  color: #303030;
   font-style: italic;
+  line-height: 1.325em;
 }
 .skill.small {
+  background: #fff;
   border-radius: 3px;
   border: 1px solid #ddd;
 }
@@ -606,6 +610,7 @@ p.quote {
   text-transform: uppercase;
 }
 .skill.medium {
+  background: #fff;
   border-radius: 3px;
   border: 1px solid #ddd;
 }
@@ -620,6 +625,7 @@ p.quote {
   text-transform: uppercase;
 }
 .skill.large {
+  background: #fff;
   border: none;
   width: 100%;
 }

@@ -54,18 +54,86 @@
 	<section class="list">
 
 		<header class="section-title">
-			<h3 class="primary">Top Skills</h3>
+			<h3 class="primary">Skills</h3>
 		</header>
 
+		<!-- Top Skills -->
 		<div class="column">
 			<div class="column-title">
-				<h4 class="primary">All Categories</h4>
+				<h4 class="primary">Best Overall</h4>
 			</div>
 			<ul class="skills">
-				<skill-medium ng-repeat="skill in skills"
+				<skill-medium ng-repeat="skill in skills.best"
 					skill="skill"></skill-medium>
 			</ul>
 		</div>
+
+		<!-- Front End -->
+		<div class="column">
+			<div class="column-title">
+				<h4 class="primary">Front-End</h4>
+			</div>
+			<ul class="skills">
+				<skill-medium ng-repeat="skill in skills.frontEnd"
+					skill="skill"></skill-medium>
+			</ul>
+		</div>
+
+		<!-- UI & Front-End Design -->
+		<div class="column">
+			<div class="column-title">
+				<h4 class="primary">UI & Graphic Design</h4>
+			</div>
+			<ul class="skills">
+				<skill-medium ng-repeat="skill in skills.uiDesign"
+					skill="skill"></skill-medium>
+			</ul>
+		</div>
+
+		<!-- Workflow -->
+		<div class="column">
+			<div class="column-title">
+				<h4 class="primary">Workflow</h4>
+			</div>
+			<ul class="skills">
+				<skill-medium ng-repeat="skill in skills.workflow"
+					skill="skill"></skill-medium>
+			</ul>
+		</div>
+
+		<!-- Back End -->
+		<div class="column">
+			<div class="column-title">
+				<h4 class="primary">Back-End & Databases</h4>
+			</div>
+			<ul class="skills">
+				<skill-medium ng-repeat="skill in skills.backEnd"
+					skill="skill"></skill-medium>
+			</ul>
+		</div>
+
+		<!-- Programming -->
+		<div class="column">
+			<div class="column-title">
+				<h4 class="primary">Programming</h4>
+			</div>
+			<ul class="skills">
+				<skill-medium ng-repeat="skill in skills.programming"
+					skill="skill"></skill-medium>
+			</ul>
+		</div>
+
+		<!-- Concepts -->
+		<div class="column">
+			<div class="column-title">
+				<h4 class="primary">Technical Concepts</h4>
+			</div>
+			<ul class="skills">
+				<skill-medium ng-repeat="skill in skills.techConcepts"
+					skill="skill"></skill-medium>
+			</ul>
+		</div>
+
 
 
 	</section>

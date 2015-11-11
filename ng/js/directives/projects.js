@@ -3,11 +3,8 @@ angular.module("DrenzekDillon")
 	return {
 		restrict: 'E',
 		templateUrl: 'templates/directives/project-medium.html',
-		scope:{
+		scope: {
 			project: '='
-		},
-		controller: function($scope){
-
 		}
 	}
 });

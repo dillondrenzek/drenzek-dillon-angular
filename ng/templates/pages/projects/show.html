@@ -3,55 +3,30 @@
 <!-- Page Title -->
 <section class="page-title">
 		
-		<div class="title column">
-			<!-- Project Title -->
-			<h2 class="primary">
-				{{project.title}}
-			</h2>
+	<div class="title column">
+		<!-- Project Title -->
+		<h2 class="primary">
+			{{project.title}}
+		</h2>
 
-			<!-- Project Type -->
-			<ul class="descriptors">
-				<li ng-show="project.type">
-					<p class="secondary">{{project.type}}</p>
-				</li>
-			</ul>
-		</div>
-
-
-		<ul class="links column">
-
-			<!-- Launch Project -->
-			<li class="link">
-				<a ng-href="project.launchUrl"
-					ng-show="project.launchUrl" 
-					title="Launch Project">
-					<i class="fa fa-external-link-square"></i>
-					<p>Launch</p>
-				</a>
+		<!-- Project Type -->
+		<ul class="descriptors">
+			<li ng-show="project.type">
+				<p class="secondary">{{project.type}}</p>
 			</li>
-
-			<!-- View on Github -->
-			<li class="link">
-				<a ng-href="project.githubUrl"
-					ng-show="project.githubUrl" 
-					title="View on GitHub">
-					<i class="fa fa-github-square"></i>
-					<p>Github</p>
-				</a>
-			</li>
-
-			<!-- View on Behance -->
-			<li class="link">
-				<a ng-href="project.behanceUrl"
-					ng-show="project.behanceUrl" 
-					title="View on Behance">
-					<i class="fa fa-behance-square"></i>
-					<p>Behance</p>
-				</a>
-			</li>
-
 		</ul>
-	<!-- </header> -->
+	</div>
+
+
+	<ul class="links column"
+		ng-show="project.links">
+
+		<li class="link"
+			ng-repeat="l in project.links">
+			<dd-link link="l"></dd-link>
+		</li>
+
+	</ul>
 </section>
 
 <!-- Title Detail -->

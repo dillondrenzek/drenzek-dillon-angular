@@ -1,6 +1,7 @@
 
 var projects = {
 
+	// Cold For Now, But Always Wondering
 	alwaysWondering: {
 		title: 'Cold For Now, But Always Wondering',
 		type: 'Artwork',
@@ -13,10 +14,36 @@ var projects = {
 		imageUrls: [
 			'img/always-wondering.jpg'
 		],
-		behanceUrl: "https://www.behance.net/gallery/29680169/Cold-For-Now-Always-Wondering",
-		
+		links: [
+			{
+				label: "Behance",
+				icon: "fa-behance-square",
+				url: "https://www.behance.net/gallery/29680169/Cold-For-Now-Always-Wondering",
+				title: "View on Behance"
+			}
+		],
+
 	},
 
+	// Gridrunner
+	gridrunner: {
+		title: 'Gridrunner',
+		type: 'HTML5 Canvas Game',
+		skills: ['HTML5', 'jQuery', 'JavaScript'],
+		bulletPoints: [
+			'Team project during Technology, Arts & Media program',
+			'Object-oriented JavaScript at its finest'
+		],
+		imageUrls: [
+			'img/gridrunner.png'
+		],
+		links: [{
+			label: "GitHub",
+			icon: "fa-github-square",
+			url: "https://github.com/dillondrenzek/dm2-team-project",
+			title: "View on GitHub"
+		}]
+	},
 
 	// Drenzek Does Denmark
 	drenzekDoesDenmark: {
@@ -32,8 +59,21 @@ var projects = {
 		"imageUrls": [
 			'img/drenzek-does-denmark.png'
 		],
-		"launchUrl": 'http://denmark.drenzek.com',
-		"githubUrl": 'https://github.com/dillondrenzek/drenzek-does-denmark',
+		"links": [
+			{
+				label: "Launch",
+				icon: "fa-external-link-square",
+				url: "http://denmark.drenzek.com",
+				title: "Launch Project"
+			},
+			{
+				label: "GitHub",
+				icon: "fa-github-square",
+				url: "https://github.com/dillondrenzek/drenzek-does-denmark",
+				title: "View on GitHub",
+			},
+		],
+
 		"sections": [
 			{
 				"type": "two-column",
@@ -120,10 +160,25 @@ var projects = {
 		"bulletPoints": [
 			'Major project in senior Capstone class at CU',
 			'Love at first sight with Node.js', 
-			'Utilized graph database Neo4j'],
+			'Utilized graph database Neo4j'
+		],
 		"imageUrls": ['img/capstone-portfolio-1.jpg'],
-		"launchUrl": "http://drenzek-capstone-portfolio.herokuapp.com/",
-		"githubUrl": "https://github.com/dillondrenzek/drenzek-capstone-portfolio",
+
+		"links": [
+			{
+				label: "Launch",
+				icon: "fa-external-link-square",
+				url: "http://drenzek-capstone-portfolio.herokuapp.com/",
+				title: "Launch Project"
+			},
+			{
+				label: "GitHub",
+				icon: "fa-github-square",
+				url: "https://github.com/dillondrenzek/drenzek-capstone-portfolio",
+				title: "View on GitHub",
+			},
+		],
+
 		"sections": [
 			{
 				type: "three-column",

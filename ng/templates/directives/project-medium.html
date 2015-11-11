@@ -24,36 +24,16 @@
 		
 
 		<!-- Project Action Links -->
-		<ul class="links">
+		<ul class="links"
+			ng-show="project.links">
+
 			<!-- View on Github -->
-			<li>
-				<a 	class="external"
-					ng-href="project.githubUrl"
-					ng-show="project.githubUrl" 
-					title="View on GitHub"><i class="fa fa-github-square"></i><p>Github</p>
-				</a>
+			<li class="link"
+				ng-repeat="l in project.links">
+				<dd-link link="l"></dd-link>
 			</li>
 
-			<!-- Launch Project -->
-			<li>
-				<a 	class="external"
-					ng-href="project.launchUrl"
-					ng-show="project.launchUrl" 
-					title="Launch Project"><i class="fa fa-external-link-square"></i><p>Launch</p>
-				</a>
-			</li>
-
-			<!-- View on Behance -->
-			<li>
-				<a class="external"
-					ng-href="project.behanceUrl"
-					ng-show="project.behanceUrl" 
-					title="View on Behance">
-					<i class="fa fa-behance-square"></i><p>Behance</p>
-				</a>
-			</li>
 		</ul>
-
 		
 	</header>
 

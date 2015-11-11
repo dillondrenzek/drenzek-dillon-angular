@@ -110,7 +110,7 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 	Width-SM(12)
 	position relative
 	display block
-	
+	margin-bottom 50px
 	Clearfix()
 	
 	
@@ -123,48 +123,20 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 		float left
 
 		.title
-			float left
-			Width-SM(10)
+			// float left
+			// Width-SM(10)
 			.primary
 				Char-MediumItemPrimary()
 			a.primary:hover
 				color Red
 
-		.links
-			float left
-			Width-SM(2)
-			li
-				display block
 					
 	.type
 		Char-HeaderLinks()
 		font-weight 400
 		text-align left
 
-	a.external
-		Char-HeaderLinks()
-		text-transform uppercase
-		&>*
-			display inline-block
-			vertical-align middle
-		i
-			margin-right ThinPadding
-			color Black
-		p
-			font-weight 700
-			font-size 0.75rem
-			color Black
-		&:hover
-			i
-				color Red
-			p
-				color Red
-				text-decoration underline
-		&:active
-			i
-				color Red
-			p
-				color Red	
+	
 	.body
 		padding 0 StandardPadding
 		Width-SM(6)
@@ -177,50 +149,7 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 			display block
 			Width-SM(12)
 
-	// ul.skills
-	// 	// margin-left StandardPadding
-	// 	padding StandardPadding 0
-	// 	// background White
-	// 	Width-SM(12)
-	// 	&>*
-	// 		display inline-block
-	// 	li
-	// 		display inline-block
-	// 		// padding-right ThinPadding
-	// 		margin StandardPadding
-	// 		margin-left 0
-	// 		margin-bottom 0
-	// 		padding (ThinPadding/4) ThinPadding
-	// 		border-radius 5px
-	// 		border solid 1px Light
-	// 	li.skill
-	// 		// position relative
-	// 		Char-HeaderLinks()
-	// 		color Dark
-	// 		font-weight 400
-	// 		font-size 0.65rem
-	// 		// padding 0
-	// 		line-height auto
-	// 		padding-top 0
-	// 		padding-bottom 0
-	// 		margin-bottom 0
-	// 		margin-top 0
-	// 		margin 2px
-
-	ul.bullets
-		li.project-bullet
-			// text-transform uppercase
-			// font-style italic
-			font-weight 400
-			font-size 0.95rem
-			// font-size 0.75rem
-			letter-spacing 0em
-			// margin-top 0
-			margin-bottom StandardPadding
-			margin-left ThickPadding
-			// margin 0
-			// padding-left StandardPadding
-			list-style-type circle
+	
 
 // .project.large
 // .project.medium
@@ -312,9 +241,6 @@ section
 	width 50%
 	
 
-	
-// Column Content
-
 // Page Title
 .page-title .title
 	position absolute
@@ -345,20 +271,26 @@ section
 	float left
 	width 20%
 
-.project
-	margin-bottom ThickPadding
-
-// Links List
-ul.links
+// Link Lists
+.links
 	li.link
 		display block
+		
+.dd-link
+	InlineChildren(middle)
+	i
+		margin-right StandardPadding
+		
+.page-title
+	li.link
 		margin-top StandardPadding
 		&:nth-child(1) // First Child
 			margin-top 0
-	i
-		margin-right StandardPadding
-	a
-		InlineChildren(middle)
+	
+	a.dd-link
+		i
+			margin-right ThickPadding
+
 
 // Skills List
 ul.skills
@@ -376,7 +308,10 @@ ul.bullets
 	li.bullet
 		margin-bottom ThickPadding
 
-
+// Figure
+figure
+	img
+		width 100%
 
 
 
@@ -385,102 +320,127 @@ ul.bullets
 /*
 	Page Styles
 				*/
-section
-	border-top 1px solid Light
-	
-section.page-title
-	border-top 0
-	
-
-// ul.skills
-// 	li.skill
-// 		border-radius 3px
-// 		border 1px solid Light
-
-
-.project
-	background white
-	border 1px solid Light
-	border-left 3px solid Light
-	
-
-
 
 
 
 
 /*   
-	Character Styles  
+	Page & Character Styles  
 						*/
 
 // Page Title
 .page-title
+	border-top 0
 	.primary
-		Char-PageTitle()
+		FiraSans(3rem, 700, Black, -0.03125em, left)
 		line-height 1em
 	.secondary
-		Char-PageSubtitle()
-		
+		FiraSans(1rem, 400, Red, 0.0714285em, left)
+		text-transform uppercase
+
 // Section Title
 .section-title
 	.primary
-		Char-SectionTitle()
+		FiraSans(1.45rem, 200, Dark, 0.125em, left)
+		line-height 1em
+		text-transform uppercase
 	.secondary
-		Char-SectionSubtitle()
+		FiraSans(1rem, 200, Black, 0.140625em, left)
 		
 // Column Title
 .column-title
 	.primary
-		Char-ColumnTitle()
+		FiraSans(1rem, 400, Red, 0.0714285em, left)
+		text-transform uppercase
 	.secondary
-		Char-ColumnSubtitle()
+		FiraSans(0.875rem, 200, Black, 0.0714285em, left)
+		text-transform uppercase
 
-// Links List
-ul.links
-	li.link
+// Sections
+section
+	border-top 1px solid Light
+
+// DD Links
+a.dd-link
+	FiraSans(0.75rem, 700, Black, 0.0714285em, left)
+	text-transform uppercase
+	p
+		font-size 1em
+	i
+		font-size 1.1em
+	&:hover
+		i
+			color Red
 		p
-			Char-HeaderLinks()
+			color Red
+			text-decoration underline
+	&:active
+		i
+			color Red
+		p
+			color Red
 
-// Skills List
-ul.skills
-	li.skill
-		a
-			Char-MediumSkillTitle()
+.page-title
+	a.dd-link
+		font-size 1rem
 
-// Project Bullet Points
+.project-title
+	a.dd-link
+		font-size 0.75rem	
+
+
+
+
+// Project Bullet Points (Medium Project)
+ul.bullets
+	li.project-bullet
+		font-weight 400
+		font-size 0.95rem
+		letter-spacing 0em
+		margin-bottom StandardPadding
+		margin-left ThickPadding
+		list-style-type circle
+
+// Generic Bullets
 ul.bullets
 	li.bullet
+		FiraSans(1.25rem, 700, Dark, -0.027916em, left)
 		list-style-position outside
 		list-style-type circle
-		// padding-left StandardPadding
-		Char-BulletPoints()
 
-		
-
-figure
-	img
-		width 100%
+// Quote Text
+p.quote
+	Char-Body()
+	font-style italic		
 
 
+
+// Skills
 .skill.small
 	border-radius 3px
 	border 1px solid Light
 	a, p
-		Char-SmallSkillTitle()
+		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
 	
 .skill.medium
 	border-radius 3px
 	border 1px solid Light
 	a, p
-		Char-MediumSkillTitle()
+		FiraSans(0.875rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
 		
 .skill.large
 	border none
 	width 100%
-	
 	a, p
-		Char-LargeSkillTitle()
+		FiraSans(1rem, 700, Black, -0.027916em, left)
 	
 
 
+// Projects
+.project
+	background white
+	border 1px solid Light
+	border-left 3px solid Light
 

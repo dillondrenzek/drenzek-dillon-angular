@@ -126,16 +126,6 @@ li {
   display: inline-block;
   vertical-align: middle;
 }
-.page section header h3 {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 1.45rem;
-  font-weight: 200;
-  color: #555;
-  letter-spacing: 0.125em;
-  text-align: left;
-  line-height: 1em;
-  text-transform: uppercase;
-}
 .page section header a {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
@@ -151,12 +141,6 @@ li {
   height: 138px;
 }
 .page section.title h2 {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #303030;
-  letter-spacing: -0.03125em;
-  text-align: left;
   position: absolute;
   bottom: 0;
   left: 10px;
@@ -257,12 +241,6 @@ li {
   margin-bottom: 0;
 }
 .page section.list-category .category h4 {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 200;
-  color: #303030;
-  letter-spacing: 0.140625em;
-  text-align: left;
   text-transform: uppercase;
 }
 .page section.list-category .category ul {
@@ -281,12 +259,6 @@ li {
   border-bottom: 1px solid #ddd;
 }
 .slide-indicator {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 200;
-  color: #303030;
-  letter-spacing: 0.140625em;
-  text-align: left;
   position: absolute;
   right: 0;
   bottom: 0;

@@ -207,6 +207,7 @@ table td {
 .project {
   position: relative;
   display: block;
+  margin-bottom: 50px;
 }
 @media (min-width: 768px) {
   .project {
@@ -233,14 +234,6 @@ table td {
     width: 100%;
   }
 }
-.project header .title {
-  float: left;
-}
-@media (min-width: 768px) {
-  .project header .title {
-    width: 83.33333333%;
-  }
-}
 .project header .title .primary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1.5rem;
@@ -253,17 +246,6 @@ table td {
 .project header .title a.primary:hover {
   color: #b23b23;
 }
-.project header .links {
-  float: left;
-}
-@media (min-width: 768px) {
-  .project header .links {
-    width: 16.66666667%;
-  }
-}
-.project header .links li {
-  display: block;
-}
 .project .type {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 0.875rem;
@@ -274,42 +256,6 @@ table td {
   text-transform: uppercase;
   font-weight: 400;
   text-align: left;
-}
-.project a.external {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #b23b23;
-  letter-spacing: 0.0714285em;
-  text-align: left;
-  text-transform: uppercase;
-  text-transform: uppercase;
-}
-.project a.external>* {
-  display: inline-block;
-  vertical-align: middle;
-}
-.project a.external i {
-  margin-right: 5px;
-  color: #303030;
-}
-.project a.external p {
-  font-weight: 700;
-  font-size: 0.75rem;
-  color: #303030;
-}
-.project a.external:hover i {
-  color: #b23b23;
-}
-.project a.external:hover p {
-  color: #b23b23;
-  text-decoration: underline;
-}
-.project a.external:active i {
-  color: #b23b23;
-}
-.project a.external:active p {
-  color: #b23b23;
 }
 .project .body {
   padding: 0 10px;
@@ -335,14 +281,6 @@ table td {
   .project figure img {
     width: 100%;
   }
-}
-.project ul.bullets li.project-bullet {
-  font-weight: 400;
-  font-size: 0.95rem;
-  letter-spacing: 0em;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  list-style-type: circle;
 }
 nav {
   margin-top: 10px;
@@ -479,22 +417,24 @@ section:after {
   float: left;
   width: 20%;
 }
-.project {
-  margin-bottom: 20px;
-}
-ul.links li.link {
+.links li.link {
   display: block;
-  margin-top: 10px;
 }
-ul.links li.link:nth-child(1) {
-  margin-top: 0;
-}
-ul.links i {
-  margin-right: 10px;
-}
-ul.links a>* {
+.dd-link>* {
   display: inline-block;
   vertical-align: middle;
+}
+.dd-link i {
+  margin-right: 10px;
+}
+.page-title li.link {
+  margin-top: 10px;
+}
+.page-title li.link:nth-child(1) {
+  margin-top: 0;
+}
+.page-title a.dd-link i {
+  margin-right: 20px;
 }
 ul.skills {
   padding: 10px;
@@ -520,23 +460,18 @@ ul.bullets {
 ul.bullets li.bullet {
   margin-bottom: 20px;
 }
+figure img {
+  width: 100%;
+}
 /*
 	Page Styles
 				*/
-section {
-  border-top: 1px solid #ddd;
-}
-section.page-title {
+/*   
+	Page & Character Styles  
+						*/
+.page-title {
   border-top: 0;
 }
-.project {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-left: 3px solid #ddd;
-}
-/*   
-	Character Styles  
-						*/
 .page-title .primary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 3rem;
@@ -591,36 +526,70 @@ section.page-title {
   text-align: left;
   text-transform: uppercase;
 }
-ul.links li.link p {
+section {
+  border-top: 1px solid #ddd;
+}
+a.dd-link {
   font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #b23b23;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #303030;
   letter-spacing: 0.0714285em;
   text-align: left;
   text-transform: uppercase;
 }
-ul.skills li.skill a {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.875rem;
+a.dd-link p {
+  font-size: 1em;
+}
+a.dd-link i {
+  font-size: 1.1em;
+}
+a.dd-link:hover i {
+  color: #b23b23;
+}
+a.dd-link:hover p {
+  color: #b23b23;
+  text-decoration: underline;
+}
+a.dd-link:active i {
+  color: #b23b23;
+}
+a.dd-link:active p {
+  color: #b23b23;
+}
+.page-title a.dd-link {
+  font-size: 1rem;
+}
+.project-title a.dd-link {
+  font-size: 0.75rem;
+}
+ul.bullets li.project-bullet {
   font-weight: 400;
-  color: #555;
-  letter-spacing: 0.0714285em;
-  text-align: left;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  list-style-type: circle;
 }
 ul.bullets li.bullet {
-  list-style-position: outside;
-  list-style-type: circle;
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: #555;
   letter-spacing: -0.027916em;
   text-align: left;
+  list-style-position: outside;
+  list-style-type: circle;
 }
-figure img {
-  width: 100%;
+p.quote {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #555;
+  letter-spacing: 0.025em;
+  text-align: left;
+  line-height: 1.125em;
+  font-style: italic;
 }
 .skill.small {
   border-radius: 3px;
@@ -662,4 +631,9 @@ figure img {
   color: #303030;
   letter-spacing: -0.027916em;
   text-align: left;
+}
+.project {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
 }

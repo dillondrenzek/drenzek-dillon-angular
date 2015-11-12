@@ -48,6 +48,8 @@ api.get('/projects/:permalink', function(req,res){
 		res.json(Projects['storm']);
 	} else if (req.params.permalink === 'always-wondering') {
 		res.json(Projects['alwaysWondering']);
+	} else if (req.params.permalink === 'gridrunner') {
+		res.json(Projects['gridrunner']);
 	}
 	
 });
@@ -136,6 +138,7 @@ app.use('/api', api);
 // 	res.send('resume.pdf');
 // });
 
+app.use('/gridrunner/', express.static(__dirname + '/gridrunner/'));
 app.use('/resume', express.static(__dirname + '/pdf/dillon-drenzek-resume.pdf'));
 
 app.use('/', function(req, res){

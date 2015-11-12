@@ -304,6 +304,7 @@ var projects = {
 
 	// Gridrunner
 	gridrunner: {
+		permalink: 'gridrunner',
 		title: 'Gridrunner',
 		type: 'HTML5 Canvas Game',
 		skills: ['HTML5', 'jQuery', 'JavaScript'],
@@ -319,7 +320,32 @@ var projects = {
 			icon: "fa-github-square",
 			url: "https://github.com/dillondrenzek/dm2-team-project",
 			title: "View on GitHub"
-		}]
+		}, {
+			label: "Play Game",
+			icon: "fa-caret-square-o-right",
+			url: "http://localhost:8081/gridrunner/index.html",
+			title: "Play Gridrunner"
+		}],
+		sections: [
+			{
+				type: "two-column",
+				title: "Overview",
+				columns: [
+					{
+						title: {
+							primary: "Digital Media 2 Team Project"
+						},
+						p: "This was a team project I completed with my friend Logan McCaul as part of our Digital Media 2 class in the Technology, Arts & Media program at CU. Logan came up with the concept of the game, the layout of each of the puzzles, and I was proud to implement the game in a way that would allow for players to create custom puzzles later on. I figured out a lot of Object-Oriented Programming paradigms on my own, and it was this project that really jump-started my passion for programming. Give the game a shot, it was a huge hit with our class!"
+					},
+					{
+						figure: {
+							imgSrc:"img/gridrunner-screen1.jpg",
+							imgAlt:"Gridrunner Gameplay"
+						}
+					}
+				]
+			}
+		]
 	},
 
 	// Drenzek Does Denmark

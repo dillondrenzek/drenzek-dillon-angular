@@ -19,8 +19,11 @@ var api = express();
 
 api.get('/projects', function(req,res){	res.json(
 	[
+		
+		
 		Projects['capstonePortfolio'],
 		Projects['drenzekDoesDenmark'],
+		Projects['storm'],
 		Projects['alwaysWondering'],
 		Projects['gridrunner'],
 		// Projects['native'],
@@ -35,13 +38,15 @@ api.get('/projects/:permalink', function(req,res){
 	// TODO: this will be fixed with MongoDB
 	if (req.params.permalink === 'capstone-portfolio') {
 		res.json(Projects['capstonePortfolio']); 
-	} else if (req.params.permalink === 'native') {
-		res.json(Projects['native']); 
-	} else if (req.params.permalink === 'storm-case-study') {
-		res.json(Projects['stormCaseStudy']); 
+	// } else if (req.params.permalink === 'native') {
+	// 	res.json(Projects['native']); 
+	// } else if (req.params.permalink === 'storm-case-study') {
+	// 	res.json(Projects['stormCaseStudy']); 
 	} else if (req.params.permalink === 'drenzek-does-denmark') {
 		res.json(Projects['drenzekDoesDenmark']); 
-	} 
+	} else if (req.params.permalink === 'storm') {
+		res.json(Projects['storm']);
+	}
 	
 });
 

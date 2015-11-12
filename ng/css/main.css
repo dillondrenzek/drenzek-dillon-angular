@@ -24,11 +24,6 @@
   position: relative;
 }
 html {
-  background: url("../img/grassy-field.jpeg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -598,8 +593,8 @@ p.quote {
 }
 .skill.small {
   background: #fff;
-  border-radius: 3px;
   border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
 }
 .skill.small a,
 .skill.small p {
@@ -613,8 +608,8 @@ p.quote {
 }
 .skill.medium {
   background: #fff;
-  border-radius: 3px;
   border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
 }
 .skill.medium a,
 .skill.medium p {

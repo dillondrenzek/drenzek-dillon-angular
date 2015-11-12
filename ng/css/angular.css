@@ -24,11 +24,6 @@
   position: relative;
 }
 html {
-  background: url("../img/grassy-field.jpeg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;

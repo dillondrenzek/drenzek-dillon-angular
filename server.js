@@ -46,6 +46,8 @@ api.get('/projects/:permalink', function(req,res){
 		res.json(Projects['drenzekDoesDenmark']); 
 	} else if (req.params.permalink === 'storm') {
 		res.json(Projects['storm']);
+	} else if (req.params.permalink === 'always-wondering') {
+		res.json(Projects['alwaysWondering']);
 	}
 	
 });

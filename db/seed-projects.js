@@ -215,7 +215,7 @@ var projects = {
 					{
 						title: {
 							primary: "Window Sticker",
-							secondary: "big, Memorable, Sticky"
+							secondary: "Big, Memorable, Sticky"
 						},
 						p: "The window sticker came shortly after I got the concept of the event nailed down with the poster. Visually, the ad would have a great impact on someone walking across the street from the store. I could imagine them exclaiming something similar to \"Whoa! What is that man chopped in 4 parts doing on that window?\""
 					},
@@ -238,6 +238,7 @@ var projects = {
 
 	// Cold For Now, But Always Wondering
 	alwaysWondering: {
+		permalink: 'always-wondering',
 		title: 'Cold For Now, But Always Wondering',
 		type: 'Artwork',
 		skills: ['Photoshop', 'Photography'],
@@ -257,6 +258,47 @@ var projects = {
 				title: "View on Behance"
 			}
 		],
+
+		sections: [
+			{
+				"type": "two-column",
+				"title": "Context",
+				"columns": [
+					{
+						title: {
+							primary: "Cold for now..."
+						},
+						p: "This piece was a side result of a stop-motion project I did for a class in November of 2013. In the project, I experimented with exposures of 20-30 seconds of the stars from my home outside of Bozeman, Montana. I stood out in the sub-zero weather for nearly 3 hours pressing the trigger on my camera every 20-30 seconds. I was cold - no doubt - but as I held my hot chocolate in my heavily-gloved hand, my mind wandered up to the heavens I was photographing."
+					},
+
+					{
+						title: {
+							primary: "...but always wondering."
+						},
+						p: "Ever since I was a kid, my dad - who was a science & astronomy teacher for over a dozen years - would provoke my mind with thoughts about space, the earth, and what the hell the Universe actually is. Thanks to him, thinking has become one of my favorite pastimes, and space is one of my favorite subjects. "
+					}
+				]
+			},
+
+			{
+				type: "two-column",
+				title: "2015 CU Honor's Journal",
+				columns: [
+					{
+						title: {
+							primary: "On advice from a friend"
+						},
+						p: "Later in February of 2014, I sat at my computer messing around in Photoshop like I love to do. Using a few of the images from that night the previous November, I compiled this collage. It is one of my favorite pieces I've ever come up with. Then, on the advice from a good friend of mine, Hailey Badovinac, I submitted this piece to the Honor's journal at the University of Colorado. I didn't think too much of it, but it became one of the featured pieces in 2015. Do any of the images in the picture look familiar?"
+					},
+					{
+						figure: {
+							imgSrc: "img/always-wondering-proof.jpg",
+							imgAlt: "My piece on the advertisement for the Honor's Journal release event"
+						}
+					}
+				]
+			}
+		]
 
 	},
 

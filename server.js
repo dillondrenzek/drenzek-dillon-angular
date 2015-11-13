@@ -4,6 +4,10 @@ var express = require('express')
 
 var app = express();
 
+
+
+
+
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/ng'));
@@ -146,5 +150,5 @@ app.use('/', function(req, res){
 });
 
 
-app.listen(8081);
-console.log("App: Listening on 8081");
+app.listen(8080);
+console.log("App: Listening on 8080");

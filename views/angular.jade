@@ -1,5 +1,5 @@
 //- Pure Angular App Template
-//- version 4.0
+//- v4.0
 
 doctype
 html(lang="en" ng-app="DrenzekDillon")
@@ -37,9 +37,6 @@ html(lang="en" ng-app="DrenzekDillon")
 
 
 	body
-
-
-
 		#site-border
 		#site-title
 				
@@ -50,19 +47,15 @@ html(lang="en" ng-app="DrenzekDillon")
 				
 			//- <!-- Social Media Links -->
 			ul(id="social-media")
-				//- <!-- GitHub -->
 				li
 					a(href="https://github.com/dillondrenzek")
 						i.fa.fa-github
-				//- !-- LinkedIn -->
 				li
 					a(href="https://www.linkedin.com/in/dillondrenzek")
 						i.fa.fa-linkedin
-				//- <!-- Behance -->
 				li
 					a(href="https://behance.net/dillondrenzek/")
 						i.fa.fa-behance
-				//- <!-- Twitter -->
 				li
 					a(href="https://twitter.com/DrEnzek")
 						i.fa.fa-twitter
@@ -73,42 +66,21 @@ html(lang="en" ng-app="DrenzekDillon")
 					li: a(href="/resume") Resume
 					li: a(href="#/") Home
 
-			//- .debug-links
-				a(href="#/") Home
-				br
-				a(href="#/projects") Projects
-				a(href="#/projects/create") Create
-				a(href="#/projects/show") Show
-				a(href="#/projects/edit") Edit
-				a(href="#/projects/index") Index
-				br
-				a(href="#/skills") Skills
-				a(href="#/skills/create") Create
-				a(href="#/skills/show") Show
-				a(href="#/skills/edit") Edit
-				a(href="#/skills/index") Index
-
 		.page
 			.column.quarter
 			.column.most(ng-view)
 
-			
+
 
 		//- Angular
-
 		//- App 
 		script(src="/js/app.js")
 
 		//- Controllers
 		script(src="/js/controllers/homepage-controller.js")
-		script(src="/js/controllers/project-create-controller.js")
-		script(src="/js/controllers/project-edit-controller.js")
 		script(src="/js/controllers/project-list-controller.js")
 		script(src="/js/controllers/project-show-controller.js")
-		script(src="/js/controllers/skill-create-controller.js")
-		script(src="/js/controllers/skill-edit-controller.js")
 		script(src="/js/controllers/skill-list-controller.js")
-		script(src="/js/controllers/skill-show-controller.js")
 
 		//- Directives
 		script(src="/js/directives/projects.js")

@@ -24,6 +24,7 @@
   position: relative;
 }
 html {
+  background: #fafafa;
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -89,7 +90,6 @@ table td {
 }
 .page {
   float: left;
-  z-index: 0;
   background: #fafafa;
   margin-top: 36px;
 }
@@ -176,7 +176,7 @@ table td {
   text-transform: uppercase;
   position: absolute;
   top: 40px;
-  left: 10px;
+  left: 15px;
   cursor: pointer;
 }
 #logo .login:hover {
@@ -191,7 +191,7 @@ table td {
   width: 25%;
 }
 #social-media li a {
-  padding-top: 10px;
+  padding-top: 15px;
   width: 100%;
   display: block;
   text-align: center;
@@ -221,7 +221,7 @@ table td {
   position: relative;
   border-top: none !important;
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 15px 0;
   float: left;
 }
 @media (min-width: 768px) {
@@ -253,7 +253,7 @@ table td {
   text-align: left;
 }
 .project .body {
-  padding: 0 10px;
+  padding: 0 15px;
   float: left;
 }
 @media (min-width: 768px) {
@@ -278,7 +278,7 @@ table td {
   }
 }
 nav {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 130px;
 }
 nav a {
@@ -315,14 +315,19 @@ nav a:hover {
   }
 }
 @media (min-width: 768px) {
+  .two-third {
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 768px) {
   .most {
     width: 75%;
   }
 }
 /* 
-	Page Structure 
-	
-					*/
+	Page Layout
+	Element Positioning
+---------------------------*/
 .page {
   width: 100%;
   display: block;
@@ -338,7 +343,7 @@ nav a:hover {
 section {
   display: block;
   width: 100%;
-  padding-left: 10px;
+  padding-left: 15px;
   margin-bottom: 50px;
 }
 section:before,
@@ -350,12 +355,12 @@ section:after {
   clear: both;
 }
 .page-title {
-  height: 137px;
+  height: 138px;
   margin-bottom: 0;
 }
 .section-title,
 .project-title {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 .section-title:before,
 .project-title:before,
@@ -369,13 +374,13 @@ section:after {
   clear: both;
 }
 .project-title {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 .column {
   min-height: 1px;
   float: left;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
 .three-column > .column {
   width: 33.33333%;
@@ -386,13 +391,13 @@ section:after {
 .page-title .title {
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 0;
   width: 80%;
 }
 .page-title .links {
   position: absolute;
   left: 80%;
-  bottom: 10px;
+  bottom: 15px;
   width: 20%;
 }
 .section-title .title {
@@ -404,7 +409,7 @@ section:after {
   width: 20%;
 }
 .project-title .title {
-  padding-left: 10px;
+  padding-left: 15px;
   float: left;
   width: 80%;
 }
@@ -420,19 +425,19 @@ section:after {
   vertical-align: middle;
 }
 .dd-link i {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .page-title li.link {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .page-title li.link:nth-child(1) {
   margin-top: 0;
 }
 .page-title a.dd-link i {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 ul.skills {
-  padding: 10px;
+  padding: 5px;
   padding-left: 0;
 }
 ul.skills:before,
@@ -449,20 +454,14 @@ ul.skills li.skill {
   padding: 0 5px;
 }
 ul.bullets {
-  padding: 20px;
+  padding: 5px;
   padding-top: 0;
 }
 ul.bullets li.bullet {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
-figure img {
-  width: 100%;
-}
-/*
-	Page Styles
-				*/
 /*   
-	Page & Character Styles  
+	Visual Styling 
 						*/
 .page-title {
   border-top: 0;
@@ -560,10 +559,10 @@ a.dd-link:active p {
 }
 ul.bullets li.project-bullet {
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   letter-spacing: 0em;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-left: 30px;
   list-style-type: circle;
 }
 ul.bullets li.bullet {

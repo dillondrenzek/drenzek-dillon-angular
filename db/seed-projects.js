@@ -1,3 +1,8 @@
+// Seed Projects
+// v4.0
+
+// TODO: v4.1 - Remove this file by implementing MongoDB
+
 
 var projects = {
 
@@ -8,9 +13,9 @@ var projects = {
 		type: 'Company Rebrand',
 		skills: ['Photoshop', 'Illustrator', 'InDesign'],
 		bulletPoints: [
-			'Rebrand of one of Europe\'s most renowned fashion shops: Storm Design Art Fashion',
+			'One of Europe\'s most renowned fashion shops',
 			'Completed Summer of 2015 while studying abroad in Denmark',
-			'Received praise from local industry professionals, as well as the store\'s owner'
+			'Received praise from store\'s owner, local industry professionals'
 		],
 		imageUrls: [
 			'img/storm.jpg'
@@ -309,7 +314,7 @@ var projects = {
 		type: 'HTML5 Canvas Game',
 		skills: ['HTML5', 'jQuery', 'JavaScript'],
 		bulletPoints: [
-			'Team project during Technology, Arts & Media program',
+			'Digital Media 2 Team Project',
 			'Object-oriented JavaScript at its finest'
 		],
 		imageUrls: [
@@ -433,17 +438,6 @@ var projects = {
 			}
 		]
 	},
-
-
-	// // Storm Case Study
-	// stormCaseStudy: {
-	// 	"permalink": "storm-case-study",
-	// 	"title": 'Storm Branding & Case Study',
-	// 	"type": 'Branding, Website',
-	// 	"skills": ['Photoshop', 'Illustrator', 'InDesign', 'HTML/CSS', 'Node.js'],
-	// 	"bulletPoints": ['Rebranding of Copenhagen\'s premiere fashion shop', 'Completed Summer of 2015 during study abroad in Denmark', 'Website serves as case study'],
-	// 	"imageUrls": ['img/storm.jpg']
-	// },
 
 	// // Native
 	// native: {

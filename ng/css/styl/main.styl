@@ -1,14 +1,64 @@
+// Main Stylus Sheet
+// v4.0
+
 @import 'app'
 
-LogoHeight = 174px
-SiteBorderHeight = 36px
-SiteTitleWidth = 130px
-SiteTitleMargin = 10px
-SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
+*,
+*:before,
+*:after
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	margin 0
+	padding 0
+	position relative
+	
+// Default Styles
+html
+	background White
+	Char-Default()
+
+a
+	text-decoration none
+	color Red
+	font-weight 400
+	&:hover
+		text-decoration underline
+		
+li
+	list-style-type none
+
+img
+	display block
+
+img.landscape
+	width 100%
+	height auto
+img.portrait
+	height 100%
+	width auto
+	
+table
+	border 1px solid Light
+	font-size 12px
+	
+	tbody
+		display block
+	th
+		border-bottom 3px solid Dark
+	td
+		border 1px solid Dark
+
+.fixed
+	position fixed
+	z-index 100
+	
+
+
+
 
 // Site Border
 #site-border
-	// float left
 	position fixed
 	z-index 100
 	top 0
@@ -28,15 +78,13 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 // Page
 .page
 	Width-SM(12)
-	// position relative
 	float left
-	z-index 0
+	// z-index 0
 	background White
 	margin-top SiteBorderHeight
 	
 // Page Columns
 .page-column
-	// position relative
 	float left
 	display inline-block
 	vertical-align top
@@ -67,7 +115,6 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 		position absolute
 		left 0.270833em
 		bottom 0.6666667em
-		// z-index 102
 	.subtitle
 		FiraSans(0.25em, 400, LtRed, 0.1em, left)
 		text-transform uppercase
@@ -75,7 +122,6 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 		position absolute
 		left 1.25em
 		bottom 1.125em
-		// z-index 102
 	.login
 		FiraSans(0.25em, 400, Red, 0.1em, left)
 		text-transform uppercase
@@ -123,8 +169,6 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 		float left
 
 		.title
-			// float left
-			// Width-SM(10)
 			.primary
 				Char-MediumItemPrimary()
 			a.primary:hover
@@ -191,15 +235,17 @@ nav
 	Width-SM(4)
 .half
 	Width-SM(6)
+.two-third
+	Width-SM(8)
 .most
 	Width-SM(9)
 
 
 
 /* 
-	Page Structure 
-	
-					*/
+	Page Layout
+	Element Positioning
+---------------------------*/
 
 // Column Containers
 .page
@@ -211,11 +257,11 @@ section
 	display block
 	width 100%
 	padding-left StandardPadding
-	margin-bottom 50px
+	margin-bottom LargePadding
 	Clearfix()
 
 .page-title
-	height 137px
+	height LogoHeight - SiteBorderHeight
 	margin-bottom 0
 	
 .section-title,
@@ -245,7 +291,7 @@ section
 .page-title .title
 	position absolute
 	left 0
-	bottom StandardPadding
+	bottom 0
 	width 80%
 	
 .page-title .links
@@ -254,6 +300,7 @@ section
 	bottom StandardPadding
 	width 20%
 	
+// Section Titles
 .section-title .title
 	float left 
 	width 80%
@@ -261,7 +308,7 @@ section
 .section-title .links 
 	float left
 	width 20%
-	
+
 .project-title .title
 	padding-left StandardPadding
 	float left
@@ -294,7 +341,7 @@ section
 
 // Skills List
 ul.skills
-	padding StandardPadding
+	padding ThinPadding
 	padding-left 0
 	Clearfix()
 	li.skill
@@ -303,29 +350,17 @@ ul.skills
 		padding 0 ThinPadding
 
 ul.bullets
-	padding ThickPadding
+	padding ThinPadding
 	padding-top 0
 	li.bullet
-		margin-bottom ThickPadding
+		margin-bottom StandardPadding
 
-// Figure
-figure
-	img
-		width 100%
-
-
-
-
-
-/*
-	Page Styles
-				*/
 
 
 
 
 /*   
-	Page & Character Styles  
+	Visual Styling 
 						*/
 
 // Page Title
@@ -395,7 +430,7 @@ a.dd-link
 ul.bullets
 	li.project-bullet
 		font-weight 400
-		font-size 0.95rem
+		font-size 0.85rem
 		letter-spacing 0em
 		margin-bottom StandardPadding
 		margin-left ThickPadding

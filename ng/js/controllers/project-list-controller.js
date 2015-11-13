@@ -5,13 +5,10 @@ angular.module('DrenzekDillon')
 	function($http, $scope){
 		return $http({
 			method: 'GET',
-			url: 'http://localhost:8081/api/projects'
+			url: '/api/projects'
 		}).success(function(data){
-
-			console.log('list projects:', data);
-
 			$scope.projects = data;
 		}).error(function(err){
-			console.error('error:', err);
+			console.error('error GET Projects:', err);
 		});
 	}]);

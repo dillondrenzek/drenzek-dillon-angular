@@ -3,27 +3,14 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
 **Homepage**: http://dillon.drenzek.com
 
 ---------
-## Version: `v4` <br>
+## Version: `v4.0` <br>
 
 ### Version History
 | Version Name      | Version Number    | Date          | Description |
 |-------------------|-----------|---------------|---|
-| Angular           | 4     |   Nov 6 15   | Reimplement new interface in Angular |
-
----------
-## File Structure
-
-    /drenzek-dillon-angular
-      /css
-      /js
-        /controllers
-        /filters
-        /services
-        /directives
-      /templates
-        /pages
-          /projects
-          /skills
+| MEAN              | 4.1   |   Nov 13 15   | _Add in MongoDB, CRUD operations_ |
+| Professional      | 4.0   |   Nov 13 15   | Presentable |
+| Angular           | 4     |   Nov  6 15   | Reimplement new interface in Angular |
 
 ---------
 
@@ -43,22 +30,6 @@ Probably convertible to directives later on
     - Models
       - Skills (large, medium, small, table)
       - Projects (large, medium, small, table)
-
---------
-
-## App Controllers
-
-- Projects CRUD `controllers/`
-  - ProjectListCtrl
-  - ProjectCreateCtrl
-  - ProjectShowCtrl
-  - ProjectEditCtrl (Not Implemented)
-
-- Skills CRUD `controllers/`
-  - SkillListCtrl 
-  - SkillCreateCtrl 
-  - SkillShowCtrl (Not Implemented)
-  - SkillEditCtrl (Not Implemented)
 
 ----
 

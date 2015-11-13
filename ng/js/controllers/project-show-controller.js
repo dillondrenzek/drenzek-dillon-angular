@@ -8,9 +8,8 @@ angular.module('DrenzekDillon')
 			method: 'GET',
 			url: '/api/projects/'+$routeParams.permalink
 		}).success(function(data){
-			console.log("retrieved project",data);
 			$scope.project = data;
 		}).error(function(err){
-			console.error("error:", err);
+			console.error("error GET project:", err);
 		});
 	}]);

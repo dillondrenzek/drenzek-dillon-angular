@@ -1,13 +1,11 @@
 // Fonts
 // v3.0.1
 // ! All @font-face, text style Mixins
-// ! generic h1,etc. tag styling is in Base.styl
 
 
 
 
 // @font-face (Fira Sans)
-
 @font-face 
 	font-family 'Fira Sans'
 	font-weight 200
@@ -37,8 +35,10 @@ FiraSans($size, $weight, $color, $spacing, $align)
 	letter-spacing $spacing
 	text-align $align
 	
+Char-Default()
+	FiraSans(16px, 400, Black, -1px, left)
 
-	
+
 
 
 // Character Styles
@@ -47,86 +47,9 @@ Char-SiteNavLinks()
 
 
 
-
-// Char-PageTitle()
-// 	FiraSans(3rem, 700, Black, -0.03125em, left)
-	
-// Char-PageSubtitle()
-// 	FiraSans(1rem, 400, Red, 0.0714285em, left)
-// 	text-transform uppercase
-
-
-
-// Char-SectionTitle()
-// 	FiraSans(1.45rem, 200, Dark, 0.125em, left)
-// 	line-height 1em
-// 	text-transform uppercase
-	
-// Char-SectionSubtitle()
-// 	FiraSans(1rem, 200, Black, 0.140625em, left)
-	
-
-
-// Char-ColumnTitle()
-// 	FiraSans(1rem, 400, Red, 0.0714285em, left)
-// 	text-transform uppercase
-	
-// Char-ColumnSubtitle()
-// 	FiraSans(0.875rem, 200, Black, 0.0714285em, left)
-// 	text-transform uppercase
-
-
-
-// Char-SmallSkillTitle()
-	
-	
-// // Char-MediumSkillTitle()
-	
-	
-// Char-LargeSkillTitle()
-	
-	
-	
-
-// Char-DDLink()
-// 	FiraSans(0.75rem, 700, Black, 0.0714285em, left)
-// 	text-transform uppercase
-// 	p
-// 		font-size 1em
-// 	i
-// 		font-size 1.1em
-// 	&:hover
-// 		i
-// 			color Red
-// 		p
-// 			color Red
-// 			text-decoration underline
-// 	&:active
-// 		i
-// 			color Red
-// 		p
-// 			color Red
-
-
-
-
-
-
 Char-HeaderLinks()
 	FiraSans(0.875rem, 400, Red, 0.0714285em, left)
 	text-transform uppercase
-	// &:hover
-	// 	text-decoration underline
-		
-
-
-
-
-// Char-BulletPoints()
-// 	FiraSans(1.25rem, 700, Dark, -0.027916em, left)
-// 	// text-transform uppercase
-
-
 
 
 Char-MediumItemPrimary()

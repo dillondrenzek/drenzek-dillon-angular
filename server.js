@@ -5,7 +5,7 @@ var express = require('express')
 var app = express();
 
 
-app.set('port', process.env.PORT || 8081);
+app.set('port', process.env.PORT);
 
 
 app.set('views', path.join(__dirname, '/views'));
@@ -137,10 +137,6 @@ api.delete('/skills/:id', function(req,res){res.json({}); });
 
 
 app.use('/api', api);
-
-// app.get('/resume', function(req, res){
-// 	res.send('resume.pdf');
-// });
 
 app.use('/gridrunner/', express.static(__dirname + '/gridrunner/'));
 app.use('/resume', express.static(__dirname + '/pdf/dillon-drenzek-resume.pdf'));

@@ -5,7 +5,7 @@ var express = require('express')
 var app = express();
 
 
-
+app.set('port', process.env.PORT || 8081);
 
 
 app.set('views', path.join(__dirname, '/views'));
@@ -150,5 +150,5 @@ app.use('/', function(req, res){
 });
 
 
-app.listen(8080);
-console.log("App: Listening on 8080");
+app.listen(app.get('port'));
+console.log("App: Listening on "+app.get('port'));

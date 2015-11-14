@@ -19,7 +19,8 @@
   "homepage": "https://github.com/dillondrenzek/drenzek-dillon-angular",
   "dependencies": {
     "express": "^4.13.3",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
     "node-dev": "^2.7.1"

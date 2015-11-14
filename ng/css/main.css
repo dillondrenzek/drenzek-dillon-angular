@@ -54,6 +54,9 @@ img.portrait {
   height: 100%;
   width: auto;
 }
+figure img {
+  width: 100%;
+}
 table {
   border: 1px solid #ddd;
   font-size: 12px;
@@ -71,6 +74,9 @@ table td {
   position: fixed;
   z-index: 100;
 }
+/* 
+**  Angular App UI Components
+*/
 #site-border {
   position: fixed;
   z-index: 100;
@@ -83,21 +89,10 @@ table td {
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 25%;
+  left: 60px;
   width: 130px;
-  -webkit-transform: translateX(-140px);
-  transform: translateX(-140px);
 }
-.page {
-  float: left;
-  background: #fafafa;
-  margin-top: 36px;
-}
-@media (min-width: 768px) {
-  .page {
-    width: 100%;
-  }
-}
+.page,
 .page-column {
   float: left;
   display: inline-block;
@@ -330,7 +325,10 @@ nav a:hover {
 ---------------------------*/
 .page {
   width: 100%;
-  display: block;
+  background: #fafafa;
+  margin-top: 36px;
+  padding-left: 220px;
+  padding-right: 30px;
 }
 .page:before,
 .page:after {
@@ -341,9 +339,7 @@ nav a:hover {
   clear: both;
 }
 section {
-  display: block;
   width: 100%;
-  padding-left: 15px;
   margin-bottom: 50px;
 }
 section:before,
@@ -355,12 +351,12 @@ section:after {
   clear: both;
 }
 .page-title {
-  height: 138px;
+  height: 137px;
   margin-bottom: 0;
 }
 .section-title,
 .project-title {
-  padding: 30px 0;
+  padding: 15px;
 }
 .section-title:before,
 .project-title:before,
@@ -373,14 +369,19 @@ section:after {
 .project-title:after {
   clear: both;
 }
-.project-title {
-  padding-left: 15px;
-}
 .column {
   min-height: 1px;
   float: left;
+}
+.page > .column {
+  padding: 0;
+}
+section > .column {
   padding-left: 15px;
   padding-bottom: 15px;
+}
+.column > .column {
+  padding-left: 15px;
 }
 .three-column > .column {
   width: 33.33333%;

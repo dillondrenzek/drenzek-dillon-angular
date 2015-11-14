@@ -38,6 +38,10 @@ img.portrait
 	height 100%
 	width auto
 	
+figure
+	img
+		width 100%
+	
 table
 	border 1px solid Light
 	font-size 12px
@@ -55,9 +59,18 @@ table
 	
 
 
+/* 
+**  Angular App UI Components
+*/
 
+// Fixed Components
+LogoHeight = 174px
+SiteBorderHeight = 36px
+SiteTitleWidth = 130px
+SiteTitleMargin = ThickPadding*2
+SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 
-// Site Border
+//- Site Border
 #site-border
 	position fixed
 	z-index 100
@@ -66,22 +79,21 @@ table
 	background black
 	height SiteBorderHeight
 
-// Site Title
+//- Site Title
 #site-title
 	position fixed
 	z-index 100
 	top 0
-	left 25%
+	left SiteTitleMargin
 	width SiteTitleWidth
-	TranslateX(SiteTitleTranslation)
+	// TranslateX(SiteTitleTranslation)
+
+
+
 
 // Page
 .page
-	Width-SM(12)
-	float left
-	// z-index 0
-	background White
-	margin-top SiteBorderHeight
+	
 	
 // Page Columns
 .page-column
@@ -249,36 +261,42 @@ nav
 
 // Column Containers
 .page
-	width 100%
-	display block
+	Width-XS(12)
+	background White
+	margin-top SiteBorderHeight
+	padding-left SiteTitleWidth + SiteTitleMargin + ThickPadding
+	padding-right ThickPadding
 	Clearfix()
 	
 section
-	display block
-	width 100%
-	padding-left StandardPadding
+	Width-XS(12)
 	margin-bottom LargePadding
 	Clearfix()
 
 .page-title
-	height LogoHeight - SiteBorderHeight
+	height LogoHeight - SiteBorderHeight - 1px
 	margin-bottom 0
 	
 .section-title,
 .project-title
-	padding ThickPadding 0
+	padding StandardPadding
 	Clearfix()
-	
-.project-title
-	padding-left StandardPadding
 
 
 // Columns
 .column
 	min-height 1px
 	float left
+
+.page > .column
+	padding 0
+	
+section > .column
 	padding-left StandardPadding
 	padding-bottom StandardPadding
+	
+.column > .column
+	padding-left StandardPadding
 
 .three-column > .column
 	width 33.33333%

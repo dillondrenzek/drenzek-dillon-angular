@@ -4,7 +4,6 @@
 var express = require('express'),
 	app = express(),
 	path = require('path'),
-	favicon = require('serve-favicon'),
 	Projects = require('./db/seed-projects'),
 	Skills = require('./db/seed-skills');
 
@@ -17,9 +16,7 @@ app.set('view engine', 'jade');
 // Public Directories TODO
 app.use(express.static(__dirname + '/ng'));
 app.use(express.static(__dirname + '/bower_components'));
-
-// Favicon
-// app.use(favicon(__dirname + '/favicon/favicon.ico'));
+app.use(express.static(__dirname + '/favicon'));
 
 // API Routes
 var api = express();

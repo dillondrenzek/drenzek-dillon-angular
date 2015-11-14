@@ -16,7 +16,6 @@ app.set('view engine', 'jade');
 // Public Directories TODO
 app.use(express.static(__dirname + '/ng'));
 app.use(express.static(__dirname + '/bower_components'));
-app.use(express.static(__dirname + '/favicon'));
 
 // API Routes
 var api = express();

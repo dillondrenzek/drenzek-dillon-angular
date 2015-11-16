@@ -10,25 +10,11 @@
 SmallThreshold = 768px
 MediumThreshold = 992px
 LargeThreshold = 1200px
-    
 
-
-
-
-// TODO: Move These somewhere else
-// @media (min-width SmallThreshold)
-//   .container 
-//     width 750px
-
-// @media (min-width MediumThreshold)
-//   .container 
-//     width 970px
-  
-// @media (min-width LargeThreshold)
-//   .container 
-//     width 1170px
-
-
+SmallThreshold = 640px
+MediumThreshold = 768px
+LargeThreshold = 992px
+ExtraLargeThreshold = 1200px
 
 
 
@@ -38,7 +24,7 @@ LargeThreshold = 1200px
 //        color red
 
 XS()
-  @media (max-width 767px)
+  @media (max-width (SmallThreshold - 1px))
     {block}
 
 SM()
@@ -51,6 +37,10 @@ MD()
 
 LG()
   @media (min-width LargeThreshold)
+    {block}
+    
+XL()
+  @media (min-width ExtraLargeThreshold)
     {block}
 
 
@@ -141,6 +131,33 @@ Width-MD(size)
 
 Width-LG(size)
   @media (min-width LargeThreshold)
+    if size == 12
+      width 100%
+    else if size == 11
+      width 91.66666667%
+    else if size == 10
+      width 83.33333333%
+    else if size == 9
+      width 75%
+    else if size == 8
+      width 66.66666667%
+    else if size == 7
+      width 58.33333333%
+    else if size == 6
+      width 50%
+    else if size == 5
+      width 41.66666667%
+    else if size == 4
+      width 33.33333333%
+    else if size == 3
+      width 25%
+    else if size == 2
+      width 16.66666667%
+    else if size == 1
+      width 8.33333333%
+   
+Width-XL(size)
+  @media (min-width ExtraLargeThreshold)
     if size == 12
       width 100%
     else if size == 11
@@ -279,6 +296,35 @@ Offset-LG(offset)
       left 16.66666667%
     else if offset == 1
       left 8.33333333%
+      
+Offset-XL(offset)
+  // position relative
+  @media (min-width ExtraLargeThreshold)
+    if offset == 12
+      left 100%
+    else if offset == 11
+      left 91.66666667%
+    else if offset == 10
+      left 83.33333333%
+    else if offset == 9
+      left 75%
+    else if offset == 8
+      left 66.66666667%
+    else if offset == 7
+      left 58.33333333%
+    else if offset == 6
+      left 50%
+    else if offset == 5
+      left 41.66666667%
+    else if offset == 4
+      left 33.33333333%
+    else if offset == 3
+      left 25%
+    else if offset == 2
+      left 16.66666667%
+    else if offset == 1
+      left 8.33333333%
+
 
 
 Left-XS(offset)

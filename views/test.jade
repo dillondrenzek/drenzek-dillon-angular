@@ -49,50 +49,45 @@ html(lang="en" ng-app="DrenzekDillon")
 
 		#site-title
 
-			div
+			header.site
 				h1.primary Dillon Drenzek
 				p.secondary Web Developer & Designer
-			div
-				header.section
-					h3.primary Social Media
-				ul(id="social-media")
-					li
-						a(href="https://github.com/dillondrenzek")
-							i.fa.fa-github
-							p GitHub
-					li
-						a(href="https://www.linkedin.com/in/dillondrenzek")
-							i.fa.fa-linkedin
-							p LinkedIn
-					li
-						a(href="https://behance.net/dillondrenzek/")
-							i.fa.fa-behance
-							p Behance
-					li
-						a(href="https://twitter.com/DrEnzek")
-							i.fa.fa-twitter
-							p Twitter
-			div
-				header.section
-					h3.primary Nav
-				nav
-					ul
-						li: a(href="/resume") Resume
-						li: a(href="#/") Home
+			
+			ul(id="social-media")
+				li
+					a(href="https://github.com/dillondrenzek")
+						i.fa.fa-github
+						p GitHub
+				li
+					a(href="https://www.linkedin.com/in/dillondrenzek")
+						i.fa.fa-linkedin
+						p LinkedIn
+				li
+					a(href="https://behance.net/dillondrenzek/")
+						i.fa.fa-behance
+						p Behance
+				li
+					a(href="https://twitter.com/DrEnzek")
+						i.fa.fa-twitter
+						p Twitter
+			
+			nav
+				ul
+					li: a(href="/resume") Resume
+					li: a(href="#/") Home
 	
 		#site-border
 		.page
 			
-
-
 			section.page-title.full
 				header 
 					h2.primary Page Title
 					p.secondary Page Subtitle
 
 			section.third.right
-				header.section
+				header.section-title
 					h3.primary Word From the Author
+					p.secondary Section Subtitle
 				figure.body
 					img(src="img/always-wondering.jpg")
 
@@ -100,15 +95,17 @@ html(lang="en" ng-app="DrenzekDillon")
 			
 
 			section.two-third.left
-				header.section
+				header.section-title
 					h3.primary Section Title (ul.body)
+					p.secondary Section Subtitle
 				ul.body
 					li.section-column
 						| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
 			
 			section.two-third.left
-				header.section
+				header.section-title
 					h3.primary Medium Projects
+					p.secondary Section Subtitle
 				ul.body
 					li.project
 						header.project

@@ -1,0 +1,599 @@
+// Main Stylus Sheet
+// v4.0
+
+@import 'app'
+
+*,
+*:before,
+*:after
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	margin 0
+	padding 0
+	position relative
+	
+// Default Styles
+html
+	background White
+	Char-Default()
+
+a
+	text-decoration none
+	color Red
+	font-weight 400
+	&:hover
+		text-decoration underline
+		
+li
+	list-style-type none
+
+img
+	display block
+
+img.landscape
+	width 100%
+	height auto
+img.portrait
+	height 100%
+	width auto
+	
+figure
+	img
+		width 100%
+	
+table
+	border 1px solid Light
+	font-size 12px
+	
+	tbody
+		display block
+	th
+		border-bottom 3px solid Dark
+	td
+		border 1px solid Dark
+
+.fixed
+	position fixed
+	z-index 100
+	
+	
+// Logo
+#logo
+	
+	background Red
+	.primary
+		FiraSans(1em, 700, White, -0.05em, left)
+		line-height 0.83333em
+		text-shadow 1px 1px 1px rgba(Black, 0.5)
+		NoSelect()
+		position absolute
+		left 0.270833em
+		bottom 0.6666667em
+	.secondary
+		FiraSans(0.25em, 400, LtRed, 0.1em, left)
+		text-transform uppercase
+		NoSelect()
+		position absolute
+		left 1.25em
+		bottom 1.125em
+	.hidden-link
+		FiraSans(0.25em, 400, Red, 0.1em, left)
+		text-transform uppercase
+		position absolute
+		top 40px
+		left StandardPadding
+		cursor pointer
+		&:hover
+			color LtRed
+
+
+
+
+/* 
+**  Angular App UI Components
+*/
+
+// Fixed Components
+SiteBorderHeight = 36px
+
+SiteTitleWidth = 130px
+SiteTitleMargin = ThickPadding*2
+
+XSLogoHeight = 100px
+SMLogoHeight = 174px
+
+XSLogoWidth = 74px
+SMLogoWidth = SiteTitleWidth
+
+
+
+
+
+
+
+// New Page Layout
+
+.quarter
+	Width-SM(3)
+.third
+	Width-SM(4)
+.half
+	Width-SM(6)
+.two-third
+	Width-SM(8)
+.most
+	Width-SM(9)
+
+.page > .column.third
+	Width-XS(12)
+	Width-LG(4)
+.page > .column.two-third
+	Width-XS(12)
+	Width-LG(8)
+
+
+
+
+
+
+
+/***************************
+	Page Layout
+	Element Positioning
+****************************/
+
+
+
+//- Site Border
+#site-border
+	z-index 100
+	top 0
+	left 0
+	width 100%
+	height SiteBorderHeight
+	background black
+	+SM()
+		position fixed
+
+
+//- Site Title
+#site-title
+	position fixed
+	z-index 101
+	top 0
+	left 0
+	+XS()
+		position absolute
+		width 100%
+		height XSLogoHeight
+		padding-left XSLogoWidth
+	+SM()
+		left SiteTitleMargin
+		width SiteTitleWidth
+
+//- Logo	
+#logo
+	+XS()
+		width XSLogoWidth
+		height XSLogoHeight
+		position absolute
+		top 0
+		left 0
+		font-size 18px
+	+SM()
+		width SMLogoWidth
+		height SMLogoHeight
+		font-size 31.32px
+
+// Social Media Links
+#social-media
+	list-style-type none
+	li
+		display inline-block
+		width 25%
+		a
+			width 100%
+			display block
+			text-align center
+		i
+			font-size 18px
+	+XS()
+		li
+			a
+				padding-top ThinPadding
+
+	+SM()
+		width SiteTitleWidth
+		li
+			a
+				padding-top StandardPadding
+			
+
+// Site Navigation
+nav
+	a
+		Char-SiteNavLinks()
+		width 100%
+		text-transform uppercase
+		padding ThinPadding
+		&:hover
+			color Red
+	+XS()
+		width 100%
+		height XSLogoHeight - SiteBorderHeight
+		position absolute
+		top SiteBorderHeight
+		li
+			display inline-block
+			width 50%
+			a
+				width 100%
+				display block
+				text-align center
+		// a
+		// 	padding-left StandardPadding		
+	+SM()
+		display block
+		width SiteTitleWidth
+		margin-top StandardPadding
+
+
+
+// Column Containers
+.page
+	Width-XS(12)
+	background White
+	
+	padding-right ThickPadding
+	padding-left SiteTitleWidth + ThickPadding
+	Clearfix()
+	+XS()
+		margin-top XSLogoHeight
+		padding-left 0
+		padding-right 0
+	+SM()
+		margin-top SiteBorderHeight
+		padding-left SiteTitleWidth + SiteTitleMargin + ThickPadding
+	
+section
+	Width-XS(12)
+	margin-bottom LargePadding
+	Clearfix()
+
+.page-title
+	height SMLogoHeight - SiteBorderHeight - 1px
+	margin-bottom 0
+	
+.section-title,
+.project-title
+	padding StandardPadding
+	Clearfix()
+
+
+// Columns
+.column
+	min-height 1px
+	float left
+
+.page > .column
+	padding 0
+	
+section > .column
+	padding-left StandardPadding
+	padding-right StandardPadding
+	padding-bottom StandardPadding
+	
+.column > .column
+	padding-left StandardPadding
+
+.three-column > .column
+	Width-XS(12)
+	+SM()
+		width 33.33333%
+
+.two-column > .column
+	Width-XS(12)
+	+SM()
+		width 50%
+	
+
+// Page Title
+.page-title
+	Width-XS(12)
+
+.page-title .title
+	position absolute
+	left 0
+	bottom 0
+	width 80%
+	
+.page-title .links
+	position absolute
+	left 80%
+	bottom StandardPadding
+	width 20%
+	
+// Section Titles
+.section-title
+	Width-XS(12)
+
+.section-title .title
+	float left 
+	width 80%
+
+.section-title .links 
+	float left
+	width 20%
+
+.project-title
+	Width-XS(12)
+
+.project-title .title
+	padding-left StandardPadding
+	float left
+	width 80%
+	
+.project-title .links
+	float left
+	width 20%
+
+// Link Lists
+.links
+	li.link
+		display block
+		
+.dd-link
+	InlineChildren(middle)
+	i
+		margin-right StandardPadding
+		
+.page-title
+	li.link
+		margin-top StandardPadding
+		&:nth-child(1) // First Child
+			margin-top 0
+	
+	a.dd-link
+		i
+			margin-right ThickPadding
+
+
+// Skills List
+ul.skills
+	padding ThinPadding
+	padding-left 0
+	Clearfix()
+	li.skill
+		float left
+		margin ThinPadding
+		padding 0 ThinPadding
+
+ul.bullets
+	padding ThinPadding
+	padding-top 0
+	li.bullet
+		margin-bottom StandardPadding
+
+
+
+
+
+
+
+
+
+/**********************  
+	Visual Styling 
+***********************/
+
+// Page Title
+.page-title
+	border-top 0
+	.primary
+		FiraSans(3rem, 700, Black, -0.03125em, left)
+		line-height 1em
+	.secondary
+		FiraSans(1rem, 400, Red, 0.0714285em, left)
+		text-transform uppercase
+
+// Section Title
+.section-title
+	.primary
+		FiraSans(1.45rem, 400, Dark, 0.125em, left)
+		line-height 1em
+		text-transform uppercase
+	.secondary
+		FiraSans(1rem, 200, Black, 0.140625em, left)
+		
+// Column Title
+.column-title
+	.primary
+		FiraSans(1rem, 400, Red, 0.0714285em, left)
+		text-transform uppercase
+	.secondary
+		FiraSans(0.875rem, 200, Black, 0.0714285em, left)
+		text-transform uppercase
+
+// Sections
+section
+	border-top 1px solid Light
+
+// DD Links
+a.dd-link
+	FiraSans(0.75rem, 700, Black, 0.0714285em, left)
+	text-transform uppercase
+	p
+		font-size 1em
+	i
+		font-size 1.1em
+	&:hover
+		i
+			color Red
+		p
+			color Red
+			text-decoration underline
+	&:active
+		i
+			color Red
+		p
+			color Red
+
+.page-title
+	a.dd-link
+		font-size 0.9rem
+		+SM()
+			font-size 1rem
+
+.project-title
+	a.dd-link
+		font-size 0.75rem	
+
+
+
+
+// Project Bullet Points (Medium Project)
+ul.bullets
+	li.project-bullet
+		font-weight 400
+		font-size 0.85rem
+		letter-spacing 0em
+		margin-bottom StandardPadding
+		margin-left ThickPadding
+		list-style-type circle
+
+// Generic Bullets
+ul.bullets
+	li.bullet
+		FiraSans(1.25rem, 700, Dark, -0.027916em, left)
+		list-style-position outside
+		list-style-type circle
+		
+
+
+// Quote Text
+p.quote
+	Char-Body()
+	letter-spacing 0em
+	font-size 1rem
+	color Dark
+	font-style italic
+	font-weight 400
+	line-height 1.5em
+
+
+
+// Skills
+.skill.small
+	background white
+	// border-radius 3px
+	border 1px solid Light
+	border-left 3px solid Light
+	a, p
+		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
+	
+.skill.medium
+	background white
+	border 1px solid Light
+	border-left 3px solid Light
+	
+	a, p
+		FiraSans(0.875rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
+		
+.skill.large
+	background white
+	border none
+	width 100%
+	a, p
+		FiraSans(1rem, 700, Black, -0.027916em, left)
+	
+
+
+// Projects
+.project
+	background white
+	border 1px solid Light
+	border-left 3px solid Light
+	figure
+		border-left 1px solid Light
+	Width-SM(12)
+	position relative
+	display block
+	margin-bottom 50px
+	Clearfix()
+	
+	
+	header
+		position relative
+		Width-SM(12)
+		border-top none !important
+		border-bottom 1px solid Light
+		padding StandardPadding 0
+		float left
+
+		.title
+			.primary
+				Char-MediumItemPrimary()
+			a.primary:hover
+				color Red
+
+					
+	.type
+		Char-HeaderLinks()
+		font-weight 400
+		text-align left
+
+	
+	.body
+		padding 0 StandardPadding
+		Width-SM(6)
+		float left
+
+	figure
+		Width-SM(6)
+		float right	
+		img
+			display block
+			Width-SM(12)
+			
+
+
+
+/*
+	Positioning Classes
+						*/
+
+// site
+	// header.site
+
+
+// page (clearfix, always width of screen)
+	// header.page
+
+
+// column (float)
+	// header.column
+	// columns within columns float
+
+
+	// sections (block, clearfix)
+		// header.section
+			
+		// content (float)
+			// header.body
+			// nav.body
+			// ul.body
+			// figure.body
+			// p.body
+
+
+
+
+
+
+
+
+
+

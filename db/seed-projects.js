@@ -11,6 +11,7 @@ var projects = {
 		permalink: 'storm',
 		title: 'Storm Design Art Fashion',
 		type: 'Company Rebrand',
+		date: 'Summer 2015',
 		skills: ['Photoshop', 'Illustrator', 'InDesign'],
 		bulletPoints: [
 			'One of Europe\'s most renowned fashion shops',
@@ -246,6 +247,7 @@ var projects = {
 		permalink: 'always-wondering',
 		title: 'Cold For Now, But Always Wondering',
 		type: 'Artwork',
+		date: 'January 2015',
 		skills: ['Photoshop', 'Photography'],
 		bulletPoints: [
 			'A collage of photographs I took while experimenting with long-exposures',
@@ -312,6 +314,7 @@ var projects = {
 		permalink: 'gridrunner',
 		title: 'Gridrunner',
 		type: 'HTML5 Canvas Game',
+		date: 'Spring 2014',
 		skills: ['HTML5', 'jQuery', 'JavaScript'],
 		bulletPoints: [
 			'Digital Media 2 Team Project',
@@ -358,6 +361,7 @@ var projects = {
 		"permalink": 'drenzek-does-denmark',
 		"title": 'Drenzek Does Denmark',
 		"type": 'Website',
+		date: 'Summer 2015',
 		"skills": ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
 		"bulletPoints": [
 			'Travel Blog built to practice MEAN Stack', 
@@ -439,20 +443,12 @@ var projects = {
 		]
 	},
 
-	// // Native
-	// native: {
-	// 	"permalink": "native",
-	// 	"title": 'Native',
-	// 	"type": 'iOS App',
-	// 	"skills": ['Objective-C', 'Sketch'],
-	// 	"bulletPoints": ['I implemented pixel-perfect views from mockups', 'Helped define product requirements','Participated in Techstars Boulder', 'Company still running in CO named Pana']
-	// },
-
 	// Capstone Portfolio
 	capstonePortfolio: {
 		"permalink": "capstone-portfolio",
 		"title": 'Capstone Portfolio',
 		"type": 'Website',
+		date: 'Spring 2015',
 		"skills": ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
 		"bulletPoints": [
 			'Major project in senior Capstone class at CU',
@@ -462,12 +458,6 @@ var projects = {
 		"imageUrls": ['img/capstone-portfolio-1.jpg'],
 
 		"links": [
-			// {
-			// 	label: "Launch",
-			// 	icon: "fa-external-link-square",
-			// 	url: "http://drenzek-capstone-portfolio.herokuapp.com/",
-			// 	title: "Launch Project"
-			// },
 			{
 				label: "GitHub",
 				icon: "fa-github-square",

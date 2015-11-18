@@ -87,6 +87,7 @@ ul
 //--- Positioning
 
 .left,
+.page-title,
 .full,
 .three-quarter,
 .two-third,
@@ -97,23 +98,35 @@ ul
 .right
 	float right
 	
-.full
-	Width-XS(12)
-.three-quarter
-	Width-XS(12)
-	Width-MD(9)
-.two-third
-	Width-XS(12)
-	Width-MD(8)
-.half
-	Width-XS(12)
-	Width-MD(6)
-.third
-	Width-XS(12)
-	Width-MD(4)
-.quarter
-	Width-XS(12)
-	Width-MD(3)
+section	
+	&.full,
+	&.page-title
+		Width-XS(12)
+	&.three-quarter
+		Width-SM(9)
+		Width-MD(12)
+		Width-LG(9)
+		
+	&.two-third
+		Width-SM(8)
+		Width-MD(12)
+		Width-LG(8)
+		
+	&.half
+		Width-SM(6)
+		Width-MD(12)
+		Width-LG(6)
+		
+	&.third
+		Width-SM(4)
+		Width-MD(12)
+		Width-LG(4)
+		
+	&.quarter
+		Width-SM(3)
+		Width-MD(12)
+		Width-LG(3)
+	
 
 LogoWidth = 130px
 LogoHeight = 174px
@@ -130,10 +143,6 @@ SiteHeaderHeight = 170px
 	width LogoWidth
 	height LogoHeight
 	margin 0 auto
-	// +SM()
-	// 	width LogoWidth
-	// 	height LogoHeight
-	// 	font-size 31.32px
 		
 
 #site-title
@@ -141,30 +150,28 @@ SiteHeaderHeight = 170px
 	z-index 100
 	top 0
 	left 0
-	overflow hidden
-	header.site
-		float left
-		height SiteHeaderHeight
-		width SiteTitleWidth
-	#social-media
-		float left
-		width SiteTitleWidth
-	
-	nav
-		float left
-		width SiteTitleWidth
+	width 100%
+	height SiteTitleHeight
 
 	+SM()
-		width SiteTitleWidth
-		height auto
-	+XS()
 		width 100%
 		height SiteTitleHeight
-		padding-left SiteTitleWidth
-		header.site
-			position absolute
-			left 0
-			bottom 0
+
+	+MD()
+		width SiteTitleWidth
+		height auto
+	// header.site
+	// 	float left
+	// 	height SiteHeaderHeight
+	// 	width SiteTitleWidth
+	// #social-media
+	// 	float left
+	// 	width SiteTitleWidth
+	
+	// nav
+	// 	float left
+	// 	width SiteTitleWidth
+
 
 #site-border
 	position fixed
@@ -210,15 +217,26 @@ nav
 
 
 // * Page
-.page
+#page
 	width 100%
+	margin-top SiteTitleHeight
+	padding-left 0
 	Clearfix()
-	+SM()
+	
+	+MD()
 		margin-top SiteBorderHeight
 		padding-left SiteTitleWidth
-	+XS()
-		margin-top SiteTitleHeight
-		padding-left 0
+		
+// .page-title
+// 	height LogoHeight - SiteBorderHeight
+// 	position relative
+// 	Clearfix()
+// 	.inner
+// 		position absolute
+// 		width 100%
+// 		bottom StandardPadding
+// 		Clearfix()
+		
 		
 	
 // * * Sections	
@@ -228,34 +246,50 @@ section
 	padding-left StandardPadding
 	padding-right StandardPadding
 	Clearfix()
+		
+section
+	&.full
+		Width-XS(12)
+		
+	&.three-quarter
+		Width-SM(9)
+		Width-MD(12)
+		Width-LG(9)
+	
+	&.two-third
+		Width-SM(8)
+		Width-MD(12)
+		Width-LG(8)
+	
+	&.half
+		Width-SM(6)
+		Width-MD(12)
+		Width-LG(6)
+	
+	&.third
+		Width-SM(4)
+		Width-MD(12)
+		Width-LG(4)
+	
+	&.quarter
+		Width-SM(3)
+		Width-MD(12)
+		Width-LG(3)
 	
 	
 
 // * * * Section Headers
-header
-	display block
-	// InlineChildren()
-	Clearfix()
-	
-	
-header.site,
-header.page
-	// height 174px
-	
-// * * * Section Body
-.body
-	display block
-	width 100%
-	padding-left StandardPadding
-	padding-right StandardPadding
-	Clearfix()
+section
+	header,
+	.body,
+	footer
+		display block
+		width 100%
+		padding-left StandardPadding
+		padding-right StandardPadding
+		Clearfix()
+			
 
-	.project
-		Width-XS(12)
-	
-// * * * * * Section Columns
-.section-column
-	display inline-block
 
 
 
@@ -388,14 +422,24 @@ section
 			FiraSans(0.875rem, 400, Red, 0.0714285em, left)
 			text-transform uppercase
 			
+	ul.descriptors
+		li
+			display inline-block
+			margin-right StandardPadding		
+		.date
+			.secondary
+				color Gray
+
 	ul.links
-		// height 100%
 		li.link
-			InlineChildren()
+			a
+				display block
+				width 100%
+				InlineChildren(middle)
 			i
 				padding-right StandardPadding
 			p
-				FiraSans(0.75rem, 400, Red, 0.0714285em, left)
+				FiraSans(0.75rem, 700, Red, 0.0714285em, left)
 				text-transform uppercase
 				
 	ul.skills
@@ -411,9 +455,19 @@ section
 		padding ThinPadding
 		padding-top 0
 		li.bullet
+			Char-Default()
+			font-style italic
+			// color Gray
 			margin-bottom StandardPadding
 			list-style-type circle
 			list-style-position inside
+		
+	.quarter
+		Width-MD(3)	
+	.half
+		Width-MD(6)
+	.three-quarter
+		Width-MD(9)
 
 
 

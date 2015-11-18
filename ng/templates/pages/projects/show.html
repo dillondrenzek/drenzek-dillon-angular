@@ -1,38 +1,49 @@
-<div class="column">
+<div class="project">
+	
+
 
 <!-- Page Title -->
 <section class="page-title">
+	<div class="inner">
 		
-	<div class="title column">
-		<!-- Project Title -->
-		<h2 class="primary">
-			{{project.title}}
-		</h2>
+		<div class="three-quarter left">
+			
+			<!-- Project Title -->
+			<h2 class="primary">
+				{{project.title}}
+			</h2>
 
-		<!-- Project Type -->
-		<ul class="descriptors">
-			<li ng-show="project.type">
-				<p class="secondary">{{project.type}}</p>
-			</li>
-		</ul>
+			<!-- Project Type -->
+			<ul class="descriptors">
+				<li class="type" ng-show="project.type">
+					<p class="secondary">{{project.type}}</p>
+				</li>
+				<li class="date" ng-show="project.date">
+					<p class="secondary">{{project.date}}</p>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="quarter right">
+			<ul class="links column"
+				ng-show="project.links">
+
+				<li class="link"
+					ng-repeat="l in project.links">
+					<dd-link link="l"></dd-link>
+				</li>
+
+			</ul>
+		</div>
+
 	</div>
-
-
-	<ul class="links column"
-		ng-show="project.links">
-
-		<li class="link"
-			ng-repeat="l in project.links">
-			<dd-link link="l"></dd-link>
-		</li>
-
-	</ul>
 </section>
 
 <!-- Title Detail -->
-<section class="two-column">
+<section class="full">
 	
-	<div class="column">
+	<div class="left half">
 		<!-- Project Skills -->
 		<ul class="skills"
 			ng-show="project.skills">
@@ -50,7 +61,7 @@
 		</ul>
 	</div>
 
-	<figure class="column"
+	<figure class="right half"
 		ng-show="project.imageUrls">
 		<img ng-repeat="url in project.imageUrls" 
 		ng-src="{{url}}">
@@ -60,7 +71,8 @@
 
 
 <!-- Body Sections -->
-<section ng-repeat="section in project.sections"
+<section class="left three-quarter"
+	ng-repeat="section in project.sections"
 	ng-class="section.type">
 
 	<!-- Section Header -->
@@ -87,7 +99,7 @@
 	</header>
 
 	<!-- Section columns -->
-	<div class="column"
+	<div class=""
 		ng-repeat="column in section.columns">
 		
 		<!-- Section Title (Optional) -->
@@ -113,5 +125,6 @@
 </section>
 
 </div>
+
 
 

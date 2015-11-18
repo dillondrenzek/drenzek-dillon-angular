@@ -4,11 +4,11 @@
 	<!-- Project Header -->
 	<header class="project-title">
 
-		<!-- Project Title -->
-		<div class="title">
+		<div class="three-quarter left">
+		
 			<a class="primary" 
-				ng-href="#/projects/{{project.permalink}}"
-				ng-if="project.permalink">{{project.title}}</a>
+					ng-href="#/projects/{{project.permalink}}"
+					ng-if="project.permalink">{{project.title}}</a>
 
 			<h4 class="primary" ng-if="!project.permalink">
 				{{project.title}}
@@ -20,20 +20,29 @@
 					<p class="secondary">{{project.type}}</p>
 				</li>
 			</ul>
+
 		</div>
+
+		<div class="quarter right">
+			<!-- Project Action Links -->
+			<ul class="links"
+				ng-show="project.links">
+
+				<!-- View on Github -->
+				<li class="link"
+					ng-repeat="l in project.links">
+					<dd-link link="l"></dd-link>
+				</li>
+
+			</ul>
+		</div>
+
+		
 		
 
-		<!-- Project Action Links -->
-		<ul class="links"
-			ng-show="project.links">
+		
+		
 
-			<!-- View on Github -->
-			<li class="link"
-				ng-repeat="l in project.links">
-				<dd-link link="l"></dd-link>
-			</li>
-
-		</ul>
 		
 	</header>
 
@@ -41,27 +50,33 @@
 	<div class="body"
 		ng-show="project.bulletPoints || project.skills">
 
-		<!-- Project Skills -->
-		<ul class="skills"
-			ng-show="project.skills">
+		<div class="left half">
+			<!-- Project Skills -->
+			<ul class="skills"
+				ng-show="project.skills">
 
-			<!-- Small Skill Directive -->
-			<skill-small ng-repeat="skill in project.skills"
-				skill="skill">{{skill}}</skill-small>
-		</ul>
+				<!-- Small Skill Directive -->
+				<skill-small ng-repeat="skill in project.skills"
+					skill="skill">{{skill}}</skill-small>
+			</ul>
 
-		<!-- Project Bullet Points -->
-		<ul class="bullets">
-			<li class="project-bullet"
-				ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
-		</ul>
+			<!-- Project Bullet Points -->
+			<ul class="bullets">
+				<li class="bullet"
+					ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
+			</ul>
+
+		</div>
+
 		
-	</div>
 
-	<!-- Project Figure -->
-	<figure ng-show="project.imageUrls">
-		<img ng-repeat="url in project.imageUrls" 
-			ng-src="{{url}}">
-	</figure>
+		<!-- Project Figure -->
+		<figure class="right half"
+			ng-show="project.imageUrls">
+			<img ng-repeat="url in project.imageUrls" 
+				ng-src="{{url}}">
+		</figure>
+
+	</div>
 
 </div>

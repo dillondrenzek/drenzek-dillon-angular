@@ -540,13 +540,83 @@ var projects = {
 				}]
 			}
 		]
+	},
+
+	dm1Portal: {
+		title: 'Digital Media 1 Portal',
+		date: 'Fall 2013',
+		type: 'Class Portal',
+
+	},
+
+	dm1Final: {
+		title: 'Digital Media 1 Final Portfolio',
+		date: 'Fall 2013',
+		type: 'Class Project',
+
+	},
+
+	iosDev: {
+		title: 'Mobile Application Development',
+		date: 'Fall 2013',
+		type: 'Class Repo',
+
+	},
+
+	dm2Portal: {
+		title: 'Digital Media 2 Portal',
+		date: 'Spring 2014',
+		type: 'Class Portal',
+
+	}, 
+
+	softwareEngFinal: {
+		title: 'Software Engineering Methods & Tools Final Project',
+		date: 'Spring 2014',
+		type: 'Class Project',
+
+	},
+
+	leFaux: {
+		title: 'Le Faux Désign Compagnie',
+		date: 'Fall 2014',
+		type: 'Class Project',
+
+	},
+
+	principlesProgramming: {
+		title: 'Principles of Programming',
+		date: 'Fall 2014',
+		type: 'Class Repo'
+	},
+
+	capstonePortal: {
+		title: 'Senior Capstone Portal',
+		date: 'Spring 2015',
+		type: 'Class Portal'
+	},
+
+	objOrientedClass: {
+		title: 'Object-Oriented Analysis/Design',
+		date: 'Spring 2015',
+		type: 'Class Portal'
+	},
+
+	jumper: {
+		title: 'Object-Oriented Analysis/Design Final Project',
+		date: 'Spring 2015',
+		type: 'Class Project'
 	}
+
+
 };
 
 projects.all = [projects["storm"],
 projects["alwaysWondering"],
 projects["gridrunner"],
 projects["drenzekDoesDenmark"],
-projects["capstonePortfolio"]];
+projects["capstonePortfolio"],
+projects["dm1Portal"]
+];
 
 module.exports = projects;

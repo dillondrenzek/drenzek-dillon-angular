@@ -57,68 +57,11 @@ table
 	position fixed
 	z-index 100
 	
-
-
-/* 
-**  Angular App UI Components
-*/
-
-// Fixed Components
-LogoHeight = 174px
-SiteBorderHeight = 36px
-SiteTitleWidth = 130px
-SiteTitleMargin = ThickPadding*2
-SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
-
-//- Site Border
-#site-border
-	position fixed
-	z-index 100
-	top 0
-	width 100%
-	background black
-	height SiteBorderHeight
-
-//- Site Title
-#site-title
-	position fixed
-	z-index 100
-	top 0
-	left SiteTitleMargin
-	width SiteTitleWidth
-	// TranslateX(SiteTitleTranslation)
-
-
-
-
-// Page
-.page
-	
-	
-// Page Columns
-.page-column
-	float left
-	display inline-block
-	vertical-align top
-	min-height 1px
-.page-column.quarter
-	Width-SM(3)
-.page-column.half
-	Width-SM(6)
-.page-column.most
-	Width-SM(9)
-.page-column.full
-	Width-SM(12)
-	
-
 	
 // Logo
 #logo
-	width SiteTitleWidth
-	height LogoHeight
-	font-size 31.32px
+	
 	background Red
-	text-align left
 	h1
 		FiraSans(1em, 700, White, -0.05em, left)
 		line-height 0.83333em
@@ -144,99 +87,29 @@ SiteTitleTranslation = -(SiteTitleWidth+SiteTitleMargin)
 		&:hover
 			color LtRed
 
-// Social Media Links
-#social-media
-	width SiteTitleWidth
-	list-style-type none
-	li
-		display inline-block
-		width 25%
-		a
-			padding-top StandardPadding
-			width 100%
-			display block
-			text-align center
-		i
-			font-size 18px
+
+
+
+/* 
+**  Angular App UI Components
+*/
+
+// Fixed Components
+SiteBorderHeight = 36px
+
+SiteTitleWidth = 130px
+SiteTitleMargin = ThickPadding*2
+
+XSLogoHeight = 100px
+SMLogoHeight = 174px
+
+XSLogoWidth = 74px
+SMLogoWidth = SiteTitleWidth
 
 
 
 
-// Model Representations
-// Projects
-.project
-	Width-SM(12)
-	position relative
-	display block
-	margin-bottom 50px
-	Clearfix()
-	
-	
-	header
-		position relative
-		Width-SM(12)
-		border-top none !important
-		border-bottom 1px solid Light
-		padding StandardPadding 0
-		float left
 
-		.title
-			.primary
-				Char-MediumItemPrimary()
-			a.primary:hover
-				color Red
-
-					
-	.type
-		Char-HeaderLinks()
-		font-weight 400
-		text-align left
-
-	
-	.body
-		padding 0 StandardPadding
-		Width-SM(6)
-		float left
-
-	figure
-		Width-SM(6)
-		float right	
-		img
-			display block
-			Width-SM(12)
-
-	
-
-// .project.large
-// .project.medium
-// .project.small
-// .project.table
-// // Skills
-// .skill
-// .skill.large
-// .skill.medium
-// .skill.small
-// .skill.table
-
-
-
-
-// Site 
-nav
-	margin-top StandardPadding
-	width SiteTitleWidth
-
-	a
-		Char-SiteNavLinks()
-		display block
-		width 100%
-		text-transform uppercase
-		padding ThinPadding
-		&:hover
-			color Red
-		
-.debug-links
-	display none
 
 
 // New Page Layout
@@ -252,21 +125,136 @@ nav
 .most
 	Width-SM(9)
 
+.page > .column.third
+	Width-XS(12)
+	Width-LG(4)
+.page > .column.two-third
+	Width-XS(12)
+	Width-LG(8)
 
 
-/* 
+
+
+
+
+
+/***************************
 	Page Layout
 	Element Positioning
----------------------------*/
+****************************/
+
+
+
+//- Site Border
+#site-border
+	z-index 100
+	top 0
+	left 0
+	width 100%
+	height SiteBorderHeight
+	background black
+	+SM()
+		position fixed
+
+
+//- Site Title
+#site-title
+	position fixed
+	z-index 101
+	top 0
+	left 0
+	+XS()
+		position absolute
+		width 100%
+		height XSLogoHeight
+		padding-left XSLogoWidth
+	+SM()
+		left SiteTitleMargin
+		width SiteTitleWidth
+
+//- Logo	
+#logo
+	+XS()
+		width XSLogoWidth
+		height XSLogoHeight
+		position absolute
+		top 0
+		left 0
+		font-size 18px
+	+SM()
+		width SMLogoWidth
+		height SMLogoHeight
+		font-size 31.32px
+
+// Social Media Links
+#social-media
+	list-style-type none
+	li
+		display inline-block
+		width 25%
+		a
+			width 100%
+			display block
+			text-align center
+		i
+			font-size 18px
+	+XS()
+		li
+			a
+				padding-top ThinPadding
+
+	+SM()
+		width SiteTitleWidth
+		li
+			a
+				padding-top StandardPadding
+			
+
+// Site Navigation
+nav
+	a
+		Char-SiteNavLinks()
+		width 100%
+		text-transform uppercase
+		padding ThinPadding
+		&:hover
+			color Red
+	+XS()
+		width 100%
+		height XSLogoHeight - SiteBorderHeight
+		position absolute
+		top SiteBorderHeight
+		li
+			display inline-block
+			width 50%
+			a
+				width 100%
+				display block
+				text-align center
+		// a
+		// 	padding-left StandardPadding		
+	+SM()
+		display block
+		width SiteTitleWidth
+		margin-top StandardPadding
+
+
 
 // Column Containers
 .page
 	Width-XS(12)
 	background White
-	margin-top SiteBorderHeight
-	padding-left SiteTitleWidth + SiteTitleMargin + ThickPadding
+	
 	padding-right ThickPadding
+	padding-left SiteTitleWidth + ThickPadding
 	Clearfix()
+	+XS()
+		margin-top XSLogoHeight
+		padding-left 0
+		padding-right 0
+	+SM()
+		margin-top SiteBorderHeight
+		padding-left SiteTitleWidth + SiteTitleMargin + ThickPadding
 	
 section
 	Width-XS(12)
@@ -274,7 +262,7 @@ section
 	Clearfix()
 
 .page-title
-	height LogoHeight - SiteBorderHeight - 1px
+	height SMLogoHeight - SiteBorderHeight - 1px
 	margin-bottom 0
 	
 .section-title,
@@ -293,19 +281,27 @@ section
 	
 section > .column
 	padding-left StandardPadding
+	padding-right StandardPadding
 	padding-bottom StandardPadding
 	
 .column > .column
 	padding-left StandardPadding
 
 .three-column > .column
-	width 33.33333%
+	Width-XS(12)
+	+SM()
+		width 33.33333%
 
 .two-column > .column
-	width 50%
+	Width-XS(12)
+	+SM()
+		width 50%
 	
 
 // Page Title
+.page-title
+	Width-XS(12)
+
 .page-title .title
 	position absolute
 	left 0
@@ -319,6 +315,9 @@ section > .column
 	width 20%
 	
 // Section Titles
+.section-title
+	Width-XS(12)
+
 .section-title .title
 	float left 
 	width 80%
@@ -326,6 +325,9 @@ section > .column
 .section-title .links 
 	float left
 	width 20%
+
+.project-title
+	Width-XS(12)
 
 .project-title .title
 	padding-left StandardPadding
@@ -377,9 +379,13 @@ ul.bullets
 
 
 
-/*   
+
+
+
+
+/**********************  
 	Visual Styling 
-						*/
+***********************/
 
 // Page Title
 .page-title
@@ -435,7 +441,9 @@ a.dd-link
 
 .page-title
 	a.dd-link
-		font-size 1rem
+		font-size 0.9rem
+		+SM()
+			font-size 1rem
 
 .project-title
 	a.dd-link
@@ -510,4 +518,86 @@ p.quote
 	border-left 3px solid Light
 	figure
 		border-left 1px solid Light
+
+// Model Representations
+// Projects
+.project
+	Width-SM(12)
+	position relative
+	display block
+	margin-bottom 50px
+	Clearfix()
+	
+	
+	header
+		position relative
+		Width-SM(12)
+		border-top none !important
+		border-bottom 1px solid Light
+		padding StandardPadding 0
+		float left
+
+		.title
+			.primary
+				Char-MediumItemPrimary()
+			a.primary:hover
+				color Red
+
+					
+	.type
+		Char-HeaderLinks()
+		font-weight 400
+		text-align left
+
+	
+	.body
+		padding 0 StandardPadding
+		Width-SM(6)
+		float left
+
+	figure
+		Width-SM(6)
+		float right	
+		img
+			display block
+			Width-SM(12)
+			
+
+
+
+/*
+	Positioning Classes
+						*/
+
+// site
+	// header.site
+
+
+// page (clearfix, always width of screen)
+	// header.page
+
+
+// column (float)
+	// header.column
+	// columns within columns float
+
+
+	// sections (block, clearfix)
+		// header.section
+			
+		// content (float)
+			// header.body
+			// nav.body
+			// ul.body
+			// figure.body
+			// p.body
+
+
+
+
+
+
+
+
+
 

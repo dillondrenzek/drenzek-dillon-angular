@@ -543,5 +543,10 @@ var projects = {
 	}
 };
 
+projects.all = [projects["storm"],
+projects["alwaysWondering"],
+projects["gridrunner"],
+projects["drenzekDoesDenmark"],
+projects["capstonePortfolio"]];
 
 module.exports = projects;

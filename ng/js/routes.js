@@ -15,17 +15,19 @@ angular.module('DrenzekDillon')
 
 
 	// PROJECTS
+	// Index Projects
+	.when('/projects/index', {
+		controller: 'ProjectListCtrl',
+		templateUrl: '/templates/pages/projects/index.html'
+	})
+	
 	// Show Project
 	.when('/projects/:permalink', {
 		controller: 'ProjectShowCtrl',
 		templateUrl: '/templates/pages/projects/show.html'
 	})
 
-	// Index Projects
-	.when('/projects/index', {
-		controller: 'ProjectListCtrl',
-		templateUrl: '/templates/pages/projects/index.html'
-	})
+	
 
 
 

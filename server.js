@@ -17,6 +17,15 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/ng'));
 app.use(express.static(__dirname + '/bower_components'));
 
+
+
+app.get('/test', function(req, res){
+	res.render('test');
+});
+
+
+
+
 // API Routes
 var api = express();
 app.use('/api', api);
@@ -25,18 +34,17 @@ app.use('/api', api);
 
 // GET projects
 api.get('/projects', function(req,res){	
+
+	console.log("GET /projects");
+
 	// TODO: fix with mongoDB v4.1
-	res.json([
-		Projects['capstonePortfolio'],
-		Projects['drenzekDoesDenmark'],
-		Projects['storm'],
-		Projects['alwaysWondering'],
-		Projects['gridrunner'],
-	]); 
+	res.json(Projects); 
 });
 
 // GET Project by permalink
 api.get('/projects/:permalink', function(req,res){
+
+	console.log("GET /projects/",req.params.permalink);
 
 	// TODO: v4.1 - fix with mongoDB 
 	if (req.params.permalink === 'capstone-portfolio') {

@@ -73,7 +73,6 @@ li
 	// font-style italic
 
 figure
-	padding 0 !important
 	img
 		display block
 		width 100%
@@ -106,24 +105,34 @@ SiteHeaderHeight = 170px
 .right
 	float right
 	
-.full,
-.page-title
-	Width-XS(12)
-.three-quarter
-	Width-XS(12)
-	Width-MD(9)
-.two-third
-	Width-XS(12)
-	Width-MD(8)
-.half
-	Width-XS(12)
-	Width-MD(6)
-.third
-	Width-XS(12)
-	Width-MD(4)
-.quarter
-	Width-XS(12)
-	Width-MD(3)
+section	
+	&.full,
+	&.page-title
+		Width-XS(12)
+	&.three-quarter
+		Width-SM(9)
+		Width-MD(12)
+		Width-LG(9)
+		
+	&.two-third
+		Width-SM(8)
+		Width-MD(12)
+		Width-LG(8)
+		
+	&.half
+		Width-SM(6)
+		Width-MD(12)
+		Width-LG(6)
+		
+	&.third
+		Width-SM(4)
+		Width-MD(12)
+		Width-LG(4)
+		
+	&.quarter
+		Width-SM(3)
+		Width-MD(12)
+		Width-LG(3)
 
 // # Fixed
 #site-title
@@ -270,7 +279,6 @@ li.link
 
 
 // * * * * Project
-
 .project
 	margin-bottom ThickPadding
 

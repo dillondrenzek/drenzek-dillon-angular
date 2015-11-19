@@ -72,9 +72,6 @@ li {
   letter-spacing: 0em;
   text-align: left;
 }
-figure {
-  padding: 0 !important;
-}
 figure img {
   display: block;
   width: 100%;
@@ -97,47 +94,82 @@ figure img.portrait {
 .right {
   float: right;
 }
-.full,
-.page-title {
+section.full,
+section.page-title {
   width: 100%;
 }
-.three-quarter {
-  width: 100%;
-}
-@media (min-width: 767px) {
-  .three-quarter {
+@media (min-width: 520px) {
+  section.three-quarter {
     width: 75%;
   }
 }
-.two-third {
-  width: 100%;
-}
 @media (min-width: 767px) {
-  .two-third {
+  section.three-quarter {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  section.three-quarter {
+    width: 75%;
+  }
+}
+@media (min-width: 520px) {
+  section.two-third {
     width: 66.66666667%;
   }
 }
-.half {
-  width: 100%;
-}
 @media (min-width: 767px) {
-  .half {
+  section.two-third {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  section.two-third {
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 520px) {
+  section.half {
     width: 50%;
   }
 }
-.third {
-  width: 100%;
-}
 @media (min-width: 767px) {
-  .third {
+  section.half {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  section.half {
+    width: 50%;
+  }
+}
+@media (min-width: 520px) {
+  section.third {
     width: 33.33333333%;
   }
 }
-.quarter {
-  width: 100%;
+@media (min-width: 767px) {
+  section.third {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  section.third {
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 520px) {
+  section.quarter {
+    width: 25%;
+  }
 }
 @media (min-width: 767px) {
-  .quarter {
+  section.quarter {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  section.quarter {
     width: 25%;
   }
 }

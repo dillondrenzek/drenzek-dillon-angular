@@ -84,8 +84,15 @@ table th {
 table td {
   border: 1px solid #555;
 }
-ul {
-  list-style-type: none;
+li {
+  list-style-type: circle;
+  list-style-position: inside;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #303030;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .left,
 .page-title,
@@ -213,49 +220,6 @@ section.page-title {
   width: 100%;
   height: 36px;
 }
-#social-media {
-  list-style-type: none;
-}
-#social-media li {
-  display: inline-block;
-  width: 25%;
-}
-#social-media li a {
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-#social-media li i {
-  font-size: 18px;
-}
-@media (max-width: 519px) {
-  #social-media li a {
-    padding-top: 5px;
-  }
-}
-@media (min-width: 520px) {
-  #social-media {
-    width: 160px;
-  }
-  #social-media li a {
-    padding-top: 15px;
-  }
-}
-nav {
-  width: 100%;
-}
-nav ul {
-  width: 100%;
-}
-nav li {
-  width: 100%;
-  display: block;
-}
-nav a {
-  display: block;
-  text-align: center;
-  width: 100%;
-}
 #page {
   width: 100%;
   margin-top: 65px;
@@ -275,11 +239,26 @@ nav a {
     padding-left: 160px;
   }
 }
+.page-title {
+  height: 138px;
+}
+.page-title header.page {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+.page-title li {
+  padding-right: 15px;
+}
 section {
   width: 100%;
   float: left;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 30px;
 }
 section:before,
 section:after {
@@ -288,6 +267,9 @@ section:after {
 }
 section:after {
   clear: both;
+}
+section.page-title {
+  margin-bottom: 0;
 }
 section.full {
   width: 100%;
@@ -372,8 +354,6 @@ section .body,
 section footer {
   display: block;
   width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 section header:before,
 section .body:before,
@@ -389,13 +369,88 @@ section .body:after,
 section footer:after {
   clear: both;
 }
+section header {
+  padding: 15px 0;
+}
+ul.line>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.line li>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.block li {
+  display: block;
+}
+ul.block li>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+ul.line.skills {
+  padding: 15px 0;
+}
+ul.line.skills li {
+  margin: 5px;
+}
+ul.line.skills li:first-child {
+  margin-left: 0;
+}
+ul.block.bullets li {
+  margin-bottom: 15px;
+}
+li.link {
+  margin-bottom: 15px;
+}
+li.link>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+li.link a>* {
+  display: inline-block;
+  vertical-align: middle;
+}
+li.link i {
+  padding-right: 15px;
+}
+.project {
+  margin-bottom: 30px;
+}
+.project header,
+.project .body,
+.project footer {
+  display: block;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.project header:before,
+.project .body:before,
+.project footer:before,
+.project header:after,
+.project .body:after,
+.project footer:after {
+  display: table;
+  content: "";
+}
+.project header:after,
+.project .body:after,
+.project footer:after {
+  clear: both;
+}
+.project ul.line li {
+  display: inline-block;
+}
+.project ul.block li {
+  diplay: block;
+}
 #site-border {
   background: #000;
 }
-.page-title {
+header.page {
   border-top: 0;
 }
-.page-title .primary {
+header.page .primary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 3rem;
   font-weight: 700;
@@ -404,7 +459,7 @@ section footer:after {
   text-align: left;
   line-height: 1em;
 }
-.page-title .secondary {
+header.page .secondary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -412,11 +467,12 @@ section footer:after {
   letter-spacing: 0.0714285em;
   text-align: left;
   text-transform: uppercase;
+  font-style: normal;
 }
 section {
   border-top: 1px solid #ddd;
 }
-.section-title .primary {
+header.section .primary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1.45rem;
   font-weight: 400;
@@ -426,13 +482,55 @@ section {
   line-height: 1em;
   text-transform: uppercase;
 }
-.section-title .secondary {
+header.section .secondary {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 200;
   color: #303030;
   letter-spacing: 0.140625em;
   text-align: left;
+}
+.skill {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 0px 5px;
+}
+.skill a,
+.skill p {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #555;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+}
+.project {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 3px solid #ddd;
+}
+.project .primary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #303030;
+  letter-spacing: -0.027916em;
+  text-align: left;
+  line-height: 1em;
+}
+.project a.primary:hover {
+  color: #b23b23;
+}
+.project header {
+  border-bottom: 1px solid #ddd;
 }
 #logo {
   background: #b23b23;
@@ -531,48 +629,4 @@ section {
   color: #303030;
   letter-spacing: -0.027916em;
   text-align: left;
-}
-.project {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-left: 3px solid #ddd;
-}
-.project:before,
-.project:after {
-  display: table;
-  content: "";
-}
-.project:after {
-  clear: both;
-}
-.project .project-title {
-  border-top: none !important;
-  border-bottom: 1px solid #ddd;
-  padding: 15px;
-}
-@media (min-width: 520px) {
-  .project .project-title {
-    width: 100%;
-  }
-}
-.project .project-title .primary {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #303030;
-  letter-spacing: -0.027916em;
-  text-align: left;
-  line-height: 1em;
-}
-.project .project-title a.primary:hover {
-  color: #b23b23;
-}
-.project .project-title .secondary {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #b23b23;
-  letter-spacing: 0.0714285em;
-  text-align: left;
-  text-transform: uppercase;
 }

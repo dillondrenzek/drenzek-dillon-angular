@@ -1,6 +1,44 @@
 //- Pure Angular App Template
 //- v4.0
 
+mixin Logo()
+	#logo
+		h1.primary Dillon Drenzek
+		p.secondary Web Developer & Designer
+
+mixin ProjectMedium()
+	li.project
+		header
+			.three-quarter
+				h4.primary Project Title
+				ul.line
+					li
+						p.type Project Type
+					li
+						p.date Project Date 2015
+			.quarter
+				ul.block
+					li.link
+						a(href="#")
+							i.fa.fa-github
+							p Github
+
+		.body
+			.half
+				ul.line.skills
+					li.skill Skill 1
+					li.skill Skill 2
+					li.skill Skill 3
+
+				ul.block.bullets
+					li.bullet Bullet 1
+					li.bullet Bullet 2
+					li.bullet Bullet 3
+			.half
+				figure
+					img(src="img/always-wondering.jpg")
+
+
 doctype
 html(lang="en" ng-app="DrenzekDillon")
 	head
@@ -47,29 +85,64 @@ html(lang="en" ng-app="DrenzekDillon")
 	.debug
 
 		#site-title
-			section
+			header.site
+				+Logo
+
+		#site-border
 
 		#page
-			section.full
+			section.page-title
 				header.page
-					h2.primary Page Title
+					.three-quarter
+						h2.primary Page Title
+						ul.line
+							li.type
+								p.secondary Project Type
+							li.date
+								p.secondary November 21st, 2015
+					.quarter
+						ul.block
+							li.link
+								i.fa.fa-github
+								p Github
+							li.link
+								i.fa.fa-github
+								p Github
 
-			section.two-third
+
+			section.half.left
+				.body
+					ul.line.skills
+						li.skill Skill 1
+						li.skill Skill 2
+						li.skill Skill 3
+					ul.block.bullets
+						li.bullet Bullet 1
+						li.bullet Bullet 2
+						li.bullet Bullet 3
+
+			section.half.right
+				figure.body
+					img(src="img/always-wondering.jpg")
+
+
+
+			section.three-quarter
 				header.section
-					h3.primary Section Title
-				.body Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				footer Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					h3.primary Section Title (Three-Quarter)
+				.body
+					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
 
-			section.third.right
+
+			//- Project List
+			section.three-quarter
 				header.section
-					h3.primary Section Title
-				.body Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-				//- footer
+					h3.primary Projects
+				.body
+					ul.block
+						+ProjectMedium
+						+ProjectMedium
+						+ProjectMedium
 
-			section.two-third
-				header.section
-					h3.primary Section Title
-				.body Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
-			
 

@@ -24,13 +24,14 @@
   position: relative;
 }
 html {
-  background: #fafafa;
   font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #303030;
-  letter-spacing: -1px;
+  letter-spacing: 0em;
   text-align: left;
+  line-height: 1em;
+  background: #fafafa;
 }
 .debug .page,
 .debug #site-title {
@@ -574,79 +575,4 @@ section {
   letter-spacing: 0.0714285em;
   text-align: left;
   text-transform: uppercase;
-}
-.project ul.descriptors li {
-  display: inline-block;
-  margin-right: 15px;
-}
-.project ul.descriptors .date .secondary {
-  color: #909090;
-}
-.project ul.links li.link a {
-  display: block;
-  width: 100%;
-}
-.project ul.links li.link a>* {
-  display: inline-block;
-  vertical-align: middle;
-}
-.project ul.links li.link i {
-  padding-right: 15px;
-}
-.project ul.links li.link p {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #b23b23;
-  letter-spacing: 0.0714285em;
-  text-align: left;
-  text-transform: uppercase;
-}
-.project ul.skills {
-  padding: 5px;
-  padding-left: 0;
-}
-.project ul.skills:before,
-.project ul.skills:after {
-  display: table;
-  content: "";
-}
-.project ul.skills:after {
-  clear: both;
-}
-.project ul.skills li.skill {
-  float: left;
-  margin: 5px;
-  padding: 0 5px;
-}
-.project ul.bullets {
-  padding: 5px;
-  padding-top: 0;
-}
-.project ul.bullets li.bullet {
-  font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #303030;
-  letter-spacing: -1px;
-  text-align: left;
-  font-style: italic;
-  margin-bottom: 15px;
-  list-style-type: circle;
-  list-style-position: inside;
-}
-@media (min-width: 767px) {
-  .project .quarter {
-    width: 25%;
-  }
-}
-@media (min-width: 767px) {
-  .project .half {
-    width: 50%;
-  }
-}
-@media (min-width: 767px) {
-  .project .three-quarter {
-    width: 75%;
-  }
 }

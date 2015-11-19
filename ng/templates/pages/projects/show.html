@@ -1,20 +1,17 @@
-<div class="project">
+
 	
 
 
 <!-- Page Title -->
 <section class="page-title">
-	<div class="inner">
-		
-		<div class="three-quarter left">
-			
-			<!-- Project Title -->
-			<h2 class="primary">
-				{{project.title}}
-			</h2>
+	<header class="page">
 
-			<!-- Project Type -->
-			<ul class="descriptors">
+		<!-- Three Quarter -->
+		<div class="three-quarter">
+
+			<h2 class="primary">{{project.title}}</h2>
+
+			<ul class="line">
 				<li class="type" ng-show="project.type">
 					<p class="secondary">{{project.type}}</p>
 				</li>
@@ -22,109 +19,100 @@
 					<p class="secondary">{{project.date}}</p>
 				</li>
 			</ul>
-
 		</div>
 
-		<div class="quarter right">
-			<ul class="links column"
-				ng-show="project.links">
-
-				<li class="link"
-					ng-repeat="l in project.links">
+		<!-- Quarter -->
+		<div class="quarter">
+			<ul class="block" ng-show="project.links">
+				<li class="link" ng-repeat="l in project.links">
 					<dd-link link="l"></dd-link>
 				</li>
-
 			</ul>
 		</div>
-
-	</div>
+		
+	</header>
 </section>
 
 <!-- Title Detail -->
 <section class="full">
 	
-	<div class="left half">
-		<!-- Project Skills -->
-		<ul class="skills"
-			ng-show="project.skills">
-			<skill-medium skill="skill"
-				ng-repeat="skill in project.skills"></skill-medium>
-		</ul>
+	<div class="body">
+		
+	
+		<div class="half">
+			<!-- Project Skills -->
+			<ul class="line skills" ng-show="project.skills">
+				<skill-medium skill="skill" ng-repeat="skill in project.skills"></skill-medium>
+			</ul>
 
-		<!-- Project Bullet Points -->
-		<ul class="bullets"
-			ng-show="project.bulletPoints">
-			<li class="bullet"
-				ng-repeat="bullet in project.bulletPoints">
-				{{bullet}}
-			</li>
-		</ul>
+			<!-- Project Bullet Points -->
+			<ul class="block bullets" ng-show="project.bulletPoints">
+				<li class="bullet" ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
+			</ul>
+		</div>
+
+		<div class="half">
+			<figure ng-show="project.imageUrls">
+				<img ng-repeat="url in project.imageUrls" ng-src="{{url}}">
+			</figure>
+		</div>
+		
 	</div>
-
-	<figure class="right half"
-		ng-show="project.imageUrls">
-		<img ng-repeat="url in project.imageUrls" 
-		ng-src="{{url}}">
-	</figure>
 
 </section>
 
 
 <!-- Body Sections -->
-<section class="left three-quarter"
-	ng-repeat="section in project.sections"
-	ng-class="section.type">
+<section class="full" ng-class="section.type" ng-repeat="section in project.sections">
 
 	<!-- Section Header -->
-	<header class="section-title"
-		ng-show="section.title || section.headerLinks">
+	<header class="section" ng-show="section.title || section.headerLinks">
 
-		<!-- Section title -->
-		<div class="title">
+		<div class="three-quarter">
 			<h3 class="primary">{{section.title}}</h3>
 		</div>
 
 		<!-- Header Links -->
-		<ul class="links" ng-show="section.headerLinks">
-
-			<li class="link" 
-				ng-repeat="link in section.headerLinks">
-				<a ng-href="{{link.href}}">
-					<i class="fa {{link.icon}}"
-						ng-show="link.icon"></i>
-					<p>{{link.label}}</p>
-				</a>
-			</li>
-		</ul>
+		<div class="quarter">
+			<ul class="links" ng-show="section.headerLinks">
+				<li class="link" 
+					ng-repeat="link in section.headerLinks">
+					<a ng-href="{{link.href}}">
+						<i class="fa {{link.icon}}"
+							ng-show="link.icon"></i>
+						<p>{{link.label}}</p>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</header>
 
 	<!-- Section columns -->
-	<div class=""
-		ng-repeat="column in section.columns">
+	<div class="body">
 		
-		<!-- Section Title (Optional) -->
-		<div class="column-title" ng-show="column.title">
-			<div class="title">
+		<div ng-class="{third: (section.columns.length%3 === 0), half: (section.columns.length%2 === 0)}" ng-repeat="column in section.columns">
+			
+			<header class="content">
 				<h4 class="primary">{{column.title.primary}}</h4>
 				<h5 class="secondary">{{column.title.secondary}}</h5>
-			</div>
+			</header>
+
+			<!-- Section Paragraph (Optional) -->
+			<p ng-show="column.p">{{column.p}}</p>
+
+			<!-- Section Figure (Optional) -->
+			<figure ng-show="column.figure">
+				<img src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}">
+				{{column.figure.html}}
+			</figure>
+
 		</div>
-
-		<!-- Section Paragraph (Optional) -->
-		<p ng-show="column.p">{{column.p}}</p>
-
-		<!-- Section Figure (Optional) -->
-		<figure ng-show="column.figure">
-			<img src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}">
-			{{column.figure.html}}
-			
-		</figure>
 
 	</div>
 	
 </section>
 
-</div>
+
 
 
 

@@ -1,35 +1,41 @@
+<!-- Index Page -->
+
 
 
 <!-- Title Section -->
-<section class="page-title full">
-	<div class="inner">
-		<h2 class="primary">, The Work Of</h2>
-	</div>
-</section>
-
-<!-- "Featured Projects" Medium Project List Section -->
-<section class="left two-third">
-	<header class="section-title">
+<section class="page-title">
+	<header class="page">
 		<div class="full">
-			<h3 class="primary">Featured Projects</h3>
+			<h2 class="primary">, The Work Of</h2>
 		</div>
 	</header>
+</section>
 
-	
-	<div>
-		<!-- Medium Project -->
+
+
+<!-- Featured Projects -->
+<section class="two-third">
+
+	<header class="section">
+		<h3 class="primary">Featured Projects</h3>
+	</header>
+
+	<div class="body">
 		<project-medium ng-repeat="project in projects" project="project"></project-medium>
 	</div>
 	
 </section>
 
-<!-- "Word From The Author" Paragraph Section -->
-<section class="right third">
-	<header class="section-title">
+
+
+<!-- A Word From The Author -->
+<section class="third">
+
+	<header class="section">
 		<h3 class="primary">A Word From The Author...</h3>
 	</header>
 
-	<div class="full">
+	<div class="body">
 		<p class="quote">Welcome to my little corner of the Internet!
 			<br>
 			I'm Dillon Drenzek and I'm an Up & Coming Web Developer. I love the structure of code, the creative freedom of design, and the endless possibilities of the Internet. What better way to combine these passions than as a web developer?
@@ -51,26 +57,91 @@
 
 
 
-<!-- "Top Skills" Medium Skill List Section -->
-<section class="right third">
+<!-- Top Skills -->
+<section class="third">
 
-	<header class="section-title">
+	<header class="section">
 		<h3 class="primary">Skills</h3>
 	</header>
 
+	<div class="body">
+
+		<!-- Top Skills -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">Best Overall</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.best" skill="skill"></skill-medium>
+		</ul>
+
+		<!-- Front End -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">Front-End</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.frontEnd" skill="skill"></skill-medium>
+		</ul>
+
+		<!-- UI & Front-End Design -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">UI & Graphic Design</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.uiDesign" skill="skill"></skill-medium>
+		</ul>
+
+		<!-- Back End -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">Back-End & Databases</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.backEnd" skill="skill"></skill-medium>
+		</ul>
+
+		<!-- Programming -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">Programming</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.programming" skill="skill"></skill-medium>
+		</ul>
+
+		<!-- Workflow -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">Workflow</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.workflow" skill="skill"></skill-medium>
+		</ul>
+
+		<!-- Concepts -->
+		<ul class="block skills">
+			<header class="content">
+				<h4 class="primary">Technical Concepts</h4>
+			</header>
+
+			<skill-medium ng-repeat="skill in skills.techConcepts" skill="skill"></skill-medium>
+		</ul>
+
+
+	</div>
+
 	<!-- Top Skills -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">Best Overall</h4>
 		</div>
-		<ul class="skills">
-			<skill-medium ng-repeat="skill in skills.best"
-				skill="skill"></skill-medium>
-		</ul>
-	</div>
+		
+	</div> -->
 
 	<!-- Front End -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">Front-End</h4>
 		</div>
@@ -78,10 +149,10 @@
 			<skill-medium ng-repeat="skill in skills.frontEnd"
 				skill="skill"></skill-medium>
 		</ul>
-	</div>
+	</div> -->
 
 	<!-- UI & Front-End Design -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">UI & Graphic Design</h4>
 		</div>
@@ -89,10 +160,10 @@
 			<skill-medium ng-repeat="skill in skills.uiDesign"
 				skill="skill"></skill-medium>
 		</ul>
-	</div>
+	</div> -->
 
 	<!-- Back End -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">Back-End & Databases</h4>
 		</div>
@@ -100,10 +171,10 @@
 			<skill-medium ng-repeat="skill in skills.backEnd"
 				skill="skill"></skill-medium>
 		</ul>
-	</div>
+	</div> -->
 
 	<!-- Programming -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">Programming</h4>
 		</div>
@@ -111,10 +182,10 @@
 			<skill-medium ng-repeat="skill in skills.programming"
 				skill="skill"></skill-medium>
 		</ul>
-	</div>
+	</div> -->
 
 	<!-- Workflow -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">Workflow</h4>
 		</div>
@@ -122,10 +193,10 @@
 			<skill-medium ng-repeat="skill in skills.workflow"
 				skill="skill"></skill-medium>
 		</ul>
-	</div>
+	</div> -->
 
 	<!-- Concepts -->
-	<div class="full">
+	<!-- <div class="full">
 		<div class="column-title">
 			<h4 class="primary">Technical Concepts</h4>
 		</div>
@@ -133,7 +204,7 @@
 			<skill-medium ng-repeat="skill in skills.techConcepts"
 				skill="skill"></skill-medium>
 		</ul>
-	</div>
+	</div> -->
 
 
 

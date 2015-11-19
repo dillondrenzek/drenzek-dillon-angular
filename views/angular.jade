@@ -1,10 +1,6 @@
 //- Pure Angular App Template
 //- v4.0
-
-mixin Logo()
-	#logo
-		h1.primary Dillon Drenzek
-		p.secondary Web Developer & Designer
+	
 
 
 doctype
@@ -57,22 +53,14 @@ html(lang="en" ng-app="DrenzekDillon")
 			ga('create', 'UA-67261358-1', 'auto');
 			ga('send', 'pageview');
 
-		//- Catch Mobile Browsers
-		//- script.
-		//- 	(function(){
-		//- 		if ((screen.width < 768) ||
-		//- 			(window.innerWidth && window.innerWidth < 768)) {
-		//- 			window.location.replace("http://localhost:8081/mobile");
-		//- 		}
-		//- 	})();
-
 
 
 	body
 		#site-title
-
-			//- header.site
-				//- +Logo
+			header.site
+				#logo
+					h1.primary Dillon Drenzek
+					p.secondary Web Developer & Designer
 			
 			//- ul(id="social-media")
 				li

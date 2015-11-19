@@ -199,34 +199,34 @@ section
 	&.page-title
 		margin-bottom 0
 	
-section
-	&.full
-		Width-XS(12)
-		
-	&.three-quarter
-		Width-SM(9)
-		Width-MD(12)
-		Width-LG(9)
+
+.full
+	Width-XS(12)
 	
-	&.two-third
-		Width-SM(8)
-		Width-MD(12)
-		Width-LG(8)
-	
-	&.half
-		Width-SM(6)
-		Width-MD(12)
-		Width-LG(6)
-	
-	&.third
-		Width-SM(4)
-		Width-MD(12)
-		Width-LG(4)
-	
-	&.quarter
-		Width-SM(3)
-		Width-MD(12)
-		Width-LG(3)
+.three-quarter
+	Width-SM(9)
+	Width-MD(12)
+	Width-LG(9)
+
+.two-third
+	Width-SM(8)
+	Width-MD(12)
+	Width-LG(8)
+
+.half
+	Width-SM(6)
+	Width-MD(12)
+	Width-LG(6)
+
+.third
+	Width-SM(4)
+	Width-MD(12)
+	Width-LG(4)
+
+.quarter
+	Width-SM(3)
+	Width-MD(12)
+	Width-LG(3)
 	
 
 // * * * Section Divisions (Header, .body, footer)
@@ -243,7 +243,10 @@ section
 		padding StandardPadding 0
 
 
-// * * * * Content		
+// * * * * Content
+header.content
+	padding ThinPadding 0
+	
 ul.line
 	InlineChildren(middle)
 	li
@@ -336,7 +339,6 @@ header.page
 	.secondary
 		FiraSans(1rem, 400, Red, 0.0714285em, left)
 		text-transform uppercase
-		font-style normal
 
 
 	
@@ -357,18 +359,11 @@ header.section
 		FiraSans(1rem, 200, Black, 0.140625em, left)
 
 
-
-// * * * Section Body
-
-
-
-
-
-
-
-
-
 // * * * * Content
+header.content
+	.primary
+		FiraSans(1rem, 400, Black, 0.0714285em, left)
+		text-transform uppercase
 
 
 

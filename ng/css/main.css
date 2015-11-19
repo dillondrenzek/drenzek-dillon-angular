@@ -107,82 +107,81 @@ li {
 .right {
   float: right;
 }
-section.full,
-section.page-title {
+.full {
   width: 100%;
 }
 @media (min-width: 520px) {
-  section.three-quarter {
+  .three-quarter {
     width: 75%;
   }
 }
 @media (min-width: 767px) {
-  section.three-quarter {
+  .three-quarter {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.three-quarter {
+  .three-quarter {
     width: 75%;
   }
 }
 @media (min-width: 520px) {
-  section.two-third {
+  .two-third {
     width: 66.66666667%;
   }
 }
 @media (min-width: 767px) {
-  section.two-third {
+  .two-third {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.two-third {
+  .two-third {
     width: 66.66666667%;
   }
 }
 @media (min-width: 520px) {
-  section.half {
+  .half {
     width: 50%;
   }
 }
 @media (min-width: 767px) {
-  section.half {
+  .half {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.half {
+  .half {
     width: 50%;
   }
 }
 @media (min-width: 520px) {
-  section.third {
+  .third {
     width: 33.33333333%;
   }
 }
 @media (min-width: 767px) {
-  section.third {
+  .third {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.third {
+  .third {
     width: 33.33333333%;
   }
 }
 @media (min-width: 520px) {
-  section.quarter {
+  .quarter {
     width: 25%;
   }
 }
 @media (min-width: 767px) {
-  section.quarter {
+  .quarter {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.quarter {
+  .quarter {
     width: 25%;
   }
 }
@@ -271,7 +270,8 @@ section:after {
 section.page-title {
   margin-bottom: 0;
 }
-section.full {
+section.full,
+section.page-title {
   width: 100%;
 }
 @media (min-width: 520px) {

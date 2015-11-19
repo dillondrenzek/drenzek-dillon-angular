@@ -252,81 +252,81 @@ section:after {
 section.page-title {
   margin-bottom: 0;
 }
-section.full {
+.full {
   width: 100%;
 }
 @media (min-width: 520px) {
-  section.three-quarter {
+  .three-quarter {
     width: 75%;
   }
 }
 @media (min-width: 767px) {
-  section.three-quarter {
+  .three-quarter {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.three-quarter {
+  .three-quarter {
     width: 75%;
   }
 }
 @media (min-width: 520px) {
-  section.two-third {
+  .two-third {
     width: 66.66666667%;
   }
 }
 @media (min-width: 767px) {
-  section.two-third {
+  .two-third {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.two-third {
+  .two-third {
     width: 66.66666667%;
   }
 }
 @media (min-width: 520px) {
-  section.half {
+  .half {
     width: 50%;
   }
 }
 @media (min-width: 767px) {
-  section.half {
+  .half {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.half {
+  .half {
     width: 50%;
   }
 }
 @media (min-width: 520px) {
-  section.third {
+  .third {
     width: 33.33333333%;
   }
 }
 @media (min-width: 767px) {
-  section.third {
+  .third {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.third {
+  .third {
     width: 33.33333333%;
   }
 }
 @media (min-width: 520px) {
-  section.quarter {
+  .quarter {
     width: 25%;
   }
 }
 @media (min-width: 767px) {
-  section.quarter {
+  .quarter {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  section.quarter {
+  .quarter {
     width: 25%;
   }
 }
@@ -352,6 +352,9 @@ section footer:after {
 }
 section header {
   padding: 15px 0;
+}
+header.content {
+  padding: 5px 0;
 }
 ul.line>* {
   display: inline-block;
@@ -454,7 +457,6 @@ header.page .secondary {
   letter-spacing: 0.0714285em;
   text-align: left;
   text-transform: uppercase;
-  font-style: normal;
 }
 section {
   border-top: 1px solid #ddd;
@@ -476,6 +478,15 @@ header.section .secondary {
   color: #303030;
   letter-spacing: 0.140625em;
   text-align: left;
+}
+header.content .primary {
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #303030;
+  letter-spacing: 0.0714285em;
+  text-align: left;
+  text-transform: uppercase;
 }
 .skill {
   background: #fff;

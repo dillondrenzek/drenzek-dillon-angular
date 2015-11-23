@@ -1,26 +1,26 @@
 <!-- Medium Project -->
 <div class="project medium">
 
-	<!-- Project Header -->
-	<header class="project-title">
+	<header>
 
-		<div class="three-quarter left">
+		<div class="three-quarter">
 		
 			<a class="primary" 
-					ng-href="#/projects/{{project.permalink}}"
-					ng-if="project.permalink">{{project.title}}</a>
+				ng-if="project.permalink"
+				ng-href="#/projects/{{project.permalink}}">{{project.title}}</a>
 
-			<h4 class="primary" ng-if="!project.permalink">
+			<h4 class="primary" 
+				ng-if="!project.permalink">
 				{{project.title}}
 			</h4>
 
 			<!-- Project Type -->
-			<ul class="descriptors">
-				<li class="type" ng-show="project.type">
-					<p class="secondary">{{project.type}}</p>
+			<ul class="line">
+				<li ng-show="project.type">
+					<p class="type">{{project.type}}</p>
 				</li>
-				<li class="date" ng-show="project.date">
-					<p class="secondary">{{project.date}}</p>
+				<li ng-show="project.date">
+					<p class="date">{{project.date}}</p>
 				</li>
 			</ul>
 
@@ -28,12 +28,10 @@
 
 		<div class="quarter right">
 			<!-- Project Action Links -->
-			<ul class="links"
-				ng-show="project.links">
+			<ul class="block links" ng-show="project.links">
 
 				<!-- View on Github -->
-				<li class="link"
-					ng-repeat="l in project.links">
+				<li class="link" ng-repeat="l in project.links">
 					<dd-link link="l"></dd-link>
 				</li>
 
@@ -53,9 +51,9 @@
 	<div class="body"
 		ng-show="project.bulletPoints || project.skills">
 
-		<div class="left half">
+		<div class="half">
 			<!-- Project Skills -->
-			<ul class="skills"
+			<ul class="line skills"
 				ng-show="project.skills">
 
 				<!-- Small Skill Directive -->
@@ -64,7 +62,7 @@
 			</ul>
 
 			<!-- Project Bullet Points -->
-			<ul class="bullets">
+			<ul class="block bullets">
 				<li class="bullet"
 					ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
 			</ul>
@@ -74,7 +72,7 @@
 		
 
 		<!-- Project Figure -->
-		<figure class="right half"
+		<figure class="half"
 			ng-show="project.imageUrls">
 			<img ng-repeat="url in project.imageUrls" 
 				ng-src="{{url}}">

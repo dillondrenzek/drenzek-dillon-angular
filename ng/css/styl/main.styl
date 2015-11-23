@@ -18,8 +18,20 @@ html
 	line-height 1em
 	background White
 
+// body > *
+// 	// border 2px solid red !important
 
+// body > * > *
+// 	border 1px solid green !important
 
+// body > * > * > *
+// 	border 1px solid blue !important
+// body > * > * > * > *
+// 	border 1px solid orange !important
+// body > * > * > * > * > *
+// 	border 1px solid purple !important
+
+	
 
 // DEBUG measures
 .debug
@@ -97,9 +109,9 @@ li
 .half,
 .third,
 .quarter
-	float left
+	display inline-block
 .right
-	float right
+	// float right
 	
 .full
 	Width-XS(12)
@@ -134,17 +146,29 @@ li
 
 LogoWidth = 130px
 LogoHeight = 174px
-SiteTitleWidth = LogoWidth + (StandardPadding*2)
+SMLogoWidth = 49px
+SMLogoHeight = 65px
+SiteTitleWidth = LogoWidth + (ThickPadding*2)
 SiteTitleHeight = 65px
 SiteBorderHeight = 36px
 SiteHeaderHeight = 170px
 
 // # Fixed
 #logo
-	font-size 32px
-	width LogoWidth
-	height LogoHeight
 	margin 0 auto
+	z-index 100
+	+XS()
+		font-size 11.94px
+		width SMLogoWidth
+		height SMLogoHeight
+	+SM()
+		font-size 11.94px
+		width SMLogoWidth
+		height SMLogoHeight
+	+MD()
+		font-size 32px
+		width LogoWidth
+		height LogoHeight
 
 #site-title
 	position fixed
@@ -153,6 +177,7 @@ SiteHeaderHeight = 170px
 	left 0
 	width 100%
 	height SiteTitleHeight
+	
 
 	+SM()
 		width 100%
@@ -161,21 +186,13 @@ SiteHeaderHeight = 170px
 	+MD()
 		width SiteTitleWidth
 		height auto
-	// header.site
-	// 	float left
-	// 	height SiteHeaderHeight
-	// 	width SiteTitleWidth
-	// #social-media
-	// 	float left
-	// 	width SiteTitleWidth
-	
-	// nav
-	// 	float left
-	// 	width SiteTitleWidth
+	header.site
+		padding-left 45px
+		padding-right 15px
 
 #site-border
 	position fixed
-	z-index 99
+	z-index 95
 	top 0
 	left 0
 	width 100%
@@ -219,39 +236,37 @@ SiteHeaderHeight = 170px
 // * Page
 #page
 	width 100%
-	margin-top SiteTitleHeight
-	padding-left 0
-	Clearfix()
+	display block
 	
+	+XS()
+		margin-top SiteTitleHeight
+		padding-left 0
+	+SM()
+		margin-top SiteTitleHeight
+		padding-left 0
 	+MD()
 		margin-top SiteBorderHeight
 		padding-left SiteTitleWidth
-		
-.page-title
-	height LogoHeight - SiteBorderHeight
-	header.page
-		position absolute
-		left 0
-		bottom 0
-		padding-left StandardPadding
-		padding-right StandardPadding
-		padding-bottom StandardPadding
-	li
-		padding-right StandardPadding
+
+	
+
 		
 		
 	
 // * * Sections	
 section
 	Width-XS(12)
+	display inline-block
+	vertical-align top
 	float left
-	padding-left StandardPadding
-	padding-right StandardPadding
+	// padding-left StandardPadding
+	// padding-right StandardPadding
 	margin-bottom ThickPadding
 	Clearfix()
 	&.page-title
 		margin-bottom 0
 
+// Responsive Widths
 section	
 	&.full,
 	&.page-title
@@ -281,6 +296,37 @@ section
 		Width-MD(12)
 		Width-LG(3)		
 
+header.page
+	display block
+	+XS()
+		height auto
+	+SM()
+		height auto
+	+MD()
+		height auto
+		min-height LogoHeight - SiteBorderHeight
+		
+header.page > *
+	+XS()
+		display block
+	+MD()
+		display inline-block
+		vertical-align bottom
+		
+section .body > *
+	+XS()
+		display block
+	+MD()
+		display inline-block
+		vertical-align middle
+
+
+	// li
+	// 	padding-right StandardPadding
+		
+	// +XS()
+	// 	li.link
+	// 		margin-bottom 0
 	
 
 // * * * Section Headers
@@ -301,10 +347,12 @@ section
 // * * * * Content		
 ul.line
 	InlineChildren(middle)
+	list-style-type none
 	li
 		InlineChildren(middle)
 	
 ul.block
+	list-style-type none
 	li
 		display block
 		InlineChildren(middle)
@@ -312,7 +360,7 @@ ul.block
 ul.line.skills
 	padding StandardPadding 0
 	li
-		margin ThinPadding
+		display inline-block
 		&:first-child
 			margin-left 0
 
@@ -335,24 +383,74 @@ li.link
 .project
 	margin-bottom ThickPadding
 
+	.three-quarter
+		Width-XS(12)
+		Width-MD(9)
+	.half
+		Width-XS(12)
+		Width-MD(6)
+		
+	.quarter
+		Width-XS(12)
+		Width-MD(3)
+
+
 	header,
 	.body,
 	footer
 		display block
 		width 100%
+		Clearfix()
+	
+	header
 		padding-left StandardPadding
 		padding-right StandardPadding
-		Clearfix()
+
+	ul.block
+		width 100%
 
 	ul.line
+		width 100%
+		li 
+			margin-right StandardPadding
+
+	ul.links
+		+XS()
+			padding-top 10px
+		+SM()
+			padding-top 10px
+		+MD()
+			padding-top 0
+		
 		li
-			display inline-block
-	ul.block
+			margin-bottom ThinPadding
+			
+	ul.skills
+		padding StandardPadding
+		
 		li
-			diplay block
-
-
-
+			margin-right ThinPadding
+			+XS()
+				margin-bottom 0
+			+SM()
+				margin-bottom 0
+			+MD()
+				margin-bottom ThinPadding
+			
+			
+	ul.bullets
+		
+		padding StandardPadding
+		+XS()
+			li
+				margin-bottom StandardPadding
+				&:last-child
+					margin-bottom 0
+		+SM()
+			li
+				margin-bottom StandardPadding
+				&:last-child
+					margin-bottom 0	
 
 
 
@@ -375,17 +473,18 @@ li.link
 
 // # Fixed
 #site-title
-	// background black
-	// color white
+	background none
 	
 #site-border
+	
 	background black
 	
 
 // * Page
 // Page Title
 header.page
-	border-top 0
+	border-left 5px solid Light
+	border-bottom 2px solid Light
 	.primary
 		FiraSans(3rem, 700, Black, -0.03125em, left)
 		line-height 1em
@@ -404,16 +503,16 @@ header.page
 
 	
 // * * Sections
-section
+section:not(.page-title)
 	border-top 1px solid Light
 	
 
 // * * * Section Headers
 header.section
 	.primary
-		FiraSans(1.45rem, 400, Dark, 0.125em, left)
+		FiraSans(2rem, 700, Black, -0.025em, left)
 		line-height 1em
-		text-transform uppercase
+		// text-transform uppercase
 	.secondary
 		FiraSans(1rem, 200, Black, 0.140625em, left)
 
@@ -438,13 +537,77 @@ header.section
 	border 1px solid Light
 	border-left 3px solid Light
 	.primary
-		Char-MediumItemPrimary()
+		FiraSans(1.5rem, 700, Black, -0.03em, left)
+		line-height 1em
 	a.primary:hover
+		color Light
+		text-decoration none
+	a.primary:active
 		color Red
+		
+	.type,
+	.date
+		FiraSans(0.875rem, 400, Red, 0.0715em, left)
+		text-transform uppercase
+		
+	.date
+		color Gray
+	.type
+		color Red
+
 	header
 		border-bottom 1px solid Light
+		
+	li.bullet
+		FiraSans(0.875rem, 400, Dark, 0.025em, left)
+		line-height 1em
+		
+	ul.skills
+		background White
+		border-bottom 1px solid Light
+	
+	// ul.bullets,
+	// ul.skills
+	
+
+	.half:first-child
+		+XS()
+			border-right 0
+		+SM()
+			border-right 0
+		+MD()
+			border-right 1px solid Light
+		
+	figure
+		background White
+		+XS()
+			border-top 1px solid Light
+		+SM()
+			border-top 1px solid Light
+		+MD()
+			border-top 0
+			
+	
+			
 
 
+
+// * * * * DD Link
+.dd-link
+	i
+		color Dark
+	p
+		FiraSans(0.75rem, 700, Black, 0.075em, left)
+		text-transform uppercase
+	&:hover i
+		color Light
+	&:hover p
+		color Gray
+	&:active i
+		color Red
+	&:active p
+		color Red
+	
 
 
 
@@ -557,7 +720,7 @@ header.section
 	// 	padding-left 0
 	// 	Clearfix()
 	// 	li.skill
-	// 		float left
+	// 		
 	// 		margin ThinPadding
 	// 		padding 0 ThinPadding
 			

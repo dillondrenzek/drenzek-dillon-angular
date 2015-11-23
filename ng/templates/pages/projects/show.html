@@ -1,5 +1,4 @@
 
-	
 
 
 <!-- Page Title -->
@@ -19,10 +18,7 @@
 					<p class="secondary">{{project.date}}</p>
 				</li>
 			</ul>
-		</div>
-
-		<!-- Quarter -->
-		<div class="quarter">
+		</div><div class="quarter">
 			<ul class="block" ng-show="project.links">
 				<li class="link" ng-repeat="l in project.links">
 					<dd-link link="l"></dd-link>
@@ -31,10 +27,10 @@
 		</div>
 		
 	</header>
-</section>
+
 
 <!-- Title Detail -->
-<section class="full">
+
 	
 	<div class="body">
 		
@@ -49,9 +45,7 @@
 			<ul class="block bullets" ng-show="project.bulletPoints">
 				<li class="bullet" ng-repeat="bullet in project.bulletPoints">{{bullet}}</li>
 			</ul>
-		</div>
-
-		<div class="half">
+		</div><div class="half">
 			<figure ng-show="project.imageUrls">
 				<img ng-repeat="url in project.imageUrls" ng-src="{{url}}">
 			</figure>
@@ -61,20 +55,27 @@
 
 </section>
 
-
-<!-- Body Sections -->
-<section class="full" ng-class="section.type" ng-repeat="section in project.sections">
-
-	<!-- Section Header -->
-	<header class="section" ng-show="section.title || section.headerLinks">
-
+<section class="full" ng-repeat="section in project.sections">
+	
+	<header class="section" ng-if="section.title || section.headerLinks">
 		<div class="three-quarter">
 			<h3 class="primary">{{section.title}}</h3>
 		</div>
+	</header>
+
+</section>
+
+<!-- Body Sections -->
+<!-- <section class="full" ng-class="section.type" ng-repeat="section in project.sections"> -->
+
+	<!-- Section Header -->
+	<!-- <header class="section" ng-show="section.title || section.headerLinks"> -->
+
+		
 
 		<!-- Header Links -->
-		<div class="quarter">
-			<ul class="links" ng-show="section.headerLinks">
+		<!-- <div class="quarter"> -->
+<!-- 			<ul class="links" ng-show="section.headerLinks">
 				<li class="link" 
 					ng-repeat="link in section.headerLinks">
 					<a ng-href="{{link.href}}">
@@ -85,10 +86,10 @@
 				</li>
 			</ul>
 		</div>
-	</header>
+	</header> -->
 
 	<!-- Section columns -->
-	<div class="body">
+<!-- 	<div class="body">
 		
 		<div ng-class="{third: (section.columns.length%3 === 0), half: (section.columns.length%2 === 0)}" ng-repeat="column in section.columns">
 			
@@ -98,10 +99,10 @@
 			</header>
 
 			<!-- Section Paragraph (Optional) -->
-			<p ng-show="column.p">{{column.p}}</p>
+<!-- <!-- 			<p ng-show="column.p">{{column.p}}</p>
 
 			<!-- Section Figure (Optional) -->
-			<figure ng-show="column.figure">
+	<!-- 		<figure ng-show="column.figure">
 				<img src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}">
 				{{column.figure.html}}
 			</figure>
@@ -110,8 +111,7 @@
 
 	</div>
 	
-</section>
-
+</section> -->
 
 
 

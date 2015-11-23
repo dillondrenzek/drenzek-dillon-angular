@@ -434,6 +434,10 @@ li.link i {
   font-size: 32px;
   left: 15px;
 }
+.dd-link>* {
+  display: inline-block;
+  vertical-align: middle;
+}
 #site-border {
   background: #000;
 }

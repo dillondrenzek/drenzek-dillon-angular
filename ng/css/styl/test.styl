@@ -1,3 +1,6 @@
+// Main Stylus Sheet
+// v4.0
+
 @import 'app'
 
 *,
@@ -9,86 +12,91 @@
 	margin 0
 	padding 0
 	position relative
-
+	
 html
 	FiraSans(1rem, 400, Black, 0em, left)
 	line-height 1em
+	background White
 
+// body > *
+// 	// border 2px solid red !important
 
-Opacity = 0.8
+// body > * > *
+// 	border 1px solid green !important
+
+// body > * > * > *
+// 	border 1px solid blue !important
+// body > * > * > * > *
+// 	border 1px solid orange !important
+// body > * > * > * > * > *
+// 	border 1px solid purple !important
+
+	
 
 // DEBUG measures
 .debug
-	*
-		border 1px solid orange
-
-	.page-title
-		background none
-		*
-			background none
-			border none
-
-	#site-title
-		// background black
-		// opacity 1
-		// height 65px
-		
-	#page
-		background black
-		opacity Opacity
+	.page, #site-title
+		border 1px solid black
 		// min-height 500px
 		
-	section
-		background Light
-		// min-height 134px
-		opacity Opacity
+	.page-column
+		border 1px solid blue
 		
-		header
-			background red
-			opacity Opacity
-			// min-height 65px
-			
-		.body
-			background yellow
-			opacity Opacity
-			// min-height 155px
-			
-		footer
-			background green
-			opacity Opacity
-			// min-height 35px
-	
-// *
-// 	border 0 !important
+	section
+		border 1px solid green
+		min-height 134px
+		
+	header
+		border 1px solid red
+		
+	.body
+		border 1px solid yellow
 
 
 
 
 
 // Default
-li
-	list-style-type circle
-	list-style-position inside
-	FiraSans(1rem, 400, Black, 0em, left)
-	// font-style italic
+a
+	text-decoration none
+	color Red
+	font-weight 400
+	&:hover
+		text-decoration underline
 
 figure
 	img
 		display block
 		width 100%
 		height auto
-	img.portrait
-		width auto
-		height 100%
+		
+img.landscape
+	width 100%
+	height auto
+	
+img.portrait
+	width auto
+	height 100%
+	
+table
+	border 1px solid Light
+	font-size 12px
+	
+	tbody
+		display block
+	th
+		border-bottom 3px solid Dark
+	td
+		border 1px solid Dark
+		
+li
+	list-style-type circle
+	list-style-position inside
+	FiraSans(1rem, 400, Black, 0em, left)
 
 
 
-LogoWidth = 130px
-LogoHeight = 174px
-SiteTitleWidth = LogoWidth + (StandardPadding*2)
-SiteTitleHeight = 65px
-SiteBorderHeight = 36px
-SiteHeaderHeight = 170px
+
 
 
 //--- Positioning
@@ -101,105 +109,10 @@ SiteHeaderHeight = 170px
 .half,
 .third,
 .quarter
-	float left
+	display inline-block
 .right
-	float right
+	// float right
 	
-section	
-	&.full,
-	&.page-title
-		Width-XS(12)
-	&.three-quarter
-		Width-SM(9)
-		Width-MD(12)
-		Width-LG(9)
-		
-	&.two-third
-		Width-SM(8)
-		Width-MD(12)
-		Width-LG(8)
-		
-	&.half
-		Width-SM(6)
-		Width-MD(12)
-		Width-LG(6)
-		
-	&.third
-		Width-SM(4)
-		Width-MD(12)
-		Width-LG(4)
-		
-	&.quarter
-		Width-SM(3)
-		Width-MD(12)
-		Width-LG(3)
-
-// # Fixed
-#site-title
-	position fixed
-	z-index 100
-	top 0
-	left 0
-	width 100%
-	height SiteTitleHeight
-
-	+SM()
-		width 100%
-		height SiteTitleHeight
-
-	+MD()
-		width SiteTitleWidth
-		height auto
-
-#site-border
-	position fixed
-	z-index 99
-	top 0
-	left 0
-	width 100%
-	height SiteBorderHeight
-
-
-
-
-
-// * Page
-#page
-	width 100%
-	margin-top SiteTitleHeight
-	padding-left 0
-	Clearfix()
-	
-	+MD()
-		margin-top SiteBorderHeight
-		padding-left SiteTitleWidth
-		
-.page-title
-	height LogoHeight - SiteBorderHeight
-	header.page
-		position absolute
-		left 0
-		bottom 0
-		padding-left StandardPadding
-		padding-right StandardPadding
-		padding-bottom StandardPadding
-	li
-		padding-right StandardPadding
-
-		
-	
-// * * Sections	
-section
-	Width-XS(12)
-	float left
-	padding-left StandardPadding
-	padding-right StandardPadding
-	margin-bottom ThickPadding
-	Clearfix()
-	&.page-title
-		margin-bottom 0
-	
-
 .full
 	Width-XS(12)
 	
@@ -229,7 +142,194 @@ section
 	Width-LG(3)
 	
 
-// * * * Section Divisions (Header, .body, footer)
+	
+
+LogoWidth = 130px
+LogoHeight = 174px
+SMLogoWidth = 49px
+SMLogoHeight = 65px
+SiteTitleWidth = LogoWidth + (ThickPadding*2)
+SiteTitleHeight = 65px
+SiteBorderHeight = 36px
+SiteHeaderHeight = 170px
+
+// # Fixed
+#logo
+	margin 0 auto
+	z-index 100
+	+XS()
+		font-size 11.94px
+		width SMLogoWidth
+		height SMLogoHeight
+	+SM()
+		font-size 11.94px
+		width SMLogoWidth
+		height SMLogoHeight
+	+MD()
+		font-size 32px
+		width LogoWidth
+		height LogoHeight
+
+#site-title
+	position fixed
+	z-index 100
+	top 0
+	left 0
+	width 100%
+	height SiteTitleHeight
+	
+
+	+SM()
+		width 100%
+		height SiteTitleHeight
+
+	+MD()
+		width SiteTitleWidth
+		height auto
+	header.site
+		padding-left 45px
+		padding-right 15px
+
+#site-border
+	position fixed
+	z-index 95
+	top 0
+	left 0
+	width 100%
+	height SiteBorderHeight
+
+// #social-media
+// 	list-style-type none
+// 	li
+// 		display inline-block
+// 		width 25%
+// 		a
+// 			width 100%
+// 			display block
+// 			text-align center
+// 		i
+// 			font-size 18px
+// 	+XS()
+// 		li
+// 			a
+// 				padding-top ThinPadding
+
+// 	+SM()
+// 		width SiteTitleWidth
+// 		li
+// 			a
+// 				padding-top StandardPadding
+
+// nav
+// 	width 100%
+// 	ul
+// 		width 100%
+// 	li
+// 		width 100%
+// 		display block
+// 	a
+// 		display block
+// 		text-align center
+// 		width 100%
+
+
+// * Page
+#page
+	width 100%
+	display block
+	
+	+XS()
+		margin-top SiteTitleHeight
+		padding-left 0
+	+SM()
+		margin-top SiteTitleHeight
+		padding-left 0
+	+MD()
+		margin-top SiteBorderHeight
+		padding-left SiteTitleWidth
+
+	
+
+		
+		
+	
+// * * Sections	
+section
+	Width-XS(12)
+	display inline-block
+	vertical-align top
+	float left
+	// padding-left StandardPadding
+	// padding-right StandardPadding
+	margin-bottom ThickPadding
+	Clearfix()
+	&.page-title
+		margin-bottom 0
+
+// Responsive Widths
+section	
+	&.full,
+	&.page-title
+		Width-XS(12)
+	&.three-quarter
+		Width-SM(9)
+		Width-MD(12)
+		Width-LG(9)
+		
+	&.two-third
+		Width-SM(8)
+		Width-MD(12)
+		Width-LG(8)
+		
+	&.half
+		Width-SM(6)
+		Width-MD(12)
+		Width-LG(6)
+		
+	&.third
+		Width-SM(4)
+		Width-MD(12)
+		Width-LG(4)
+		
+	&.quarter
+		Width-SM(3)
+		Width-MD(12)
+		Width-LG(3)		
+
+header.page
+	display block
+	+XS()
+		height auto
+	+SM()
+		height auto
+	+MD()
+		height auto
+		min-height LogoHeight - SiteBorderHeight
+		
+header.page > *
+	+XS()
+		display block
+	+MD()
+		display inline-block
+		vertical-align bottom
+		
+section .body > *
+	+XS()
+		display block
+	+MD()
+		display inline-block
+		vertical-align middle
+
+
+	// li
+	// 	padding-right StandardPadding
+		
+	// +XS()
+	// 	li.link
+	// 		margin-bottom 0
+	
+
+// * * * Section Headers
 section
 	header,
 	.body,
@@ -241,18 +341,18 @@ section
 section
 	header
 		padding StandardPadding 0
+			
 
 
-// * * * * Content
-header.content
-	padding ThinPadding 0
-	
+// * * * * Content		
 ul.line
 	InlineChildren(middle)
+	list-style-type none
 	li
 		InlineChildren(middle)
 	
 ul.block
+	list-style-type none
 	li
 		display block
 		InlineChildren(middle)
@@ -260,7 +360,7 @@ ul.block
 ul.line.skills
 	padding StandardPadding 0
 	li
-		margin ThinPadding
+		display inline-block
 		&:first-child
 			margin-left 0
 
@@ -276,38 +376,88 @@ li.link
 		InlineChildren(middle)
 	i
 		padding-right StandardPadding
-		
 
-		
 
 
 // * * * * Project
 .project
 	margin-bottom ThickPadding
 
+	.three-quarter
+		Width-XS(12)
+		Width-MD(9)
+	.half
+		Width-XS(12)
+		Width-MD(6)
+		
+	.quarter
+		Width-XS(12)
+		Width-MD(3)
+
+
 	header,
 	.body,
 	footer
 		display block
 		width 100%
+		Clearfix()
+	
+	header
 		padding-left StandardPadding
 		padding-right StandardPadding
-		Clearfix()
+
+	ul.block
+		width 100%
 
 	ul.line
-		li
-			display inline-block
-	ul.block
-		li
-			diplay block
+		width 100%
+		li 
+			margin-right StandardPadding
 
-// * * * * Logo
-#logo
-	height LogoHeight
-	width LogoWidth
-	font-size 32px
-	left StandardPadding
-	
+	ul.links
+		+XS()
+			padding-top 10px
+		+SM()
+			padding-top 10px
+		+MD()
+			padding-top 0
+		
+		li
+			margin-bottom ThinPadding
+			
+	ul.skills
+		padding StandardPadding
+		
+		li
+			margin-right ThinPadding
+			+XS()
+				margin-bottom 0
+			+SM()
+				margin-bottom 0
+			+MD()
+				margin-bottom ThinPadding
+			
+			
+	ul.bullets
+		
+		padding StandardPadding
+		+XS()
+			li
+				margin-bottom StandardPadding
+				&:last-child
+					margin-bottom 0
+		+SM()
+			li
+				margin-bottom StandardPadding
+				&:last-child
+					margin-bottom 0	
+
+
+
+
+
+
+
 
 
 
@@ -323,49 +473,52 @@ li.link
 
 // # Fixed
 #site-title
-	// background black
-	// color white
+	background none
 	
 #site-border
+	
 	background black
 	
 
 // * Page
+// Page Title
 header.page
-	border-top 0
+	border-left 5px solid Light
+	border-bottom 2px solid Light
 	.primary
 		FiraSans(3rem, 700, Black, -0.03125em, left)
 		line-height 1em
 	.secondary
 		FiraSans(1rem, 400, Red, 0.0714285em, left)
 		text-transform uppercase
-
+		font-style normal
+// .page-title
+// 	border-top 0
+// 	.primary
+// 		FiraSans(3rem, 700, Black, -0.03125em, left)
+// 		line-height 1em
+// 	.secondary
+// 		FiraSans(1rem, 400, Red, 0.0714285em, left)
+// 		text-transform uppercase
 
 	
 // * * Sections
-section
+section:not(.page-title)
 	border-top 1px solid Light
-
-
-
+	
 
 // * * * Section Headers
 header.section
 	.primary
-		FiraSans(1.45rem, 400, Dark, 0.125em, left)
+		FiraSans(2rem, 700, Black, -0.025em, left)
 		line-height 1em
-		text-transform uppercase
+		// text-transform uppercase
 	.secondary
 		FiraSans(1rem, 200, Black, 0.140625em, left)
 
 
-// * * * * Content
-header.content
-	.primary
-		FiraSans(1rem, 400, Black, 0.0714285em, left)
-		text-transform uppercase
 
-
+// * * * Section Body
 
 // * * * * Skill
 .skill
@@ -384,13 +537,85 @@ header.content
 	border 1px solid Light
 	border-left 3px solid Light
 	.primary
-		Char-MediumItemPrimary()
+		FiraSans(1.5rem, 700, Black, -0.03em, left)
+		line-height 1em
 	a.primary:hover
+		color Light
+		text-decoration none
+	a.primary:active
 		color Red
+		
+	.type,
+	.date
+		FiraSans(0.875rem, 400, Red, 0.0715em, left)
+		text-transform uppercase
+		
+	.date
+		color Gray
+	.type
+		color Red
+
 	header
 		border-bottom 1px solid Light
+		
+	li.bullet
+		FiraSans(0.875rem, 400, Dark, 0.025em, left)
+		line-height 1em
+		
+	ul.skills
+		background White
+		border-bottom 1px solid Light
+	
+	// ul.bullets,
+	// ul.skills
+	
 
-// * * * * Logo
+	.half:first-child
+		+XS()
+			border-right 0
+		+SM()
+			border-right 0
+		+MD()
+			border-right 1px solid Light
+		
+	figure
+		background White
+		+XS()
+			border-top 1px solid Light
+		+SM()
+			border-top 1px solid Light
+		+MD()
+			border-top 0
+			
+	
+			
+
+
+
+// * * * * DD Link
+.dd-link
+	i
+		color Dark
+	p
+		FiraSans(0.75rem, 700, Black, 0.075em, left)
+		text-transform uppercase
+	&:hover i
+		color Light
+	&:hover p
+		color Gray
+	&:active i
+		color Red
+	&:active p
+		color Red
+	
+
+
+
+
+
+
+
+// --- Logo
 #logo
 	background Red
 	.primary
@@ -417,5 +642,105 @@ header.content
 		cursor pointer
 		&:hover
 			color LtRed
+
+
+// --- Model Representations
+.skill.small
+	background white
+	// border-radius 3px
+	border 1px solid Light
+	border-left 3px solid Light
+	a, p
+		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
+	
+.skill.medium
+	background white
+	border 1px solid Light
+	border-left 3px solid Light
+	
+	a, p
+		FiraSans(0.875rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
+		
+.skill.large
+	background white
+	border none
+	width 100%
+	a, p
+		FiraSans(1rem, 700, Black, -0.027916em, left)
+
+
+// .project
+// 	background white
+// 	border 1px solid Light
+// 	border-left 3px solid Light
+// 	Clearfix()
+
+
+
+	
+// 	.project-title
+// 		Width-SM(12)
+// 		border-top none !important
+// 		border-bottom 1px solid Light
+// 		padding StandardPadding
+		
+// 		.primary
+// 			Char-MediumItemPrimary()
+// 		a.primary:hover
+// 			color Red
+		
+// 		.secondary
+// 			FiraSans(0.875rem, 400, Red, 0.0714285em, left)
+// 			text-transform uppercase
+			
+	// ul.descriptors
+	// 	li
+	// 		display inline-block
+	// 		margin-right StandardPadding		
+	// 	.date
+	// 		.secondary
+	// 			color Gray
+
+	// ul.links
+	// 	li.link
+	// 		a
+	// 			display block
+	// 			width 100%
+	// 			InlineChildren(middle)
+	// 		i
+	// 			padding-right StandardPadding
+	// 		p
+	// 			FiraSans(0.75rem, 700, Red, 0.0714285em, left)
+	// 			text-transform uppercase
+				
+	// ul.skills
+	// 	padding ThinPadding
+	// 	padding-left 0
+	// 	Clearfix()
+	// 	li.skill
+	// 		
+	// 		margin ThinPadding
+	// 		padding 0 ThinPadding
+			
+	// ul.bullets
+	// 	padding ThinPadding
+	// 	padding-top 0
+	// 	li.bullet
+	// 		Char-Default()
+	// 		font-style italic
+	// 		// color Gray
+	// 		margin-bottom StandardPadding
+	// 		list-style-type circle
+	// 		list-style-position inside
+		
+	// .quarter
+	// 	Width-MD(3)	
+	// .half
+	// 	Width-MD(6)
+	// .three-quarter
+	// 	Width-MD(9)
+
 
 

@@ -1,0 +1,109 @@
+//- !-- Index Page 
+//- !-- Title Section 
+section(class="page-title")
+	header(class="page")
+		div(class="full")
+			h2(class="primary") , The Work Of
+
+
+
+//- !-- Featured Projects 
+section(class="two-third")
+
+	header(class="section")
+		h3(class="primary") Featured Projects
+
+	div(class="body")
+		project-medium(ng-repeat="project in projects" project="project")
+
+
+
+//- !-- A Word From The Author 
+section(class="third")
+
+	header(class="section")
+		h3(class="primary") A Word From The Author...
+
+	div(class="body")
+		p(class="quote") Welcome to my little corner of the Internet!
+			br
+			| I'm Dillon Drenzek and I'm an Up & Coming Web Developer. I love the structure of code, the creative freedom of design, and the endless possibilities of the Internet. What better way to combine these passions than as a web developer?
+			br
+			br
+			| I graduated with a degree in Computer Science in May of 2015 and after spending the summer studying Graphic Design in Denmark, I've moved to Seattle to start my career at a company that is as passionate about what they do as I am! I've put this website together to demonstrate what I'm capable of. So, play around, see what you can find, and then feel free to drop me a note at dillon@drenzek.com!
+			br
+			br
+			| Cheers!
+			br
+			| Dillon
+
+
+
+//- !-- Top Skills 
+section(class="third")
+
+	header(class="section")
+		h3(class="primary") Skills
+
+	div(class="body")
+
+		//- !-- Top Skills 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") Best Overall
+
+			skill-medium( ng-repeat="skill in skills.best" skill="skill" )
+
+		//- !-- Front End 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") Front-End
+
+			skill-medium(ng-repeat="skill in skills.frontEnd" skill="skill")
+		
+
+		//- !-- UI & Front-End Design 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") UI & Graphic Design
+			
+
+			skill-medium(ng-repeat="skill in skills.uiDesign" skill="skill")
+		
+
+		//- !-- Back End 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") Back-End & Databases
+			
+
+			skill-medium(ng-repeat="skill in skills.backEnd" skill="skill")
+		
+
+		//- !-- Programming 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") Programming
+			
+
+			skill-medium(ng-repeat="skill in skills.programming" skill="skill")
+		
+
+		//- !-- Workflow 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") Workflow
+			
+
+			skill-medium(ng-repeat="skill in skills.workflow" skill="skill")
+		
+
+		//- !-- Concepts 
+		ul(class="block skills")
+			header(class="content")
+				h4(class="primary") Technical Concepts
+			skill-medium(ng-repeat="skill in skills.techConcepts" skill="skill")
+		
+
+
+	

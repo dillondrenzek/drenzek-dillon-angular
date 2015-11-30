@@ -1,0 +1,617 @@
+@import 'app'
+
+*,
+*:before,
+*:after
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+	margin 0
+	padding 0
+	position relative
+	
+html
+	FiraSans(16px, 400, Black, 0em, left)
+	line-height 1em
+	background White
+	
+a
+	text-decoration none
+	color Red
+	font-weight 400
+	&:hover
+		text-decoration underline
+
+figure
+	img
+		display block
+		width 100%
+		height auto
+		
+img.landscape
+	width 100%
+	height auto
+	
+img.portrait
+	width auto
+	height 100%
+	
+table
+	border 1px solid Light
+	font-size 12px
+	
+	tbody
+		display block
+	th
+		border-bottom 3px solid Dark
+	td
+		border 1px solid Dark
+		
+li
+	list-style-type circle
+	list-style-position inside
+	FiraSans(1rem, 400, Black, 0em, left)	
+
+// #page, #site-title
+// 	border 3px solid black
+	
+	
+// section
+// 	border 3px solid purple
+// 	min-height 134px
+	
+// header.section,
+// .body.section,
+// footer.section
+// 	border 3px solid blue
+	
+// .three-quarter,
+// .half,
+// .quarter
+// 	border 3px solid green
+// 	min-height 55px
+// 	&>*
+// 		border 3px solid orange
+// 	&>*>*
+// 		border 3px solid red
+	
+	
+
+
+
+
+LogoWidth = 130px
+LogoHeight = 174px
+SMLogoWidth = 49px
+SMLogoHeight = 65px
+SiteTitleWidth = LogoWidth + (ThickPadding*2)
+SiteTitleHeight = 65px
+SiteBorderHeight = 36px
+SiteHeaderHeight = 170px
+
+
+
+	
+// * Page Sections
+section.page-title,
+section
+	
+
+// Page Title
+header.page-title,
+.body.page-title
+	+XS()
+		display block
+		width 100%		
+
+
+	
+// * * Section Divisions
+
+
+// Header, Body, Footer
+section > header,
+section > .body,
+section > footer 
+	+XS()
+		display block
+		width 100%
+		
+		
+// * * * Content Containers
+
+.three-quarter,	
+.half,
+.quarter
+	display inline-block
+	Width-XS(12)
+	
+	&>*
+		display block
+		margin-bottom StandardPadding
+	
+	.primary
+		margin-bottom 0
+
+
+
+// * * * * Content
+// ul.line
+// 	InlineChildren(middle)
+// 	list-style-type none
+// 	li
+// 		InlineChildren(middle)
+	
+// ul.block
+// 	list-style-type circle
+// 	list-style-position inside
+// 	li
+// 		display block
+// 		margin-bottom StandardPadding
+		
+// 		InlineChildren(middle)
+		
+li.link
+	InlineChildren(middle)
+	
+	padding-left StandardPadding
+	&:first-child
+		padding-left 0
+	i
+		margin-right StandardPadding
+	p
+		margin-right StandardPadding
+		
+ul.skills
+	li
+		margin-right ThinPadding
+		margin-bottom ThinPadding
+	
+
+// # # # # 
+
+ul.links
+	li.link
+		+XS()
+			display inline-block
+	
+// Styling
+
+
+// # Page
+	
+// * Page Sections
+	
+	
+// * * Section Divisions
+		
+		
+// * * * Content Containers
+	
+// * * * * Content
+
+// .page-title 	
+// 	.primary
+// 		FiraSans(1.75rem, 700, Black, -0.05em, left)
+// 		line-height 1em
+// 	.secondary
+// 		FiraSans(0.75rem, 400, Red, 0.05em, left)
+// 		line-height 1em
+// 		text-transform uppercase
+// 	.tertiary
+// 		FiraSans(0.5rem, 700, Gray, 0.05em, left)
+// 		text-transform uppercase
+		
+// header.section
+// 	.primary
+// 		FiraSans(1.25rem, 700, Black, -0.05em, left)
+// 		line-height 1em
+// 	.secondary
+// 		FiraSans(0.75rem, 400, Red, 0.05em, left)
+// 		line-height 1em
+// 		text-transform uppercase
+		
+// header.content
+// 	.primary
+// 		FiraSans(1rem, 400, Red, 0.05em, left)
+// 		line-height 1em
+// 		text-transform uppercase
+// 	.secondary
+// 		FiraSans(0.75rem, 700, Black, 0.075em, left)
+// 		text-transform uppercase
+		
+// p.content
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+
+
+
+
+
+
+// li.skill
+// 	background white
+// 	border 1px solid Light
+// 	border-left 3px solid Light
+// 	padding 0px 5px
+// 	a, p
+// 		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
+// 		text-transform uppercase
+
+figcaption
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Positioning
+
+// # Fixed
+// Site Border
+#site-border
+	position fixed
+	z-index 100
+	left 0
+	top 0
+	height SiteBorderHeight
+	width 100%
+	
+	
+// Site Title
+#site-title
+	+XS()
+		position fixed
+		z-index 105
+		left 0
+		top 0
+		height SMLogoHeight
+		width 100%
+
+// # Page
+// #page
+#page
+	+XS()
+		position relative
+		width 100%
+		padding-top SMLogoHeight
+
+// # # Sections
+// section
+section
+	+XS()
+		display block
+		padding StandardPadding
+		padding-bottom 0
+
+// # # # Section Divisions
+// header
+section > header,
+header.section
+// .body
+section > .body,
+.body.section
+// footer
+section > footer,
+footer.section
+
+
+
+// # # # # Content Containers
+// .full
+.full
+// .three-quarter
+.three-quarter
+// .half
+.half
+// .quarter
+.quarter
+
+
+
+
+
+
+// # # # # # Content
+
+// h2
+// Page Level
+
+// h2,
+// h2.primary,
+// .page-title > .primary
+// 	FiraSans(1.75rem, 700, Black, -0.05em, left)
+// 	line-height 1em
+
+// h2.secondary,
+// .page-title > .secondary
+// 	FiraSans(0.75rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+	
+// h2.tertiary,
+// .page-title > .tertiary
+// 	FiraSans(0.5rem, 700, Gray, 0.05em, left)
+// 	text-transform uppercase
+
+
+
+// h3
+// Section Level
+
+// h3,
+// h3.primary
+// .section > .primary
+// 	FiraSans(1.25rem, 700, Black, -0.05em, left)
+// 	line-height 1em
+
+// h3.secondary,
+// .section > .secondary
+// 	FiraSans(1rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+	
+// h3.tertiary,
+// .section > .tertiary
+// 	FiraSans(0.75rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+
+
+
+// h4
+// Content Level
+
+// h4,
+// h4.primary,
+// .content > .primary
+// 	FiraSans(1rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+
+// h4.secondary,
+// .content > .secondary
+// 	FiraSans(0.75rem, 700, Black, 0.075em, left)
+// 	text-transform uppercase
+
+// h4.tertiary,
+// .content > .tertiary
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+	
+// p,
+// p.primary,
+// p.content
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+
+// p.secondary
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+// 	font-style italic
+	
+// ul.block
+ul.block
+	li
+		display block
+		InlineChildren(middle)
+		
+// ul.line
+ul.line
+	li
+		display inline-block
+		vertical-align middle
+		InlineChildren(middle)
+
+// li.bullet
+// li.link
+// li.skill
+
+// figure
+figure
+
+// img
+img,
+figure > img
+
+// figcaption
+figcaption,
+figure > figcaption
+	FiraSans(0.75rem, 200, Black, -0.05em, center)
+	font-style italic
+
+// # # # # # Drop-Ins
+// .project.medium
+// .skill.small
+
+
+
+
+
+
+
+
+
+// Styling
+
+// # Fixed
+// Site Border
+#site-border
+	background black
+// Site Title
+#site-title
+
+// # Page
+// #page
+#page
+
+// # # Sections
+// section
+section
+
+// # # # Section Divisions
+// header
+section > header,
+header.section
+// .body
+section > .body,
+.body.section
+// footer
+section > footer,
+footer.section
+
+// # # # # Content Containers
+// .full
+.full
+// .three-quarter
+.three-quarter
+// .half
+.half
+// .quarter
+.quarter
+
+// # # # # # Content
+
+// h2
+// Page Level
+h2,
+h2.primary,
+.page-title > .primary
+	FiraSans(1.75rem, 700, Black, -0.05em, left)
+	line-height 1em
+
+h2.secondary,
+.page-title > .secondary
+	FiraSans(0.75rem, 400, Red, 0.05em, left)
+	line-height 1em
+	text-transform uppercase
+	
+h2.tertiary,
+.page-title > .tertiary
+	FiraSans(0.5rem, 700, Gray, 0.05em, left)
+	text-transform uppercase
+
+
+
+// h3
+// Section Level
+h3,
+h3.primary
+.section .primary
+	FiraSans(1.25rem, 700, Black, -0.05em, left)
+	line-height 1em
+
+h3.secondary,
+.section .secondary
+	FiraSans(1rem, 400, Red, 0.05em, left)
+	line-height 1em
+	text-transform uppercase
+	
+h3.tertiary,
+.section .tertiary
+	FiraSans(0.75rem, 400, Red, 0.05em, left)
+	line-height 1em
+	text-transform uppercase
+
+
+
+// h4
+// Content Level
+h4,
+h4.primary,
+.content > .primary
+	FiraSans(1rem, 400, Red, 0.05em, left)
+	line-height 1em
+	text-transform uppercase
+
+h4.secondary,
+.content > .secondary
+	FiraSans(0.75rem, 700, Black, 0.075em, left)
+	text-transform uppercase
+
+h4.tertiary,
+.content > .tertiary
+	FiraSans(0.9rem, 400, Black, -0.025em, left)
+	
+p,
+p.primary,
+p.content
+	FiraSans(0.9rem, 400, Black, -0.025em, left)
+
+p.secondary
+	FiraSans(0.9rem, 400, Black, -0.025em, left)
+	font-style italic
+	
+// ul.block
+ul.block
+// ul.block li
+	li
+		
+// ul.line
+ul.line
+// ul.line li
+	li
+
+// li.bullet
+// li.link
+// li.skill
+
+// figure
+figure
+
+// img
+img,
+figure > img
+	display block
+
+// figcaption
+figcaption,
+figure > figcaption
+	
+
+
+// # # # # # Drop-Ins
+// .project.medium
+// .skill.small
+li.skill
+	background white
+	border 1px solid Light
+	border-left 3px solid Light
+	padding 0px 5px
+	a, p
+		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
+		text-transform uppercase
+		
+li.bullet
+	FiraSans(1rem, 200, Black, -0.05em, left)
+	font-style italic
+
+
+// External Link
+li.link
+	border-right 1px solid Light
+	i
+		font-size 0.75rem
+		color Dark
+	p
+		FiraSans(0.75rem, 700, Black, 0.075em, left)
+		text-transform uppercase
+	&:hover i
+		color Light
+	&:hover p
+		color Gray
+	&:active i
+		color Red
+	&:active p
+		color Red
+
+
+
+
+

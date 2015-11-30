@@ -1,26 +1,78 @@
-doctype
-html
-	head
-	body
-		#site-title
-		#site-border
-		#page
-			section.page-title
-				header.page-title
-					.three-quarter
-						h1.primary Page Title Primary
-						h2.secondary Page Title secondary
-						p.tertiary Tertiary
-					.quarter
-						ul.block.links
-							li.link
-								i.fa.fa-github
-								p Github
-							li.link
-								i.fa.fa-external-link
-								p Launch
+//- Page Title
+section(class="page-title")
 
-				.body.page-title
+	//- Header
+	header(class="page-title")
+		.three-quarter
+			h2.primary Page Title Primary
+			ul.line
+				li.secondary Page Title secondary
+				li.tertiary Tertiary
+		.quarter
+			ul.block.links
+				li.link
+					i.fa.fa-github
+					p.tertiary Github
+				li.link
+					i.fa.fa-external-link
+					p.tertiary Launch
 
-			section.full
+
+	//- Body
+	.body(class="page-title")
+		.half
+			ul.line.skills
+				li.skill 
+					a(href="#")
+						p Photoshop
+				li.skill 
+					a(href="#")
+						p CSS
+				li.skill 
+					a(href="#")
+						p Angular.js
+				li.skill 
+					a(href="#")
+						p Node.js
+				li.skill 
+					a(href="#")
+						p Team Project
+			ul.block.bullets
+				li.bullet Bullet points are short sentences
+				li.bullet Some tell why this project is important in the grand scheme
+				li.bullet Others just state facts.
+		.half
+			figure
+				img(src="img/always-wondering.jpg")
+				figcaption Testing the figcaption
+
+
+//- Example Full Section
+section.full
+	header(class="section")
+		.three-quarter
+			h3.primary Section Primary
+			h3.secondary Section Secondary
+		.quarter
+			ul.block.links
+				li.link
+					i.fa.fa-github
+					p Github
+				li.link
+					i.fa.fa-external-link
+					p Launch
+	.body(class="section")
+		.third
+			header(class="content")
+				h4.primary Content Primary
+				h4.secondary Content Secondary
+			p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+		.third
+			figure
+				img(src="img/always-wondering.jpg")
+				figcaption Testing the figcaption
+		.third
+			figure
+				img(src="img/always-wondering.jpg")
+				figcaption Testing the figcaption
 

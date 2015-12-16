@@ -92,6 +92,11 @@ app.get('/mobile', function(req, res){
 	res.render('mobile');
 });
 
+// Testing
+app.get('/test', function(req, res){
+	res.render('test');
+});
+
 // GET '/resume'
 app.use('/resume', express.static(__dirname + '/pdf/dillon-drenzek-resume.pdf'));
 

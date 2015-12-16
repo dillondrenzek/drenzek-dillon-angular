@@ -1,43 +1,6 @@
 //- Pure Angular App Template
 //- v4.0
 
-mixin Logo()
-	#logo
-		h1.primary Dillon Drenzek
-		p.secondary Web Developer & Designer
-
-mixin ProjectMedium()
-	li.project
-		header
-			.three-quarter
-				h4.primary Project Title
-				ul.line
-					li
-						p.type Project Type
-					li
-						p.date Project Date 2015
-			.quarter
-				ul.block
-					li.link
-						a(href="#")
-							i.fa.fa-github
-							p Github
-
-		.body
-			.half
-				ul.line.skills
-					li.skill Skill 1
-					li.skill Skill 2
-					li.skill Skill 3
-
-				ul.block.bullets
-					li.bullet Bullet 1
-					li.bullet Bullet 2
-					li.bullet Bullet 3
-			.half
-				figure
-					img(src="img/always-wondering.jpg")
-
 
 doctype
 html(lang="en" ng-app="DrenzekDillon")
@@ -73,6 +36,7 @@ html(lang="en" ng-app="DrenzekDillon")
 
 		//- Stylesheets
 		link(rel="stylesheet" href="/font-awesome/css/font-awesome.min.css")
+		link(rel="stylesheet" href="/css/main.css")
 		link(rel="stylesheet" href="/css/test.css")
 
 		//- Vendor Scripts 
@@ -82,96 +46,41 @@ html(lang="en" ng-app="DrenzekDillon")
 
 
 	body
-	.debug
-
-		#site-title
-			header.site
-				+Logo
 
 		#site-border
 
+		#site-title
+
 		#page
 			section.page-title
-				header.page
+				header
 					.three-quarter
-						h2.primary Page Title
-						ul.line
-							li.type
-								p.secondary Project Type
-							li.date
-								p.secondary November 21st, 2015
 					.quarter
-						ul.block
-							li.link
-								i.fa.fa-github
-								p Github
-							li.link
-								i.fa.fa-github
-								p Github
-
-			section.full
 				.body
 					.half
-						ul.line.skills
-							li.skill Skill 1
-							li.skill Skill 2
-							li.skill Skill 3
-						ul.block.bullets
-							li.bullet Bullet 1
-							li.bullet Bullet 2
-							li.bullet Bullet 3
+					.half
+				footer
 
-					
-					.half.right
-						figure
-							img(src="img/always-wondering.jpg")
-
-
-
-			section.two-third
-				header.section
-					h3.primary Section Title (Three-Quarter)
+			section
+				header
 				.body
-					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+					.third
+					.two-third
+				footer
 
-			section.third
-				header.section
-					h3.primary Skills
+			section
+				header
 				.body
-					ul.block.skills
-						header.content
-							h4.primary Skill Category
-						li.skill Skill 1
-						li.skill Skill 2
-						li.skill Skill 3
+					.quarter
+					.three-quarter
+				footer
 
-					ul.block.skills
-						header.content
-							h4.primary Skill Category
-						li.skill Skill 1
-						li.skill Skill 2
-						li.skill Skill 3
-
-					ul.block.skills
-						header.content
-							h4.primary Skill Category
-						li.skill Skill 1
-						li.skill Skill 2
-						li.skill Skill 3
-
-
-
-
-
-			//- Project List
-			section.three-quarter
-				header.section
-					h3.primary Projects
+			section
+				header
 				.body
-					ul.block
-						+ProjectMedium
-						+ProjectMedium
-						+ProjectMedium
+					.half
+					.half
+				footer
 
 
 

@@ -89,419 +89,419 @@ li
 // #
 
 
-LogoWidth = 130px
-LogoHeight = 174px
-SMLogoWidth = 49px
-SMLogoHeight = 65px
-SiteTitleWidth = LogoWidth + (ThickPadding*2)
-SiteTitleHeight = 65px
-SiteBorderHeight = 36px
-SiteHeaderHeight = 170px
+// LogoWidth = 130px
+// LogoHeight = 174px
+// SMLogoWidth = 49px
+// SMLogoHeight = 65px
+// SiteTitleWidth = LogoWidth + (ThickPadding*2)
+// SiteTitleHeight = 65px
+// SiteBorderHeight = 36px
+// SiteHeaderHeight = 170px
 
 
 
 	
-// # Page Sections
-section
-	display block
-	margin-bottom LargePadding
-	
-section.page-title
-	border-top none
-	margin-top 0
-
-// Page Title
-header.page-title,
-.body.page-title
-	+XS()
-		display block
-		width 100%		
-
-
-	
-// # # Header, Body, Footer
-
-section 
-	header
-	.body,
-	footer
-		+XS()
-			display block
-			width 100%
-			
-	header
-		padding-top StandardPadding
-			
-		
-// # # # Content Containers
-
-.three-quarter,	
-.half,
-.quarter
-	display inline-block
-	vertical-align middle
-	padding-top StandardPadding
-	padding-bottom StandardPadding
-	Width-XS(12)
-		
-.three-quarter
-	Width-SM(9)
-.half
-	Width-SM(6)
-.quarter
-	Width-SM(3)
-
-
-
-// # # # # Content
-ul.line
-	InlineChildren(middle)
-	list-style-type none
-	li
-		InlineChildren(middle)
-		margin-right StandardPadding
-	
-ul.block
-	list-style-type circle
-	list-style-position inside
-	li
-		display block
-		// margin-bottom StandardPadding
-		
-		InlineChildren(middle)
-		
-li.link
-	InlineChildren(middle)
-	padding StandardPadding
-	// padding-top 0
-	// padding-bottom 0
-	&:first-child
-		// padding-left 0
-	i
-		margin-right StandardPadding
-	p
-		// margin-right StandardPadding
-		
-li.bullet
-	padding-left StandardPadding
-	padding-right StandardPadding
-	margin-bottom StandardPadding
-
-		
-ul.skills
-	+XS()
-		padding-bottom StandardPadding
-	li
-		margin-right ThinPadding
-		margin-bottom ThinPadding
-	
-
-// # # # # 
-
-ul.links
-	li.link
-		+XS()
-			display inline-block
-			
-p.content
-	padding StandardPadding
-
-	
-
-
-
-
-
-
-
-
-
-
-// Styling
-
-
-// # Page
-html
-	FiraSans(16px, 200, Black, 0em, left)
-	
-// * <section>
-section
-	background white
-	border-top 1px solid Gray
-	border-bottom 1px solid Gray
-	
-// * * header, .body, footer
-
-		
-		
-// * * * Content Containers
-	
-// * * * * Content
-
-.page-title 	
-	.primary
-		FiraSans(2.5rem, 700, Black, -0.05em, left)
-		line-height 1.25em
-	.secondary
-		FiraSans(1rem, 400, Red, 0.05em, left)
-		line-height 1.25em
-		text-transform uppercase
-	.tertiary
-		FiraSans(0.75rem, 700, Gray, 0.05em, left)
-		text-transform uppercase
-		
-header.section
-	border-top 3px solid Dark
-	border-bottom 1px solid Light
-	.primary
-		FiraSans(1.25rem, 700, Black, -0.05em, left)
-		line-height 1em
-	.secondary
-		FiraSans(0.75rem, 400, Red, 0.05em, left)
-		line-height 1em
-		text-transform uppercase
-		
-header.content
-	.primary
-		FiraSans(1rem, 400, Red, 0.05em, left)
-		line-height 1em
-		text-transform uppercase
-	.secondary
-		FiraSans(0.75rem, 700, Black, 0.075em, left)
-		text-transform uppercase
-		
-p.content
-	FiraSans(0.9rem, 400, Black, -0.025em, left)
-
-
-
-
-
-
-li.skill
-	background white
-	border 1px solid Light
-	border-left 3px solid Light
-	padding 0px 5px
-	a, p
-		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
-		text-transform uppercase
-
-figcaption
-	display block
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Positioning
-
-// # Fixed
-// Site Border
-#site-border
-	position fixed
-	z-index 100
-	left 0
-	top 0
-	height SiteBorderHeight
-	width 100%
-	
-	
-// Site Title
-#site-title
-	+SM()
-		position fixed
-		z-index 105
-		left 0
-		top 0
-		height SMLogoHeight
-		width 100%
-	+XS()
-		position fixed
-		z-index 105
-		left 0
-		top 0
-		height SMLogoHeight
-		width 100%
-
-// # Page
-// #page
-#page
-	+SM()
-		position relative
-		width 100%
-		padding-top SMLogoHeight
-	+XS()
-		position relative
-		width 100%
-		padding-top SMLogoHeight
-
-// # # Sections
+// // # Page Sections
 // section
-section
-	+SM()
-		display block
-		padding StandardPadding
-		padding-bottom 0
-	+XS()
-		display block
-		padding StandardPadding
-		padding-bottom 0
-
-// # # # Section Divisions
-// header
-
-// section > header,
-// header.section
+// 	display block
+// 	margin-bottom LargePadding
 	
+// section.page-title
+// 	border-top none
+// 	margin-top 0
 
-// // .body
-// section > .body,
-// .body.section
-// // footer
-// section > footer,
-// footer.section
+// // Page Title
+// header.page-title,
+// .body.page-title
+// 	+XS()
+// 		display block
+// 		width 100%		
 
 
+	
+// // # # Header, Body, Footer
 
-// # # # # Content Containers
-// .full
-// .full
-// // .three-quarter
-// .three-quarter
-// // .half
-// .half
-// // .quarter
+// section 
+// 	header
+// 	.body,
+// 	footer
+// 		+XS()
+// 			display block
+// 			width 100%
+			
+// 	header
+// 		padding-top StandardPadding
+			
+		
+// // # # # Content Containers
+
+// .three-quarter,	
+// .half,
 // .quarter
-.full,
-.three-quarter,
-.half,
-.quarter
-	// border-top 1px solid Light
-	border-bottom 1px solid Light
+// 	display inline-block
+// 	vertical-align middle
+// 	padding-top StandardPadding
+// 	padding-bottom StandardPadding
+// 	Width-XS(12)
+		
+// .three-quarter
+// 	Width-SM(9)
+// .half
+// 	Width-SM(6)
+// .quarter
+// 	Width-SM(3)
 
 
 
-
-
-// # # # # # Content
-
-// h2
-// Page Level
-
-h2,
-h2.primary,
-.page-title > .primary
-	FiraSans(2.5rem, 700, Black, -0.05em, left)
-	line-height 1.2em
-
-h2.secondary,
-.page-title > .secondary
-	FiraSans(1.25rem, 400, Red, 0.05em, left)
-	line-height 1em
-	text-transform uppercase
-	
-h2.tertiary,
-.page-title > .tertiary
-	FiraSans(0.75rem, 700, Gray, 0.05em, left)
-	text-transform uppercase
-
-
-
-// h3
-// Section Level
-
-h3,
-h3.primary
-.section > .primary
-	FiraSans(1.25rem, 700, Black, -0.05em, left)
-	line-height 1.2em
-
-h3.secondary,
-.section > .secondary
-	FiraSans(1rem, 400, Red, 0.05em, left)
-	line-height 1em
-	text-transform uppercase
-	
-h3.tertiary,
-.section > .tertiary
-	FiraSans(0.75rem, 400, Red, 0.05em, left)
-	line-height 1em
-	text-transform uppercase
-
-
-
-// h4
-// Content Level
-
-h4,
-h4.primary,
-.content > .primary
-	FiraSans(1rem, 400, Red, 0.05em, left)
-	line-height 1em
-	text-transform uppercase
-
-h4.secondary,
-.content > .secondary
-	FiraSans(0.75rem, 700, Black, 0.075em, left)
-	text-transform uppercase
-
-h4.tertiary,
-.content > .tertiary
-	FiraSans(0.9rem, 400, Black, -0.025em, left)
-	
-p,
-p.primary,
-p.content
-	FiraSans(0.9rem, 400, Black, -0.025em, left)
-
-p.secondary
-	FiraSans(0.9rem, 400, Black, -0.025em, left)
-	font-style italic
+// // # # # # Content
+// ul.line
+// 	InlineChildren(middle)
+// 	list-style-type none
+// 	li
+// 		InlineChildren(middle)
+// 		margin-right StandardPadding
 	
 // ul.block
-ul.block
-	li
-		display block
-		InlineChildren(middle)
+// 	list-style-type circle
+// 	list-style-position inside
+// 	li
+// 		display block
+// 		// margin-bottom StandardPadding
 		
-// ul.line
-ul.line
-	li
-		display inline-block
-		vertical-align middle
-		InlineChildren(middle)
-
-// li.bullet
+// 		InlineChildren(middle)
+		
 // li.link
+// 	InlineChildren(middle)
+// 	padding StandardPadding
+// 	// padding-top 0
+// 	// padding-bottom 0
+// 	&:first-child
+// 		// padding-left 0
+// 	i
+// 		margin-right StandardPadding
+// 	p
+// 		// margin-right StandardPadding
+		
+// li.bullet
+// 	padding-left StandardPadding
+// 	padding-right StandardPadding
+// 	margin-bottom StandardPadding
+
+		
+// ul.skills
+// 	+XS()
+// 		padding-bottom StandardPadding
+// 	li
+// 		margin-right ThinPadding
+// 		margin-bottom ThinPadding
+	
+
+// // # # # # 
+
+// ul.links
+// 	li.link
+// 		+XS()
+// 			display inline-block
+			
+// p.content
+// 	padding StandardPadding
+
+	
+
+
+
+
+
+
+
+
+
+
+// // Styling
+
+
+// // # Page
+// html
+// 	FiraSans(16px, 200, Black, 0em, left)
+	
+// // * <section>
+// section
+// 	background white
+// 	border-top 1px solid Gray
+// 	border-bottom 1px solid Gray
+	
+// // * * header, .body, footer
+
+		
+		
+// // * * * Content Containers
+	
+// // * * * * Content
+
+// .page-title 	
+// 	.primary
+// 		FiraSans(2.5rem, 700, Black, -0.05em, left)
+// 		line-height 1.25em
+// 	.secondary
+// 		FiraSans(1rem, 400, Red, 0.05em, left)
+// 		line-height 1.25em
+// 		text-transform uppercase
+// 	.tertiary
+// 		FiraSans(0.75rem, 700, Gray, 0.05em, left)
+// 		text-transform uppercase
+		
+// header.section
+// 	border-top 3px solid Dark
+// 	border-bottom 1px solid Light
+// 	.primary
+// 		FiraSans(1.25rem, 700, Black, -0.05em, left)
+// 		line-height 1em
+// 	.secondary
+// 		FiraSans(0.75rem, 400, Red, 0.05em, left)
+// 		line-height 1em
+// 		text-transform uppercase
+		
+// header.content
+// 	.primary
+// 		FiraSans(1rem, 400, Red, 0.05em, left)
+// 		line-height 1em
+// 		text-transform uppercase
+// 	.secondary
+// 		FiraSans(0.75rem, 700, Black, 0.075em, left)
+// 		text-transform uppercase
+		
+// p.content
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+
+
+
+
+
+
 // li.skill
-
-// figure
-// figure
-
-// // img
-// img,
-// figure > img
+// 	background white
+// 	border 1px solid Light
+// 	border-left 3px solid Light
+// 	padding 0px 5px
+// 	a, p
+// 		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
+// 		text-transform uppercase
 
 // figcaption
-figcaption,
-figure > figcaption
-	FiraSans(0.75rem, 200, Black, -0.05em, center)
-	font-style italic
+// 	display block
 
-// # # # # # Drop-Ins
-// .project.medium
-// .skill.small
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Positioning
+
+// // # Fixed
+// // Site Border
+// #site-border
+// 	position fixed
+// 	z-index 100
+// 	left 0
+// 	top 0
+// 	height SiteBorderHeight
+// 	width 100%
+	
+	
+// // Site Title
+// #site-title
+// 	+SM()
+// 		position fixed
+// 		z-index 105
+// 		left 0
+// 		top 0
+// 		height SMLogoHeight
+// 		width 100%
+// 	+XS()
+// 		position fixed
+// 		z-index 105
+// 		left 0
+// 		top 0
+// 		height SMLogoHeight
+// 		width 100%
+
+// // # Page
+// // #page
+// #page
+// 	+SM()
+// 		position relative
+// 		width 100%
+// 		padding-top SMLogoHeight
+// 	+XS()
+// 		position relative
+// 		width 100%
+// 		padding-top SMLogoHeight
+
+// // # # Sections
+// // section
+// section
+// 	+SM()
+// 		display block
+// 		padding StandardPadding
+// 		padding-bottom 0
+// 	+XS()
+// 		display block
+// 		padding StandardPadding
+// 		padding-bottom 0
+
+// // # # # Section Divisions
+// // header
+
+// // section > header,
+// // header.section
+	
+
+// // // .body
+// // section > .body,
+// // .body.section
+// // // footer
+// // section > footer,
+// // footer.section
+
+
+
+// // # # # # Content Containers
+// // .full
+// // .full
+// // // .three-quarter
+// // .three-quarter
+// // // .half
+// // .half
+// // // .quarter
+// // .quarter
+// .full,
+// .three-quarter,
+// .half,
+// .quarter
+// 	// border-top 1px solid Light
+// 	border-bottom 1px solid Light
+
+
+
+
+
+// // # # # # # Content
+
+// // h2
+// // Page Level
+
+// h2,
+// h2.primary,
+// .page-title > .primary
+// 	FiraSans(2.5rem, 700, Black, -0.05em, left)
+// 	line-height 1.2em
+
+// h2.secondary,
+// .page-title > .secondary
+// 	FiraSans(1.25rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+	
+// h2.tertiary,
+// .page-title > .tertiary
+// 	FiraSans(0.75rem, 700, Gray, 0.05em, left)
+// 	text-transform uppercase
+
+
+
+// // h3
+// // Section Level
+
+// h3,
+// h3.primary
+// .section > .primary
+// 	FiraSans(1.25rem, 700, Black, -0.05em, left)
+// 	line-height 1.2em
+
+// h3.secondary,
+// .section > .secondary
+// 	FiraSans(1rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+	
+// h3.tertiary,
+// .section > .tertiary
+// 	FiraSans(0.75rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+
+
+
+// // h4
+// // Content Level
+
+// h4,
+// h4.primary,
+// .content > .primary
+// 	FiraSans(1rem, 400, Red, 0.05em, left)
+// 	line-height 1em
+// 	text-transform uppercase
+
+// h4.secondary,
+// .content > .secondary
+// 	FiraSans(0.75rem, 700, Black, 0.075em, left)
+// 	text-transform uppercase
+
+// h4.tertiary,
+// .content > .tertiary
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+	
+// p,
+// p.primary,
+// p.content
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+
+// p.secondary
+// 	FiraSans(0.9rem, 400, Black, -0.025em, left)
+// 	font-style italic
+	
+// // ul.block
+// ul.block
+// 	li
+// 		display block
+// 		InlineChildren(middle)
+		
+// // ul.line
+// ul.line
+// 	li
+// 		display inline-block
+// 		vertical-align middle
+// 		InlineChildren(middle)
+
+// // li.bullet
+// // li.link
+// // li.skill
+
+// // figure
+// // figure
+
+// // // img
+// // img,
+// // figure > img
+
+// // figcaption
+// figcaption,
+// figure > figcaption
+// 	FiraSans(0.75rem, 200, Black, -0.05em, center)
+// 	font-style italic
+
+// // # # # # # Drop-Ins
+// // .project.medium
+// // .skill.small
 
 
 

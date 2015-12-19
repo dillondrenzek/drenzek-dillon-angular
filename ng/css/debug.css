@@ -1,5 +1,25 @@
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 200;
+  src: url("../../fonts/FiraSans-Light.woff") format('woff'), url("../../fonts/FiraSans-Light.ttf") format('truetype'), url("../../fonts/FiraSans-Light.eot");
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 400;
+  src: url("../../fonts/FiraSans-Regular.woff") format('woff'), url("../../fonts/FiraSans-Regular.ttf") format('truetype'), url("../../fonts/FiraSans-Regular.eot");
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-weight: 700;
+  src: url("../../fonts/FiraSans-Bold.woff") format('woff'), url("../../fonts/FiraSans-Bold.ttf") format('truetype'), url("../../fonts/FiraSans-Bold.eot");
+}
 * {
   border: none;
+}
+#site-border,
+#site-title,
+#page {
+  border: 3px solid #909090;
 }
 section {
   border: 1px solid #800080;
@@ -15,5 +35,45 @@ section footer {
 .two-third,
 .three-quarter,
 .full {
+  width: 100%;
   border: 1px solid #008000;
+  min-height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+@media (min-width: 992px) {
+  .quarter {
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .three-quarter {
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .third {
+    width: 33.3333333%;
+  }
+}
+@media (min-width: 768px) {
+  .two-third {
+    width: 66.6666667%;
+  }
+}
+@media (min-width: 480px) {
+  .half {
+    width: 50%;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+figure,
+img,
+figcaption {
+  border: 1px solid #ffa500;
 }

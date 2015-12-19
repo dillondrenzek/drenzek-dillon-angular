@@ -85,14 +85,14 @@ section.page-title {
   border-top: none;
   margin-top: 0;
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   header.page-title,
   .body.page-title {
     display: block;
     width: 100%;
   }
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   section header,
   section .body,
   section footer {
@@ -112,17 +112,17 @@ section header {
   padding-bottom: 15px;
   width: 100%;
 }
-@media (min-width: 520px) {
+@media (min-width: 480px) {
   .three-quarter {
     width: 75%;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 480px) {
   .half {
     width: 50%;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 480px) {
   .quarter {
     width: 25%;
   }
@@ -167,7 +167,7 @@ li.bullet {
   padding-right: 15px;
   margin-bottom: 15px;
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   ul.skills {
     padding-bottom: 15px;
   }
@@ -176,7 +176,7 @@ ul.skills li {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   ul.links li.link {
     display: inline-block;
   }
@@ -302,7 +302,7 @@ figcaption {
   height: 36px;
   width: 100%;
 }
-@media (min-width: 520px) {
+@media (min-width: 480px) {
   #site-title {
     position: fixed;
     z-index: 105;
@@ -312,7 +312,7 @@ figcaption {
     width: 100%;
   }
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   #site-title {
     position: fixed;
     z-index: 105;
@@ -322,28 +322,28 @@ figcaption {
     width: 100%;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 480px) {
   #page {
     position: relative;
     width: 100%;
     padding-top: 65px;
   }
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   #page {
     position: relative;
     width: 100%;
     padding-top: 65px;
   }
 }
-@media (min-width: 520px) {
+@media (min-width: 480px) {
   section {
     display: block;
     padding: 15px;
     padding-bottom: 0;
   }
 }
-@media (max-width: 519px) {
+@media (max-width: 479px) {
   section {
     display: block;
     padding: 15px;

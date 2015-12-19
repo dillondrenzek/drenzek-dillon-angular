@@ -1,8 +1,14 @@
+@import 'app'
+
 // RESETS
 *
 	border none
 
-
+// Site Components
+#site-border,
+#site-title,
+#page
+	border 3px solid Gray
 
 // Section Divisions
 section
@@ -20,5 +26,33 @@ section
 .two-third,
 .three-quarter,
 .full
+	width 100%
 	border 1px solid green
+	min-height 100px
+	display inline-block
+	vertical-align top
+	
+.quarter
+	+LG()
+		width 25%
+.three-quarter
+	+LG()
+		width 75%
+		
+.third
+	+MD()
+		width 33.3333333%
+.two-third
+	+MD()
+		width 66.6666667%
 
+.half
+	+SM()
+		width 50%
+
+
+// Content
+h1, h2, h3, h4,
+ul, li,
+figure, img, figcaption
+	border 1px solid orange

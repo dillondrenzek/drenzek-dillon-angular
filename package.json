@@ -1,6 +1,6 @@
 {
   "name": "drenzek-dillon-angular",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "The Portfolio Website of Dillon Drenzek, built with Angular",
   "main": "server.js",
   "scripts": {
@@ -23,6 +23,11 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-shell": "^0.5.1",
+    "gulp-stylus": "^2.1.0",
+    "gulp-watch": "^4.3.5",
     "node-dev": "^2.7.1"
   }
 }

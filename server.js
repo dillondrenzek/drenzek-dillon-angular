@@ -77,6 +77,7 @@ api.get('/skills', function(req,res){
 
 
 // Gridrunner Subapp
+// TODO: Fix subapp
 app.use('/gridrunner/', express.static(__dirname + '/gridrunner/'));
 
 // Catch Mobile Browsers

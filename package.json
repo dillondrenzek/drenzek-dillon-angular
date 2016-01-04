@@ -1,6 +1,6 @@
 {
   "name": "drenzek-dillon-angular",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "The Portfolio Website of Dillon Drenzek, built with Angular",
   "main": "server.js",
   "scripts": {

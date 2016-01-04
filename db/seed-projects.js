@@ -328,7 +328,7 @@ var projects = {
 		}, {
 			label: "Play Game",
 			icon: "fa-caret-square-o-right",
-			url: "http://localhost:8081/gridrunner/index.html",
+			url: "/gridrunner/index.html",
 			title: "Play Gridrunner"
 		}],
 		sections: [

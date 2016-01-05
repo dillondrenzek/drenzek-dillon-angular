@@ -34,16 +34,16 @@ angular.module('DrenzekDillon')
 	.when('/skills/index', {
 		controller: 'SkillListCtrl',
 		templateUrl: '/templates/pages/skills/index.html'
-	})
+	});
 
 	
 
 	// 404 NOT FOUND
 
 	// Otherwise
-	.otherwise({
-		redirectTo: '/'
-	});
+	// .otherwise({
+	// 	redirectTo: '/'
+	// });
 
 	$locationProvider.html5Mode(true);
 

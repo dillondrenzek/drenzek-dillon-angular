@@ -547,6 +547,25 @@ var projects = {
 			url: "/tam/index.html",
 			title: "Launch Project"
 		}]
+	},
+
+	// Le Faux
+	leFaux: {
+		// permalink: 'le-faux',
+		title: 'Le Faux Désign Compagnie',
+		type: '(Fake) Company Branding',
+		skills: ['HTML', 'CSS', 'Photoshop', 'Illustrator'],
+		bulletPoints: [
+			'Class project in Advanced Web Design',
+			'Assigned to create a "Fake Company", hence "Le Faux"',
+			'Created Logo, Website, Branding'
+		],
+		links: [{
+			label: "Launch",
+			icon: "fa-external-link-square",
+			url: "/le-faux/index.html",
+			title: "Launch Project"
+		}]
 	}
 };
 

@@ -32,6 +32,7 @@ api.get('/projects', function(req,res){
 		Projects['gridrunner'],
 		Projects['tam'],
 		Projects['capstonePortfolio'],
+		Projects['leFaux'],
 		Projects['alwaysWondering'],
 	]); 
 });
@@ -50,8 +51,6 @@ api.get('/projects/:permalink', function(req,res){
 		res.json(Projects['alwaysWondering']);
 	} else if (req.params.permalink === 'gridrunner') {
 		res.json(Projects['gridrunner']);
-	} else if (req.params.permalink === 'tam') {
-		res.json(Projects['tam']);
 	}
 	
 });

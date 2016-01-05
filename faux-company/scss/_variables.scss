@@ -1,0 +1,75 @@
+// Wrapper
+	$wrapper-width: 960px;
+
+// Header
+	$header-height: 150px;
+	$header-height-M: 125px;
+	$header-height-S: 60px;
+
+// Nav
+	$nav-height: 50px;
+	$nav-border-width: 5px;
+	$nav-height-M: 75px;
+	$nav-height-S: 60px;
+
+// Sidebar
+	$sidebar-width: 240px;
+	$sidebar-title-height: 77px;
+
+// Main Page
+	$main-page-width: calc(100% - $sidebar-width);
+
+// Logo
+	$logo-margin: 15px;
+	$logo-size: $sidebar-width - ($logo-margin * 2);
+	$logo-margin-M: $logo-margin - 5;
+	$logo-margin-S: 5px;
+
+// Gallery Items
+	
+	$gallery-item-width: 50%;
+	$gallery-item-height: 300px;
+	$gallery-item-height-S: 200px;
+	$gallery-item-title-height: 50px;
+	$gallery-item-unhide-height: 40px;
+	$gallery-item-unhide-width: 50px;
+
+// Footer
+	$footer-width: $main-page-width;
+
+
+
+
+// INDEX PAGE VARIABLES
+
+$index-header-height: 50px;
+$nav-link-height: 100px;
+$inner-wrap-width: 100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

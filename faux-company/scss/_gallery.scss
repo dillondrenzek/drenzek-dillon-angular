@@ -1,0 +1,94 @@
+// Gallery
+.gallery-item {
+    background: $white;
+    position: relative;
+    width: $gallery-item-width;
+    height: $gallery-item-height;
+    overflow: hidden;
+    float: left;
+    display: inline-block;
+    .title-container {
+        position: absolute;
+        top: $gallery-item-height - $gallery-item-title-height;
+        background: rgba($black, 0.95);
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+
+
+        @include animate(top, .3s);
+
+        h3 {
+            font-family: "Lobster", sans-serif;
+            color: $white;
+            font-size: 20px;
+            margin-bottom: 5px;
+
+            @include animate(color, .3s);
+        }
+
+        p {
+            font-family: "Bakersville", serif;
+            font-style: italic;
+            color: $white;
+            font-size: 14px;
+        } 
+
+        &.title-correction {
+            position: absolute;
+            top: ($gallery-item-height - $gallery-item-title-height) !important; 
+        }      
+    }
+
+    img {
+        min-height: $gallery-item-height;
+        width: 720px;
+        margin: 0 auto;
+
+        &.blurred {
+          -webkit-filter: blur(5px);
+          -moz-filter: blur(5px);
+          -o-filter: blur(5px);
+          -ms-filter: blur(5px);
+          filter: blur(5px);
+        }
+    }
+
+    &:hover {
+        .title-container {
+            top: $gallery-item-height;
+        }
+
+        .unhide {
+            top: 0px;
+        }
+    }
+
+    .dimmed {
+        top: 0px;
+
+        h3 {
+            color: transparent;
+        }
+    }
+
+    .unhide {
+        position: absolute;
+        top: -$gallery-item-unhide-height;
+        left: 0px;
+        height: $gallery-item-unhide-height;
+        width: $gallery-item-unhide-width;
+        padding-top: 10px;
+        font-family: "Icon";
+        font-size: 24px;
+        text-align: center;
+        color: $black;
+        cursor: default;
+        background: rgba($white, 0.6);
+        @include animate(top, .5s);
+
+        &:hover {
+            color: lighten($black, 40);
+        }
+    } 
+}

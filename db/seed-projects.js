@@ -321,12 +321,12 @@ var projects = {
 			url: "https://github.com/dillondrenzek/dm2-team-project",
 			title: "View on GitHub"
 		}, 
-		{
-			label: "Play Game",
-			icon: "fa-caret-square-o-right",
-			url: "/gridrunner/index.html",
-			title: "Play Gridrunner"
-		}
+		// {
+		// 	label: "Play Game",
+		// 	icon: "fa-caret-square-o-right",
+		// 	url: "/gridrunner/index.html",
+		// 	title: "Play Gridrunner"
+		// }
 		],
 		sections: [
 			{

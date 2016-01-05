@@ -27,11 +27,12 @@ app.use('/api', api);
 api.get('/projects', function(req,res){	
 	// TODO: fix with mongoDB v4.1
 	res.json([
-		Projects['capstonePortfolio'],
 		Projects['drenzekDoesDenmark'],
 		Projects['storm'],
-		Projects['alwaysWondering'],
 		Projects['gridrunner'],
+		Projects['tam'],
+		Projects['capstonePortfolio'],
+		Projects['alwaysWondering'],
 	]); 
 });
 
@@ -49,6 +50,8 @@ api.get('/projects/:permalink', function(req,res){
 		res.json(Projects['alwaysWondering']);
 	} else if (req.params.permalink === 'gridrunner') {
 		res.json(Projects['gridrunner']);
+	} else if (req.params.permalink === 'tam') {
+		res.json(Projects['tam']);
 	}
 	
 });

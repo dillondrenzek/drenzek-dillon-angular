@@ -1,7 +1,7 @@
 // Seed Projects
 // v4.0
 
-// TODO: v4.1 - Remove this file by implementing MongoDB
+// TODO: v5 - Remove this file by implementing MongoDB
 
 
 var projects = {
@@ -235,11 +235,7 @@ var projects = {
 			}
 
 		]
-
-
-
 	},
-
 
 	// Cold For Now, But Always Wondering
 	alwaysWondering: {
@@ -304,7 +300,6 @@ var projects = {
 				]
 			}
 		]
-
 	},
 
 	// Gridrunner
@@ -441,15 +436,6 @@ var projects = {
 		]
 	},
 
-	// // Native
-	// native: {
-	// 	"permalink": "native",
-	// 	"title": 'Native',
-	// 	"type": 'iOS App',
-	// 	"skills": ['Objective-C', 'Sketch'],
-	// 	"bulletPoints": ['I implemented pixel-perfect views from mockups', 'Helped define product requirements','Participated in Techstars Boulder', 'Company still running in CO named Pana']
-	// },
-
 	// Capstone Portfolio
 	capstonePortfolio: {
 		"permalink": "capstone-portfolio",
@@ -542,6 +528,25 @@ var projects = {
 				}]
 			}
 		]
+	},
+
+	// Technology, Arts & Media Work
+	tam: {
+		// permalink: 'tam',
+		title: 'Technology, Arts & Media Portal',
+		type: 'Class Portal',
+		skills: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Photoshop', 'Illustrator', 'Premiere Pro'],
+		bulletPoints: [
+			'Portal to a sample of the work I completed for my Honor\'s Minor in Technology, Arts and Media',
+			'Digital Media 1 Portal was the first website I ever completed',
+			'Advanced Web Design Portal contains much of my most advanced formal web-dev training'
+		],
+		links: [{
+			label: "Launch",
+			icon: "fa-external-link-square",
+			url: "/tam/index.html",
+			title: "Launch Project"
+		}]
 	}
 };
 

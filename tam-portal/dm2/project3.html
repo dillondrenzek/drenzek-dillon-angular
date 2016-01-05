@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- Page Details -->
+
+	<title>Project 3 - Dillon Drenzek</title>
+	
+<!-- Meta Tags -->	
+
+	<!-- <meta name="description" content="Free Web tutorials"> -->
+	<!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"> -->
+	<!-- <meta name="author" content="Hege Refsnes"> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+<!-- Links -->
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100' rel='stylesheet' type='text/css'>
+	
+	<!-- Media Queries to change stylesheet	 -->
+	<!-- <link href='style.css' media='screen and (min-width:600px)' rel='stylesheet'> -->
+	
+	<!-- Favicon Link -->
+	<!-- <link type="image/png" href="" rel="shortcut icon"> -->
+	
+<!-- Scripts -->
+
+	<!-- jQuery -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+<!-- Styles -->	
+	<style type="text/css">
+	
+/* UTILITY */
+			
+		*,
+		*:before,
+		*:after{
+			box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+			margin: 0;
+		}
+		html{
+            background: #912F77;
+            color: #ccc;
+		}
+
+		body{
+			font-size: 16px;
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.center{
+			
+			display: table;
+			margin: 0 auto;
+		}
+
+		.hide{
+			display: none;
+		}
+
+		a.plan {
+			background: #333;
+			border-bottom: solid black 2px;
+			border-right: solid black 2px;
+			border-bottom-right-radius: 2em;
+			color: #aaa;
+			font-family: 'Advent Pro', sans-serif;
+			padding: 10px;
+			position: fixed;
+			text-decoration: none;
+
+		}
+			a.plan:hover{
+				background: #333333;
+				border-color: #aaa;
+				color: #eee;
+			}
+
+		#form-container{
+			background: #711F57;
+			padding: 35px;
+		}
+		#form{
+			width: 320px;
+			margin: 0 auto;
+		}
+		.input-container{
+			background: #510F47;
+			padding:15px;
+			width: 75%;
+		}
+		.input-container label{
+			/*position: relative;*/
+			/*display: block;*/
+			/*text-align: left;*/
+			/*float: left;*/
+			/*margin-right: 5em;*/
+		}
+		.input-container input{
+			/*position: relative;*/
+			/*display: block;*/
+			/*text-align: right;*/
+			/*float: right;*/
+		}
+</style>
+
+</head>
+
+<body>
+	<a href="./project3-plan.txt" class="plan">Project 3 Plan</a>
+
+	<div id="form-container" class="center">
+		<h2> Hey girl, can I have your number?</h2><br>
+			
+		<form action="#">
+			<p><label for="name">Name</label> <input type="text" id="name" /></p>
+			<p><label for="e-mail">E-mail</label> <input type="text" id="e-mail" /></p>
+			<p class="submit"><input type="submit" value="Submit" /></p>
+		</form>
+
+		<fieldset>
+		<form action="phptextpost.php" method="post" accept-charset="utf-8" id="form">
+
+			<!-- Name input field -->
+			<!-- <div class="center input-container"> -->
+				<label for="name">Name</label>
+				<input name="name" type="text" required autofocus><br>
+			<!-- </div> -->
+
+			<!-- Telephonic Information -->
+			<!-- <div class="center input-container"> -->
+				<label for="number">Number</label>
+				<input name="number" type="text" tabindex="1" size="3" maxlength="3" onkeyup="">
+				<input name="number" type="text" tabindex="2" size="3" maxlength="3" onkeyup="">
+				<input name="number" type="text" tabindex="3" size="4" maxlength="4" onkeyup=""><br>
+			<!-- </div> -->
+
+			<!-- Datepicker -->
+			<!-- <div class="center input-container"> -->
+				<label for="datepicker">Date</label>
+				<input name="datepicker" type="text" placeholder="Tomorrow?"><br>
+			<!-- </div> -->
+
+			<!-- Submit -->
+			<!-- <div class="center input-container"> -->
+				<input id="submit" type="submit" name="submit" value="Call Me :)">
+			<!-- </div> -->
+			
+		</form>
+		</fieldset>
+		<br>
+	</div>
+</body>
+</html>

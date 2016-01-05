@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- Page Details -->
+
+	<title>Digital Media 2 - Dillon Drenzek</title>
+	
+<!-- Meta Tags -->	
+
+	<!-- <meta name="description" content="Free Web tutorials"> -->
+	<!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"> -->
+	<meta name="author" content="Dillon Drenzek">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+<!-- Links -->
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100' rel='stylesheet' type='text/css'>
+	
+	<!-- Media Queries to change stylesheet	 -->
+	<link href='./css/style.css' type='text/css' rel='stylesheet'>
+	
+	<!-- Favicon Link -->
+	<!-- <link type="image/png" href="" rel="shortcut icon"> -->
+	
+<!-- Scripts -->
+
+	<!-- jQuery -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+	
+<!-- Styles -->	
+	<style >
+
+	</style>
+
+	<script type="text/javascript">	
+
+		function hideObj(type){
+			$('section.links').hide();
+			$('section.categories div').removeClass('selected');
+
+			switch(type){
+				case 'labs':
+					$('section.labs.links').toggle();
+					$('section.categories div.labs').toggleClass('selected');
+					break;
+				case 'proj':
+					$('section.proj.links').toggle();
+					$('section.categories div.proj').toggleClass('selected');
+					break;
+				case 'team':
+					$('section.team.links').toggle();
+					$('section.categories div.team').toggleClass('selected');
+					break;
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<div class="x-container x-column wrapper">
+		<!-- HEADER -->
+		<header class="dark x-container">
+			<div class="x-object">
+				<img href="index.html" id="banner" src="./images/banner.png" width="500px" height="100px" alt="Digital Media 2 by Dillon Drenzek">
+				<h2>Digital Media 2</h2>
+			</div>
+		</header>
+
+		<!-- NAV -->
+		<nav class="dark">
+			<section class="x-container x-row categories">
+				<div class="labs" onclick="hideObj('labs');">Labs</div>
+				<div class="proj" onclick="hideObj('proj');">Projects</div>
+				<div class="team" onclick="hideObj('team');">Team Project</div>
+			</section>
+		</nav>
+
+		<!-- LINKS CONTAINER -->
+		<div class="dark links-container">
+			<!-- Labs Links -->
+			<section class="labs links x-container x-row">
+				<a href="./lab1.html">1</a>
+				<a href="./lab2.html">2</a>
+				<a href="./lab3.html">3</a>
+				<a href="./lab4.html">4</a>
+				<a href="./lab5.html">5</a>
+				<a href="./lab6.html">6</a>
+				<a href="./lab7.html">7</a>
+				<a href="./lab8.html">8</a>
+				<a href="./lab9.html">9</a>
+				<a href="./lab10.html">10</a>
+				<a href="./lab11.php">11</a>
+				<a href="./lab12.php">12</a>
+				<a href="./lab13.php">13</a>
+				<a href="./lab14.php">14</a>
+
+			</section>
+
+			<!-- Project Links -->
+			<section class="proj links x-container x-row">
+				<a href="./project1.html">1</a>
+				<a href="./project2.html">2</a>
+				<a href="./project3/index.html">3</a>
+			</section>
+
+			<!-- Team Project Links -->
+			<section class="team links x-container x-row">
+				<a href="./team-project/index.html">Team Project</a>
+			</section>
+
+			<!-- HIDE LINK CONTAINERS -->
+			<script type="text/javascript">
+				$('section.links').toggle();
+			</script>
+		</div>	
+	</div>
+</body>
+</html>

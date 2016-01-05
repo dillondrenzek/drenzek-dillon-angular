@@ -1,0 +1,217 @@
+/* UTILITY */
+
+/*@media all and (min-width: 600px) {}*/
+
+/*@font-face{
+	font-family: 'Bebas Neue';
+	src: url(./font/BebasNeue.otf);
+}*/
+
+@font-face{
+	font-family: 'BebasNeue';
+	src: url('../font/BebasNeue-webfont.eot');
+	src: url('../font/BebasNeue-webfont.eot?iefix') format('eot'),
+		url('../font/BebasNeue-webfont.woff') format('woff'),
+		url('../font/BebasNeue-webfont.ttf') format('truetype'),
+		url('../font/BebasNeue-webfont.svg#webfont') format('svg');
+}
+
+.bebas-neue {		font-family: 'BebasNeue', sans-serif;}
+.big-text {			font-size: 3rem;}
+.byline {			font-size: .7rem;
+					font-style: italic;}
+.centered-text {	text-align: center;}
+.columned {			-webkit-column-count: 3; /* Chrome, Safari, Opera */
+					-moz-column-count: 3; /* Firefox */
+					column-count: 3;}
+.footnote {			font-size: .7rem;}
+.handwritten {		font-size: 1.25rem;
+					font-family: 'Shadows Into Light', cursive;}
+.light-text-color {	color: #F1F5E5;}
+.text-shadow {		text-shadow: 3px 3px 3px rgba(0,0,0,0.4);}
+.top-margin {		margin-top: 30px !important;}
+.white-bg {			background: white;}
+
+
+
+/***  Main Page  ***/
+article {
+	background: #eeeeee;
+	font-family: lato, sans-serif;
+	padding: 30px;
+}
+
+
+aside {
+	position: absolute;
+	color: #bbb;
+}
+	.question-text {
+		font-size: .8rem;
+	}
+	.answer-text {
+		font-style: italic;
+		font-size: 1.05rem;
+	}
+
+#page-title-box {
+	background: #C73F00;
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+	border: solid 3px #252423;
+	border-radius: 20px;
+	text-align: center;
+	/*margin-top: 0px;*/
+}
+	#page-title-box > h3{
+		color: #eee;
+		font-family: lato, sans-serif;
+		font-weight: 300;
+		font-size: 3rem;
+	}
+
+	.no-rock {
+		font-size: .8rem;
+		-webkit-transition: all .25s ease; /* For Safari 3.1 to 6.0 */
+		transition: all .25s ease;
+	} 
+		#page-title-box:hover .no-rock {
+			transform-origin: left bottom;
+			-ms-transform: rotate(-5deg); /* IE 9 */
+			-webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+			transform: rotate(-5deg);
+		}
+
+#prof-pic-box {
+	width: 250px;
+	height: 280px;
+	border: solid 3px #252423;
+	border-radius: 30px;
+	text-align: center;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #C73F00;
+}
+
+	figure img {
+		width: 250px;
+	}
+
+	figure figcaption {
+		color: white;
+	}
+
+#slogan {
+	text-align: center;
+}
+
+#chat-box {
+	width: 500px;
+	padding: 5px;
+	margin: 0 auto;
+	background: #aaa;
+	border-radius: 20px;
+}
+	.chat-bubble {
+		background: red;
+		position: relative;
+		padding: 10px;
+		border-radius: 25px;
+		/*height: 30px;*/
+		margin: 10px;
+	}
+		.chat-date {
+			color: #3B4142;
+			font-size: .65rem;
+			font-weight: 700;
+			text-align: center;
+		}
+		.chat-left {
+			text-align: left;
+			background: #ddd;
+			width: 330px;
+		}
+		.chat-right {
+			text-align: right;
+			background: #3ae;
+			width: 315px;
+			right:-150px;
+		}
+
+.transparency-box {
+	background: #232425;
+	position: relative;
+	height: 125px;
+}
+	#transparency-header {
+		background: rgb(133, 173, 9);
+		opacity: 1;
+		-webkit-transition: all 1s ease; /* For Safari 3.1 to 6.0 */
+		transition: all 1s ease;
+		z-index: 5;
+		
+	}
+		#transparency-header:hover{
+			opacity: 0;
+		}
+
+	#transparency-kicker {
+		top: -125px;
+	}
+
+	.transparency-text {
+		font-family: lato, sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 5rem;
+		text-align: center;
+	}
+
+#drop-shadow-box {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.blockquote-box {
+	background: rgb(41, 90, 94);
+	padding: 10px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+	position: relative;
+	width: 400px;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+	.blockquote-header {
+		color: #F1F5E5;
+		margin-bottom: 10px;
+	}
+
+	blockquote {
+		background: #eeeeee;
+		padding: 10px;
+		box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	}
+
+#hipster-box {
+	background: white;
+	padding: 20px 30px;
+}
+	sup {
+		color: #C73F00;	
+	}
+
+footer {
+	background: #3B4142;
+	font-family: lato, sans-serif;
+	padding: 20px;
+	text-align: center;
+}
+	footer a {
+		text-decoration: none;
+		color: #C73F00;
+	}
+
+summary{
+	outline: none;
+}

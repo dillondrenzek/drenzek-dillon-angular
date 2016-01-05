@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>Dillon Drenzek - DM Portal - V3</title>
+        <meta charset="utf-8">
+
+        <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+        <!-- SAVE THESE FONTS
+
+        <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Ruda' rel='stylesheet' type='text/css'> -->
+        <link href='portal-hostpage-style.css' rel='stylesheet' type='text/css'>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(QuicklookMiniTM);
+
+            function QuicklookMiniTM() {
+
+                /*     Individual Attributes     */
+                var betweenLinks = 8;               /* Like Margin */
+
+
+                /*         Grid Settings         */
+                var wrapperHeight = 75;
+                var wrapperWidth = 960;
+                var margin = 8;                    /* Space above and below grid */
+
+
+                /* ---------- END USER FRIENDLINESS -------------- */
+                    // // Declarations
+
+                    var linkArray = document.getElementsByClassName("quicklook-link");
+                    var numLinks = linkArray.length;
+
+                    // // Calculations
+                    var linkWidth = (wrapperWidth - ((numLinks-1)*betweenLinks))/numLinks;
+                    
+
+                    var linkHeight;
+                    
+                    var l = 0; //linkArray counter
+
+                    for (var j = 0; j < numLinks; j++) {
+
+                        // calculate current linkHeight
+                        linkHeight = (wrapperHeight);
+
+                            var borderSize = parseInt($(linkArray[l]).css("border"));
+                            var padding = parseInt($(linkArray[l]).css("padding"));
+                            var left = (j * betweenLinks) + (j * linkWidth);
+                            var contentHeight = linkHeight - (borderSize*2) - padding*2 + 1;
+                            var contentWidth = linkWidth - (borderSize*2) - padding*2 + 1;
+                            var child = $(linkArray[l]).children(".quicklook-content");
+                            
+
+                            linkHeight = parseInt(linkHeight);
+                            left = parseInt(left);
+                            contentHeight = parseInt(contentHeight);
+                            contentWidth = parseInt(contentWidth);
+
+                            $(child).css("height", contentHeight);
+                            $(child).css("width", contentWidth);
+                            $(child).css("max-height", contentHeight);
+                            $(child).css("max-width", contentWidth);
+
+                            $(linkArray[l]).css("height", linkHeight);
+                            $(linkArray[l]).css("left", left);
+
+                            console.log(left);
+
+                            l++;
+                    }  // End of Link Height
+
+                    // // Reassign Variables
+                    
+                    $("#quicklook-wrapper").css("height", wrapperHeight);
+                    $("#quicklook-wrapper").css("width", wrapperWidth);
+                    $("#quicklook-wrapper").css("margin-top", margin);
+                    $("#quicklook-wrapper").css("margin-bottom", margin);
+
+
+
+                    parseInt(linkWidth);
+                    $(".quicklook-link").css("width", linkWidth);
+
+                    console.log(linkHeight, linkWidth);
+                }
+
+        </script>
+
+    </head>
+     
+<!-- HTML START -->     
+    <div id="content-wrapper">
+        <body>
+            <header href="index.html">
+                <img href="index.html" id="banner" src="./images/banner.png" width="500px" height="100px" alt="Digital Media 1 by Dillon Drenzek">
+            </header>
+
+            <!-- Quicklook Wrapper -->
+            <div id="quicklook-wrapper">
+
+                <!-- Quicklook Link --> 
+                <a class="quicklook-link" href="index.html">
+                    
+                    <div class="quicklook-content">
+                        <h2>Home</h2>
+                    </div>
+                </a>
+
+                <!-- Quicklook Link --> 
+                <a class="quicklook-link" href="dillondrenzek-belief-1.html">
+                    <img class="link-bg" src="./images/tib-bg.jpg">
+                    <div class="quicklook-content">
+                        <h2>This I Believe</h2>
+                    </div>
+                </a>
+
+                <!-- Quicklook Link --> 
+                <a class="quicklook-link" href="veghead.html">
+                    <img class="link-bg" src="./images/veghead.jpg">
+                    <div class="quicklook-content">
+                         <h2>Veg Head</h2>
+                    </div>
+                </a>
+
+                <!-- Quicklook Link --> 
+                <a class="quicklook-link" id="current-page" href="tableau.html">
+                    <img class="link-bg" src="./images/uncle-dill-tableau.jpg">
+                    <div class="quicklook-content">
+                        <h2>Tableau</h2>
+                    </div>
+                </a>
+
+               <!-- Quicklook Link --> 
+               <a class="quicklook-link" href="sequential-images.html">
+                    <img class="link-bg" id="landscape" src="./images/sequential-images.jpg">
+                    <div class="quicklook-content">
+                        <h2>Sequence</h2>
+                    </div>
+                </a>
+
+                <!-- Quicklook Link --> 
+               <a class="quicklook-link" href="audio.html">
+                <!-- <img class="link-bg" id="landscape" src="./images/sequential-images.jpg"> -->
+                <div class="quicklook-content">
+                <h2>Audio</h2>
+               </div></a>
+
+            </div> <!-- Quicklook Wrapper -->
+
+            <section id="main-page-wrapper">
+                <h3>Uncle Dillon Wants You!</h3>
+                
+                <img id="subject" src="./images/uncle-dill-tableau.jpg">
+
+                <h6>(In a strictly patriotic way)</h6>
+                
+
+            </section>
+            
+
+
+            <footer>The footer</footer>
+
+
+        </body>
+    </div>
+</html>

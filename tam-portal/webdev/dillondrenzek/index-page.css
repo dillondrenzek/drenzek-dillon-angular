@@ -1,0 +1,270 @@
+/* -------------------- UTILITY CSS -------------------- */
+		*,
+		*:before,
+		*:after{
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			margin: 0;
+		}
+		html{
+			background: #252423;
+			/*background: url(./images/tam-bg.jpg) no-repeat center center fixed;*/
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            /*background: #c5c4b3;*/
+		}
+
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		
+
+		/* background color palette */
+
+		.colorgray{background: #9a9a9a;}
+
+		/* Blue - #2F7A8B */
+		.color1{background: rgba(47,122,139,1);}
+
+		/* Yellow - #D6B929 */
+		.color2{background: rgba(214,185,41,1);}
+
+		/* Purple - #711D59 */
+		.color3{background: rgba(113,29,89,1);}
+
+		/* Green - #779627 */
+		.color4{background: rgba(119,150,39,1);}
+	/* -------------------- end utility css -------------------- */
+
+	/* -------------------- WRAPPER CSS -------------------- */
+		#wrapper{
+			width: 960px;
+			top: 0px;
+			margin: 0 auto;
+			background: #777;
+			z-index: 0;
+		}
+	/* -------------------- end wrapper css -------------------- */
+
+	/* -------------------- HEADER CSS -------------------- */
+		header{
+			position: fixed;
+			width: 960px;
+			height: 100px;
+			line-height: 100px;
+			background: black;
+
+			top: 0px;
+			margin: 0 auto;
+			z-index: 100;
+
+			border-bottom: 1px solid #9a9a9a;
+
+		}
+
+			header h1{
+				font-family: 'Advent Pro', sans-serif;
+				font-size: 4em;
+				font-weight: 100;
+				text-align: right;
+				color: #fafafa;
+				padding-right: 20px;
+			}
+
+			h1 span{
+				color: #9a9a9a;
+
+			}
+	/* -------------------- end header css -------------------- */
+
+	/* -------------------- NAVIGATION CSS -------------------- */
+		nav{
+			width: 210px;
+			height: 350px;
+			top:100px;
+
+			position: fixed;
+			display: block;
+
+			transition: .35s ease all;
+			-webkit-transition: .35s ease all;
+
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+		}
+
+			/* Nav Links */
+			nav a{
+				background: rgba(26,25,25,1);
+				line-height: 70px;
+				height: 70px;
+
+				position: relative;
+				display: block;
+				right: 0px;
+				z-index: 101;
+
+				text-decoration: none;
+				color: #F2FCF2;
+				font-size: 1.5rem;
+				text-align: center;
+				padding: 0 1rem;
+				font-family: 'Advent Pro', sans-serif;
+				font-weight: 100;
+
+				transition: .35s ease all;
+				-webkit-transition: .35s ease all;
+
+				opacity: 1;
+			
+			}
+				nav a:hover{
+					right:30px;
+					background: rgba(25,25,25,0.75);
+					
+				}
+
+				/* Link Specific CSS */
+				.a1{border-bottom: 1px solid #9a9a9a;}
+				.a2{border-bottom: 1px solid #2F7A8B;}
+				.a3{border-bottom: 1px solid #D6B929;}
+				.a4{border-bottom: 1px solid #711D59;}
+				.a5{border-bottom: 1px solid #779627;}
+
+			/* Navbar Link Icons  (currently White letters with solid bg) */
+			.nav-icon{
+				position: absolute;
+
+				width: 30px;
+				height: 70px;
+				right: 0px;
+				font-size: 28px;
+				z-index: 100;
+			
+				color: white;
+				text-align: center;
+				line-height: 70px;
+				margin: 0;
+				font-family: 'Advent Pro', sans-serif;
+				font-weight: 400;
+
+				-webkit-transition: .35s all ease;
+				transition: .35s all ease;
+
+			}
+				/* Icon Specific CSS */
+				.i1{top: 0px;}
+				.i2{top: 70px;}
+				.i3{top: 140px;}
+				.i4{top: 210px;}
+				.i5{top: 280px;}
+	/* -------------------- end navigation css -------------------- */
+
+	/* -------------------- MAIN PAGE CSS -------------------- */
+		#main-page{
+			position: relative;
+			width: 750px;
+
+			top: 100px;
+			left: 210px;
+			background: white;
+			z-index: 0;
+			margin: 0;
+		}
+
+		#main-page section{
+			position: relative;
+			display: block;
+		}
+
+		#main-page section h2{
+			height: 70px;
+			line-height: 70px;
+
+			text-decoration: none;
+			color: #F2FCF2;
+			font-size: 2.5rem;
+			text-align: left;
+			padding: 0 1rem;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+		}
+
+		.section-divider{
+			position: relative;
+			display: block;
+			background: #252423;
+
+			height: 70px;
+			width: 750px;
+
+		}
+
+		/* --- Articles CSS --- */
+		.article-divider{
+			position: relative;
+			display: block;
+
+			height: 1px;
+			width: 750px;
+		}
+
+		article a{
+			text-decoration: none;
+			font-weight: 400;
+		}
+
+		article h3{
+			height: 45px;
+			line-height: 45px;
+			background: #1a1a1a;
+			color: #fafafa;
+
+			text-decoration: none;
+			font-size: 2rem;
+			text-align: right;
+			padding: 0 1rem;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+		}
+		article h4{
+			height: 25px;
+			line-height: 25px;
+			background: #2a2a2a;
+			color: #fafafa;
+
+			text-decoration: none;
+			/*font-size: .85rem;*/
+			text-align: right;
+			padding: 0 1rem;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+		}
+
+			.b1{border-right: 5px solid #9a9a9a;}
+			.b2{border-right: 5px solid rgba(47,122,139,1);}
+			.b3{border-right: 5px solid rgba(214,185,41,1);}
+			.b4{border-right: 5px solid rgba(113,29,89,1);}
+			.b5{border-right: 5px solid rgba(119,150,39,1);}
+
+		article img{
+			position: relative;
+			display: block;
+			height: 500px;
+			width: 750px;
+			margin: 0 auto;
+		}
+		article p{
+			color: #1a1a1a;
+			padding: 1rem;
+			font-family: 'Advent Pro', serif;
+			font-weight: 100;
+			font-size: 14px;
+			line-height: 1.3em;
+		}
+		/* --- end articles css --- */
+	/* -------------------- end main page css -------------------- */

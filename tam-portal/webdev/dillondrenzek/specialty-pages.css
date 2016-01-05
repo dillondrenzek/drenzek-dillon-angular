@@ -1,0 +1,320 @@
+
+	/* -------------------- UTILITY CSS -------------------- */
+		*,
+		*:before,
+		*:after{
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			margin: 0;
+		}
+		html{
+			background: #999;
+			/*background: url(./images/tam-bg.jpg) no-repeat center center fixed;*/
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+		}
+
+		body{
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+		}
+  
+		/*               --- color palette ---              */
+		/*    .colorx - Background Color                    */
+		/*        .fx - Header Span Color                   */
+		/*		  .bx - Color for all Borders               */
+
+
+			/* Dark Gray - #1a1a1a */
+				.colordarkgray{background: #1a1a1a;}
+
+			/* Medium Gray - #252423 */
+				.colormediumgray{background: #454443;}
+
+
+
+			/* Light Gray - #9a9a9a */
+				.color1{background: #7a7a7a;}
+				.f1{color: #7a7a7a;}
+				.b1{border-color: #7a7a7a;}
+
+			/* Blue - #2F7A8B */
+				.color2{background: rgba(47,122,139,1);}
+				.f2{color: rgba(47,122,139,1);}
+				.b2{border-color: rgba(47,122,139,1);}
+
+			/* Yellow - #D6B929 */
+				.color3{background: rgba(214,185,41,1);}
+				.f3{color: rgba(214,185,41,1);}
+				.b3{border-color: rgba(214,185,41,1);}
+
+			/* Purple - #711D59 - Revised: #8F2584; */
+				.color4{background: rgba(143,37,132,1);}
+				.f4{color: rgba(143,37,132,1);}
+				.b4{border-color: rgba(143,37,132,1);}
+
+			/* Green - #779627 */
+				.color5{background: rgba(119,150,39,1);}
+				.f5{color: rgba(119,150,39,1);}
+				.b5{border-color: rgba(119,150,39,1);}
+
+	/* -------------------- end utility css -------------------- */
+
+	/* -------------------- WRAPPER CSS -------------------- */
+		#wrapper{
+			position: relative;
+			width: 960px;
+			top: 0px;
+			margin: 0 auto;
+			z-index: 0;
+		}
+	/* -------------------- end wrapper css -------------------- */
+
+	/* -------------------- HEADER CSS -------------------- */
+		header{
+			position: fixed;
+			width: 960px;
+			height: 100px;
+			background: black;
+			z-index: 100;
+
+			border-bottom-width: 4px;
+			border-bottom-style: solid;
+		}
+			/* My name in the header */
+			header h1{
+				font-family: 'Advent Pro', Verdana, sans-serif;
+				font-size: 4em;
+				font-weight: 100;
+				text-align: right;
+				color: #fafafa;
+				padding-right: 20px;
+			}
+
+			h1 span{}
+
+	/* -------------------- end header css -------------------- */
+
+	/* -------------------- NAVIGATION CSS -------------------- */
+		nav{
+			top:100px;
+			position: fixed;
+			transition: .35s ease all;
+			-webkit-transition: .35s ease all;
+		}
+
+			/* Nav Links */
+			nav a{
+				background: rgba(36,35,35,1);
+				line-height: 70px;
+				height: 70px;
+				width: 210px;
+				position: relative;
+				display: block;
+				z-index: 101;
+				text-decoration: none;
+				color: #F2FCF2;
+				font-size: 1.5rem;
+				text-align: center;
+				padding: 0 1rem;
+				font-family: 'Advent Pro', sans-serif;
+				font-weight: 100;
+				transition: .35s ease all;
+				-webkit-transition: .35s ease all;
+				border: 2px solid rgba(0,0,0,0);
+			}
+
+				/* Link Hover States */
+				nav a:hover{
+					right:30px;
+					background: rgba(75,75,75,1);
+					
+				}
+
+				/* Link Specific CSS */
+				.a1{}
+					.a1:hover{border: 2px solid #9a9a9a;}
+
+				.a2{}
+					.a2:hover{border: 2px solid #2F7A8B;}
+
+				.a3{}
+					.a3:hover{border: 2px solid #D6B929;}
+
+				.a4{}
+					.a4:hover{border: 2px solid #8F2584;}
+
+				.a5{}
+					.a5:hover{border: 2px solid #779627;}
+
+
+			/* Navbar Link Icons  (currently White letters with solid bg) */
+			.nav-icon{
+				position: absolute;
+				width: 30px;
+				height: 70px;
+				right: 0px;
+				font-size: 28px;
+				z-index: 100;
+				color: #fafafa;
+				text-align: center;
+				line-height: 70px;
+				margin: 0;
+				font-family: 'Advent Pro', sans-serif;
+				font-weight: 100;
+				-webkit-transition: .35s all ease;
+				transition: .35s all ease;
+			}
+				/* Icon Specific CSS */
+				.i1{top: 0px;}
+				.i2{top: 70px;}
+				.i3{top: 140px;}
+				.i4{top: 210px;}
+				.i5{top: 280px;}
+
+				
+
+
+	/* -------------------- end navigation css -------------------- */
+
+	/* -------------------- MAIN PAGE CSS -------------------- */
+		#main-page{
+			background: #111;
+
+			position: absolute;
+			width: 752px;
+			top: 100px;
+			left: 208px;
+			z-index: 0;
+
+			border-left-width: 2px;
+			border-left-style: solid;
+		}
+
+		#my-picture{
+			width: 170px;
+			height: auto;
+			position: relative;
+			float: left;
+		}
+
+
+		/* Page Title (ex. Photography) */
+		h2{
+			position: fixed;
+			width: 750px;
+			line-height: 70px;
+			background: #1a1a1a;
+			color: #F2FCF2;
+			font-size: 2.5rem;
+			padding: 0 1rem;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+			z-index:105;
+
+		}
+
+		/* main page icon */
+		.main-icon{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 60px;
+			text-align: center;
+			font-size: 48px;
+			z-index: 106;
+		}
+
+		.section-divider{
+			position: relative;
+			display: block;
+			background: transparent;
+			height: 70px;
+			width: 750px;
+		}
+
+		/* --- Articles CSS --- */
+		.article-divider{
+			position: relative;
+			display: block;
+			height: 20px;
+			width: 750px;
+			background: transparent;
+		}
+
+		/* Article Heading (gray) */
+		article h3{
+			position: relative;
+			display: block;
+			width: 750px;
+			height: 45px;
+			line-height: 45px;
+			background: #2a2a2a;
+			color: #fafafa;
+			font-size: 1.5rem;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+			padding-left: 2rem;
+
+			border-top-width: 2px;
+			border-top-style: solid;
+
+			border-right-width: 60px;
+			border-right-style: solid;
+		}
+
+		h3 span{
+			font-size: 16px;
+			font-weight: 400;
+			padding: 1rem;
+		}
+
+		/* Article Subheading */
+		/*article h4{
+			height: 25px;
+			line-height: 25px;
+			background: #2a2a2a;
+			color: #fafafa;
+
+			text-decoration: none;
+			font-size: .85rem;
+			text-align: right;
+			padding: 0 1rem;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+		}*/
+
+		article div{
+			position: relative;
+			display: block;
+		}	
+
+		article img{
+			height: 500px;
+			width: 750px;
+			margin: 0 auto;
+		}
+		article p{
+			width: 750px;
+			background: #fafafa;
+			color: #1a1a1a;
+			padding: 1rem;
+			font-family: Verdana, sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.4em;
+
+		}
+		/* --- end articles css --- */
+
+		/* --- Footer CSS --- */
+		footer{
+			width: 750px;
+			height: 150px;
+		}
+
+
+	/* -------------------- end main page css -------------------- */

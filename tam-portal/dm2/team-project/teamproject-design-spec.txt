@@ -1,0 +1,45 @@
+//////////////////////////////////////
+//                                  //
+//      Phase 3 - Design Spec       //
+//  by Dillon Drenzek, Logan McCaul //
+//                                  //
+//////////////////////////////////////
+
+
+|	Overview
+------------------------
+
+	The project will take the form of a single-player puzzle game. The object of the game will be 
+	to complete three separate puzzles(red,blue,green) acting as a character in a Pac-Man style arcade game. 
+	As the player completes the puzzle, they receive a key. When they have 3 keys, they are able 
+	to open the final door and try to complete one final puzzle.
+
+...Puzzles...
+	We are still writing the puzzles, but we would like to have each room be a slightly different 
+	style of puzzle. For instance, we'll have a red room be like a coordination challenge complete
+	with a wall of lava, the blue room will be a race against the clock and then the green room 
+	will be a logic test of some sort, to test the players' intellect as well.
+
+...HTML5 Canvas...
+	We will draw the game and the components on an html5 canvas. I thought there might be more to say.
+
+...Movement...
+	One of the key parts of this game is going to be movement. We will need to have a solid engine
+	for moving sprites around the board. This will best be accomplished with a JavaScript/jQuery
+	code base. The engine should be able to move any object that we render from point a to point
+	b in a certain timeframe. Unless the css3 animations would be easier, I think we'd be able to 
+	have a little more control in jQuery.
+
+...Flashlights...
+	One twist in the game we came up with was a concept of 'flashlights.' If the background of a 
+	room is red, green, or blue, we thought it might be interesting to have three different colors 
+	of flashlights to illuminate key parts of the puzzle. You would have to switch the color of 
+	the flashlight (moved by the mouse)
+
+	...An alternative...
+		An alternative to that would be have three keys on the keyboard switch between all the 
+		colors and have the background of each room change to reveal different things on the game 
+		board
+
+
+

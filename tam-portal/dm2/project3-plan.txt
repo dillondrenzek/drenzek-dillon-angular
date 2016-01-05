@@ -1,0 +1,92 @@
+Description:
+	I think I would like to expand on th elab I started making for Lab 12. It is a humorous
+	way to ask for a girls phone number. I want to create something like a form for someone
+	trying to make an appointment with somebody. I will have a space for name, phone number,
+	email, "appointment time" and then once everything has been submitted, I'll give them a
+	confirmation message. It might even be interesting to try and find a way to send a 
+	confirmation email. I don't know if that is probable or not.
+	
+	I think it would also be great to have the form auto-complete, auto-format, and auto-
+	everything as much as possible. Meaning, the cursor will go from field to field by
+	itself. For instance, in the phone number field, when she finishes filling out the area
+	code, the cursor will automatically go to the next section of the phone number.
+	
+	There will also be confirmation messages as she fills out the form. Like checkmarks, lots
+	and lots of green.
+	
+	After the form has been submitted, all the data will be put into a database for me. Kind
+	of like an address book.
+	
+	Maybe it would be funny to have a fake Terms and Conditions checkbox at the bottom.
+	
+Pseudocode:
+	I think I will need to use some JavaScript in addition to the php. For instance, the phone 
+	number section, I looked online and the way you move the focus from one field to another
+	is by using Javascript.
+	
+	The basic form looks like:
+		<form action="" method="post" id="form">
+			<label for="name">Name:</label><br>
+			<input id="name" type="text" name="name" required autofocus><br><br>
+			
+			<label for="number">Number:</label><br>
+			<input id="number" type="text" name="areacode" tabindex="1" size="3" maxlength="3" onkeyup="checkLen(this,this.value)">
+			<input id="number" type="text" name="firstthree" tabindex="2" size="3" maxlength="3" onkeyup="checkLen(this,this.value)">
+			<input id="number" type="text" name="lastfour" tabindex="3" size="4" maxlength="4" onkeyup="checkLen(this,this.value)"><br><br>
+			
+			<label for="datepicker">Date:</label><br>
+			<input id="datepicker" type="text" name="datepicker" placeholder="Tomorrow?"><br><br>
+			
+			<input id="submit" type="submit" name="submit" value="Call Me :)">
+		</form>
+		
+	There will be a datepicker for the date field which is handled by the jQuery UI library:
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script>
+			$(function() {
+			    $( "#datepicker" ).datepicker();
+			  });
+		</script>
+		
+	The telephone field is handled by a function called checkLen() which I have found online, 
+	I may try to implement my own version of this function
+		<script>
+			function checkLen(x,y)
+			{
+			if (y.length==x.maxLength)
+			  {
+			  var next=x.tabIndex;
+			  if (next<document.getElementById("form").length)
+			    {
+			    document.getElementById("form").elements[next].focus();
+			    }
+			  }
+			}
+		</script>
+		
+
+Visual Design:
+	
+	The visual design will be pretty easy. It should be a simple, attractive looking web form.
+	I would like to make this as unserious as possible. I want to experiment with form CSS. 
+	I have seen many different textboxes around the web, I think it would be awesome to get
+	creative and customize all the form elements.
+	
+	
+	-------------------------------------
+	|	Name: [                  ]		|	
+	|									|
+	|	Phone: [   ] [   ] [     ]		|
+	|									|
+	|	Email: [                 ]		|
+	|									|
+	|	Date: [APR] [17] [2014]			|
+	|	Time: [7:00 PM]					|
+	|	Location: [You Pick :)]			|
+	|									|
+	|			[ Submit ]				|
+	-------------------------------------
+Testing:
+	Obviously, I will test my page on real females! Just kidding. I think the testing process
+	will be really easy. I don't really know what to put here. I will simply trial and error 
+	the whole thing. Upload to the server, test functionality, rinse, repeat. 

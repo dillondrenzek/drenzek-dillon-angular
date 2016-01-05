@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Default - Dillon Drenzek</title>
+
+	<!-- Meta Tags -->	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Dillon Drenzek">
+
+	<!-- Links -->
+		<!-- Google Fonts -->
+			<!-- <link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100' rel='stylesheet' type='text/css'> -->
+		<!-- Stylesheet -->
+			<!-- <link href='./css/header-nav-style.css' rel='stylesheet'> -->
+		<!-- Favicon Link -->
+			<!-- <link type="image/png" href="" rel="shortcut icon"> -->
+
+	<!-- Scripts -->
+		<!-- jQuery -->	
+			<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+			<script src="http://use.edgefonts.net/lato:n1,n3.js"></script>
+
+	<!-- Styles -->	
+		<style type="text/css">
+		
+		/* UTILITY */
+			/*@media all and (min-width: 600px) {}*/
+
+			*,
+			*:before,
+			*:after{
+				box-sizing:border-box;
+					-moz-box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				background: #252423;
+				/*height: 100%;*/
+			}
+
+			a {
+				text-decoration: none;
+				font-family: lato, sans-serif;
+				color: #eeeeee;
+				padding: 20px;
+				background: #CC4035;
+				position: fixed;
+				float: left;
+				z-index: 100;
+				/*top: 0px;*/
+			}
+
+				a:hover {
+					background: #FF6E63;
+				}
+
+			#wrapper {
+				display: table;
+				height: 100vh;
+				width: 100%;
+				background: blue;
+			}
+
+			#screen-center {
+				/*background: blue;*/
+				height: 100vh;
+				width: 100%;
+				display: block;
+				position: relative;
+			}
+
+			#second-project-link {
+				position: absolute;
+				right: 0px;
+				left: none;
+			}
+
+			#start-button {
+				color: #eeeeee;
+				padding: 20px;
+				cursor: pointer;
+				font-weight: 700;
+				font-size: 2rem;
+				display: block;
+				/*vertical-align: middle;*/
+				text-align: center;
+				/*background: green;*/
+				font-family: lato, sans-serif;
+				position: relative;
+				background: green;
+				width: 200px;
+				top: 100px;
+				left: 100px;
+			}
+
+				#start-button:hover {
+					background: #3BAB1C;
+				}
+
+			#graph-container {
+				display: table;
+				height: 400px;
+				width: 800px;
+				/*background: red;*/
+				background: #222;
+				margin: 0 auto;
+				position: relative;
+				top: 200px;
+				border-bottom: 5px solid white; 
+				overflow: hidden;
+			}
+			.graph-slot {
+				/*width: 20%;*/
+				height: 5px;
+				display: table-cell;
+				/*background: red;*/
+				/*position: absolute;*/
+				bottom: 0px;
+				margin-left: 10px;
+			}
+
+			.graph-bar {
+				background: green;
+				position: absolute;
+				width: 20%;
+				margin-left: 20px;
+				bottom: 0px;
+				color: #eeeeee;
+				font-family: lato,sans-serif;
+				font-size: 2rem;
+				text-align: center;
+				/*height: 100px;*/
+			}
+
+			.bar-anim-100 {
+				height: 98%;
+				background: #7F2921;
+				-webkit-animation: grow-bar-full 1.6s 1 normal ease;
+				animation: grow-bar-full 1.6s 1 normal ease;
+			}
+
+			@-webkit-keyframes grow-bar-full {
+			    from {
+			    	height: 0px;
+			    	opacity:.3;
+			    }
+			    to {
+			    	height: 98%;
+			    		opacity:1;
+			    }
+			}
+
+			@keyframes grow-bar-full {
+				from {
+					height: 0px;
+					opacity:.3;
+				}
+				to {
+					height: 98%;
+						opacity:1;
+				}
+			}
+
+			.bar-anim-75 {
+				height: 75%;
+				background: #CC2A1C;
+				-webkit-animation: grow-bar-three 1.8s 1 normal ease;
+				animation: grow-bar-three 1.8s 1 normal ease;
+			}
+
+			@-webkit-keyframes grow-bar-three {
+			    from {height: 0px;
+			    	opacity:.3;}
+			    to {height: 75%;
+			    	opacity:1;}
+			}
+
+			@keyframes grow-bar-three {
+				from {height: 0px;
+					opacity:.3;}
+				to {height: 75%;
+					opacity:1;}
+			}
+
+			.bar-anim-50 {
+				height: 50%;
+				background: #FF5143;
+				-webkit-animation: grow-bar-half 1.2s 1 normal ease;
+				animation: grow-bar-half 1.2s 1 normal ease;
+			}
+
+			@-webkit-keyframes grow-bar-half {
+			    from {height: 0px;
+			    	opacity:.3;}
+			    to {height: 50%;
+			    	opacity:1;}
+			}
+
+			@keyframes grow-bar-half {
+				from {height: 0px;
+					opacity:.3;}
+				to {height: 50%;
+					opacity:1;}
+			}
+
+			.bar-anim-25 {
+				height: 35%;
+				background: #FF6F63;
+				-webkit-animation: grow-bar-one 1.5s 1 normal ease;
+				animation: grow-bar-one 1.5s 1 normal ease;
+			}
+
+			@-webkit-keyframes grow-bar-one {
+			    from {height: 0px;
+			    	opacity:.3;}
+			    to {height: 35%;
+			    	opacity:1;}
+			}
+
+			@keyframes grow-bar-one {
+				from {height: 0px;
+					opacity:.3;}
+				to {height: 35%;
+					opacity:1;}
+			}
+
+			/*.text-fade-anim {
+				color: rgba(240,240,240,0);
+				-webkit-animation: text-fade-in 1s 1 normal ease;
+				-webkit-animation-delay: 2s; 
+				animation: text-fade-in 1s 1 normal ease;
+    			animation-delay: 2s;
+			}
+
+			@-webkit-keyframes text-fade-in {
+			    from {color: rgba(240,240,240,0);}
+			    to {color: rgba(240,240,240,1);}
+			    color: rgba(240,240,240,1);
+			}
+
+			@keyframes text-fade-in {
+				from {color: rgba(240,240,240,0);}
+				to {color: rgba(240,240,240,1);}
+				color: rgba(240,240,240,1);
+			}*/
+
+		</style>
+</head>
+<body>
+	<!-- <div id="wrapper"> -->
+		<a href="./index.html">&lt; BACK</a>
+		<a href="./css-animation-project/index.html" id="second-project-link">Here is a second project I started &gt;</a>
+
+		<div id="screen-center">
+
+			<div id="graph-container">
+				<div class="graph-slot">
+					<div class="graph-bar bar-anim-100 text-fade-anim">100%</div>
+				</div>
+				<div class="graph-slot">
+					<div class="graph-bar bar-anim-25 text-fade-anim">23.7%</div>
+				</div>
+				<div class="graph-slot">
+					<div class="graph-bar bar-anim-50 text-fade-anim">49.9%</div>
+				</div>
+				<div class="graph-slot">
+					<div class="graph-bar bar-anim-75 text-fade-anim">73.9%</div>
+				</div>
+			</div>
+			<!-- <div id="start-button">START</div> -->
+		</div>
+	<!-- </div> --> <!-- end wrapper -->
+</body>
+</html>

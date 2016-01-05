@@ -566,6 +566,25 @@ var projects = {
 			url: "/le-faux/index.html",
 			title: "Launch Project"
 		}]
+	},
+
+	// WordPress Portfolio
+	wordpressPortfolio: {
+		// permalink: 'wordpress-portfolio',
+		title: 'Artwork WordPress Portfolio',
+		type: 'Class Project / Portfolio',
+		skills: ['Photoshop', 'Illustrator', 'WordPress'],
+		bulletPoints: [
+			'A simple WordPress.com site built for Advanced Web Design',
+			'Displays a number of my favorite digital art projects',
+			'Emotionally Expressive, Digitally Impressive'
+		],
+		links: [{
+			label: "Launch",
+			icon: "fa-external-link-square",
+			url: "https://dillondrenzek.wordpress.com/",
+			title: "Launch Project"
+		}]
 	}
 };
 

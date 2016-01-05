@@ -33,6 +33,7 @@ api.get('/projects', function(req,res){
 		Projects['tam'],
 		Projects['capstonePortfolio'],
 		Projects['leFaux'],
+		Projects['wordpressPortfolio'],
 		Projects['alwaysWondering'],
 	]); 
 });

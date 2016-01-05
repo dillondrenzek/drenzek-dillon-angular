@@ -546,7 +546,10 @@ var projects = {
 			icon: "fa-external-link-square",
 			url: "/tam/index.html",
 			title: "Launch Project"
-		}]
+		}],
+		imageUrls: [
+			'img/tam-portal-1.jpg'
+		]
 	},
 
 	// Le Faux
@@ -565,7 +568,10 @@ var projects = {
 			icon: "fa-external-link-square",
 			url: "/le-faux/index.html",
 			title: "Launch Project"
-		}]
+		}],
+		imageUrls: [
+			'img/le-faux-1.jpg'
+		]
 	},
 
 	// WordPress Portfolio
@@ -584,7 +590,10 @@ var projects = {
 			icon: "fa-external-link-square",
 			url: "https://dillondrenzek.wordpress.com/",
 			title: "Launch Project"
-		}]
+		}],
+		imageUrls: [
+			'img/wordpress-portfolio-1.jpg'
+		]
 	}
 };
 

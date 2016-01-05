@@ -76,9 +76,15 @@ api.get('/skills', function(req,res){
 
 
 
-// Gridrunner Subapp
-// TODO: Fix subapp
-// app.use('/gridrunner/', express.static(__dirname + '/gridrunner/'));
+// Gridrunner
+app.use('/gridrunner', express.static(__dirname + '/gridrunner'));
+
+// TAM Portal
+app.use('/tam', express.static(__dirname + '/tam-portal'));
+
+// Le Faux Désign Compagnie
+app.use('/le-faux', express.static(__dirname + '/faux-company'));
+
 
 // Catch Mobile Browsers
 app.get('/mobile', function(req, res){

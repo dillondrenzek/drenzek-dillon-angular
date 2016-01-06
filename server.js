@@ -27,12 +27,12 @@ app.use('/api', api);
 api.get('/projects', function(req,res){	
 	// TODO: fix with mongoDB v4.1
 	res.json([
+		Projects['capstonePortfolio'],
 		Projects['drenzekDoesDenmark'],
 		Projects['storm'],
 		Projects['gridrunner'],
-		Projects['tam'],
-		Projects['capstonePortfolio'],
 		Projects['leFaux'],
+		Projects['tam'],
 		Projects['wordpressPortfolio'],
 		Projects['alwaysWondering'],
 	]); 

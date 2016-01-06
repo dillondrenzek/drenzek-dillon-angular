@@ -450,12 +450,12 @@ var projects = {
 		"imageUrls": ['img/capstone-portfolio-1.jpg'],
 
 		"links": [
-			// {
-			// 	label: "Launch",
-			// 	icon: "fa-external-link-square",
-			// 	url: "http://drenzek-capstone-portfolio.herokuapp.com/",
-			// 	title: "Launch Project"
-			// },
+			{
+				label: "Launch",
+				icon: "fa-external-link-square",
+				url: "http://drenzek-capstone-portfolio.herokuapp.com/",
+				title: "Launch Project"
+			},
 			{
 				label: "GitHub",
 				icon: "fa-github-square",

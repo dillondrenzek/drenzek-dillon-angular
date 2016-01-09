@@ -7,17 +7,29 @@ var express = require('express'),
 	Projects = require('./db/seed-projects'),
 	Skills = require('./db/seed-skills');
 
+
+
+///////////////
+// App Setup //
+///////////////
+
 // App Port
 app.set('port', (process.env.PORT || 8081));
 
+// HTML Templates with Jade
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade');
 
-// Public Directories TODO
+// Public Directories
 app.use(express.static(__dirname + '/ng'));
 app.use(express.static(__dirname + '/bower_components'));
 
-// API Routes
+
+
+////////////////
+// API Routes //
+////////////////
+
 var api = express();
 app.use('/api', api);
 
@@ -79,6 +91,10 @@ api.get('/skills', function(req,res){
 
 
 
+////////////////////////
+// Static Directories //
+////////////////////////
+
 // Gridrunner
 app.use('/gridrunner', express.static(__dirname + '/gridrunner'));
 
@@ -88,14 +104,10 @@ app.use('/tam', express.static(__dirname + '/tam-portal'));
 // Le Faux Désign Compagnie
 app.use('/le-faux', express.static(__dirname + '/faux-company'));
 
-
-// Catch Mobile Browsers
-app.get('/mobile', function(req, res){
-	res.render('mobile');
-});
-
 // GET '/resume'
 app.use('/resume', express.static(__dirname + '/pdf/dillon-drenzek-resume.pdf'));
+
+
 
 // GET '/'
 app.use('/', function(req, res){

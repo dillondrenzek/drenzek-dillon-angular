@@ -3,7 +3,7 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
 **Homepage**: http://dillon.drenzek.com
 
 ---------
-## Version: `v4.0.1` <br>
+## Version: `v4.0.2` <br>
 
 ### Version History
 | Version Name      | Version Number    | Date          | Description |

@@ -95,17 +95,19 @@ api.get('/skills', function(req,res){
 // Static Directories 
 //--------------------
 
+var staticHTMLPath = '/static/html';
+
 // Gridrunner
-app.use('/gridrunner', express.static(__dirname + '/gridrunner'));
+app.use('/gridrunner', express.static(__dirname + staticHTMLPath + '/gridrunner'));
 
 // TAM Portal
-app.use('/tam', express.static(__dirname + '/tam-portal'));
+app.use('/tam', express.static(__dirname + staticHTMLPath + '/tam-portal'));
 
 // Le Faux Désign Compagnie
-app.use('/le-faux', express.static(__dirname + '/faux-company'));
+app.use('/le-faux', express.static(__dirname + staticHTMLPath + '/faux-company'));
 
 // GET '/resume'
-app.use('/resume', express.static(__dirname + '/pdf/dillon-drenzek-resume.pdf'));
+app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));
 
 
 

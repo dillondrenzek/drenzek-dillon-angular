@@ -1,3 +1,5 @@
+// v4.0.2
+
 angular.module('DrenzekDillon')
 .controller('HomepageCtrl', [
 	'$http',
@@ -22,6 +24,4 @@ angular.module('DrenzekDillon')
 		}).error(function(err){
 			console.error('error:', err);
 		});
-
-
 }]);

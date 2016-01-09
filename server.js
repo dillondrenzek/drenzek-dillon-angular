@@ -1,5 +1,5 @@
 // Main Server
-// v4.0
+// v4.0.2
 
 var express = require('express'),
 	app = express(),
@@ -9,9 +9,9 @@ var express = require('express'),
 
 
 
-///////////////
-// App Setup //
-///////////////
+//-----------
+// App Setup 
+//-----------
 
 // App Port
 app.set('port', (process.env.PORT || 8081));
@@ -26,9 +26,9 @@ app.use(express.static(__dirname + '/bower_components'));
 
 
 
-////////////////
-// API Routes //
-////////////////
+//------------
+// API Routes 
+//------------
 
 var api = express();
 app.use('/api', api);
@@ -91,9 +91,9 @@ api.get('/skills', function(req,res){
 
 
 
-////////////////////////
-// Static Directories //
-////////////////////////
+//--------------------
+// Static Directories 
+//--------------------
 
 // Gridrunner
 app.use('/gridrunner', express.static(__dirname + '/gridrunner'));

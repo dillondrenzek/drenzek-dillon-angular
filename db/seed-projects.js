@@ -1,5 +1,5 @@
 // Seed Projects
-// v4.0
+// v4.0.2
 
 // TODO: v5 - Remove this file by implementing MongoDB
 

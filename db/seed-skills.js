@@ -1,7 +1,7 @@
 // Seed Skills
-// v4.0
+// v4.0.2
 
-// TODO: v4.1 - Remove this file by implementing MongoDB
+// TODO: v5 - Remove this file by implementing MongoDB
 
 
 var skills = {

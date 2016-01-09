@@ -1,5 +1,5 @@
 // Angular Routes
-// v4.0
+// v4.0.2
 
 angular.module('DrenzekDillon')
 .config(function($routeProvider, $locationProvider){
@@ -19,28 +19,27 @@ angular.module('DrenzekDillon')
 	.when('/projects/:permalink', {
 		controller: 'ProjectShowCtrl',
 		templateUrl: '/templates/pages/projects/show.html'
-	})
-
-	// Index Projects
-	.when('/projects/index', {
-		controller: 'ProjectListCtrl',
-		templateUrl: '/templates/pages/projects/index.html'
-	})
-
-
-
-	// SKILLS
-	// Index Skills
-	.when('/skills/index', {
-		controller: 'SkillListCtrl',
-		templateUrl: '/templates/pages/skills/index.html'
 	});
 
+	// TODO: Implement
+	// Index Projects
+	// .when('/projects/index', {
+	// 	controller: 'ProjectListCtrl',
+	// 	templateUrl: '/templates/pages/projects/index.html'
+	// })
+
+
+	// TODO: Implement
+	// SKILLS
+	// Index Skills
+	// .when('/skills/index', {
+	// 	controller: 'SkillListCtrl',
+	// 	templateUrl: '/templates/pages/skills/index.html'
+	// });
+
 	
-
+	// TODO: Implement
 	// 404 NOT FOUND
-
-	// Otherwise
 	// .otherwise({
 	// 	redirectTo: '/'
 	// });

@@ -1,0 +1,44 @@
+//- !-- Medium Project --
+div(class="project medium")
+
+	//- !-- Project Header --
+	header(class="project-title")
+
+		//- !-- Project Title --
+		div(class="title")
+			a(class="primary" ng-href="/projects/{{project.permalink}}" ng-if="project.permalink") {{project.title}}
+			h4(class="primary" ng-if="!project.permalink") {{project.title}}
+
+			//- !-- Project Type --
+			ul(class="descriptors")
+				li(class="type" ng-show="project.type")
+					p(class="secondary") {{project.type}}
+		
+
+		//- !-- Project Action Links --
+		ul(class="links" ng-show="project.links")
+
+			//- !-- View on Github --
+			li(class="link" ng-repeat="l in project.links")
+				dd-link(link="l")
+			
+
+	//- !-- Project Body --
+	div(class="body" ng-show="project.bulletPoints || project.skills")
+
+		//- !-- Project Skills --
+		ul(class="skills" ng-show="project.skills")
+
+			//- !-- Small Skill Directive --
+			skill-small(ng-repeat="skill in project.skills" skill="skill") {{skill}}
+		
+
+		//- !-- Project Bullet Points --
+		ul(class="bullets")
+			li(class="project-bullet" ng-repeat="bullet in project.bulletPoints") {{bullet}}
+		
+
+	//- !-- Project Figure --
+	figure(ng-show="project.imageUrls")
+		img(ng-repeat="url in project.imageUrls" ng-src="{{url}}")
+

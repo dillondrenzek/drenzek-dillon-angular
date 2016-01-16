@@ -1,0 +1,123 @@
+div(class="column two-third")
+
+	//- !-- Title Section --
+	section(class="page-title")
+		div(class="title column")
+			h2(class="primary") , The Work Of
+
+
+	//- !-- "Word From The Author" Paragraph Section --
+	section(class="paragraph")
+		header(class="section-title")
+			div(class="title")
+				h3(class="primary") A Word From The Author...
+			
+		
+
+		div(class="column")
+			p(class="quote") Welcome to my little corner of the Internet!
+			p(class="quote") I'm Dillon Drenzek and I'm an Up & Coming Web Developer. I love the structure of code, the creative freedom of design, and the endless possibilities of the Internet. What better way to combine these passions than as a web developer? 
+			br
+			p(class="quote") I graduated with a degree in Computer Science in May of 2015 and after spending the summer studying Graphic Design in Denmark, I've moved to Seattle to start my career at a company that is as passionate about what they do as I am! I've put this website together to demonstrate what I'm capable of. So, play around, see what you can find, and then feel free to drop me a note at dillon@drenzek.com!
+			br
+			p(class="quote") Cheers!brDillon
+
+
+
+
+	//- !-- "Featured Projects" Medium Project List Section --
+	section(class="list")
+		header(class="section-title")
+			div(class="title")
+				h3(class="primary") Featured Projects
+
+		
+		div(class="column")
+			//- !-- Medium Project --
+			project-medium(ng-repeat="project in projects" project="project")
+
+
+
+//- !-- Page Column Right --
+div(class="page-column third")
+	//- !-- Title Section --
+	section(class="page-title")
+
+	//- !-- "Top Skills" Medium Skill List Section --
+	section(class="list column")
+
+		header(class="section-title")
+			h3(class="primary") Skills
+		
+
+		//- !-- Top Skills --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") Best Overall
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.best" skill="skill")
+			
+		
+
+		//- !-- Front End --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") Front-End
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.frontEnd" skill="skill")
+			
+		
+
+		//- !-- UI & Front-End Design --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") UI & Graphic Design
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.uiDesign" skill="skill")
+			
+		
+
+		//- !-- Back End --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") Back-End & Databases
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.backEnd" skill="skill")
+			
+		
+
+		//- !-- Programming --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") Programming
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.programming" skill="skill")
+			
+		
+
+		//- !-- Workflow --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") Workflow
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.workflow" skill="skill")
+			
+		
+
+		//- !-- Concepts --
+		div(class="column")
+			div(class="column-title")
+				h4(class="primary") Technical Concepts
+			
+			ul(class="skills")
+				skill-medium(ng-repeat="skill in skills.techConcepts" skill="skill")
+			
+		
+
+	

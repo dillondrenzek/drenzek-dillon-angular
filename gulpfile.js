@@ -12,8 +12,8 @@ var gulp = require('gulp'),
 gulp.task('jade', function() {
 
 	// Angular Templates
-  return gulp.src('./src/ng/templates/**/**/*.jade')
-  	.pipe(watch('./src/ng/templates/**/**/*.jade'))
+  return gulp.src('./src/jade/templates/**/**/*.jade')
+  	.pipe(watch('./src/jade/templates/**/**/*.jade'))
   	.pipe(plumber())
     .pipe(jade())
     .pipe(gulp.dest('./ng/templates/'));

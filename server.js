@@ -45,8 +45,8 @@ api.get('/projects', function(req,res){
 		Projects['gridrunner'],
 		Projects['leFaux'],
 		Projects['tam'],
-		Projects['wordpressPortfolio'],
-		Projects['alwaysWondering'],
+		// Projects['wordpressPortfolio'],
+		// Projects['alwaysWondering'],
 	]); 
 });
 

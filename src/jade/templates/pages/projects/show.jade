@@ -1,0 +1,94 @@
+div.column
+
+//- !-- Page Title --
+section.page-title
+		
+	div.title.column
+		//- !-- Project Title --
+		h2.primary {{project.title}}
+		
+
+		//- !-- Project Type --
+		ul.descriptors
+			li(ng-show="project.type")
+				p.secondary {{project.type}}
+			
+		
+	
+
+
+	ul.links.column(ng-show="project.links")
+
+		li.link(ng-repeat="l in project.links")
+			dd-link(link="l")
+		
+
+	
+
+
+//- !-- Title Detail --
+section.two-column
+	
+	div.column
+		//- !-- Project Skills --
+		ul.skills(ng-show="project.skills")
+			skill-medium(skill="skill" ng-repeat="skill in project.skills")
+		
+
+		//- !-- Project Bullet Points --
+		ul.bullets(ng-show="project.bulletPoints")
+			li.bullet(ng-repeat="bullet in project.bulletPoints") {{bullet}}
+			
+		
+	
+
+	figure.column(ng-show="project.imageUrls")
+		img(ng-repeat="url in project.imageUrls" ng-src="{{url}}")
+	
+
+
+
+
+//- !-- Body Sections --
+section(ng-repeat="section in project.sections" ng-class="section.type")
+
+	//- !-- Section Header --
+	header.section-title(ng-show="section.title || section.headerLinks")
+
+		//- !-- Section title --
+		div.title
+			h3.primary {{section.title}}
+		
+
+		//- !-- Header Links --
+		ul.links(ng-show="section.headerLinks")
+
+			li.link(ng-repeat="link in section.headerLinks")
+				a(ng-href="{{link.href}}")
+					i.fa(class="{{link.icon}}" ng-show="link.icon")
+					p {{link.label}}
+
+
+	//- !-- Section columns --
+	div.column(ng-repeat="column in section.columns")
+		
+		//- !-- Section Title (Optional) --
+		div.column-title(ng-show="column.title")
+			div.title
+				h4.primary {{column.title.primary}}
+				h5.secondary {{column.title.secondary}}
+			
+		
+
+		//- !-- Section Paragraph (Optional) --
+		p(ng-show="column.p") {{column.p}}
+
+		//- !-- Section Figure (Optional) --
+		figure(ng-show="column.figure")
+			| {{column.figure.html}}
+			img(src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}")
+			
+
+
+
+

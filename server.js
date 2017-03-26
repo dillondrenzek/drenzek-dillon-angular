@@ -10,7 +10,7 @@ var express = require('express'),
 
 
 //-----------
-// App Setup 
+// App Setup
 //-----------
 
 // App Port
@@ -21,13 +21,13 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'jade');
 
 // Public Directories
-app.use(express.static(__dirname + '/ng'));
+app.use(express.static(__dirname + '/ng-deprecated'));
 app.use(express.static(__dirname + '/bower_components'));
 
 
 
 //------------
-// API Routes 
+// API Routes
 //------------
 
 var api = express();
@@ -36,7 +36,7 @@ app.use('/api', api);
 // Projects API
 
 // GET projects
-api.get('/projects', function(req,res){	
+api.get('/projects', function(req,res){
 	// TODO: fix with mongoDB v4.1
 	res.json([
 		Projects['capstonePortfolio'],
@@ -47,17 +47,17 @@ api.get('/projects', function(req,res){
 		Projects['tam'],
 		// Projects['wordpressPortfolio'],
 		// Projects['alwaysWondering'],
-	]); 
+	]);
 });
 
 // GET Project by permalink
 api.get('/projects/:permalink', function(req,res){
 
-	// TODO: v4.1 - fix with mongoDB 
+	// TODO: v4.1 - fix with mongoDB
 	if (req.params.permalink === 'capstone-portfolio') {
 		res.json(Projects['capstonePortfolio']);
 	} else if (req.params.permalink === 'drenzek-does-denmark') {
-		res.json(Projects['drenzekDoesDenmark']); 
+		res.json(Projects['drenzekDoesDenmark']);
 	} else if (req.params.permalink === 'storm') {
 		res.json(Projects['storm']);
 	} else if (req.params.permalink === 'always-wondering') {
@@ -65,7 +65,7 @@ api.get('/projects/:permalink', function(req,res){
 	} else if (req.params.permalink === 'gridrunner') {
 		res.json(Projects['gridrunner']);
 	}
-	
+
 });
 
 // TODO: v4.1 - Projects Model CRUD operations
@@ -80,7 +80,7 @@ api.get('/projects/:permalink', function(req,res){
 // GET skills
 api.get('/skills', function(req,res){
 	// TODO: v4.1 - Skills Model w/ MongoDB
-	res.json(Skills); 
+	res.json(Skills);
 });
 
 // TODO: Implement Skill Model CRUD Operations
@@ -92,7 +92,7 @@ api.get('/skills', function(req,res){
 
 
 //--------------------
-// Static Directories 
+// Static Directories
 //--------------------
 
 var staticHTMLPath = '/static/html';
@@ -119,5 +119,3 @@ app.use('/', function(req, res){
 // App Listen
 app.listen(app.get('port'));
 console.log("App: Listening on "+app.get('port'));
-
-

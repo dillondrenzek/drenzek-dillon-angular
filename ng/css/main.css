@@ -135,10 +135,10 @@ table td {
   text-align: left;
   line-height: 0.83333em;
   text-shadow: 1px 1px 1px rgba(48,48,48,0.5);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-user-select: none /* Chrome all / Safari all */;
+  -moz-user-select: none /* Firefox all */;
+  -ms-user-select: none /* IE 10+ */;
+  user-select: none /* Likely future */;
   cursor: default;
   position: absolute;
   left: 0.270833em;
@@ -152,10 +152,10 @@ table td {
   letter-spacing: 0.1em;
   text-align: left;
   text-transform: uppercase;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-user-select: none /* Chrome all / Safari all */;
+  -moz-user-select: none /* Firefox all */;
+  -ms-user-select: none /* IE 10+ */;
+  user-select: none /* Likely future */;
   cursor: default;
   position: absolute;
   left: 1.25em;
@@ -566,12 +566,15 @@ ul.bullets li.project-bullet {
   margin-left: 30px;
   list-style-type: circle;
 }
+ul.bullets {
+  padding: 50px;
+}
 ul.bullets li.bullet {
   font-family: 'Fira Sans', Helvetica, sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #555;
-  letter-spacing: -0.027916em;
+  letter-spacing: 0.027916em;
   text-align: left;
   list-style-position: outside;
   list-style-type: circle;
@@ -590,6 +593,12 @@ p.quote {
   font-style: italic;
   font-weight: 400;
   line-height: 1.5em;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: -0.027916em;
+  text-align: left;
 }
 .skill.small {
   background: #fff;
@@ -599,12 +608,17 @@ p.quote {
 .skill.small a,
 .skill.small p {
   font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.65rem;
+  font-size: 1.15rem;
   font-weight: 400;
   color: #555;
   letter-spacing: 0.0714285em;
   text-align: left;
-  text-transform: uppercase;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: -0.027916em;
+  text-align: left;
 }
 .skill.medium {
   background: #fff;
@@ -614,12 +628,18 @@ p.quote {
 .skill.medium a,
 .skill.medium p {
   font-family: 'Fira Sans', Helvetica, sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #555;
   letter-spacing: 0.0714285em;
   text-align: left;
-  text-transform: uppercase;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: -0.027916em;
+  text-align: left;
+  padding: 7px 15px;
 }
 .skill.large {
   background: #fff;
@@ -635,11 +655,14 @@ p.quote {
   letter-spacing: -0.027916em;
   text-align: left;
 }
-.project {
+.project.medium {
   background: #fff;
   border: 1px solid #ddd;
   border-left: 3px solid #ddd;
 }
-.project figure {
+.project.medium figure {
   border-left: 1px solid #ddd;
+}
+.project.medium .body {
+  background: #fff;
 }

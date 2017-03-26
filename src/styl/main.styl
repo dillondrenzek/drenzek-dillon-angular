@@ -444,8 +444,10 @@ ul.bullets
 
 // Generic Bullets
 ul.bullets
+	padding 50px
 	li.bullet
-		FiraSans(1.25rem, 700, Dark, -0.027916em, left)
+		FiraSans(1.25rem, 400, Dark, 0.027916em, left)
+		// FiraSans(1.25rem, 700, Dark, -0.027916em, left)
 		list-style-position outside
 		list-style-type circle
 		
@@ -460,6 +462,8 @@ p.quote
 	font-style italic
 	font-weight 400
 	line-height 1.5em
+	FiraSans(1.25rem, 700, Dark, -0.027916em, left)
+	// font-style normal
 
 
 
@@ -470,17 +474,21 @@ p.quote
 	border 1px solid Light
 	border-left 3px solid Light
 	a, p
-		FiraSans(0.65rem, 400, Dark, 0.0714285em, left)
-		text-transform uppercase
+		FiraSans(1.15rem, 400, Dark, 0.0714285em, left)
+		FiraSans(1.25rem, 700, Dark, -0.027916em, left)
+		// text-transform uppercase
 	
 .skill.medium
 	background white
 	border 1px solid Light
 	border-left 3px solid Light
+	// padding 20px
 	
 	a, p
-		FiraSans(0.875rem, 400, Dark, 0.0714285em, left)
-		text-transform uppercase
+		FiraSans(1.25rem, 400, Dark, 0.0714285em, left)
+		FiraSans(1.25rem, 700, Dark, -0.027916em, left)
+		padding 7px 15px
+		// text-transform uppercase
 		
 .skill.large
 	background white
@@ -492,10 +500,13 @@ p.quote
 
 
 // Projects
-.project
+.project.medium
 	background white
 	border 1px solid Light
 	border-left 3px solid Light
 	figure
 		border-left 1px solid Light
+		
+	.body
+		background white
 

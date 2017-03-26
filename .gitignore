@@ -1,1 +1,8 @@
 node_modules/
+
+src/**/*.js
+src/**/*.js.map
+
+!src/systemjs.config.js
+!src/systemjs-angular-loader.js
+!src/systemjs.config.extras.js

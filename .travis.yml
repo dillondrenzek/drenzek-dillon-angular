@@ -9,3 +9,5 @@ deploy:
   on:
     repo: dillondrenzek/dillon-drenzek-com
     branch: v5-staging
+  run:
+    - "npm run start:prod"

@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/dillondrenzek/drenzek-dillon-angular",
   "scripts": {
-    "preinstall": "rm -rf node_modules/",
     "start:dev:client": "concurrently \"npm run build:watch\" \"npm run serve:bs\"",
     "start:dev": "npm run build:server && concurrently \"npm run build:client\" \"npm run serve:node\"",
     "start:dev:watch": "npm run build:server && concurrently \"npm run build:client:watch\" \"npm run serve:node\"",

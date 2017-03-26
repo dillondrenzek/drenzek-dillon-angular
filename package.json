@@ -18,6 +18,7 @@
     "start:dev:client": "concurrently \"npm run build:watch\" \"npm run serve:bs\"",
     "start:dev": "npm run build:server && concurrently \"npm run build:client\" \"npm run serve:node\"",
     "start:dev:watch": "npm run build:server && concurrently \"npm run build:client:watch\" \"npm run serve:node\"",
+    "start:prod": "npm run build:server && npm run build:client && npm run serve:node",
     "build:server": "tsc -p ./tsconfig.json",
     "build:client": "tsc -p src/app/",
     "build:client:watch": "tsc -p src/app/ -w",

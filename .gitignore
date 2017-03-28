@@ -6,3 +6,9 @@ src/**/*.js.map
 !src/app/systemjs.config.js
 !src/app/systemjs-angular-loader.js
 !src/app/systemjs.config.extras.js
+
+server.js
+server.js.map
+
+ng-deprecated
+db

@@ -12,3 +12,5 @@ server.js.map
 
 ng-deprecated
 db
+
+npm-debug.log

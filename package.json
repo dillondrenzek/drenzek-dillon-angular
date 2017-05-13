@@ -1,0 +1,26 @@
+{
+  "name": "dillon-drenzek-com",
+  "version": "1.0.0",
+  "description": "The professional portfolio of University of Colorado graduate, Dillon Drenzek. <br> **Homepage**: http://dillon.drenzek.com",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillondrenzek/dillon-drenzek-com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dillondrenzek/dillon-drenzek-com/issues"
+  },
+  "homepage": "https://github.com/dillondrenzek/dillon-drenzek-com#readme",
+  "dependencies": {
+    "express": "4.15.2",
+    "path": "0.12.7",
+    "pug": "2.0.0-rc.1"
+  }
+}

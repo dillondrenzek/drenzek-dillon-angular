@@ -1,5 +1,13 @@
 node_modules/
 
-_project/
+#v5 Project planning
+_project
 
+# Old v4 files
+v4-deprecated
+db
+static
+
+
+!views/*.pug
 test.js

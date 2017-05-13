@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '7.8.0'
+  - '7.10.0'
 deploy:
   provider: heroku
   api_key:
@@ -8,7 +8,5 @@ deploy:
   app:
     master: drenzek-dillon-angular
     v5-staging: drenzek-dillon-staging
-install:
-  - npm install
 script:
   - npm run start:prod

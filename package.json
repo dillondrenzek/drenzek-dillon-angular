@@ -22,8 +22,8 @@
     "serve": "node server.js"
   },
   "dependencies": {
-    "express": "^4.15.2",
-    "path": "^0.12.7",
-    "pug": "^2.0.0-rc.1"
+    "express": "4.15.2",
+    "path": "0.12.7",
+    "pug": "2.0.0-rc.1"
   }
 }

@@ -19,16 +19,16 @@ app.set('view engine', 'pug');
 // Static Directories
 //--------------------
 
-var staticHTMLPath = '/static/html';
-
-// Gridrunner
-app.use('/gridrunner', express.static(__dirname + staticHTMLPath + '/gridrunner'));
-
-// TAM Portal
-app.use('/tam', express.static(__dirname + staticHTMLPath + '/tam-portal'));
-
-// Le Faux Désign Compagnie
-app.use('/le-faux', express.static(__dirname + staticHTMLPath + '/faux-company'));
+// var staticHTMLPath = '/static/html';
+//
+// // Gridrunner
+// app.use('/gridrunner', express.static(__dirname + staticHTMLPath + '/gridrunner'));
+//
+// // TAM Portal
+// app.use('/tam', express.static(__dirname + staticHTMLPath + '/tam-portal'));
+//
+// // Le Faux Désign Compagnie
+// app.use('/le-faux', express.static(__dirname + staticHTMLPath + '/faux-company'));
 
 // GET '/resume'
 // app.use(

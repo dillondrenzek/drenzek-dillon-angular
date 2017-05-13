@@ -11,3 +11,4 @@ static
 
 !views/*.pug
 test.js
+.env

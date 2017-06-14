@@ -11,88 +11,34 @@ html
     link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
     link(rel="stylesheet" href="/static/stylesheets/main.css")
     
-    //- Favicon
-    include ./favicon.pug
-    //- analytics
-    //- include ./analytics.pug
+    include ./site/favicon.pug
+    //- include ./site/analytics.pug
     
   body
     #site-border
     #site-title
-      //- <!-- Logo -->
-      #logo
-        h1 Dillon Drenzek
-        .subtitle Up &amp; Coming Developer
-      //- <!-- Social Media Links -->
-      ul(id="social-media")
-        li
-          a(href="https://github.com/dillondrenzek")
-            i.fa.fa-github
-        li
-          a(href="https://www.linkedin.com/in/dillondrenzek")
-            i.fa.fa-linkedin
-        li
-          a(href="https://behance.net/dillondrenzek/")
-            i.fa.fa-behance
-        li
-          a(href="https://twitter.com/DrEnzek")
-            i.fa.fa-twitter
-      //- <!-- Nav Links -->
-      nav
-        ul
-          li: a(href="/resume" target="_self") Resume
-          li: a(href="/" target="_self") Home
+      include ./brand/logo.pug
+      include ./brand/social-media.pug
+      include ./site/nav.pug
         
     .page
       .column.two-third
+        
         section.page-title
           .title.column
-            h2.primary , The Work of
+            h2.primary 
+            
         section.paragraph
           header.section-title
             .title
               h3.primary A Word From The Author...
           .column
-            p.quote Welcome to my little corner of the Internet!
-            p.quote I'm Dillon Drenzek and I'm an Up &amp; Coming Web Developer. I love the structure of code, the creative freedom of design, and the endless possibilities of the Internet. What better way to combine these passions than as a web developer?
-            p.quote I graduated with a degree in Computer Science in May of 2015 and after spending the summer studying Graphic Design in Denmark, I've moved to Seattle to start my career at a company that is as passionate about what they do as I am! I've put this website together to demonstrate what I'm capable of. So, play around, see what you can find, and then feel free to drop me a note at dillon@drenzek.com!
-            p.quote Cheers! Dillon
+            p.quote Cheers!
+            p.quote - Dillon
+        
         section.list
           header.section-title
             .title
               h3.primary Featured Projects
           .column
-            include ./project-medium.pug
-      .page-column.third
-        .page-title
-        .list.column
-          header.section-title
-            h3.primary Skills
-          .column
-            .column-title
-              h4.primary Best Overall
-            ul.skills
-          .column
-            .column-title
-              h4.primary Front-End
-            ul.skills
-          .column
-            .column-title
-              h4.primary UI &amp; Graphic Design
-            ul.skills
-          .column
-            .column-title
-              h4.primary Back-End &amp; Databases
-            ul.skills
-          .column
-            .column-title
-              h4.primary Programming
-            ul.skills
-          .column
-            .column-title
-              h4.primary Workflow
-            ul.skills
-          .column
-            .column-title
-              h4.primary Technical Concepts
-            ul.skills
+            include ./projects/project-medium.pug

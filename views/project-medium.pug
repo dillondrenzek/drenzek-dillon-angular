@@ -8,7 +8,7 @@
           p.secondary {{project.type}}
     ul( ng-show="project.links" class="links")
       li( ng-repeat="l in project.links" class="link")
-        .dd-link Link
+        include ./dd-link.pug
   .body( ng-show="project.bulletPoints || project.skills")
     ul.skills( ng-show="project.skills")
       skill-small( ng-repeat="skill in project.skills" skill="skill") {{skill}}

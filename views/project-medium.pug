@@ -1,0 +1,18 @@
+.project.medium
+  header.project-title
+    .title
+      a( ng-href="/projects/{{project.permalink}}" ng-if="project.permalink" class="primary") {{project.title}}
+      h4( ng-if="!project.permalink" class="primary") {{project.title}}
+      ul.descriptors
+        li( ng-show="project.type" class="type")
+          p.secondary {{project.type}}
+    ul( ng-show="project.links" class="links")
+      li( ng-repeat="l in project.links" class="link")
+        .dd-link Link
+  .body( ng-show="project.bulletPoints || project.skills")
+    ul.skills( ng-show="project.skills")
+      skill-small( ng-repeat="skill in project.skills" skill="skill") {{skill}}
+    ul.bullets
+      li( ng-repeat="bullet in project.bulletPoints" class="project-bullet") {{bullet}}
+  figure( ng-show="project.imageUrls")
+    img( ng-repeat="url in project.imageUrls" ng-src="{{url}}")

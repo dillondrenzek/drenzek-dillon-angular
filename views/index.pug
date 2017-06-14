@@ -1,95 +1,98 @@
 doctype
 html
-	head
-		title Dillon Drenzek | v5
-		meta(charset="utf-8")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-			
-		//- Bootstrap CSS
-		//- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")  
-		
-		link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
-		link(rel="stylesheet" href="/static/stylesheets/main.css")
-		
-		//- Favicon
-		include ./favicon.pug
-		
-	body
-		#site-border
-		#site-title
-			//- <!-- Logo -->
-			#logo
-				h1 Dillon Drenzek
-				.subtitle Up &amp; Coming Developer
-			//- <!-- Social Media Links -->
-			ul(id="social-media")
-				li
-					a(href="https://github.com/dillondrenzek")
-						i.fa.fa-github
-				li
-					a(href="https://www.linkedin.com/in/dillondrenzek")
-						i.fa.fa-linkedin
-				li
-					a(href="https://behance.net/dillondrenzek/")
-						i.fa.fa-behance
-				li
-					a(href="https://twitter.com/DrEnzek")
-						i.fa.fa-twitter
-			//- <!-- Nav Links -->
-			nav
-				ul
-					li: a(href="/resume" target="_self") Resume
-					li: a(href="/" target="_self") Home
-				
-		.page
-			.column.two-third
-				section.page-title
-					.title.column
-						h2.primary , The Work of
-				section.paragraph
-					header.section-title
-						.title
-							h3.primary A Word From The Author...
-					.column
-						p.quote Welcome to my little corner of the Internet!
-						p.quote I'm Dillon Drenzek and I'm an Up &amp; Coming Web Developer. I love the structure of code, the creative freedom of design, and the endless possibilities of the Internet. What better way to combine these passions than as a web developer?
-						p.quote I graduated with a degree in Computer Science in May of 2015 and after spending the summer studying Graphic Design in Denmark, I've moved to Seattle to start my career at a company that is as passionate about what they do as I am! I've put this website together to demonstrate what I'm capable of. So, play around, see what you can find, and then feel free to drop me a note at dillon@drenzek.com!
-						p.quote Cheers! Dillon
-				section.list
-					header.section-title
-						.title
-							h3.primary Featured Projects
-					.column
-			.page-column.third
-				.page-title
-				.list.column
-					header.section-title
-						h3.primary Skills
-					.column
-						.column-title
-							h4.primary Best Overall
-						ul.skills
-					.column
-						.column-title
-							h4.primary Front-End
-						ul.skills
-					.column
-						.column-title
-							h4.primary UI &amp; Graphic Design
-						ul.skills
-					.column
-						.column-title
-							h4.primary Back-End &amp; Databases
-						ul.skills
-					.column
-						.column-title
-							h4.primary Programming
-						ul.skills
-					.column
-						.column-title
-							h4.primary Workflow
-						ul.skills
-					.column
-						.column-title
-							h4.primary Technical Concepts
-						ul.skills
+  head
+    title Dillon Drenzek | v5
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+      
+    //- Bootstrap CSS
+    //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")  
+    
+    link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/static/stylesheets/main.css")
+    
+    //- Favicon
+    include ./favicon.pug
+    //- analytics
+    //- include ./analytics.pug
+    
+  body
+    #site-border
+    #site-title
+      //- <!-- Logo -->
+      #logo
+        h1 Dillon Drenzek
+        .subtitle Up &amp; Coming Developer
+      //- <!-- Social Media Links -->
+      ul(id="social-media")
+        li
+          a(href="https://github.com/dillondrenzek")
+            i.fa.fa-github
+        li
+          a(href="https://www.linkedin.com/in/dillondrenzek")
+            i.fa.fa-linkedin
+        li
+          a(href="https://behance.net/dillondrenzek/")
+            i.fa.fa-behance
+        li
+          a(href="https://twitter.com/DrEnzek")
+            i.fa.fa-twitter
+      //- <!-- Nav Links -->
+      nav
+        ul
+          li: a(href="/resume" target="_self") Resume
+          li: a(href="/" target="_self") Home
+        
+    .page
+      .column.two-third
+        section.page-title
+          .title.column
+            h2.primary , The Work of
+        section.paragraph
+          header.section-title
+            .title
+              h3.primary A Word From The Author...
+          .column
+            p.quote Welcome to my little corner of the Internet!
+            p.quote I'm Dillon Drenzek and I'm an Up &amp; Coming Web Developer. I love the structure of code, the creative freedom of design, and the endless possibilities of the Internet. What better way to combine these passions than as a web developer?
+            p.quote I graduated with a degree in Computer Science in May of 2015 and after spending the summer studying Graphic Design in Denmark, I've moved to Seattle to start my career at a company that is as passionate about what they do as I am! I've put this website together to demonstrate what I'm capable of. So, play around, see what you can find, and then feel free to drop me a note at dillon@drenzek.com!
+            p.quote Cheers! Dillon
+        section.list
+          header.section-title
+            .title
+              h3.primary Featured Projects
+          .column
+            include ./project-medium.pug
+      .page-column.third
+        .page-title
+        .list.column
+          header.section-title
+            h3.primary Skills
+          .column
+            .column-title
+              h4.primary Best Overall
+            ul.skills
+          .column
+            .column-title
+              h4.primary Front-End
+            ul.skills
+          .column
+            .column-title
+              h4.primary UI &amp; Graphic Design
+            ul.skills
+          .column
+            .column-title
+              h4.primary Back-End &amp; Databases
+            ul.skills
+          .column
+            .column-title
+              h4.primary Programming
+            ul.skills
+          .column
+            .column-title
+              h4.primary Workflow
+            ul.skills
+          .column
+            .column-title
+              h4.primary Technical Concepts
+            ul.skills

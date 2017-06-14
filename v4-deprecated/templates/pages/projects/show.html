@@ -1,1 +1,45 @@
-<div class="column"></div><section class="page-title"><div class="title column"><h2 class="primary">{{project.title}}</h2><ul class="descriptors"><li ng-show="project.type"><p class="secondary">{{project.type}}</p></li></ul></div><ul ng-show="project.links" class="links column"><li ng-repeat="l in project.links" class="link"><dd-link link="l"></dd-link></li></ul></section><section class="two-column"><div class="column"><ul ng-show="project.skills" class="skills"><skill-medium skill="skill" ng-repeat="skill in project.skills"></skill-medium></ul><ul ng-show="project.bulletPoints" class="bullets"><li ng-repeat="bullet in project.bulletPoints" class="bullet">{{bullet}}</li></ul></div><figure ng-show="project.imageUrls" class="column"><img ng-repeat="url in project.imageUrls" ng-src="{{url}}"/></figure></section><section ng-repeat="section in project.sections" ng-class="section.type"><header ng-show="section.title || section.headerLinks" class="section-title"><div class="title"><h3 class="primary">{{section.title}}</h3></div><ul ng-show="section.headerLinks" class="links"><li ng-repeat="link in section.headerLinks" class="link"><a ng-href="{{link.href}}"><i ng-show="link.icon" class="fa {{link.icon}}"></i><p>{{link.label}}</p></a></li></ul></header><div ng-repeat="column in section.columns" class="column"><div ng-show="column.title" class="column-title"><div class="title"><h4 class="primary">{{column.title.primary}}</h4><h5 class="secondary">{{column.title.secondary}}</h5></div></div><p ng-show="column.p">{{column.p}}</p><figure ng-show="column.figure">{{column.figure.html}}<img src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}"/></figure></div></section>
+<div class="column"></div>
+<section class="page-title">
+	<div class="title column">
+		<h2 class="primary">{{project.title}}</h2>
+		<ul class="descriptors">
+			<li ng-show="project.type">
+				<p class="secondary">{{project.type}}</p>
+			</li>
+		</ul>
+	</div>
+	<ul ng-show="project.links" class="links column">
+		<li ng-repeat="l in project.links" class="link">
+			<dd-link link="l"></dd-link>
+		</li>
+	</ul>
+</section>
+<section class="two-column">
+	<div class="column">
+		<ul ng-show="project.skills" class="skills">
+			<skill-medium skill="skill" ng-repeat="skill in project.skills"></skill-medium>
+		</ul>
+		<ul ng-show="project.bulletPoints" class="bullets">
+			<li ng-repeat="bullet in project.bulletPoints" class="bullet">{{bullet}}</li>
+		</ul>
+	</div>
+	<figure ng-show="project.imageUrls" class="column"><img ng-repeat="url in project.imageUrls" ng-src="{{url}}" /></figure>
+</section>
+<section ng-repeat="section in project.sections" ng-class="section.type">
+	<header ng-show="section.title || section.headerLinks" class="section-title">
+		<div class="title">
+			<h3 class="primary">{{section.title}}</h3></div>
+		<ul ng-show="section.headerLinks" class="links">
+			<li ng-repeat="link in section.headerLinks" class="link"><a ng-href="{{link.href}}"><i ng-show="link.icon" class="fa {{link.icon}}"></i><p>{{link.label}}</p></a></li>
+		</ul>
+	</header>
+	<div ng-repeat="column in section.columns" class="column">
+		<div ng-show="column.title" class="column-title">
+			<div class="title">
+				<h4 class="primary">{{column.title.primary}}</h4>
+				<h5 class="secondary">{{column.title.secondary}}</h5></div>
+		</div>
+		<p ng-show="column.p">{{column.p}}</p>
+		<figure ng-show="column.figure">{{column.figure.html}}<img src="{{column.figure.imgSrc}}" alt="{{column.figure.imgAlt}}" /></figure>
+	</div>
+</section>

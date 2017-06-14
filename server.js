@@ -10,28 +10,12 @@ const express = require('express'),
 app.set('port', (process.env.PORT || 8085));
 
 
-// HTML Templates with Jade
+// HTML Templates with Pug
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
 
-
-//--------------------
-// Static Directories
-//--------------------
-
-// var staticHTMLPath = '/static/html';
-//
-// // Gridrunner
-// app.use('/gridrunner', express.static(__dirname + staticHTMLPath + '/gridrunner'));
-//
-// // TAM Portal
-// app.use('/tam', express.static(__dirname + staticHTMLPath + '/tam-portal'));
-//
-// // Le Faux Désign Compagnie
-// app.use('/le-faux', express.static(__dirname + staticHTMLPath + '/faux-company'));
-
-// GET '/resume'
-// app.use(
+app.use('/static', express.static(__dirname + '/static'));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.get('/', function (req, res) {
   res.render('index');

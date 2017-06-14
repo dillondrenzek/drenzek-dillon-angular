@@ -5,8 +5,6 @@ _project
 
 # Old v4 files
 v4-deprecated
-db
-static
 
 
 !views/*.pug

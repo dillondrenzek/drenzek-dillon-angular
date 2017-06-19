@@ -1,17 +1,20 @@
-.project.medium
+//- .project.medium
   header.project-title
     .title
-      h4.primary Project Title
+      //- h4.primary Project Title
       ul.descriptors
         li.type
           p.secondary Descriptor
     ul.links
       li.link
-        include ./dd-link.pug
+        //- DD Link
+        a.dd-link(title="Title" target="_self")
+          i( class="fa fa-github")
+            p Link Label
   .body
     ul.skills
-      include ./skill-small.pug
+      //- Skill
+      li.skill.small
+        p Skill
     ul.bullets
       li.project-bullet Bullet point
-  figure
-    img(src="/static/img/always-wondering.jpg")

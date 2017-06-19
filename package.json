@@ -22,6 +22,7 @@
     "serve": "node server.js",
     "build:css": "npm run build:scss && npm run build:bootstrap",
     "build:scss": "node-sass  --output-style expanded --source-map true --precision 6 src/style -o static/style",
+    "build:scss:watch": "node-sass -w --output-style expanded --source-map true --precision 6 src/style -o static/style",
     "build:bootstrap": "npm run compile:bootstrap && npm run postcss && npm run minify:bootstrap",
     "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap/bootstrap.scss static/style/bootstrap/bootstrap.css && node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap/bootstrap-grid.scss static/style/bootstrap/bootstrap-grid.css && node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap/bootstrap-reboot.scss static/style/bootstrap/bootstrap-reboot.css",
     "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap.min.css static/style/bootstrap/bootstrap.css && cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-grid.min.css static/style/bootstrap/bootstrap-grid.css && cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-reboot.min.css static/style/bootstrap/bootstrap-reboot.css",

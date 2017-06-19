@@ -1,0 +1,44 @@
+div.card.project
+  div.card-block
+    .card-title
+      .row
+        .col
+          h1.title Project Title
+          h2.descriptor Descriptor
+        .col.text-right
+          ul.links
+            li.link 
+              a.dd-link(title="Title" target="_self")
+                i( class="fa fa-github")
+                  p Link Label
+      
+  .card-img-bottom
+    .row.no-gutters
+      .col-6
+        ul.bullets
+          li.project-bullet Bullet point
+          li.project-bullet Bullet point
+          li.project-bullet Bullet point
+      .col-6
+        img( src="/static/img/always-wondering.jpg" alt="Card image cap" )
+
+//- .project.medium
+  header.project-title
+    .title
+      //- h4.primary Project Title
+      ul.descriptors
+        li.type
+          p.secondary Descriptor
+    ul.links
+      li.link
+        //- DD Link
+        a.dd-link(title="Title" target="_self")
+          i( class="fa fa-github")
+            p Link Label
+  .body
+    ul.skills
+      //- Skill
+      li.skill.small
+        p Skill
+    ul.bullets
+      li.project-bullet Bullet point

@@ -4,6 +4,7 @@
 /_project
 /static/stylesheets/*.css.map
 /static/stylesheets/*.min.css.map
+/static/style
 
 # Old v4 files
 /v4-deprecated

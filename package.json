@@ -20,10 +20,11 @@
     "start:prod": "npm start",
     "start": "npm install && npm run serve",
     "serve": "node server.js",
+    "build:css": "npm run build:bootstrap",
     "build:bootstrap": "npm run compile:bootstrap && npm run postcss && npm run minify:bootstrap",
-    "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 vendor/bootstrap/scss/bootstrap.scss static/stylesheets/bootstrap.css && node-sass --output-style expanded --source-map true --precision 6 vendor/bootstrap/scss/bootstrap-grid.scss static/stylesheets/bootstrap-grid.css && node-sass --output-style expanded --source-map true --precision 6 vendor/bootstrap/scss/bootstrap-reboot.scss static/stylesheets/bootstrap-reboot.css",
-    "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/stylesheets/bootstrap.min.css static/stylesheets/bootstrap.css && cleancss --skip-advanced --source-map --output static/stylesheets/bootstrap-grid.min.css static/stylesheets/bootstrap-grid.css && cleancss --skip-advanced --source-map --output static/stylesheets/bootstrap-reboot.min.css static/stylesheets/bootstrap-reboot.css",
-    "postcss": "postcss --config postcss.js --replace static/stylesheets/*.css -m"
+    "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap/bootstrap.scss static/style/bootstrap/bootstrap.css && node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap/bootstrap-grid.scss static/style/bootstrap/bootstrap-grid.css && node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap/bootstrap-reboot.scss static/style/bootstrap/bootstrap-reboot.css",
+    "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap.min.css static/style/bootstrap/bootstrap.css && cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-grid.min.css static/style/bootstrap/bootstrap-grid.css && cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-reboot.min.css static/style/bootstrap/bootstrap-reboot.css",
+    "postcss": "postcss --config postcss.js --replace static/style/**/*.css -m"
   },
   "dependencies": {
     "autoprefixer": "^6.6.1",

@@ -8,23 +8,46 @@ html
     //- Bootstrap CSS
     //- link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")  
     
-    link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
-    link(rel="stylesheet" href="/static/stylesheets/main.css")
+    //- link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
+    //- link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/static/stylesheets/bootstrap-reboot.min.css")
+    link(rel="stylesheet" href="/static/stylesheets/bootstrap-grid.min.css")
+    link(rel="stylesheet" href="/static/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet" href="/static/stylesheets/style.css")
+    //- link(rel="stylesheet" href="/static/stylesheets/main.css")
     
     include ./site/favicon.pug
     //- include ./site/analytics.pug
     
   body
-  //- body
-    #site-border
-    #site-title
-      include ./brand/logo.pug
-      include ./brand/social-media.pug
-      include ./site/nav.pug
-        
-    .page
-      .column.two-third
-        
+    .fixed-top
+      .container
+        .nav
+          .navbar-brand.mr-auto
+            img.mr-2( src="/static/img/favicon/android-chrome-72x72.png" width="30" height="30" alt="")
+            .
+              Dillon Drenzek
+          
+          .nav-item
+            a.nav-link(href='#') Home
+          .nav-item
+            a.nav-link(href='#') Resume
+
+    .page.container
+      //- .page-header
+        h2 Home
+      //- .card
+        .card-block
+          h4.card-title A Word From the Author
+      //- blockquote.blockquote
+        p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+        footer.blockquote-footer Someone famous in 
+          cite( title="Source Title") Source Title
+          
+          
+          
+      //- Old Content
+      
         section.page-title
           .title.column
             h2.primary 
@@ -37,4 +60,4 @@ html
             p.quote Cheers!
             p.quote - Dillon
         
-        //- include ./projects/project-section
+        include ./projects/project-section

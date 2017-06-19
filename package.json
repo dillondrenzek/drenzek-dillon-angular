@@ -19,12 +19,21 @@
   "scripts": {
     "start:prod": "npm start",
     "start": "npm install && npm run serve",
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "build:bootstrap": "npm run compile:bootstrap && npm run postcss && npm run minify:bootstrap",
+    "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 vendor/bootstrap/scss/bootstrap.scss static/stylesheets/bootstrap.css && node-sass --output-style expanded --source-map true --precision 6 vendor/bootstrap/scss/bootstrap-grid.scss static/stylesheets/bootstrap-grid.css && node-sass --output-style expanded --source-map true --precision 6 vendor/bootstrap/scss/bootstrap-reboot.scss static/stylesheets/bootstrap-reboot.css",
+    "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/stylesheets/bootstrap.min.css static/stylesheets/bootstrap.css && cleancss --skip-advanced --source-map --output static/stylesheets/bootstrap-grid.min.css static/stylesheets/bootstrap-grid.css && cleancss --skip-advanced --source-map --output static/stylesheets/bootstrap-reboot.min.css static/stylesheets/bootstrap-reboot.css",
+    "postcss": "postcss --config postcss.js --replace static/stylesheets/*.css -m"
   },
   "dependencies": {
+    "autoprefixer": "^6.6.1",
+    "bootstrap": "4.0.0-alpha.6",
     "express": "4.15.2",
     "font-awesome": "4.7.0",
+    "node-sass": "^4.1.1",
     "path": "0.12.7",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
     "pug": "2.0.0-rc.1"
   }
 }

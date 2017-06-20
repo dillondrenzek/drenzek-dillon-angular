@@ -1,0 +1,45 @@
+//- Experience Entry 
+
+mixin entry(title, company, date, location)
+  li
+    p= title
+    p= company
+    p= date
+    p= location
+    if block
+      ul
+        block
+  
+  
+  
+//- Bullet
+
+mixin bullet
+  li 
+    block
+
+
+
+
+
+//- Template
+
+.row.no-gutters
+  h2 Experience
+  
+.row
+  ul
+    +entry(
+      'Web Application Developer',
+      'VIZUALIIZ',
+      'FEBRUARY 2016 - JUNE 2017',
+      'SEATTLE, WASHINGTON' )
+    +entry( 
+      'iOS Developer',
+      'NATIVE (A TECHSTARS-BACKED COMPANY)',
+      'FEBRUARY 2014 - MAY 2015',
+      'BOULDER, COLORADO' ) 
+      +bullet Designed, then crafted code to accommodate quickly evolving product
+      +bullet Implemented core app features using Agile development methods
+      +bullet Contributed to team meetings establishing product requirements, company principles & goals
+      +bullet Participated in Boulder’s thriving entrepenuerial & startup community

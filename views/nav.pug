@@ -1,0 +1,12 @@
+
+//- Nav Link
+mixin nav_link(link, text)
+  a.nav-link(href=link target="_self")= text
+
+
+//- Template
+.d-flex.align-self-center
+  .mr-auto
+    include ./brand/logo
+  .p-2.align-self-center: +nav_link('/', 'Home')
+  .p-2.align-self-center: +nav_link('/resume', 'Resume')

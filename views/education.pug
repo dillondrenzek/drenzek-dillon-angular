@@ -1,0 +1,42 @@
+//- Experience Entry 
+
+mixin entry(title, company, date, location)
+  li
+    p= title
+    p= company
+    p= date
+    p= location
+    if block
+      ul
+        block
+  
+  
+  
+//- Bullet
+
+mixin bullet
+  li 
+    block
+
+
+
+
+//- Template
+
+.row.no-gutters
+  h2 Education
+  
+.row
+  ul
+    +entry(
+      'Computer Science, B.A.',
+      'UNIVERSITY OF COLORADO AT BOULDER',
+      'AUGUST 2010 - MAY 2015',
+      'BOULDER, COLORADO' )
+      +bullet Honors Minor in Technology, Arts & Media (TAM)
+    +entry( 
+      'Graphic Design Studio',
+      'DANISH INSTITUTE FOR STUDY ABROAD',
+      'MAY - AUGUST 2015',
+      'COPENHAGEN, DENMARK' ) 
+      +bullet Completed a rebranding of Copenhagen’s premiere fashion shop

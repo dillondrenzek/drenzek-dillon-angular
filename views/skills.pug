@@ -1,50 +1,57 @@
+//- Badge
+
+mixin badge
+  .badge.badge-default.mr-1
+    block
+
+
 .row.no-gutters
   h2 Skills
 .row
   .col
-    | Web Development
-    ul
-      li HTML5
-      li CSS3
-      li jQuery
-      li JavaScript
-      li Stylus
-      li Jade
-      li Express.js
-      li Node.js
-      li Bootstrap
-      li WordPress
-      li Angular.js
-      li MongoDB
-      li REST APIs
-      li JSON
-      li AJAX
+    h2 Web Development
+    div
+      +badge HTML5
+      +badge CSS3
+      +badge jQuery
+      +badge JavaScript
+      +badge Stylus
+      +badge Jade
+      +badge Express.js
+      +badge Node.js
+      +badge Bootstrap
+      +badge WordPress
+      +badge Angular.js
+      +badge MongoDB
+      +badge REST APIs
+      +badge JSON
+      +badge AJAX
   .col
-    | UI Design
-    ul
-      li Photoshop
-      li Illustrator
-      li Sketch
+    h2 UI Design
+    div
+      +badge Photoshop
+      +badge Illustrator
+      +badge Sketch
   .col
-    | Workflow
-    ul
-      li Git/GitHub
-      li Mac OS X
-      li Cmd. Line
-      li Gulp.js
-      li Linux
+    h2 Workflow
+    div
+      +badge Git/GitHub
+      +badge Mac OS X
+      +badge Cmd. Line
+      +badge Gulp.js
+      +badge Linux
   .col
-    | Programming
-    ul
-      li Objective-C
-      li Swift
-      li Python
-      li C/C++
-      li Java
+    h2 Programming
+    div
+      +badge Objective-C
+      +badge Swift
+      +badge Python
+      +badge C/C++
+      +badge Java
   .col 
-    | Technical Concepts
-    ul
-      li Model-View-Controller (MVC)
-      li Object-Oriented Programming
-      li Responsive Web Design
-      li Cross-Browser Compatibility
+    h2 Technical Concepts
+    div
+      +badge Model-View-Controller (MVC)
+      +badge Object-Oriented Programming
+      +badge Responsive Web Design
+      +badge Cross-Browser Compatibility

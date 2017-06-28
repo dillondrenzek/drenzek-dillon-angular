@@ -1,3 +1,4 @@
+include ./brand/logo
 
 //- Nav Link
 mixin nav_link(link, text)
@@ -5,8 +6,12 @@ mixin nav_link(link, text)
 
 
 //- Template
-.d-flex.align-self-center
-  .mr-auto
-    include ./brand/logo
-  .p-2.align-self-center: +nav_link('/', 'Home')
-  .p-2.align-self-center: +nav_link('/resume', 'Resume')
+nav.navbar.navbar-inverse.bg-inverse.flex-row.align-items-center.no-padding
+  .container
+    ul.navbar-nav.flex-row.justify-content-between
+      li.nav-item.mr-auto
+        +logo('40')(class="h2")
+      li.nav-item
+        +nav_link('#', 'Home')
+      li.nav-item.ml-3
+        +nav_link('#', 'Resume')

@@ -16,17 +16,31 @@
   "bugs": {
     "url": "https://github.com/dillondrenzek/dillon-drenzek-com/issues"
   },
+  "watch": {
+    "serve": "server.js",
+    "build:scss": {
+      "patterns": ["src/style"],
+      "extensions": "scss",
+      "quiet": false
+    },
+    "build:bootstrap": {
+      "patterns": ["src/style/bootstrap"],
+      "extensions": "scss",
+      "quiet": false
+    }
+  },
   "scripts": {
     "start:prod": "npm start",
-    "start": "npm install && npm run build:css && npm run serve",
+    "start:dev": "npm run watch",
+    "start": "npm run start:dev",
     "serve": "node server.js",
     "build:css": "npm run build:scss && npm run build:bootstrap",
-    "build:scss": "node-sass  --output-style expanded --source-map true --precision 6 src/style -o static/style",
-    "build:scss:watch": "node-sass -w --output-style expanded --source-map true --precision 6 src/style -o static/style",
+    "build:scss": "node-sass --output-style expanded --source-map true --precision 6 src/style -o static/style",
     "build:bootstrap": "npm run compile:bootstrap && npm run postcss && npm run minify:bootstrap",
     "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap -o static/style/bootstrap",
-    "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap.min.css static/style/bootstrap/bootstrap.css && cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-grid.min.css static/style/bootstrap/bootstrap-grid.css && cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-reboot.min.css static/style/bootstrap/bootstrap-reboot.css",
-    "postcss": "postcss --config postcss.js --replace static/style/**/*.css -m"
+    "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-custom.min.css static/style/bootstrap/bootstrap-custom.css",
+    "postcss": "postcss --config postcss.js --replace static/style/**/*.css -m",
+    "watch": "npm-watch"
   },
   "dependencies": {
     "autoprefixer": "^6.6.1",
@@ -38,5 +52,9 @@
     "postcss-cli": "^2.6.0",
     "postcss-flexbugs-fixes": "^2.1.0",
     "pug": "2.0.0-rc.1"
+  },
+  "devDependencies": {
+    "concurrently": "3.4.0",
+    "npm-watch": "0.1.9"
   }
 }

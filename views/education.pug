@@ -1,11 +1,13 @@
 //- Experience Entry 
 
 mixin entry(title, company, date, location)
-  li
-    p= title
-    p= company
-    p= date
-    p= location
+  li.list-group-item
+    .d-flex.w-100.justify-content-between
+      h1= title
+      p= company
+    .d-flex.w-100.justify-content-between
+      h2= date
+      p= location
     if block
       ul
         block
@@ -15,7 +17,7 @@ mixin entry(title, company, date, location)
 //- Bullet
 
 mixin bullet
-  li 
+  li
     block
 
 
@@ -27,7 +29,7 @@ mixin bullet
   h2 Education
   
 .row
-  ul
+  ul.list-group
     +entry(
       'Computer Science, B.A.',
       'UNIVERSITY OF COLORADO AT BOULDER',

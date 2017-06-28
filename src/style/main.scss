@@ -1,11 +1,20 @@
 .fixed-top {
   background: white;
-  border-bottom: 1px solid #eaeaea;
+
+
+  // .navbar {
+  //   padding-top: 0;
+  //   padding-bottom: 0;
+  // }
 }
 
 .page,
 .page-column {
   margin-top: 56px;
+}
+
+.navbar-brand {
+  padding: 0;
 }
 
 

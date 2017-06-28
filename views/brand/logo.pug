@@ -2,5 +2,7 @@
   h1 Dillon Drenzek
   .subtitle Up &amp; Coming Developer
 
-img.mr-2( src="/static/img/favicon/favicon-64x64.png" width="48" height="48" alt="")
-span.h2.align-middle Dillon Drenzek
+mixin logo(size)
+  img.mr-2( src="/static/img/favicon/favicon-64x64.png" width=size height=size alt="")
+  if (attributes.class)
+    span.align-middle(class!=attributes.class) Dillon Drenzek

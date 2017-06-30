@@ -24,7 +24,9 @@ app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume
 
 // Index page
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', {
+    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com'
+  });
 });
 
 

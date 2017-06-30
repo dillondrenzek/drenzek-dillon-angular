@@ -7,8 +7,6 @@ html
       
     link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
     link(rel="stylesheet" href="/static/style/bootstrap/bootstrap-custom.min.css")
-    link(rel="stylesheet" href="/static/style/bootstrap/bootstrap-grid.min.css")
-    //- link(rel="stylesheet" href="/static/style/bootstrap/bootstrap.min.css")
     link(rel="stylesheet" href="/static/style/main.css")
       
     script(src="/vendor/jquery-3.2.1.min.js")
@@ -24,9 +22,17 @@ html
     
     .container.page
         
-      .jumbotron
-        h1 Up & Coming Developer
-
-      include experience          
-      include education                  
-      include skills
+      section#intro
+        h1 I'm Dillon Drenzek
+        h2 I'm an Up &amp; Coming Developer
+      
+      section#experience
+        include experience
+      section#education
+        include education
+      //- .jumbotron
+      //-   h1 Up & Coming Developer
+      //- 
+      //-         
+      //- include education                  
+      //- include skills

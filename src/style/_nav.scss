@@ -1,0 +1,29 @@
+@import 'bootstrap/variables';
+
+a {
+  cursor: pointer;
+}
+
+
+// Nav
+
+nav {
+  background: $gray-dark;
+  color: $gray-lightest;
+
+  // Nav Links
+  a {
+    color: $gray-lightest;
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($brand-primary, 5%);
+      text-decoration: none;
+    }
+  }
+}

@@ -6,12 +6,10 @@ mixin nav_link(link, text)
 
 
 //- Template
-nav.navbar.navbar-inverse.bg-inverse.flex-row.align-items-center.no-padding
+nav
   .container
-    ul.navbar-nav.flex-row.justify-content-between
-      li.nav-item.mr-auto
-        +logo('40')(class="h2")
-      li.nav-item
-        +nav_link('#', 'Home')
-      li.nav-item.ml-3
+    .d-flex.w-100.flex-row.justify-content-between.align-items-center
+      div
+        +logo('56')(class="h2")
+      div
         +nav_link('#', 'Resume')

@@ -1,22 +1,96 @@
-.fixed-top {
-  background: white;
+@import 'bootstrap/variables';
 
+// Custom Components
+@import 'nav';
 
-  // .navbar {
-  //   padding-top: 0;
-  //   padding-bottom: 0;
-  // }
+section {
+  padding: 0 15px;
+
+  &:not(#intro) {
+    margin-bottom: 60px;
+  }
+  header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+  }
 }
 
-.page,
-.page-column {
+#intro {
+  padding: 50px;
+  text-align: center;
+  h1, h2 {
+    font-weight: 200;
+    line-height: 1.4em;
+  }
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.67px;
+  }
+  h2 {
+    font-size: 2rem;
+    letter-spacing: -0.67px;
+    text-transform: none;
+  }
+
+}
+
+
+
+
+.page {
   margin-top: 56px;
-}
-
-.navbar-brand {
   padding: 0;
 }
 
+ul.entry-list {
+  list-style-type: none;
+  padding: 0 15px;
+}
+
+.entry {
+
+  margin-bottom: 30px;
+
+  h1 {
+    span {
+      font-size: 1.25rem;
+      letter-spacing: 0.25px;
+      font-weight: 700;
+    }
+    small {
+      font-size: 0.85rem;
+      letter-spacing: 0.25px;
+      font-weight: 400;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    span {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    li {
+      letter-spacing: 0.17px;
+      font-size: 0.875rem;
+      font-style: italic;
+      font-weight: 200;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}
 
 // @import "fonts";
 //

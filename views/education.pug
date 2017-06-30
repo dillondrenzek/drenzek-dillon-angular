@@ -1,15 +1,15 @@
-//- Experience Entry 
+//- Education Entry 
 
 mixin entry(title, company, date, location)
-  li.list-group-item
-    .d-flex.w-100.justify-content-between
-      h1= title
-      p= company
-    .d-flex.w-100.justify-content-between
-      h2= date
-      p= location
+  li.entry
+    h1.d-flex.w-100.justify-content-between.align-items-center
+      span= title
+      small= date
+    h2.d-flex.w-100.justify-content-between.align-items-center
+      span= company
+      span= location
     if block
-      ul
+      ul.bullets
         block
   
   
@@ -17,7 +17,7 @@ mixin entry(title, company, date, location)
 //- Bullet
 
 mixin bullet
-  li
+  li.bullet
     block
 
 
@@ -25,20 +25,19 @@ mixin bullet
 
 //- Template
 
-.row.no-gutters
+header.justify-content-around
   h2 Education
   
-.row
-  ul.list-group
-    +entry(
-      'Computer Science, B.A.',
-      'UNIVERSITY OF COLORADO AT BOULDER',
-      'AUGUST 2010 - MAY 2015',
-      'BOULDER, COLORADO' )
-      +bullet Honors Minor in Technology, Arts & Media (TAM)
-    +entry( 
-      'Graphic Design Studio',
-      'DANISH INSTITUTE FOR STUDY ABROAD',
-      'MAY - AUGUST 2015',
-      'COPENHAGEN, DENMARK' ) 
-      +bullet Completed a rebranding of Copenhagen’s premiere fashion shop
+ul.entry-list
+  +entry(
+    'Computer Science, B.A.',
+    'UNIVERSITY OF COLORADO AT BOULDER',
+    'AUGUST 2010 - MAY 2015',
+    'BOULDER, COLORADO' )
+    +bullet Honors Minor in Technology, Arts & Media (TAM)
+  +entry( 
+    'Graphic Design Studio',
+    'DANISH INSTITUTE FOR STUDY ABROAD',
+    'MAY - AUGUST 2015',
+    'COPENHAGEN, DENMARK' ) 
+    +bullet Completed a rebranding of Copenhagen’s premiere fashion shop

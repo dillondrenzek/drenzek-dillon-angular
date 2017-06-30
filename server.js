@@ -18,6 +18,10 @@ app.use('/static', express.static(__dirname + '/static'));
 app.use('/vendor', express.static(__dirname + '/vendor'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
+
+// GET '/resume'
+app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));
+
 // Index page
 app.get('/', function (req, res) {
   res.render('index');
@@ -157,8 +161,7 @@ app.listen(app.get('port'), function () {
 // // // Le Faux Désign Compagnie
 // // app.use('/le-faux', express.static(__dirname + staticHTMLPath + '/faux-company'));
 // //
-// // // GET '/resume'
-// // app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));
+
 // //
 // //
 // //

@@ -30,7 +30,7 @@
     }
   },
   "scripts": {
-    "start:prod": "npm start",
+    "start:prod": "npm run serve",
     "start:dev": "npm run watch",
     "start": "npm run start:dev",
     "serve": "node server.js",

@@ -13,29 +13,41 @@ html
     script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js")
     script(src="/vendor/bootstrap/dist/js/bootstrap.min.js")
     
-    include ./site/favicon
-    //- include ./site/analytics
+    include ./includes/favicon
+    //- include ./includes/analytics
     
   body
+    
+    //- Fixed Nav Bar
     .fixed-top
       include nav
     
+    //- Scrolling page
     .container.page
         
+      //- Intro Section  
       section#intro
-        h1 I'm Dillon Drenzek
-        h2 I'm an Up &amp; Coming Developer
+        
+        //- centered profile image
+        figure.d-flex.justify-content-center.portrait
+          img(src="/static/img/portrait.jpg" height="184" width="184")
+            
+        //- centered title
+        .d-flex.justify-content-center
+          .text-center
+            h1 I'm Dillon Drenzek
+            h2 A Professional Web Developer
       
-      section#experience
+      section
+        include ./includes/project-card
+      
+      
+      
+      //- section#experience
         include experience
-      section#education
+      //- section#education
         include education
     
-    footer.justify-content-around.text-center
-      a(href=githubUrl) version 5.0.0-alpha.1
-      //- .jumbotron
-      //-   h1 Up & Coming Developer
-      //- 
-      //-         
-      //- include education                  
-      //- include skills
+    footer.text-center
+      span drenzek.com 
+      a(href=githubUrl) v5.0.0-alpha.1

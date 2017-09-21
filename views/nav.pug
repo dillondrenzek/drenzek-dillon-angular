@@ -1,4 +1,4 @@
-include ./brand/logo
+include ./includes/logo
 
 //- Nav Link
 mixin nav_link(link, text)
@@ -9,7 +9,7 @@ mixin nav_link(link, text)
 nav
   .container
     .d-flex.w-100.flex-row.justify-content-between.align-items-center
+      #logo
+        +logo('56')(class="title")
       div
-        +logo('56')(class="h2")
-      div
-        +nav_link('/resume', 'Resume')
+        //- +nav_link('/resume', 'Resume')

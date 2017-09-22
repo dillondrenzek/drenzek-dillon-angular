@@ -26,28 +26,52 @@ html
     .container.page
         
       //- Intro Section  
-      section#intro
+      section.row#intro
         
-        //- centered profile image
-        figure.d-flex.justify-content-center.portrait
-          img(src="/static/img/portrait.jpg" height="184" width="184")
-            
-        //- centered title
-        .d-flex.justify-content-center
-          .text-center
-            h1 I'm Dillon Drenzek
+        //- portrait
+        .col-12
+          .row.justify-content-center
+            figure
+              img(src="/static/img/portrait.jpg" height="184" width="184")
+        
+        //- text
+        .col-12
+          .row.justify-content-center
+            h1 I'm Dillon 
+            //- Drenzek
+          .row.justify-content-center
             h2 A Professional Web Developer
+            
+      //- List Item Header
+      mixin ListItem(l_title, l_subtitle, r_title, r_subtitle)
+        .ListItem
+          header
+            .row.justify-content-between
+              .col.left-title= l_title
+              .col.right-title.text-right= r_title
+            .row.justify-content-between
+              .col.left-subtitle= l_subtitle
+              .col.right-subtitle.text-right= r_subtitle
       
-      section
-        include ./includes/project-card
+      section.row.justify-content-center#experience
+        header.col-12.text-center
+          h1 Experience
       
+        .col-12.list-item
+          +ListItem('Web Application Developer', 'Vizualiiz (Woodinville, WA)', '1 yr 4 mos', 'Feb 2016 - Jun 2017')
+        .col-12.list-item
+          +ListItem('iOS Developer', 'Native (Boulder, CO)', '1 yr 3 mos', 'Feb 2014 - May 2015')
+          
+          
+      section.row.justify-content-center#education
+        header.col-12.text-center
+          h1 Education
       
-      
-      //- section#experience
-        include experience
-      //- section#education
-        include education
+        .col-12.list-item
+          +ListItem('Computer Science, B.A.', 'University of Colorado at Boulder', 'May 2015', 'Graduated')
     
-    footer.text-center
-      span drenzek.com 
-      a(href=githubUrl) v5.0.0-alpha.1
+    
+    footer.row.no-gutters.justify-content-center
+      .text-center
+        span drenzek.com 
+        a(href=githubUrl) v5.0.0-alpha.1

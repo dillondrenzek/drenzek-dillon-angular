@@ -1,0 +1,30 @@
+.ListItem {
+  margin-bottom: 30px;
+}
+
+
+
+.ListItem {
+  header {
+
+    @mixin _common-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+    @mixin _common-subtitle {
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+
+    .left-title {
+      @include _common-title;
+    }
+    .left-subtitle {}
+
+    .right-title {
+      @include _common-title;
+    }
+    .right-subtitle {}
+      @include _common-subtitle;
+  }
+}

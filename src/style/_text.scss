@@ -1,0 +1,25 @@
+// Page: Heading 1
+@mixin page-heading-1 {
+  font-size: 2.5rem;
+  line-height: 1.15em;
+  font-weight: 500;
+  letter-spacing: -.0375em;
+}
+
+// Page: Heading 1 Subtitle
+@mixin page-heading-1-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  text-transform: none;
+  color: #636C72;
+}
+
+// Page: Heading 2
+@mixin page-heading-2 {
+  font-size: 1.25rem;
+  letter-spacing: 8.17px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -1,80 +1,54 @@
-include ./Entry
+extends layout
+include Entry
 
-doctype
-html
-  head
-    title Dillon Drenzek | v5
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-      
-    link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
-    link(rel="stylesheet" href="/static/style/bootstrap/bootstrap-custom.min.css")
-    link(rel="stylesheet" href="/static/style/main.css")
-      
-    script(src="/vendor/jquery-3.2.1.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js")
-    script(src="/vendor/bootstrap/dist/js/bootstrap.min.js")
-    
-    include ./site/favicon
-    //- include ./site/analytics
-    
-  body
-    .fixed-top
-      include nav
-    
-    .container.page
-        
-      //- Intro
-        
-      section#intro
-        .row.no-gutters.justify-content-between.align-items-center
-          .col
-            h1 I'm Dillon
-            p.subtitle Professional Web Developer
-          .col-4
-            img.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
-      
-      
-      
-      //- Experience
-      
-      section#experience
-        header.justify-content-center
-          h2 Experience
+
+
+block page
   
-        ul.entry-list
-          each e in experience.entries
-            li.entry
-              +Entry( e.title, e.duration, e.location, e.dates)
-                .col-12
-                  p= e.description
-                .col-12
-                  .row.no-gutters.justify-content-between
-                    .col-auto
-                      if e.url
-                        a.learn-more(href=e.url) learn more
-                    .col-auto.align-items-end
-                      if e.skills
-                        +EntrySkillList(e.skills)
-        
-        
-      //- Education  
-        
-      section#education
-        header.justify-content-center
-          h2 Education
-          
-        ul.entry-list
-          each e in education.entries
-            li.entry
-              +Entry( e.title, e.dates, e.location, e.status )
-                .col-12
-                  p= e.description
-                .col-12
-                  .row.no-gutters.justify-content-between
-                    .col-auto
-                      if e.url
-                        a.learn-more(href=e.url) learn more
-                        
-    include ./footer
+  //- Intro
+  section#intro
+    .row.no-gutters.justify-content-between.align-items-center
+      .col
+        h1 I'm Dillon
+        p.subtitle Professional Web Developer
+      .col-4
+        img.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
+
+
+
+  //- Experience
+  section#experience
+    header.justify-content-center
+      h2 Experience
+    ul.entry-list
+      each e in experience.entries
+        li.entry
+          +Entry( e.title, e.duration, e.location, e.dates)
+            .col-12
+              p= e.description
+            .col-12
+              .row.no-gutters.justify-content-between
+                .col-auto
+                  if e.url
+                    a.learn-more(href=e.url) learn more
+                .col-auto.align-items-end
+                  if e.skills
+                    +EntrySkillList(e.skills)
     
+    
+    
+  //- Education  
+  section#education
+    header.justify-content-center
+      h2 Education
+    ul.entry-list
+      each e in education.entries
+        li.entry
+          +Entry( e.title, e.dates, e.location, e.status )
+            .col-12
+              p= e.description
+            .col-12
+              .row.no-gutters.justify-content-between
+                .col-auto
+                  if e.url
+                    a.learn-more(href=e.url) learn more

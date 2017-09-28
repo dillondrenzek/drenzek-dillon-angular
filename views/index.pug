@@ -52,3 +52,26 @@ block page
                 .col-auto
                   if e.url
                     a.learn-more(href=e.url) learn more
+
+
+
+  //- Projects
+  if projects
+    section#projects
+      header.justify-content-center
+        h2 Projects
+      ul.entry-list
+        each e in projects.entries
+          li.entry
+            +Entry( e.title, '', e.type, '')
+              .col-12
+                p= e.description
+              .col-12
+                .row.no-gutters.justify-content-between
+                  .col-auto
+                    if e.url
+                      a.learn-more(href=e.url) learn more
+                  .col-auto.align-items-end
+                    if e.skills
+                      +EntrySkillList(e.skills)
+              

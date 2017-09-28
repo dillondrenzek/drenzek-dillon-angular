@@ -1,0 +1,76 @@
+@mixin Entry-heading-1 {
+  font-size: 1.25rem;
+  line-height: 1.4em;
+  letter-spacing: normal;
+  font-weight: 700;
+}
+@mixin Entry-heading-2 {
+  font-size: 1.125rem;
+  line-height: normal;
+  letter-spacing: -.015625em;
+  font-weight: bold;
+}
+@mixin Entry-subtitle {
+  font-size: .75rem;
+  line-height: normal;
+  letter-spacing: .16667em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #A4A29D;
+}
+
+
+.Entry {
+
+  // General Utility
+
+  .col-right {
+    text-align: right;
+  }
+
+  // fonts
+
+  .heading-1 {
+    @include Entry-heading-1();
+  }
+
+  .heading-2 {
+    @include Entry-heading-2();
+  }
+
+  .subtitle-1 {
+    @include Entry-subtitle();
+  }
+
+  .subtitle-2 {
+    @include Entry-subtitle();
+  }
+
+  header {
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .learn-more {
+    font-size: .75rem;
+    color: #b23b23;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: .083em;
+  }
+
+  .skills .skill {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-style: normal;
+    margin-left: 25px;
+  }
+}

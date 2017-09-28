@@ -23,3 +23,14 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+
+
+
+// List Item: Heading 1
+@mixin list-item-heading-1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.4em;
+  letter-spacing: normal;
+}

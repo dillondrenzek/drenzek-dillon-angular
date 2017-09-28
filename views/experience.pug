@@ -1,47 +1,45 @@
-//- Experience Entry 
-
-mixin entry(title, company, date, location)
-  li.entry
-    header
-      h1.d-flex.w-100.justify-content-between.align-items-center
-        span= title 
-        small= date
-      h2.d-flex.w-100.justify-content-between.align-items-center
-        span= company
-        span= location
-    if block
-      ul.bullets
-        block
-  
-  
-  
-//- Bullet
-
-mixin bullet
-  li.bullet
-    block
+include ./Entry
 
 
 
+
+
+//- Experience Entry
+//- mixin ExperienceEntry(heading_1, heading_2, company, location, date)
+//-   - var subtitle_1 = company + ' - ' + location;
+//-   .Entry
+//-     +Entry(heading_1, heading_2, subtitle_1, date)
+//-       block heading_1
+//-         | Web Application Developer
+//-       block heading_2
+//-         | 1 yr 4 mos
 
 
 //- Template
 
-header.justify-content-around
-  h2 Experience
-  
-ul.entry-list
-  +entry(
+
+                
+                
+                
+                
+                
+                
+                
+                
+  //- +ExperienceEntry('Web Application Developer', '1 yr 4 mos', 'Vizualiiz', 'Seattle, WA', 'Feb 2016 - Jun 2017')
+  //-   | Quickly learned Angular 2 & initiated application updates as framework evolved
+  //- +ExperienceEntry('iOS Developer', '1 yr 3 mos', 'Native', 'Boulder, CO', 'Feb 2014 - May 2015')
+  //-   | Quickly learned Angular 2 & initiated application updates as framework evolved
+  //- +entry(
     'Web Application Developer',
     'VIZUALIIZ',
     'FEB 2016 - JUN 2017',
     'SEATTLE, WASHINGTON' )
-    +bullet Quickly learned Angular 2 & initiated application updates as framework evolved
     +bullet Helped architect application data model, REST API, data flows within Angular & project file structure to grow and accommodate fluctuating requirements
     +bullet Implemented key modules like user authentication, search & dynamic forms
     +bullet Eventually lead front-end UI design & transition to a responsive framework using Bootstrap
     +bullet Advocated test-driven development & established front-end testing framework
-  +entry( 
+  //- +entry( 
     'iOS Developer',
     'NATIVE (A TECHSTARS-BACKED COMPANY)',
     'FEB 2014 - MAY 2015',

@@ -4,6 +4,7 @@
 
 // Custom Components
 @import 'nav';
+@import 'Entry';
 
 section {
   margin-bottom: 50px;
@@ -32,7 +33,21 @@ section {
   margin-top: 56px;
   padding: 0;
   padding-top: 50px;
+
+  font-size: 0.875rem;
+  letter-spacing: 0.0264285em;
 }
+
+
+
+
+// Experience List Items
+
+
+
+
+
+
 
 ul.entry-list {
   list-style-type: none;
@@ -74,10 +89,10 @@ ul.entry-list {
 
   ul {
     li {
-      letter-spacing: 0.17px;
-      font-size: 0.875rem;
-      font-style: italic;
-      font-weight: 200;
+      // letter-spacing: 0.17px;
+      // font-size: 0.875rem;
+      // font-style: italic;
+      // font-weight: 200;
 
       &:not(:last-child) {
         margin-bottom: 10px;
@@ -90,8 +105,11 @@ ul.entry-list {
 
 footer {
   padding: 20px;
-  color: $gray-light;
-  background: $gray-lightest;
+  background: #5C5858;
   font-size: 0.5rem;
   letter-spacing: 0.5px;
+
+  a, a:hover {
+    color: #eaeaea;
+  }
 }

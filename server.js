@@ -25,7 +25,45 @@ app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume
 // Index page
 app.get('/', function (req, res) {
   res.render('index', {
-    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com'
+    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
+    experience: {
+      entries: [
+        {
+          title: 'Web Application Developer',
+          duration: '1 yr 4 mos',
+          location: 'Vizualiiz - Seattle, WA',
+          dates: 'Feb \'16 - Jun \'17',
+          description: 'First experience with Angular 2; helped rebuild company’s flagship asset management application',
+          skills: ['Angular', 'RxJS', 'Sass', 'REST']
+        },{
+          title: 'iOS Developer',
+          duration: '1 yr 3 mos',
+          location: 'Native - Boulder, CO',
+          dates: 'Feb \'14 - May \'15',
+          description: 'Helped build a new company with a team of graduating seniors, winning the New Venture Challenge at CU and participating in Techstars-Boulder',
+          skills: ['iOS SDK', 'Objective-C', 'Swift', 'REST']
+        }
+      ]
+    },
+    education: {
+      entries: [
+        {
+          title: 'Computer Science, B.A.',
+          dates: 'May 2015',
+          location: 'University of Colorado at Boulder',
+          status: 'Graduated',
+          description: 'Honors Minor in Technology, Arts & Media (TAM)'
+        },
+        {
+          title: 'Graphic Design Studio',
+          dates: 'May - Aug 2015',
+          location: 'DIS - Copenhagen, Denmark',
+          status: 'Completed',
+          description: 'Completed an academic rebranding of Copenhagen’s premiere fashion shop'
+        }
+
+      ]
+    }
   });
 });
 

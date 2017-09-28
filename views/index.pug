@@ -41,35 +41,20 @@ html
           h2 Experience
           
         ul.entry-list
-          li.entry
-            +Entry(
-              'Web Application Developer', 
-              '1 yr 4 mos', 
-              'Vizualiiz - Seattle, WA', 
-              'Feb \'16 - Jun \'17' )
-              .col-12
-                p First experience with Angular 2; helped rebuild company’s flagship asset management application
-              .col-12
-                .row.no-gutters.justify-content-between
-                  .col-auto
-                    a.learn-more(href="#") learn more
-                  .col-auto.align-items-end
-                    +EntrySkillList(['Angular', 'RxJS', 'Sass', 'REST'])
-          
-          li.entry
-            +Entry(
-              'iOS Developer', 
-              '1 yr 3 mos', 
-              'Native - Boulder, CO', 
-              'Feb \'14 - May \'15' )
-              .col-12
-                p Helped build a new company with a team of graduating seniors, winning the New Venture Challenge at CU and participating in Techstars-Boulder
-              .col-12
-                .row.no-gutters.justify-content-between
-                  .col-auto
-                    a.learn-more(href="#") learn more
-                  .col-auto.align-items-end
-                    +EntrySkillList(['iOS SDK', 'Objective-C', 'Swift', 'REST'])
+          each e in experience.entries
+            li.entry
+              +Entry( e.title, e.duration, e.location, e.dates)
+                .col-12
+                  p= e.description
+                .col-12
+                  .row.no-gutters.justify-content-between
+                    .col-auto
+                      if e.url
+                        a.learn-more(href=e.url) learn more
+                    .col-auto.align-items-end
+                      if e.skills
+                        +EntrySkillList(e.skills)
+
         
         
       //- Education  
@@ -79,30 +64,17 @@ html
           h2 Education
           
         ul.entry-list
-          li.entry
-            +Entry(
-              'Computer Science, B.A.',
-              'May 2015',
-              'University of Colorado at Boulder',
-              'Graduated' )
-              .col-12
-                p Honors Minor in Technology, Arts & Media (TAM)
-              .col-12
-                .row.no-gutters.justify-content-between
-                  .col-auto
-                    a.learn-more(href="#") learn more
-          li.entry
-            +Entry( 
-              'Graphic Design Studio',
-              'May - Aug 2015',
-              'Danish Institute for Study Abroad',
-              'COPENHAGEN, DENMARK' )
-              .col-12
-                p Completed an academic rebranding of Copenhagen’s premiere fashion shop
-              .col-12
-                .row.no-gutters.justify-content-between
-                  .col-auto
-                    a.learn-more(href="#" disabled) learn more
+          each e in education.entries
+            li.entry
+              +Entry( e.title, e.dates, e.location, e.status )
+                .col-12
+                  p= e.description
+                .col-12
+                  .row.no-gutters.justify-content-between
+                    .col-auto
+                      if e.url
+                        a.learn-more(href=e.url) learn more
+                        
     footer
       .row.no-gutters.justify-content-center.align-items-center
         .col-auto

@@ -61,7 +61,6 @@ app.get('/', function (req, res) {
           status: 'Completed',
           description: 'Completed an academic rebranding of Copenhagen’s premiere fashion shop'
         }
-
       ]
     }
   });

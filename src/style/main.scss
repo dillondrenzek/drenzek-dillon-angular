@@ -8,22 +8,17 @@
 @import 'Entry';
 
 // reset
+h1, p {
+  margin-bottom: 0;
+}
 ul {
   padding: 0;
 }
 
-section {
-  margin-bottom: 50px;
 
-  header h2 {
-    @include page-heading-2();
-  }
-}
 
 #intro {
-  h1, p {
-    margin-bottom: 0;
-  }
+
   h1 {
     @include page-heading-1();
   }
@@ -37,13 +32,19 @@ section {
 
 .page {
   margin-top: 56px;
-  // padding: 0;
   padding-top: 50px;
 
   font-size: 0.875rem;
   letter-spacing: 0.0264285em;
-}
 
+  section {
+    margin-bottom: 50px;
+
+    header h2 {
+      @include page-heading-2();
+    }
+  }
+}
 
 
 .entry-list {

@@ -1,3 +1,6 @@
+### v5.0.0 - alpha.4
+* Removed directory `/v4-deprecated`
+
 ### v5.0.0 - alpha.3
 * Updated Resume PDF available for download
 * Added basic Project Entrys to the home page

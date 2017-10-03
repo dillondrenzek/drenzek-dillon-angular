@@ -3,6 +3,7 @@
 const express = require('express'),
   path = require('path'),
   pug = require('pug'),
+  packageJSON = require('./package.json'),
   app = express();
 
 
@@ -25,7 +26,11 @@ app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume
 // Index page
 app.get('/', function (req, res) {
   res.render('index', {
+
     githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
+    appVersion: packageJSON['version'],
+
+
     experience: {
       entries: [
         {
@@ -60,6 +65,67 @@ app.get('/', function (req, res) {
           location: 'DIS - Copenhagen, Denmark',
           status: 'Completed',
           description: 'Completed an academic rebranding of Copenhagen’s premiere fashion shop'
+        }
+      ]
+    },
+    projects: {
+      entries: [
+
+        // vertical panoramas
+        {
+          title: 'Vertical Panoramas',
+          type: 'Photography Showcase',
+          description: 'A photography project I\'ve been working on for a few years. Every landmark-ish place I go to, I take a "vertical panorama" that includes the landmark and my feet standing in front of it',
+          url: null,
+          skills: ['React']
+        },
+
+        // spotify playlist editor
+        {
+          title: 'Spotify Timeline',
+          type: 'Web App',
+          description: 'A web application that utilizes the Spotify API to help users create playlists',
+          skills: ['Angular', 'REST'],
+          url: null
+        },
+
+        // minesweeper game
+
+        // stocks app
+        {
+          title: 'Stocks App',
+          type: 'Web App',
+          description: 'A web application that utilizes the Markit free API for stock quotes and helps the user draw quick conclusions about their Portfolio',
+          skills: ['Angular', 'REST']
+        },
+
+        {
+          title: 'Storm Design Art Fashion Rebranding',
+          type: 'Academic Rebrand',
+          description: 'Received praise from store\'s owner, local industry professionals about project\'s attention to customer',
+          skills: ['Photoshop', 'Illustrator', 'InDesign'],
+          url: null
+        },
+        {
+          title: 'Drenzek Does Denmark',
+          type: 'Blog',
+          description: 'A travel blog I built to practice the MEAN stack while abroad in Denmark',
+          skills: ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
+          url: null
+        },
+        {
+          title: 'Capstone Portfolio',
+          type: 'Website',
+          description: 'Major Project in senior Capstone class at CU; first used Node.js and Neo4j',
+          skills: ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
+          url: null
+        },
+        {
+          title: 'Technology, Arts & Media Portal',
+          type: 'Class Portal',
+          description: 'Portal to a sample of the work I completed for my Honor\'s Minor in Technology, Arts and Media',
+          skills: ['HTML/CSS', 'jQuery', 'Adobe Creative Suite'],
+          url: null
         }
       ]
     }

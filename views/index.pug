@@ -1,18 +1,34 @@
 extends layout
 include Entry
 
+mixin _EntryList
+  ul.entry-list.row
+    block
+      
+mixin _GridEntry
+  li.entry.col-xs-12.col-md-6.col-lg-4
+    block
+      
+mixin _NarrowEntry(center)
+  if center
+    li.entry.col-xs-12.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+      block
+  else 
+    li.entry.col-xs-12.col-md-10.col-lg-8
+      block   
 
 
 block page
   
   //- Intro
   section#intro
-    .row.no-gutters.justify-content-between.align-items-center
-      .col
-        h1 I'm Dillon
-        p.subtitle Professional Web Developer
-      .col-4
-        img.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
+    .col-xs-12.col-lg-10.offset-lg-1
+      .row.no-gutters.justify-content-between.align-items-center
+        .col
+          h1 I'm Dillon
+          p.subtitle Professional Web Developer
+        .col-4
+          img.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
 
 
 
@@ -20,20 +36,19 @@ block page
   section#experience
     header.justify-content-center
       h2 Experience
-    ul.entry-list
+    +_EntryList
       each e in experience.entries
-        li.entry
+        +_NarrowEntry(true)
           +Entry( e.title, e.duration, e.location, e.dates)
             .col-12
               p= e.description
             .col-12
               .row.no-gutters.justify-content-between
-                .col-auto
+                .col
                   if e.url
                     a.learn-more(href=e.url) learn more
-                .col-auto.align-items-end
-                  if e.skills
-                    +EntrySkillList(e.skills)
+                .col.align-items-end
+                  +EntrySkillList(e.skills)
     
     
     
@@ -41,9 +56,9 @@ block page
   section#education
     header.justify-content-center
       h2 Education
-    ul.entry-list
+    +_EntryList
       each e in education.entries
-        li.entry
+        +_NarrowEntry(true)
           +Entry( e.title, e.dates, e.location, e.status )
             .col-12
               p= e.description
@@ -52,3 +67,26 @@ block page
                 .col-auto
                   if e.url
                     a.learn-more(href=e.url) learn more
+
+
+
+  //- Projects
+  if projects
+    section#projects
+      header.justify-content-center
+        h2 Projects
+      +_EntryList
+        each e in projects.entries
+          +_GridEntry
+            +Entry( e.title, '', e.type, '')
+              .col-12
+                p= e.description
+              .col-12
+                .row.no-gutters.justify-content-between
+                  if e.url
+                    .col
+                      a.learn-more(href=e.url) learn more
+                  if e.skills
+                    .col.align-items-end
+                      +EntrySkillList(e.skills)
+              

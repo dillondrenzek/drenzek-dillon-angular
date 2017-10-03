@@ -17,21 +17,26 @@ mixin Entry(heading_1, heading_2, subtitle_1, subtitle_2)
 
 
 mixin EntryTitle(title_1, title_2)
-    .col-auto.col-left
-      .heading-1= title_1
-    .col-auto.col-right
-      .heading-2= title_2
+    if (title_1)
+      .col.col-left
+        .heading-1= title_1
+    if (title_2)
+      .col.col-right
+        .heading-2= title_2
 
 mixin EntrySubtitle(subtitle_1, subtitle_2)
-    .col-auto.col-left
-      block left
-        .subtitle-1= subtitle_1
-    .col-auto.col-right
-      block right
-        .subtitle-2= subtitle_2
+    if (subtitle_1)
+      .col.col-left
+        block left
+          .subtitle-1= subtitle_1
+    if (subtitle_2)
+      .col.col-right
+        block right
+          .subtitle-2= subtitle_2
   
 
+
 mixin EntrySkillList(skills)
-  ul.d-inline-flex.skills
+  ul.d-flex.flex-row-reverse.no-gutters.skills
     each skill in skills
-      li.skill= skill
+      li.col-auto.skill= skill     

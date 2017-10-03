@@ -73,6 +73,10 @@
     font-weight: 700;
     letter-spacing: -0.025em;
     font-style: normal;
-    margin-left: 25px;
+
+    // flex row reverse => first not last child
+    &:not(:first-child) {
+      margin-right: 10px;
+    }
   }
 }

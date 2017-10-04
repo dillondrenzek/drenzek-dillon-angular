@@ -1,5 +1,6 @@
 extends layout
 include Entry
+include projects
 
 mixin _EntryList
   ul.entry-list.row
@@ -39,16 +40,16 @@ block page
     +_EntryList
       each e in experience.entries
         +_NarrowEntry(true)
-          +Entry( e.title, e.duration, e.location, e.dates)
-            .col-12
-              p= e.description
-            .col-12
-              .row.no-gutters.justify-content-between
-                .col
-                  if e.url
-                    a.learn-more(href=e.url) learn more
-                .col.align-items-end
-                  +EntrySkillList(e.skills)
+          +Entry
+            +EntryHeader
+              +EntryTitle(e.title, e.duration)
+              +EntrySubtitle(e.location, e.dates)
+            +EntryDescription(e.description)
+          //- +Entry( e.title, e.duration, e.location, e.dates)
+            if e.url
+              a.learn-more(href=e.url) learn more
+            .col.align-items-end
+              +EntrySkillList(e.skills)
     
     
     
@@ -59,10 +60,12 @@ block page
     +_EntryList
       each e in education.entries
         +_NarrowEntry(true)
-          +Entry( e.title, e.dates, e.location, e.status )
-            .col-12
-              p= e.description
-            .col-12
+          +Entry
+            +EntryHeader
+              +EntryTitle(e.title, e.dates)
+              +EntrySubtitle(e.location, e.status)
+            +EntryDescription(e.description)
+            //- .col-12
               .row.no-gutters.justify-content-between
                 .col-auto
                   if e.url
@@ -76,17 +79,11 @@ block page
       header.justify-content-center
         h2 Projects
       +_EntryList
-        each e in projects.entries
+        each proj in projects.entries
           +_GridEntry
-            +Entry( e.title, '', e.type, '')
-              .col-12
-                p= e.description
-              .col-12
-                .row.no-gutters.justify-content-between
-                  if e.url
-                    .col
-                      a.learn-more(href=e.url) learn more
-                  if e.skills
-                    .col.align-items-end
-                      +EntrySkillList(e.skills)
+            +ProjectEntry(proj)
+            //- if e.url
+                  .col
+                    a.learn-more(href=e.url) learn more
+              
               

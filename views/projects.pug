@@ -1,0 +1,17 @@
+include Entry
+
+//- Project
+//-
+
+
+
+//- Project Entry
+//- @param {Project} proj
+mixin ProjectEntry(proj)
+  +Entry.Project-Entry
+    +EntryImage("/static/img/portrait.jpg", "alt", "100%", 180)
+    +EntryHeader
+      +EntryTitle(proj.title)
+      +EntrySubtitle(proj.type)
+    +EntryDescription(proj.description)
+    

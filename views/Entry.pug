@@ -50,9 +50,3 @@ mixin EntryImage(src, alt, width, height=150)
   figure(style={height: ht})
     img(src=src, alt=alt, width=width)
   
-
-
-mixin EntrySkillList(skills)
-  ul.d-flex.flex-row-reverse.no-gutters.skills
-    each skill in skills
-      li.col-auto.skill= skill     

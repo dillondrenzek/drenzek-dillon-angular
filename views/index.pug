@@ -45,11 +45,8 @@ block page
               +EntryTitle(e.title, e.duration)
               +EntrySubtitle(e.location, e.dates)
             +EntryDescription(e.description)
-          //- +Entry( e.title, e.duration, e.location, e.dates)
-            if e.url
-              a.learn-more(href=e.url) learn more
-            .col.align-items-end
-              +EntrySkillList(e.skills)
+          //- if e.url
+            a.learn-more(href=e.url) learn more
     
     
     
@@ -65,11 +62,8 @@ block page
               +EntryTitle(e.title, e.dates)
               +EntrySubtitle(e.location, e.status)
             +EntryDescription(e.description)
-            //- .col-12
-              .row.no-gutters.justify-content-between
-                .col-auto
-                  if e.url
-                    a.learn-more(href=e.url) learn more
+            //- if e.url
+              a.learn-more(href=e.url) learn more
 
 
 
@@ -83,7 +77,6 @@ block page
           +_GridEntry
             +ProjectEntry(proj)
             //- if e.url
-                  .col
-                    a.learn-more(href=e.url) learn more
+              a.learn-more(href=e.url) learn more
               
               

@@ -9,7 +9,8 @@ include Entry
 //- @param {Project} proj
 mixin ProjectEntry(proj)
   +Entry.Project-Entry
-    +EntryImage("/static/img/portrait.jpg", "alt", "100%", 180)
+    if proj.image
+      +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
     +EntryHeader
       +EntryTitle(proj.title)
       +EntrySubtitle(proj.type)

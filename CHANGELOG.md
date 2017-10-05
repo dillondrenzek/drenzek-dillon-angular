@@ -1,3 +1,6 @@
+### v5.0.0 - alpha.5
+* ...
+
 ### v5.0.0 - alpha.4
 * Added `image` to `ProjectEntry`
 * Added accessory mixins to help clients build `Entry`

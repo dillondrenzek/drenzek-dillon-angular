@@ -1,5 +1,8 @@
 ### v5.0.0 - alpha.4
+* Added `image` to `ProjectEntry`
+* Added accessory mixins to help clients build `Entry`
 * Removed directory `/v4-deprecated`
+* Removed `skills` from projects
 
 ### v5.0.0 - alpha.3
 * Updated Resume PDF available for download

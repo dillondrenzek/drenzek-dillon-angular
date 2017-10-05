@@ -68,63 +68,101 @@ app.get('/', function (req, res) {
         }
       ]
     },
+
+
+
+    // Project
+    // - title, type, description, url
+    // - image { src, alt }
     projects: {
       entries: [
 
         // vertical panoramas
-        {
-          title: 'Vertical Panoramas',
-          type: 'Photography Showcase',
-          description: 'A photography project I\'ve been working on for a few years. Every landmark-ish place I go to, I take a "vertical panorama" that includes the landmark and my feet standing in front of it',
-          url: null,
-          skills: ['React']
-        },
+        // {
+        //   title: 'Vertical Panoramas',
+        //   type: 'Photography Showcase',
+        //   image: {
+        //     src: '/static/img/always-wondering.jpg',
+        //     alt: 'NEED REPLACEMENT'
+        //   },
+        //   description: `
+        //     A photography project I\'ve been working on for a few years.
+        //     Every landmark-ish place I go to, I take a "vertical panorama" that
+        //     includes the landmark and my feet standing in front of it
+        //     `,
+        //   url: null
+        // },
 
         // spotify playlist editor
-        {
-          title: 'Spotify Timeline',
-          type: 'Web App',
-          description: 'A web application that utilizes the Spotify API to help users create playlists',
-          skills: ['Angular', 'REST'],
-          url: null
-        },
+        // {
+        //   title: 'Spotify Timeline',
+        //   type: 'Web App',
+        //   image: {
+        //     src: '/static/img/spotify-placeholder.png',
+        //     alt: 'NEED REPLACEMENT'
+        //   },
+        //   description: 'A web application that utilizes the Spotify API to help users create playlists',
+        //   url: null
+        // },
 
         // minesweeper game
 
         // stocks app
-        {
-          title: 'Stocks App',
-          type: 'Web App',
-          description: 'A web application that utilizes the Markit free API for stock quotes and helps the user draw quick conclusions about their Portfolio',
-          skills: ['Angular', 'REST']
-        },
+        // {
+        //   title: 'Stocks App',
+        //   type: 'Web App',
+        //   image : {
+        //     src: '/static/img/always-wondering.jpg',
+        //     alt: 'NEED REPLACEMENT'
+        //   },
+        //   description: `
+        //     A web application that utilizes the Markit free API
+        //     for stock quotes and helps the user draw quick conclusions
+        //     about their Portfolio
+        //   `
+        // },
 
         {
-          title: 'Storm Design Art Fashion Rebranding',
-          type: 'Academic Rebrand',
-          description: 'Received praise from store\'s owner, local industry professionals about project\'s attention to customer',
-          skills: ['Photoshop', 'Illustrator', 'InDesign'],
+          title: 'Storm Design Art Fashion',
+          type: 'Academic Company Rebrand',
+          image : {
+            src: '/static/img/storm.jpg',
+            alt: 'Storm Design Art Fashion Company Rebranding'
+          },
+          description: `
+            Received praise from store\'s owner,
+            local industry professionals about project\'s attention to customer needs
+            `,
           url: null
         },
         {
           title: 'Drenzek Does Denmark',
           type: 'Blog',
+          image : {
+            src: '/static/img/drenzek-does-denmark.png',
+            alt: 'Drenzek Does Denmark Logo'
+          },
           description: 'A travel blog I built to practice the MEAN stack while abroad in Denmark',
-          skills: ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
           url: null
         },
         {
           title: 'Capstone Portfolio',
           type: 'Website',
+          image : {
+            src: '/static/img/capstone-portfolio-1.jpg',
+            alt: 'Capstone Portfolio Screenshot 1'
+          },
           description: 'Major Project in senior Capstone class at CU; first used Node.js and Neo4j',
-          skills: ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
           url: null
         },
         {
           title: 'Technology, Arts & Media Portal',
           type: 'Class Portal',
-          description: 'Portal to a sample of the work I completed for my Honor\'s Minor in Technology, Arts and Media',
-          skills: ['HTML/CSS', 'jQuery', 'Adobe Creative Suite'],
+          image : {
+            src: '/static/img/tam-portal-1.jpg',
+            alt: 'TAM Portal 1'
+          },
+          description: 'A portal to the work I completed for my Honor\'s Minor in Technology, Arts and Media',
           url: null
         }
       ]

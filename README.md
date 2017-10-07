@@ -13,3 +13,7 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
   - Include links back
 - Allow download of my resume as a PDF
 - Short "Word from the Author" explaining current situation
+
+### For Release
+- Solid build and deploy process
+  - Travis CI?, front-end testing?, gulp?

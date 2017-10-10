@@ -4,6 +4,7 @@
 
 // Custom Components
 @import 'nav';
+@import 'sections';
 @import 'footer';
 @import 'Entry';
 
@@ -17,15 +18,7 @@ ul {
 
 
 
-#intro {
 
-  h1 {
-    @include page-heading-1();
-  }
-  h1 + .subtitle {
-    @include page-heading-1-subtitle();
-  }
-}
 
 
 
@@ -37,20 +30,14 @@ ul {
   font-size: 0.875rem;
   letter-spacing: 0.0264285em;
 
-  section {
-    margin-bottom: 50px;
+  @import 'sections';
 
-    header h2 {
-      @include page-heading-2();
-    }
-  }
 }
 
 
 .entry-list {
   list-style-type: none;
-}
-
-.entry {
-  margin-bottom: 30px;
+  .entry {
+    margin-bottom: 30px;
+  }
 }

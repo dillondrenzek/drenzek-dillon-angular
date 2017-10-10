@@ -1,36 +1,68 @@
-// Page: Heading 1
-@mixin page-heading-1 {
-  font-size: 2.5rem;
-  line-height: 1.15em;
-  font-weight: 500;
-  letter-spacing: -.0375em;
+// Page / Heading 1
+// - >SM
+// - XS
+@mixin page-heading-1($size: sm) {
+  @if $size == xs {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -.0375em;
+    line-height: 1.1875em;
+  } @else {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -.0375em;
+    line-height: 1.15em;
+  }
 }
 
-// Page: Heading 1 Subtitle
-@mixin page-heading-1-subtitle {
-  font-size: 1.5rem;
-  font-style: italic;
+
+
+$page-heading-1-subtitle-color: #636c72;
+
+// Page / Heading 1 Subtitle
+// - >SM
+// - XS
+@mixin page-heading-1-subtitle($size: sm) {
+  color: $page-heading-1-subtitle-color;
   text-transform: none;
-  color: #636C72;
+  font-style: italic;
+  @if $size == xs {
+    font-size: .875rem;
+  } @else {
+    font-size: 1.5rem;
+  }
 }
 
-// Page: Heading 2
-@mixin page-heading-2 {
-  font-size: 1.25rem;
-  letter-spacing: 8.17px;
-  margin-bottom: 20px;
-  font-weight: 400;
+
+
+// Page / Heading 2
+// - >SM
+// - XS
+@mixin page-heading-2($size: sm) {
+  letter-spacing: .25em;
+  font-weight: 200;
   text-transform: uppercase;
   text-align: center;
+  @if $size == xs {
+    font-size: 1.25rem;
+  } @else {
+    font-size: 1.5rem;
+  }
 }
 
 
 
-
-// List Item: Heading 1
-@mixin list-item-heading-1 {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.4em;
-  letter-spacing: normal;
+// Page / Body
+// >SM, XS
+@mixin page-body($size: sm) {
+  @if $size == xs {
+    font-size: .75rem;
+    letter-spacing: .0308333em;
+    font-weight: 400;
+  } @else {
+    font-size: .875rem;
+    letter-spacing: .0264285em;
+    font-weight: 400;
+    line-height: 1.5;
+  }
 }

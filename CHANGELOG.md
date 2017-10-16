@@ -1,5 +1,10 @@
 ### v5.0.0 - alpha.5
 * Added special support for XS screen sizes
+* Added `/src/views/components`
+* Added `/src/views/includes`
+* Added `/src/styles/components`
+* Moved `/views` inside `/src`
+
 
 ### v5.0.0 - alpha.4
 * Added `image` to `ProjectEntry`

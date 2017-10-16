@@ -1,4 +1,4 @@
-@import 'bootstrap/variables';
+// @import 'bootstrap/variables';
 
 a {
   cursor: pointer;
@@ -15,11 +15,11 @@ nav {
   a {
     color: $gray-lightest;
     font-family: $font-family-sans-serif;
-    font-weight: 300;
     font-size: $font-size-sm;
-    text-transform: uppercase;
+    font-weight: 300;
     letter-spacing: 1px;
     text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
       color: lighten($brand-primary, 5%);

@@ -1,12 +1,8 @@
 @import 'fonts';
 @import 'text';
 @import 'bootstrap/variables';
+@import 'components';
 
-// Custom Components
-@import 'nav';
-@import 'sections';
-@import 'footer';
-@import 'Entry';
 
 // reset
 h1, p {
@@ -29,9 +25,6 @@ ul {
 
   font-size: 0.875rem;
   letter-spacing: 0.0264285em;
-
-  @import 'sections';
-
 }
 
 

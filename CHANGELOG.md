@@ -1,5 +1,5 @@
 ### v5.0.0 - alpha.5
-* ...
+* Added special support for XS screen sizes
 
 ### v5.0.0 - alpha.4
 * Added `image` to `ProjectEntry`

@@ -1,5 +1,6 @@
 include Entry
 include comments
+include cards
 
 //- Project
 //-
@@ -10,11 +11,12 @@ include comments
 //- @param {Project} proj
 mixin ProjectEntry(proj)
   +Entry.Project-Entry
-    if proj.image
-      +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
-    +EntryHeader
-      +EntryTitle(proj.title)
-      +EntrySubtitle(proj.type)
+    +Card
+      if proj.image
+        +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
+      +EntryHeader
+        +EntryTitle(proj.title)
+        +EntrySubtitle(proj.type)
     +Comment(proj.description)
     //- +EntryDescription(proj.description)
     

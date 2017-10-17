@@ -1,4 +1,5 @@
 include Entry
+include comments
 
 //- Project
 //-
@@ -14,5 +15,6 @@ mixin ProjectEntry(proj)
     +EntryHeader
       +EntryTitle(proj.title)
       +EntrySubtitle(proj.type)
-    +EntryDescription(proj.description)
+    +Comment(proj.description)
+    //- +EntryDescription(proj.description)
     

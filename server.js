@@ -124,7 +124,7 @@ app.get('/', function (req, res) {
 
         {
           title: 'Storm Design Art Fashion',
-          type: 'Academic Company Rebrand',
+          type: 'Academic Rebranding',
           image : {
             src: '/static/img/storm.jpg',
             alt: 'Storm Design Art Fashion Company Rebranding'

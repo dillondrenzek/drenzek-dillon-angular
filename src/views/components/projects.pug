@@ -1,13 +1,10 @@
-include Entry
+include entry
 include comments
 include cards
 
-//- Project
-//-
-
-
 
 //- Project Entry
+//- a composition of Entry subcomponents meant to display projects
 //- @param {Project} proj
 mixin ProjectEntry(proj)
   +Entry.Project-Entry
@@ -18,5 +15,4 @@ mixin ProjectEntry(proj)
         +EntryTitle(proj.title)
         +EntrySubtitle(proj.type)
     +Comment(proj.description)
-    //- +EntryDescription(proj.description)
     

@@ -20,16 +20,16 @@ ul {
 
 
 .page {
-  margin-top: 56px;
-  padding-top: 50px;
+  font-size: .875rem;
+  letter-spacing: .0264285em;
 
-  font-size: 0.875rem;
-  letter-spacing: 0.0264285em;
+  margin-top: 56px;
 }
 
 
 .entry-list {
   list-style-type: none;
+  margin-bottom: 0; // Bootstrap Reset
   .entry {
     margin-bottom: 30px;
   }

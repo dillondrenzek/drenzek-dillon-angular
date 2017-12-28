@@ -4,7 +4,12 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
 
 [Waffle.io Project Board](https://waffle.io/dillondrenzek/dillon-drenzek-com)
 
+## Development
 
+### Push to Staging
+
+
+## Outlook
 
 ### For Beta
 - Display related work experience and education Resume-style

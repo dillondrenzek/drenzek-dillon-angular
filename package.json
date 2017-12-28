@@ -30,7 +30,7 @@
     }
   },
   "scripts": {
-    "start:prod": "npm run build:css && npm run serve",
+    "start:prod": "npm run serve",
     "start:dev": "npm run watch",
     "start": "npm run start:dev",
     "serve": "node server.js",
@@ -40,7 +40,8 @@
     "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap -o static/style/bootstrap",
     "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-custom.min.css static/style/bootstrap/bootstrap-custom.css",
     "postcss": "postcss --config postcss.js --replace static/style/**/*.css -m",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "postinstall": "npm run build:css"
   },
   "dependencies": {
     "autoprefixer": "^6.6.1",

@@ -34,6 +34,14 @@ app.get('/', function (req, res) {
     experience: {
       entries: [
         {
+          title: 'Front End Web Developer',
+          duration: 'Current',
+          location: 'Peach - Seattle, WA',
+          dates: 'Nov \'17 - Current',
+          description: 'I help build the Front End of Peach\'s website and web application',
+          skills: ['Angular.js', 'Sass', 'Foundation']
+        },
+        {
           title: 'Web Application Developer',
           duration: '1 yr 4 mos',
           location: 'Vizualiiz - Seattle, WA',

@@ -1,0 +1,11 @@
+$card-bg: #fff;
+$card-border-color: #eaeaea;
+$card-shadow-color: rgba(0, 0, 0, .12);
+
+
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border-color;
+  box-shadow: 1px 1px 2px $card-shadow-color;
+  padding: 10px;
+}

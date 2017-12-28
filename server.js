@@ -34,6 +34,14 @@ app.get('/', function (req, res) {
     experience: {
       entries: [
         {
+          title: 'Front End Web Developer',
+          duration: 'Current',
+          location: 'Peach - Seattle, WA',
+          dates: 'Nov \'17 - Current',
+          description: 'I help build the Front End of Peach\'s website and web application using Angular.js',
+          skills: ['Angular.js', 'Sass', 'Foundation']
+        },
+        {
           title: 'Web Application Developer',
           duration: '1 yr 4 mos',
           location: 'Vizualiiz - Seattle, WA',
@@ -124,7 +132,7 @@ app.get('/', function (req, res) {
 
         {
           title: 'Storm Design Art Fashion',
-          type: 'Academic Company Rebrand',
+          type: 'Academic Rebranding',
           image : {
             src: '/static/img/storm.jpg',
             alt: 'Storm Design Art Fashion Company Rebranding'

@@ -1,12 +1,13 @@
 @import '../bootstrap/mixins/breakpoints';
 
 
-$section-margin-bottom: 50px;
+$section-padding: 50px;
 $section-header-margin-bottom: 25px;
 
 
 section {
-  margin-bottom: $section-margin-bottom;
+  padding-bottom: $section-padding;
+  padding-top: $section-padding;
 
   header h2 {
     margin-bottom: $section-header-margin-bottom;
@@ -20,6 +21,11 @@ section {
   .portrait {
     margin-left: 10px;
   }
+}
+
+section#projects {
+  background-color: #fafafa;
+
 }
 
 

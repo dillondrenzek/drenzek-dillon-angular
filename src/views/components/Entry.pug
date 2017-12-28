@@ -1,12 +1,35 @@
+//- Entry List
+mixin EntryList
+  ul.entry-list.row
+    block
+
+
+  
+//- Entry List Item
+mixin EntryListItem(mode)
+  - mode = mode.toLowerCase()
+  
+  case mode
+    when 'narrow'
+      li.entry.col-xs-12.col-md-10.offset-md-1.col-lg-8.offset-lg-2
+        block
+    when 'grid'
+      li.entry.col-xs-12.col-md-6.col-lg-4
+        block
+    when 'full'
+    default
+      li.entry.col-12
+        block
+
+
+
 //- Entry
-//- composed of accessory components:
-//-   - EntryImage
-//-   - EntryHeader
-//-   - EntryDescription
 mixin Entry
   .Entry&attributes(attributes)
     block
-      
+
+
+    
 //- Entry Header
 mixin EntryHeader
   header
@@ -43,6 +66,8 @@ mixin EntryDescription(desc)
   .row.no-gutters
     .col
       p= desc
+
+
 
 //- Entry Image
 mixin EntryImage(src, alt, width, height=150)

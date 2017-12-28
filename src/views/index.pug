@@ -1,28 +1,17 @@
 extends layout
-include components/Entry
+include components/entry
 include components/projects
+include components/sections
 
-mixin _EntryList
-  ul.entry-list.row.no-gutters
-    block
+
       
-mixin _GridEntry
-  li.entry.col-xs-12.col-md-6.col-lg-4
-    block
-      
-mixin _NarrowEntry(center)
-  if center
-    li.entry.col-xs-12.col-md-10.offset-md-1.col-lg-8.offset-lg-2
-      block
-  else 
-    li.entry.col-xs-12.col-md-10.col-lg-8
-      block   
+  
 
 
 block page
   
   //- Intro
-  section#intro
+  +Section#intro
     .row
       .col-xs-12.col-lg-10.offset-lg-1
         .row.no-gutters.justify-content-between.align-items-center
@@ -34,50 +23,64 @@ block page
 
 
 
+
+
   //- Experience
-  section#experience
-    header.justify-content-center
-      h2 Experience
-    +_EntryList
+  +Section#experience
+  
+    //- Header
+    +SectionHeader Experience
+    
+    //- Entries
+    +EntryList
       each e in experience.entries
-        +_NarrowEntry(true)
+        +EntryListItem('narrow')
+        
+          //- Experience Entry
           +Entry
             +EntryHeader
               +EntryTitle(e.title, e.duration)
               +EntrySubtitle(e.location, e.dates)
             +EntryDescription(e.description)
-          //- if e.url
-            a.learn-more(href=e.url) learn more
     
     
     
-  //- Education  
-  section#education
-    header.justify-content-center
-      h2 Education
-    +_EntryList
+    
+    
+  //- Education
+  +Section#education
+  
+    //- Header
+    +SectionHeader Education
+    
+    //- Entries
+    +EntryList
       each e in education.entries
-        +_NarrowEntry(true)
+        +EntryListItem('narrow')
+        
+          //- Education Entry
           +Entry
             +EntryHeader
               +EntryTitle(e.title, e.dates)
               +EntrySubtitle(e.location, e.status)
             +EntryDescription(e.description)
-            //- if e.url
-              a.learn-more(href=e.url) learn more
+
+
 
 
 
   //- Projects
-  if projects
-    section#projects
-      header.justify-content-center
-        h2 Projects
-      +_EntryList
-        each proj in projects.entries
-          +_GridEntry
-            +ProjectEntry(proj)
-            //- if e.url
-              a.learn-more(href=e.url) learn more
+  +Section#projects
+    
+    //- Header
+    +SectionHeader Projects
+    
+    //- Entries
+    +EntryList
+      each proj in projects.entries
+        +EntryListItem('grid')
+        
+          //- Project Entry
+          +ProjectEntry(proj)
               
               

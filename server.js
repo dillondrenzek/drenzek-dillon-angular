@@ -38,7 +38,7 @@ app.get('/', function (req, res) {
           duration: 'Current',
           location: 'Peach - Seattle, WA',
           dates: 'Nov \'17 - Current',
-          description: 'I help build the Front End of Peach\'s website and web application',
+          description: 'I help build the Front End of Peach\'s website and web application using Angular.js',
           skills: ['Angular.js', 'Sass', 'Foundation']
         },
         {

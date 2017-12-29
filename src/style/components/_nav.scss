@@ -20,6 +20,7 @@ nav {
     letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase;
+    padding-left: 15px;
 
     &:hover {
       color: lighten($brand-primary, 5%);

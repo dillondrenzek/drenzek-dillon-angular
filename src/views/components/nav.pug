@@ -12,4 +12,8 @@ nav
       div
         +logo('56')(class="h2")
       div
+        each account in socialMedia
+          a.nav-link(href=account.url target="_blank" title=account.title)
+            i(class=account.faIconClasses)
+        
         +nav_link('/resume', 'Resume')

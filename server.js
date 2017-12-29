@@ -33,15 +33,18 @@ app.get('/', function (req, res) {
     socialMedia: {
       'instagram': {
         title: 'Instagram',
-        url: 'https://www.instagram.com/dillondrenzek/'
+        url: 'https://www.instagram.com/dillondrenzek/',
+        faIconClasses: 'fab fa-instagram'
       },
       'github': {
         title: 'GitHub',
-        url: 'https://github.com/dillondrenzek'
+        url: 'https://github.com/dillondrenzek',
+        faIconClasses: 'fab fa-github'
       },
       'linkedin': {
         title: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/dillondrenzek/'
+        url: 'https://www.linkedin.com/in/dillondrenzek/',
+        faIconClasses: 'fab fa-linkedin'
       }
     },
 

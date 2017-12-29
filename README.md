@@ -7,7 +7,7 @@ The professional portfolio of University of Colorado graduate, Dillon Drenzek. <
 ## Development
 
 ### Push to Staging
-
+1. `git push origin v5-staging`
 
 ## Outlook
 

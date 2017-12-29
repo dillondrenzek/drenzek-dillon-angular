@@ -30,6 +30,20 @@ app.get('/', function (req, res) {
     githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
     appVersion: packageJSON['version'],
 
+    socialMedia: {
+      'instagram': {
+        title: 'Instagram',
+        url: 'https://www.instagram.com/dillondrenzek/'
+      },
+      'github': {
+        title: 'GitHub',
+        url: 'https://github.com/dillondrenzek'
+      },
+      'linkedin': {
+        title: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/dillondrenzek/'
+      }
+    },
 
     experience: {
       entries: [

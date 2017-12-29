@@ -34,3 +34,16 @@ ul {
     margin-bottom: 30px;
   }
 }
+
+
+.social-media-links {
+  list-style-type: none;
+
+  a {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: .65rem;
+    padding-right: 1rem;
+  }
+}

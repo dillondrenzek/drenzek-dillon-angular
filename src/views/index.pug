@@ -21,8 +21,8 @@ block page
             ul.social-media-links.row.no-gutters
               each account in socialMedia
                 li.col-auto
-                  //- .title
-                  a.url(href=account.url target="_blank")= account.title
+                  a(href=account.url target="_blank" title=account.title)
+                    i(class=`fa-2x ${account.faIconClasses}`)
           .col-4
             img.portrait.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
 

@@ -1,6 +1,7 @@
 @import 'fontawesome/fontawesome';
 @import 'fontawesome/fa-solid';
 @import 'fontawesome/fa-brands';
+@import 'colors';
 @import 'fonts';
 @import 'text';
 @import 'bootstrap/variables';
@@ -27,6 +28,35 @@ ul {
   letter-spacing: .0264285em;
 
   margin-top: 56px;
+}
+
+.photo {
+  height: 350px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+
+  @include media-breakpoint-down(xs) {
+    height: 250px;
+  }
+}
+
+#intro-photo {
+  background-image: url('/static/img/always-wondering.jpg');
+}
+
+#intro {
+  border-bottom: 1px solid $light-1;
+}
+
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 1rem;
+  }
 }
 
 

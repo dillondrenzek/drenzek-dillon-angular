@@ -35,6 +35,10 @@ ul {
   width: 100%;
   background-size: cover;
   background-position: center;
+
+  @include media-breakpoint-down(xs) {
+    height: 250px;
+  }
 }
 
 #intro-photo {

@@ -12,7 +12,7 @@ nav
       div
         +logo('56')(class="logo")
       div
-        each account in socialMedia
+        each account in socialMedia.accounts
           a.nav-link(href=account.url target="_blank" title=account.title)
             i(class=account.faIconClasses)
         

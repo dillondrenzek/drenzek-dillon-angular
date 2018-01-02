@@ -22,7 +22,7 @@ block page
             h1 I'm Dillon
             p.subtitle Professional Web Developer
             ul.social-media-links.row.no-gutters
-              each account in socialMedia
+              each account in socialMedia.accounts
                 li.col-auto
                   a(href=account.url target="_blank" title=account.title)
                     i(class=`fa-2x ${account.faIconClasses}`)

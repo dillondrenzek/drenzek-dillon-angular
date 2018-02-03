@@ -1,0 +1,19 @@
+//- Template
+nav.nav
+  .container
+    .d-flex.w-100.flex-row.justify-content-between.align-items-center
+      div
+        a.nav-link(href="/" target="_self")
+          #logo
+            img( src="/static/img/drenzek-logo.svg" width="42" height="56" alt="Drenzek Logo")
+            span.align-middle Dillon Drenzek
+        
+        a.nav-link(href="/about" target="_self")
+          | About
+      div
+        each account in socialMedia.accounts
+          a.nav-link(href=account.url target="_blank" title=account.title)
+            i(class=account.faIconClasses)
+        a.nav-link(href="/resume" target="_self")
+          | Resume
+        

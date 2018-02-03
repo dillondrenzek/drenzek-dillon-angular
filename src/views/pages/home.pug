@@ -1,0 +1,47 @@
+extends ../default  
+
+
+//- Project Entry
+//- a composition of Entry subcomponents meant to display projects
+//- @param {Project} proj
+mixin _ProjectEntry(proj)
+  +Entry.Project-Entry
+    +Card
+      if proj.image
+        +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
+      +EntryHeader
+        +EntryTitle(proj.title)
+        +EntrySubtitle(proj.type)
+    +Comment(proj.description)
+
+
+
+block page
+
+  .photo#intro-photo
+    
+  //- Intro
+  +Section#intro
+    .row
+      .col-12.col-lg-10.offset-lg-1
+        .row.no-gutters.justify-content-between.align-items-center
+          .col
+            h1 I'm Dillon
+            p.subtitle Professional Web Developer
+            ul.social-media-links.row.no-gutters
+              each account in socialMedia.accounts
+                li.col-auto
+                  a(href=account.url target="_blank" title=account.title)
+                    i(class=`fa-2x ${account.faIconClasses}`)
+          .col-4
+            img.portrait.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
+
+  //- Projects
+  +Section#projects
+    +SectionHeader Projects
+    +EntryList
+      each proj in projects.entries
+        +EntryListItem('grid')
+          +_ProjectEntry(proj)
+              
+              

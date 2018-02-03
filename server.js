@@ -24,9 +24,9 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 // GET '/resume'
 app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));
 
-// Index page
-app.get('/', function (req, res) {
-  res.render('index', {
+// About page
+app.get('/about', function (req, res) {
+  res.render('pages/about', {
 
     githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
     appVersion: packageJSON['version'],
@@ -35,7 +35,23 @@ app.get('/', function (req, res) {
     experience: db.experience,
     education: db.education,
     projects: db.projects
-    
+
+  });
+});
+
+
+// Index page
+app.get('/', function (req, res) {
+  res.render('pages/home', {
+
+    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
+    appVersion: packageJSON['version'],
+
+    socialMedia: db.socialMedia,
+    experience: db.experience,
+    education: db.education,
+    projects: db.projects
+
   });
 });
 

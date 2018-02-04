@@ -15,7 +15,8 @@ module.exports = {
       dates: 'Feb \'16 - Jun \'17',
       description: 'First experience with Angular 2; helped rebuild company’s flagship asset management application',
       skills: ['Angular', 'RxJS', 'Sass', 'REST']
-    },{
+    },
+    {
       title: 'iOS Developer',
       duration: '1 yr 3 mos',
       location: 'Native - Boulder, CO',

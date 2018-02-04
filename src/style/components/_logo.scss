@@ -11,6 +11,8 @@
   }
 
   @include media-breakpoint-down(xs) {
-    font-size: 1rem;
+    span {
+      display: none;
+    }
   }
 }

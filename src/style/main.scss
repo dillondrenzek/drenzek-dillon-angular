@@ -45,9 +45,7 @@ ul {
   background-image: url('/static/img/always-wondering.jpg');
 }
 
-#intro {
-  border-bottom: 1px solid $light-1;
-}
+
 
 
 .entry-list {
@@ -55,18 +53,5 @@ ul {
   margin-bottom: 0; // Bootstrap Reset
   .entry {
     margin-bottom: 30px;
-  }
-}
-
-
-.social-media-links {
-  list-style-type: none;
-  margin-top: 1em;
-
-  a {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: .65rem;
-    padding-right: 2em;
   }
 }

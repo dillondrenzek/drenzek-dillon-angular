@@ -21,27 +21,51 @@ block page
   .photo#intro-photo
     
   //- Intro
-  +Section#intro
-    .row
-      .col-12.col-lg-10.offset-lg-1
-        .row.no-gutters.justify-content-between.align-items-center
-          .col
-            h1 I'm Dillon
-            p.subtitle Professional Web Developer
-            ul.social-media-links.row.no-gutters
-              each account in socialMedia.accounts
-                li.col-auto
-                  a(href=account.url target="_blank" title=account.title)
-                    i(class=`fa-2x ${account.faIconClasses}`)
-          .col-4
-            img.portrait.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
+  section#intro
+    .container
+      .row
+        .col-12.col-lg-10.offset-lg-1
+          .row.no-gutters.justify-content-between.align-items-center
+            .col
+              h1 I'm Dillon
+              p.subtitle Professional Web Developer
+              
+            .col-4
+              img.portrait.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
+
+  section#social-media
+    .container
+      .row
+        .col-12.col-lg-10.offset-lg-1
+          .row.no-gutters.justify-content-between.align-items-center
+            //- Social Media Links
+            .social-media-links.w-100.p-3
+              //- row (small-up)
+              .d-none.d-sm-flex.flex-row
+                .row.w-100.no-gutters.justify-content-between.align-items-center
+                  //- Social Media Link
+                  each account in socialMedia.accounts
+                    .col
+                      a.social-media-link.p-2.d-flex.flex-row.justify-content-center.align-items-center(href=account.url target="_blank" title=account.title)
+                        i(class=`fa-2x ${account.faIconClasses}`)
+                        span= account.title
+              //- column (column xs)       
+              .d-flex.d-sm-none.flex-column
+                .justify-content-between.align-items-center
+                  //- Social Media Link
+                  each account in socialMedia.accounts
+                    .col
+                      a.social-media-link.p-2.d-flex.flex-row.justify-content-center.align-items-center(href=account.url target="_blank" title=account.title)
+                        i(class=`fa-2x ${account.faIconClasses}`)
+                        span= account.title
 
   //- Projects
-  +Section#projects
-    +SectionHeader Projects
-    +EntryList
-      each proj in projects.entries
-        +EntryListItem('grid')
-          +_ProjectEntry(proj)
+  section#projects
+    .container
+      +SectionHeader Projects
+      +EntryList
+        each proj in projects.entries
+          +EntryListItem('grid')
+            +_ProjectEntry(proj)
               
               

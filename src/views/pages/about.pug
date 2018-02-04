@@ -3,25 +3,27 @@ extends ../default
 block page
   
   //- Experience
-  +Section#experience
-    +SectionHeader Experience
-    +EntryList
-      each e in experience.entries
-        +EntryListItem('narrow')
-          +Entry
-            +EntryHeader
-              +EntryTitle(e.title, e.duration)
-              +EntrySubtitle(e.location, e.dates)
-            +EntryDescription(e.description)
+  section#experience
+    .container
+      +SectionHeader Experience
+      +EntryList
+        each e in experience.entries
+          +EntryListItem('narrow')
+            +Entry
+              +EntryHeader
+                +EntryTitle(e.title, e.duration)
+                +EntrySubtitle(e.location, e.dates)
+              +EntryDescription(e.description)
     
   //- Education
-  +Section#education
-    +SectionHeader Education
-    +EntryList
-      each e in education.entries
-        +EntryListItem('narrow')
-          +Entry
-            +EntryHeader
-              +EntryTitle(e.title, e.dates)
-              +EntrySubtitle(e.location, e.status)
-            +EntryDescription(e.description)
+  section#education
+    .container
+      +SectionHeader Education
+      +EntryList
+        each e in education.entries
+          +EntryListItem('narrow')
+            +Entry
+              +EntryHeader
+                +EntryTitle(e.title, e.dates)
+                +EntrySubtitle(e.location, e.status)
+              +EntryDescription(e.description)

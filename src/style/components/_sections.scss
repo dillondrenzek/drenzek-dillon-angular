@@ -6,8 +6,11 @@ $section-header-margin-bottom: 25px;
 
 
 section {
-  padding-bottom: $section-padding;
-  padding-top: $section-padding;
+
+  &:not(#social-media) {
+    padding-bottom: $section-padding;
+    padding-top: $section-padding;
+  }
 
   header h2 {
     margin-bottom: $section-header-margin-bottom;
@@ -30,6 +33,7 @@ section#projects {
 
 
 #intro {
+  border-bottom: 1px solid $light-1;
 
   h1 {
     @include media-breakpoint-up(sm) {
@@ -46,6 +50,32 @@ section#projects {
     }
     @include media-breakpoint-down(xs) {
       @include page-heading-1-subtitle(xs);
+    }
+  }
+}
+
+
+
+#social-media {
+  border-bottom: 1px solid $light-1;
+
+  .social-media-links {
+    a {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: .65rem;
+      text-decoration: none;
+      & > :first-child {
+        margin-right: 15px;
+      }
+    }
+
+    .social-media-link {
+      border-radius: 0.25em;
+      overflow: hidden;
+      &:hover {
+        background: #eaeaea;
+      }
     }
   }
 }

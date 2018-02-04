@@ -30,6 +30,9 @@ app.get('/about', function (req, res) {
 
     githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
     appVersion: packageJSON['version'],
+    page: {
+      titleImageUrl: '/static/img/portrait.jpg'
+    },
 
     socialMedia: db.socialMedia,
     experience: db.experience,
@@ -46,6 +49,9 @@ app.get('/', function (req, res) {
 
     githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
     appVersion: packageJSON['version'],
+    page: {
+      titleImageUrl: '/static/img/always-wondering.jpg'
+    },
 
     socialMedia: db.socialMedia,
     experience: db.experience,

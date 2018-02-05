@@ -8,6 +8,8 @@ var ProjectController = require('../../controllers/project.controller');
 
 // Map each API to the Controller FUnctions
 
+router.get('/:id', ProjectController.getProject);
+
 router.get('/', ProjectController.listProjects);
 
 router.post('/', ProjectController.createProject);

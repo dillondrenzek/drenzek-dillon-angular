@@ -2,6 +2,15 @@ const Project = require('../models/project.model');
 
 _this = this;
 
+// get project
+exports.get = async function (id) {
+  try {
+      var project = await Project.findById(id);
+      return project;
+  } catch(e) {
+      throw Error("Error occured while Finding the Todo")
+  }
+}
 
 // list projects
 exports.list = async function(query, page, limit) {
@@ -17,7 +26,6 @@ exports.list = async function(query, page, limit) {
     return projects;
   } catch (e) {
     throw Error('Error listing Projects');
-
   }
 
 }
@@ -25,6 +33,8 @@ exports.list = async function(query, page, limit) {
 
 // create project
 exports.create = async function (project) {
+
+  console.log('Creating Project:', project);
 
   var newProject = new Project({
     title: project.title,
@@ -41,7 +51,7 @@ exports.create = async function (project) {
     var savedProject = await newProject.save();
     return savedProject;
   } catch (e) {
-    throw Error('Error creating Project');
+    throw Error('Error creating Project: ' + e);
   }
 }
 
@@ -80,13 +90,13 @@ exports.remove = async function (id) {
 
   // Delete the Todo
     try{
-        var deleted = await ToDo.remove({_id: id});
+        var deleted = await Project.remove({_id: id});
         if(deleted.result.n === 0){
             throw Error("Project could not be deleted");
         }
         return deleted;
     } catch(e) {
-        throw Error("Error Occured while Deleting the Project");
+        throw Error("Error Occured while Deleting the Project" + e);
     }
 
 };

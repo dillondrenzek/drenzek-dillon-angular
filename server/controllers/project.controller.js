@@ -1,6 +1,17 @@
 var ProjectService = require('../services/project.service');
 
 
+exports.getProject = async function (req, res, next) {
+    var id = req.params.id;
+
+    try {
+        var project = await ProjectService.get(id);
+        return res.status(200).json({status: 200, data: project, message: 'Success'})
+    } catch(e) {
+        return res.status(400).json({status: 400., message: e.message})
+    }
+}
+
 exports.listProjects = async function (req, res, next) {
 
   var page = req.query.page || 1;
@@ -20,6 +31,9 @@ exports.listProjects = async function (req, res, next) {
 
 exports.createProject = async function (req, res, next) {
 
+  // console.log('Create Project with request:', req);
+  console.log('Create Project with body:', req.body);
+
   var project = {
     title: req.body.title,
     type: req.body.type,
@@ -28,7 +42,6 @@ exports.createProject = async function (req, res, next) {
     description: req.body.description,
     url: req.body.url,
   };
-
 
   try {
     var savedProject = await ProjectService.create(project);
@@ -46,11 +59,15 @@ exports.createProject = async function (req, res, next) {
 exports.removeProject = async function(req, res, next){
 
     var id = req.params.id;
+    console.log('Delete Project with id:', id);
 
     try {
-        var deleted = await ProjectService.remove(id)
+        var deleted = await ProjectService.remove(id);
+
+        console.log('Deleted Project:', deleted);
         return res.status(204).json({ status:204, message: 'Success' });
     } catch(e) {
+      console.error('Error Deleting Project:', e);
         return res.status(400).json({ status: 400, message: e.message });
     }
 

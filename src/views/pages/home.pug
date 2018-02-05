@@ -5,14 +5,15 @@ extends ../default
 //- a composition of Entry subcomponents meant to display projects
 //- @param {Project} proj
 mixin _ProjectEntry(proj)
-  +Entry.Project-Entry
-    +Card
-      if proj.image
-        +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
-      +EntryHeader
-        +EntryTitle(proj.title)
-        +EntrySubtitle(proj.type)
-    +Comment(proj.description)
+  a(href=`/project/${proj.slug}`)
+    +Entry.Project-Entry
+      +Card
+        if proj.image
+          +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
+        +EntryHeader
+          +EntryTitle(proj.title)
+          +EntrySubtitle(proj.type)
+      +Comment(proj.description)
 
 
 
@@ -62,7 +63,8 @@ block page
   //- Projects
   section#projects
     .container
-      +SectionHeader Projects
+      header.justify-content-center
+        h2 Projects
       +EntryList
         each proj in projects.entries
           +EntryListItem('grid')

@@ -20,46 +20,60 @@ app.use('/static', express.static(__dirname + '/static'));
 app.use('/vendor', express.static(__dirname + '/vendor'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
+function context(ctx) {
+  var appContext = {
+    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
+    appVersion: packageJSON['version'],
+
+    socialMedia: db.socialMedia,
+    experience: db.experience,
+    education: db.education,
+    projects: db.projects
+  };
+
+  return Object.assign({}, appContext, ctx);
+}
+
 
 // GET '/resume'
 app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));
 
-// About page
-app.get('/about', function (req, res) {
-  res.render('pages/about', {
-
-    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
-    appVersion: packageJSON['version'],
-    page: {
-      titleImageUrl: '/static/img/portrait.jpg'
-    },
-
-    socialMedia: db.socialMedia,
-    experience: db.experience,
-    education: db.education,
-    projects: db.projects
-
+// Show Project page
+app.get('/project/:slug', function (req, res, next) {
+  var project = db.projects.entries.find(function(proj) {
+    return proj.slug === req.params['slug'];
   });
+
+  if (project || !req.params['slug']) {
+    res.render('pages/show-project', context({ project }));
+  } else {
+    res.status(500).send('404');
+  }
 });
 
+
+// About page
+app.get('/about', function (req, res) {
+  res.render('pages/about', context({
+    page: {
+      titleImageUrl: '/static/img/portrait.jpg'
+    }
+  }));
+});
 
 // Index page
 app.get('/', function (req, res) {
-  res.render('pages/home', {
-
-    githubUrl: 'https://github.com/dillondrenzek/dillon-drenzek-com',
-    appVersion: packageJSON['version'],
+  res.render('pages/home', context({
     page: {
       titleImageUrl: '/static/img/always-wondering.jpg'
-    },
-
-    socialMedia: db.socialMedia,
-    experience: db.experience,
-    education: db.education,
-    projects: db.projects
-
-  });
+    }
+  }));
 });
+
+app.get('/*', function (req, res) {
+  res.redirect('/');
+});
+
 
 
 

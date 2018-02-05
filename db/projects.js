@@ -47,6 +47,7 @@ module.exports = {
     // },
 
     {
+      slug: 'storm',
       title: 'Storm Design Art Fashion',
       type: 'Academic Rebranding',
       image : {
@@ -60,6 +61,7 @@ module.exports = {
       url: null
     },
     {
+      slug: 'drenzek-does-denmark',
       title: 'Drenzek Does Denmark',
       type: 'Blog',
       image : {
@@ -70,6 +72,7 @@ module.exports = {
       url: null
     },
     {
+      slug: 'capstone-portfolio',
       title: 'Capstone Portfolio',
       type: 'Website',
       image : {
@@ -80,6 +83,7 @@ module.exports = {
       url: null
     },
     {
+      slug: 'tam-portal',
       title: 'Technology, Arts & Media Portal',
       type: 'Class Portal',
       image : {

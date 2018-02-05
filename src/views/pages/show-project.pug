@@ -1,0 +1,9 @@
+extends ../default
+
+block page
+
+  .photo#about-photo(style=`background-image:url('${ project.image.src }');`)
+
+  h1= project.title
+  h2= project.type
+  p= project.description

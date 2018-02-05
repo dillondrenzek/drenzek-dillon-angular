@@ -7,7 +7,8 @@ block page
   //- Experience
   section#experience
     .container
-      +SectionHeader Experience
+      header.justify-content-center
+        h2 Experience
       +EntryList
         each e in experience.entries
           +EntryListItem('narrow')
@@ -20,7 +21,8 @@ block page
   //- Education
   section#education
     .container
-      +SectionHeader Education
+      header.justify-content-center
+        h2 Education
       +EntryList
         each e in education.entries
           +EntryListItem('narrow')

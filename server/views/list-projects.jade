@@ -2,31 +2,36 @@ extends layout
 
 block content
   h1= title
+    small= ` (${projects.docs.length})`
 
-  ul
-    for project in projects.docs
-      li
-        h1= project.title
-        h2= project.type
-        table
-          tr
-            td Id
-            td= project._id
-          tr
-            td Image Src
-            td= project.image_src
-          tr
-            td Image Alt
-            td= project.image_alt
-          tr
-            td Description
-            td= project.description
-          tr
-            td Url
-            td= project.url
-          tr
-            td Created
-            td= project.createdAt
-          tr
-            td Modified
-            td= project.modifiedAt
+  if !projects.docs.length
+    h4 No Projects
+
+  if projects.docs.length
+    ul
+      for project in projects.docs
+        li
+          h1= project.title
+          h2= project.type
+          table
+            tr
+              td Id
+              td= project._id
+            tr
+              td Image Src
+              td= project.image_src
+            tr
+              td Image Alt
+              td= project.image_alt
+            tr
+              td Description
+              td= project.description
+            tr
+              td Url
+              td= project.url
+            tr
+              td Created
+              td= project.createdAt
+            tr
+              td Modified
+              td= project.modifiedAt

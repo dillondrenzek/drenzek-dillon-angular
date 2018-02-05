@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+
+  table
+    for project in projects.docs
+      tr
+        td= project._id
+        td= project.title
+        td= project.type
+        td= project.image_src
+        td= project.image_alt
+        td= project.description
+        td= project.url
+        td= project.createdAt
+        td= project.modifiedAt

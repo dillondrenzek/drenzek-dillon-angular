@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= `List ${title.plural}`
+    small= ` (${items.length})`
+
+  if !items.length
+    h4 No ${title.plural}
+
+  if items.length
+    ul
+      for item in items
+        li
+          h3= item[item_display.title_key]
+          h4= item[item_display.subtitle_key]
+          table
+            for key in item_display.keys
+              tr
+                td= key
+                td= item[key]

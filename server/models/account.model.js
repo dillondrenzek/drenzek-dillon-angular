@@ -10,7 +10,7 @@ var AccountSchema = new mongoose.Schema({
   modifiedAt: Date
 });
 
-AccountSchema.plugin(mongoosePaginate)
+AccountSchema.plugin(mongoosePaginate);
 
 const Account = mongoose.model('Account', AccountSchema);
 

@@ -15,9 +15,24 @@ async function get(req, res, next) {
   try {
     var projects = await ProjectService.list({}, page, limit);
 
-    res.render('list-projects', {
-      title: 'List Projects',
-      projects
+    res.render('list', {
+      title: {
+        singular: 'Project',
+        plural: 'Projects'
+      },
+      items: projects.docs,
+      item_display: {
+        title_key: 'title',
+        subtitle_key: 'type',
+        keys: ['title',
+        'type',
+        'image_src',
+        'image_alt',
+        'description',
+        'url',
+        'createdAt',
+        'modifiedAt']
+      }
     });
   } catch (e) {
 

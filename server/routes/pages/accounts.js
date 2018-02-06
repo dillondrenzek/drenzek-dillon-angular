@@ -15,9 +15,17 @@ async function get(req, res, next) {
   try {
     var accounts = await AccountService.list({}, page, limit);
 
-    res.render('list-accounts', {
-      title: 'List Accounts',
-      accounts
+    res.render('list', {
+      title: {
+        singular: 'Account',
+        plural: 'Accounts'
+      },
+      items: accounts.docs,
+      item_display: {
+        title_key: 'title',
+        subtitle_key: 'slug',
+        keys: [ '_id', 'title', 'slug', 'url', 'faIconClasses', 'createdAt', 'modifiedAt' ]
+      }
     });
   } catch (e) {
 

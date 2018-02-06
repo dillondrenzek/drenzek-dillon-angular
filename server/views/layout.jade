@@ -2,16 +2,18 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
   
-    nav
-      ul
-        li
-          a(href="/") Home
-        li
-          a(href="/projects") Projects
-        li
-          a(href="/accounts") Accounts
+    nav.top-bar
+      .top-bar-left
+        ul.dropdown.menu(data-dropdown-menu)
+          li
+            a(href="/") Home
+          li
+            a(href="/projects") Projects
+          li
+            a(href="/accounts") Accounts
     
     block content

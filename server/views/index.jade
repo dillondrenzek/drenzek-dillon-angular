@@ -24,7 +24,7 @@ block content
   .row
     .column.small-12.medium-6
       +listTitle('Projects', ` ${projects.length}`)
-        .column.small-12
+        //- .column.small-12
           ul.menu
             li
               a(href="/projects/new") New
@@ -38,7 +38,7 @@ block content
             li.list-item
               +listItem(project.title, project.id)
                 ul.menu
-                  li
+                  //- li
                     a(href="/projects/#{project.id}/edit") Edit
                   //- li
                     a(href="/projects/#{project.id}/delete") Delete
@@ -62,5 +62,6 @@ block content
                   ul.menu
                     li
                       a(href="/accounts/#{account.id}/edit") Edit
-                    //- li
-                      a(href="/account/#{account.id}/delete") Delete
+                    li
+                      - var url = '/api/accounts/' + account.id
+                      a(onclick="deleteRequest('#{url}')") Delete

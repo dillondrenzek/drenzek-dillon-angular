@@ -1,32 +1,66 @@
 extends layout
 
-block content
 
-  .grid-x
-    .cell.small-12.medium-6
-      h2 Projects
-        small= ` (${projects.length})`
+
+mixin listTitle(title, subtitle)
+  .row
+    .column.small-12
+      h2= title
+        small= subtitle
+    block
+      
+    
+
+mixin listItem(title, id)
+  .row
+    span.column.small-12= title
+    small.column.small-12= id
+    block
+
+
+
+
+block content
+  .row
+    .column.small-12.medium-6
+      +listTitle('Projects', ` ${projects.length}`)
+        .column.small-12
+          ul.menu
+            li
+              a(href="/projects/new") New
 
       if !projects.length
         h4 No Projects
 
       if projects.length
-        ul
+        ul.list
           for project in projects
-            li
-              p= project.title + ' - '
-                small= project.id
+            li.list-item
+              +listItem(project.title, project.id)
+                ul.menu
+                  li
+                    a(href="/projects/#{project.id}/edit") Edit
+                  //- li
+                    a(href="/projects/#{project.id}/delete") Delete
 
-    .cell.small-12.medium-6
-      h2 Accounts
-        small= ` (${accounts.length})`
+    .column.small-12.medium-6
+      +listTitle('Accounts', ` ${accounts.length}`)
+        .column.small-12
+          ul.menu
+            li
+              a(href="/accounts/new") New
 
       if !accounts.length
         h4 No Accounts
 
       if accounts.length
-        ul
+        ul.list
           for account in accounts
-            li
-              p= account.title + ' - '
-                small= account.id
+            li.list-item
+              +listItem(account.title, account.id)
+                .columns.small-12
+                  ul.menu
+                    li
+                      a(href="/accounts/#{account.id}/edit") Edit
+                    //- li
+                      a(href="/account/#{account.id}/delete") Delete

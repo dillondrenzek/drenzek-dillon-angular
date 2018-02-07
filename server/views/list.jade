@@ -5,17 +5,15 @@ block content
     small= ` (${items.length})`
 
   if !items.length
-    h4 No ${title.plural}
+    h4= `No ${title.plural}`
 
   if items.length
-    ul
+    .grid-x.grid-padding-x.grid-margin-y
       for item in items
-        li
+        .cell.small-12.large-6
           h3= item[item_display.title_key]
           h4= item[item_display.subtitle_key]
-          table
-            for key in item_display.keys
-              tr
-                td= key
-                td
-                  pre= item[key]
+          for key in item_display.keys
+            .grid-x.grid-padding-y
+              .cell.small-12.medium-3= key
+              code.cell.small-12.medium-9= item[key]

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= `Create ${title}`
+
+  form( action="#{baseUrl}/" method="POST" )
+    
+    for key in keys
+      .row
+        .columns.small-12.medium-3= key
+        .columns.small-12.medium-9
+          input(type="text" name="#{key}")
+            
+    .row
+      .column
+        input(type="submit" class="button" value="Save")

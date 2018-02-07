@@ -1,5 +1,4 @@
-const Account = require('../models/account.model'),
-  { Page } = require('../util/index');
+const Account = require('../models/account.model');
 
 _this = this;
 
@@ -93,7 +92,7 @@ exports.remove = async function (id) {
   // Delete the Todo
     try{
         var deleted = await Account.remove({_id: id});
-        if(deleted.result.n === 0){
+        if(deleted.result && deleted.result.n === 0){
             throw Error("Account could not be deleted");
         }
         return deleted;

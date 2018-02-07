@@ -2,7 +2,10 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/foundation.css')
+    
+    script(src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+    script(src="/javascripts/script.js")
+    link(rel='stylesheet', href='/stylesheets/foundation-flex.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
   
@@ -16,6 +19,5 @@ html
           li
             a(href="/accounts") Accounts
     
-    .row
-      .column.small-12
-        block content
+    .container
+      block content

@@ -31,7 +31,6 @@ exports.listAccounts = async function (req, res, next) {
 
 exports.createAccount = async function (req, res, next) {
 
-  // console.log('Create Account with request:', req);
   console.log('Create Account with body:', req.body);
 
   var account = {
@@ -43,7 +42,7 @@ exports.createAccount = async function (req, res, next) {
 
   try {
     var savedAccount = await AccountService.create(account);
-    return res.status(200).json({ status: 200, data: savedAccount, message: 'Success' });
+    return res.status(200).redirect('/');
   } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }
@@ -63,7 +62,7 @@ exports.removeAccount = async function(req, res, next){
         var deleted = await AccountService.remove(id);
 
         console.log('Deleted Account:', deleted);
-        return res.status(204).json({ status:204, message: 'Success' });
+        return res.status(204).json({ status: 204, message: 'Successfully deleted account with id:', id });
     } catch(e) {
       console.error('Error Deleting Account:', e);
         return res.status(400).json({ status: 400, message: e.message });

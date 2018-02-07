@@ -1,5 +1,4 @@
-const Project = require('../models/project.model'),
-  { Page } = require('../util/index');
+const Project = require('../models/project.model');
 
 _this = this;
 

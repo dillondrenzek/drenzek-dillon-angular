@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= `Edit ${title}`
+    small= ` (${subtitle})`
+  
+  - var url = baseUrl + '/' + item._id
+  .row
+    .columns
+      button.button.alert(onclick="deleteRequest('#{url}')" ) Delete
+  
+  form  
+    .row
+      .columns.small-12.medium-3 _id
+      .columns.small-12.medium-9
+        input(type="text" value="#{item._id}" name="_id" readonly)
+    
+    for key in keys
+      .row
+        .columns.small-12.medium-3= key
+        .columns.small-12.medium-9
+          input(type="text" value="#{item[key]}" name="#{key}")
+            
+    .row
+      .column
+        input(type="submit" class="button" value="Save")

@@ -2,7 +2,7 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
   
@@ -16,4 +16,6 @@ html
           li
             a(href="/accounts") Accounts
     
-    block content
+    .row
+      .column.small-12
+        block content

@@ -1,5 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  .grid-x
+    .cell.small-12.medium-6
+      h2 Projects
+        small= ` (${projects.length})`
+
+      if !projects.length
+        h4 No Projects
+
+      if projects.length
+        ul
+          for project in projects
+            li
+              p= project.title + ' - '
+                small= project.id
+
+    .cell.small-12.medium-6
+      h2 Accounts
+        small= ` (${accounts.length})`
+
+      if !accounts.length
+        h4 No Accounts
+
+      if accounts.length
+        ul
+          for account in accounts
+            li
+              p= account.title + ' - '
+                small= account.id

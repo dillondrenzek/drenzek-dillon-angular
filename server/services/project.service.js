@@ -1,4 +1,5 @@
-const Project = require('../models/project.model');
+const Project = require('../models/project.model'),
+  { Page } = require('../util/index');
 
 _this = this;
 
@@ -15,13 +16,16 @@ exports.get = async function (id) {
 // list projects
 exports.list = async function(query, page, limit) {
 
-  var options = {
+  page = page || 1;
+  limit = limit || 10;
+
+  var params = {
     page,
     limit
   };
 
   try {
-    var projects = await Project.paginate(query, options);
+    var projects = await Project.paginate(query, params);
 
     return projects;
   } catch (e) {

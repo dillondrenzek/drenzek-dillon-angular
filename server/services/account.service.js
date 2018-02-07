@@ -1,4 +1,5 @@
-const Account = require('../models/account.model');
+const Account = require('../models/account.model'),
+  { Page } = require('../util/index');
 
 _this = this;
 
@@ -15,13 +16,16 @@ exports.get = async function (id) {
 // list accounts
 exports.list = async function(query, page, limit) {
 
-  var options = {
+  page = page || 1;
+  limit = limit || 10;
+
+  var params = {
     page,
     limit
   };
 
   try {
-    var accounts = await Account.paginate(query, options);
+    var accounts = await Account.paginate(query, params);
 
     return accounts;
   } catch (e) {

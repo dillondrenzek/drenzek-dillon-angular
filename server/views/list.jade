@@ -17,4 +17,5 @@ block content
             for key in item_display.keys
               tr
                 td= key
-                td= item[key]
+                td
+                  pre= item[key]

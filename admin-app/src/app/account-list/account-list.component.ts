@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Account } from '../account/account.model';
+import { AccountService } from '../account/account.service';
 
 @Component({
   selector: 'admin-account-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountListComponent implements OnInit {
 
-  constructor() { }
+  @Input() accounts: Account[];
+
+  constructor(private accountService: AccountService) { }
 
   ngOnInit() {
+
+    this.accountService.getAccounts().subscribe((accounts: Account[]) => {
+      this.accounts = accounts;
+    });
+
+
   }
 
 }

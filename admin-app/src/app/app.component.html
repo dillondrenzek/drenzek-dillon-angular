@@ -1,16 +1,14 @@
 
-	<nav class="top-bar">
-		<div class="top-bar-left">
-			<ul data-dropdown-menu="" class="dropdown menu">
+	<!-- <nav>
+			<ul class="menu">
 				<li><a href="/">Home</a></li>
 				<li><a href="/projects">Projects</a></li>
 				<li><a href="/accounts">Accounts</a></li>
 			</ul>
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="column small-12 medium-6">
+	</nav> -->
+	<!-- <div class="container">
+		<div class="row"> -->
+			<!-- <div class="column small-12 medium-6">
 				<div class="row">
 					<div class="column small-12">
 						<h2>Projects<small> 7</small></h2></div>
@@ -71,18 +69,19 @@
 						</div>
 					</li>
 				</ul>
-			</div>
+			</div> -->
 			<div class="column small-12 medium-6">
 				<div class="row">
 					<div class="column small-12">
-						<h2>Accounts<small> 3</small></h2></div>
+						<h2>Accounts<small> 3</small></h2>
+          </div>
 					<div class="column small-12">
-						<ul class="menu">
+						<!-- <ul class="menu">
 							<li><a href="/accounts/new">New</a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
-				<admin-account-list></admin-account-list>
+				<admin-account-list [accounts]="accounts"></admin-account-list>
 			</div>
-		</div>
-	</div>
+		<!-- </div>
+	</div> -->

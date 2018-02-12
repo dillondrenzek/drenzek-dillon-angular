@@ -1,87 +1,39 @@
-
-	<!-- <nav>
-			<ul class="menu">
-				<li><a href="/">Home</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/accounts">Accounts</a></li>
-			</ul>
-	</nav> -->
-	<!-- <div class="container">
-		<div class="row"> -->
-			<!-- <div class="column small-12 medium-6">
-				<div class="row">
-					<div class="column small-12">
-						<h2>Projects<small> 7</small></h2></div>
-					<div class="column small-12">
-						<ul class="menu">
-							<li><a href="/projects/new">New</a></li>
-						</ul>
-					</div>
+<!-- <div class="top-bar">
+	<div class="top-bar-left">
+		<ul class="dropdown menu" data-dropdown-menu
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/accounts">Accounts</a></li>
+		</ul>
+	</div>
+</div> -->
+<div class="container">
+	<div class="row">
+		<div class="column small-12 medium-6">
+			<div class="row">
+				<div class="column small-12">
+					<h2>Accounts<small> 3</small></h2>
 				</div>
-				<ul class="list">
-					<li class="list-item">
-						<div class="row"><span class="column small-12">Storm Design Art Fashion</span><small class="column small-12">5a77d56a20642a63a0d12e3d</small>
-							<ul class="menu">
-								<li><a href="/projects/5a77d56a20642a63a0d12e3d/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="list-item">
-						<div class="row"><span class="column small-12">Drenzek Does Denmark</span><small class="column small-12">5a77e2b9cee42766726c063f</small>
-							<ul class="menu">
-								<li><a href="/projects/5a77e2b9cee42766726c063f/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="list-item">
-						<div class="row"><span class="column small-12">Technology, Arts &amp; Media Portal</span><small class="column small-12">5a77e4c2ad4ba8694d17ab20</small>
-							<ul class="menu">
-								<li><a href="/projects/5a77e4c2ad4ba8694d17ab20/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="list-item">
-						<div class="row"><span class="column small-12">Capstone Portfolio</span><small class="column small-12">5a77e4d4ad4ba8694d17ab21</small>
-							<ul class="menu">
-								<li><a href="/projects/5a77e4d4ad4ba8694d17ab21/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="list-item">
-						<div class="row"><span class="column small-12">TEst project</span><small class="column small-12">5a7d2ae788d386fd91e80919</small>
-							<ul class="menu">
-								<li><a href="/projects/5a7d2ae788d386fd91e80919/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="list-item">
-						<div class="row"><span class="column small-12">TEst project</span><small class="column small-12">5a7d2b1106c44dfdc7a85d65</small>
-							<ul class="menu">
-								<li><a href="/projects/5a7d2b1106c44dfdc7a85d65/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="list-item">
-						<div class="row"><span class="column small-12">What about this?</span><small class="column small-12">5a7d2b1f06c44dfdc7a85d66</small>
-							<ul class="menu">
-								<li><a href="/projects/5a7d2b1f06c44dfdc7a85d66/delete">Delete</a></li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div> -->
-			<div class="column small-12 medium-6">
-				<div class="row">
-					<div class="column small-12">
-						<h2>Accounts<small> 3</small></h2>
-          </div>
-					<div class="column small-12">
-						<!-- <ul class="menu">
-							<li><a href="/accounts/new">New</a></li>
-						</ul> -->
-					</div>
+				<div class="column small-12">
+					<ul class="menu">
+						<li><a href="/accounts/new">New</a></li>
+					</ul>
 				</div>
-				<admin-account-list [accounts]="accounts"></admin-account-list>
 			</div>
-		<!-- </div>
-	</div> -->
+			<admin-account-list [accounts]="accounts"></admin-account-list>
+		</div>
+
+		<div class="column small-12 medium-6">
+			<div class="row">
+				<div class="column small-12">
+					<h2>Projects<small> 7</small></h2></div>
+				<div class="column small-12">
+					<ul class="menu">
+						<li><a href="/projects/new">New</a></li>
+					</ul>
+				</div>
+			</div>
+			<admin-project-list [projects]="projects"></admin-project-list>
+		</div>
+	</div>
+</div>

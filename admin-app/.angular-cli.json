@@ -19,10 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "admin",
       "styles": [
-        "styles.css",
-        "../bower_components/foundation/css/foundation.min.css"
+        "../bower_components/foundation/css/normalize.min.css",
+        "../bower_components/foundation/css/foundation.min.css",
+        "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../bower_components/foundation/js/vendor/jquery.js",
+        "../bower_components/foundation/js/foundation.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

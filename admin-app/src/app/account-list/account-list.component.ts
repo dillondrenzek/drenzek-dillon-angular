@@ -14,12 +14,9 @@ export class AccountListComponent implements OnInit {
   constructor(private accountService: AccountService) { }
 
   ngOnInit() {
-
     this.accountService.getAccounts().subscribe((accounts: Account[]) => {
       this.accounts = accounts;
     });
-
-
   }
 
 }

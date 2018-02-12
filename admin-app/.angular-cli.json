@@ -17,9 +17,10 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "admin",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../bower_components/foundation/css/foundation.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

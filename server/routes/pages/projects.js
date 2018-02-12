@@ -3,6 +3,28 @@ var router = express.Router();
 
 var ProjectService = require('../../services/project.service');
 
+router.get('/new', new_);
+
+async function new_(req, res, next) {
+
+  try {
+    res.render('new', {
+      title: 'Project',
+      baseUrl: '/api/projects',
+      keys: ['title',
+        'type',
+        'image_src',
+        'image_alt',
+        'description',
+        'url',
+        'createdAt',
+        'modifiedAt'
+      ]
+    });
+  } catch (e) {
+    res.status(400).json({ status: 400, message: e.message });
+  }
+}
 
 //
 router.get('/', get);

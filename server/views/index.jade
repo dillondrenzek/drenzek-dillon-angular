@@ -18,13 +18,13 @@ mixin listItem(title, id)
     block
 
 
-
+//- Content block
 
 block content
   .row
     .column.small-12.medium-6
       +listTitle('Projects', ` ${projects.length}`)
-        //- .column.small-12
+        .column.small-12
           ul.menu
             li
               a(href="/projects/new") New
@@ -40,7 +40,7 @@ block content
                 ul.menu
                   //- li
                     a(href="/projects/#{project.id}/edit") Edit
-                  //- li
+                  li
                     a(href="/projects/#{project.id}/delete") Delete
 
     .column.small-12.medium-6

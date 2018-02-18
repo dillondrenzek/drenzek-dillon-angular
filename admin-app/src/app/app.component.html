@@ -1,36 +1,24 @@
-<!-- <div class="top-bar">
-	<div class="top-bar-left">
-		<ul class="dropdown menu" data-dropdown-menu
-      <li><a href="/">Home</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/accounts">Accounts</a></li>
-		</ul>
-	</div>
-</div> -->
 <div class="container">
 	<div class="row">
-		<div class="column small-12 medium-6">
+		<div class="col-sm">
 			<div class="row">
-				<div class="column small-12">
-					<h2>Accounts<small> 3</small></h2>
+				<div class="col-sm-12">
+					<h2>Accounts <small>{{(accounts) ? accounts.length : 0}}</small></h2>
 				</div>
-				<div class="column small-12">
-					<ul class="menu">
-						<li><a href="/accounts/new">New</a></li>
-					</ul>
+				<div class="col-sm-12">
+					<a class="btn btn-link" href="/accounts/new">New</a>
 				</div>
 			</div>
 			<admin-account-list [accounts]="accounts"></admin-account-list>
 		</div>
 
-		<div class="column small-12 medium-6">
+		<div class="col-sm">
 			<div class="row">
-				<div class="column small-12">
-					<h2>Projects<small> 7</small></h2></div>
-				<div class="column small-12">
-					<ul class="menu">
-						<li><a href="/projects/new">New</a></li>
-					</ul>
+				<div class="col-sm-12">
+					<h2>Projects <small>{{(projects) ? projects.length : 0}}</small></h2>
+        </div>
+				<div class="col-sm-12">
+					<a class="btn btn-link" href="/projects/new">New</a>
 				</div>
 			</div>
 			<admin-project-list [projects]="projects"></admin-project-list>

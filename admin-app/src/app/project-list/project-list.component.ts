@@ -13,10 +13,20 @@ export class ProjectListComponent implements OnInit {
 
   constructor(private projectService: ProjectService) { }
 
-  ngOnInit() {
+  onClickDelete(id: string) {
+    this.projectService.deleteProject(id).subscribe(() => {
+      this.loadProjects();
+    });
+  }
+
+  loadProjects() {
     this.projectService.getProjects().subscribe((projects: Project[]) => {
       this.projects = projects;
     });
+  }
+
+  ngOnInit() {
+    this.loadProjects();
   }
 
 }

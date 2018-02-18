@@ -13,10 +13,26 @@ export class ProjectService {
 
   constructor(private http: Http) { }
 
+  getProject(id: string): Observable<Project> {
+    const url = this.baseUrl + '/' + id;
+    return this.http.get(url).pipe(
+      map((res: Response) => <Project>res.json()['data'])
+    );
+  }
+
   getProjects(): Observable<Project[]> {
     return this.http.get(this.baseUrl).pipe(
       map((res: Response) => res.json()['data']),
       map((cursor: Cursor<Project[]>) => cursor['docs'])
+    );
+  }
+
+  deleteProject(id: string): Observable<void> {
+    const url = this.baseUrl + '/' + id;
+    return this.http.delete(url).pipe(
+      map(() => {
+        return;
+      })
     );
   }
 

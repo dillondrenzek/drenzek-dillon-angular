@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectService } from '../project/project.service';
+import { Project } from '../project/project.model';
 
 @Component({
   selector: 'admin-project-view',
@@ -7,7 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectViewComponent implements OnInit {
 
-  constructor() { }
+  project: Project;
+
+  constructor( private route: ActivatedRoute, private projectService: ProjectService ) {
+
+    const id = route.snapshot.params['id'];
+
+    this.projectService.getProject(id)
+      .subscribe((project: Project) => {
+        this.project = project;
+      });
+
+  }
 
   ngOnInit() {
   }

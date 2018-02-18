@@ -9,11 +9,14 @@ import { AccountListComponent } from './account-list/account-list.component';
 import { AccountService } from './account/account.service';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectService } from './project/project.service';
+import { ProjectViewComponent } from './project-view/project-view.component';
 
 
 const appRoutes: Routes = [
-  { path:'accounts', component: AccountListComponent },
-  { path:'projects', component: ProjectListComponent }
+  { path:'accounts',      component: AccountListComponent },
+  { path:'projects/:id',  component: ProjectViewComponent },
+  { path:'projects',      component: ProjectListComponent },
+  { path: '',   redirectTo: '/projects', pathMatch: 'full' }
 ];
 
 
@@ -33,7 +36,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AccountListComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    ProjectViewComponent
   ],
   bootstrap: [AppComponent]
 })

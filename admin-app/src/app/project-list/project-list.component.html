@@ -1,13 +1,16 @@
 <h2>Projects</h2>
 
-<ul class="list-group">
+<ul class="list-group list-group-flush">
   <li class="list-group-item" *ngFor="let project of projects">
-    <div class="row"><span class="column small-12">{{ project.title }}</span><small class="column small-12">{{ project._id }}</small>
-      <div class="columns small-12">
-        <ul class="menu">
-          <!-- <li><a href="/projects/{{project._id}}/edit">Edit</a></li>
-          <li><a onclick="deleteRequest('/api/projects/{{project._id}}')">Delete</a></li> -->
-        </ul>
+    <div class="row row-collapse">
+      <div class="col">
+        <a routerLink="/projects/{{project._id}}"><strong>{{ project.title }}</strong></a>
+      </div>
+      <div class="col-auto">
+        <div class="btn-group" role="group" aria-label="List item actions">
+          <button type="button" class="btn btn-sm btn-outline-warning" disabled>Edit</button>
+          <button type="button" class="btn btn-sm btn-outline-danger" disabled>Delete</button>
+        </div>
       </div>
     </div>
   </li>

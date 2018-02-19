@@ -45,7 +45,7 @@ exports.createProject = async function (req, res, next) {
 
   try {
     var savedProject = await ProjectService.create(project);
-    return res.status(200).redirect('/');
+    return res.status(200).json({ status: 200, data: savedProject, message: 'Success' });
   } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }

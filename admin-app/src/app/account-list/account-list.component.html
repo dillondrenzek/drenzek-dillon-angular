@@ -1,22 +1,15 @@
-<!-- {
-  slug: string,
-  title: string,
-  url: string,
-  faIconClasses: string,
-  createdAt: Date,
-  modifiedAt: Date
-} -->
-
 <h2>Accounts</h2>
 
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let account of accounts">
-    <div class="row"><span class="column small-12">{{ account.title }}</span><small class="column small-12">{{ account._id }}</small>
-      <div class="columns small-12">
-        <ul class="menu">
-          <!-- <li><a href="/accounts/{{account._id}}/edit">Edit</a></li>
-          <li><a onclick="deleteRequest('/api/accounts/{{account._id}}')">Delete</a></li> -->
-        </ul>
+    <div class="row row-collapse d-flex justify-content-between align-items-center">
+      <div class="col">
+        <strong>{{ account.title }}</strong>
+      </div>
+      <div class="col-auto">
+        <a href="{{account.url}}">
+          <small>{{ account.url }}</small>
+        </a>
       </div>
     </div>
   </li>

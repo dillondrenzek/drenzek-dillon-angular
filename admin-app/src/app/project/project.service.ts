@@ -9,12 +9,12 @@ import { Cursor } from '../core/cursor';
 @Injectable()
 export class ProjectService {
 
-  baseUrl: string = 'http://localhost:3000/api/projects';
+  baseUrl: string = 'http://localhost:3000/api/projects/';
 
   constructor(private http: Http) { }
 
   getProject(id: string): Observable<Project> {
-    const url = this.baseUrl + '/' + id;
+    const url = this.baseUrl + id;
     return this.http.get(url).pipe(
       map((res: Response) => <Project>res.json()['data'])
     );
@@ -27,12 +27,16 @@ export class ProjectService {
     );
   }
 
+  createProject(project: Project): Observable<Project> {
+    return this.http.post(this.baseUrl, project).pipe(
+      map((res: Response) => res.json()['data'])
+    )
+  }
+
   deleteProject(id: string): Observable<void> {
-    const url = this.baseUrl + '/' + id;
+    const url = this.baseUrl + id;
     return this.http.delete(url).pipe(
-      map(() => {
-        return;
-      })
+      map(() => null)
     );
   }
 

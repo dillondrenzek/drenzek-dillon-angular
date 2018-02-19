@@ -1,0 +1,10 @@
+.container,
+.container-fluid {
+  height: 100vh;
+  width: 100%;
+}
+
+.container > .row,
+.container-fluid > .row {
+  height: 100%;
+}

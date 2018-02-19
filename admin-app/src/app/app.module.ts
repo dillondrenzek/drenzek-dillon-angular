@@ -10,10 +10,13 @@ import { AccountService } from './account/account.service';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectService } from './project/project.service';
 import { ProjectViewComponent } from './project-view/project-view.component';
+import { ProjectFormComponent } from './project-form/project-form.component';
+import { NewProjectViewComponent } from './new-project-view/new-project-view.component';
 
 
 const appRoutes: Routes = [
   { path:'accounts',      component: AccountListComponent },
+  { path:'projects/new',  component: NewProjectViewComponent },
   { path:'projects/:id',  component: ProjectViewComponent },
   { path:'projects',      component: ProjectListComponent },
   { path: '',   redirectTo: '/projects', pathMatch: 'full' }
@@ -37,7 +40,9 @@ const appRoutes: Routes = [
     AppComponent,
     AccountListComponent,
     ProjectListComponent,
-    ProjectViewComponent
+    ProjectViewComponent,
+    ProjectFormComponent,
+    NewProjectViewComponent
   ],
   bootstrap: [AppComponent]
 })

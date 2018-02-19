@@ -3,3 +3,8 @@
 /* a:not(.nav-link) {
   color: black;
 } */
+
+body {
+  height: 100vh;
+  width: 100%;
+}

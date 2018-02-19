@@ -42,7 +42,7 @@ exports.createAccount = async function (req, res, next) {
 
   try {
     var savedAccount = await AccountService.create(account);
-    return res.status(200).redirect('/');
+    return res.status(200).json({ status: 200, data: savedAccount, message: 'Success' });
   } catch (e) {
     return res.status(400).json({ status: 400, message: e.message });
   }

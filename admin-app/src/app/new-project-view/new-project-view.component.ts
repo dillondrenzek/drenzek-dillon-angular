@@ -20,6 +20,10 @@ export class NewProjectViewComponent implements OnInit {
     });
   }
 
+  onClickCancel() {
+    this.router.navigate(['projects']);
+  }
+
   ngOnInit() {
   }
 

@@ -25,18 +25,18 @@ export class EditProjectViewComponent implements OnInit {
 
   onClickSave() {
     this.projectService.saveProject(this.project).subscribe((project: Project) => {
-      this.navigateBack();
+      this.router.navigate(['projects', this.project._id]);
     });
+  }
+
+  onClickCancel() {
+    this.router.navigate(['projects']);
   }
 
   onClickDelete() {
     this.projectService.deleteProject(this.project._id).subscribe(() => {
-      this.navigateBack();
+      this.router.navigate(['projects']);
     });
-  }
-
-  private navigateBack() {
-    this.router.navigate(['../'],  { relativeTo: this.route });
   }
 
   ngOnInit() {

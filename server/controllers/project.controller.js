@@ -69,11 +69,12 @@ exports.updateProject = async function (req, res, next) {
       console.log('Fetched Project with _id', fetchedProject);
       if (fetchedProject) {
         updateProject = Object.assign(fetchedProject, req.body);
+        console.log('Updating Project with _id', updateProject._id);
         savedProject = await ProjectService.update(updateProject);
       } else {
+        console.log('Creating New Project with _id', updateProject._id);
         savedProject = await ProjectService.create(req.body)
       }
-
     } catch (e) {
       return res.status(400).json({ status: 400, message: e.message });
     }
@@ -85,6 +86,9 @@ exports.updateProject = async function (req, res, next) {
       return res.status(400).json({ status: 400, message: e.message });
     }
   }
+
+
+  return res.status(200).json({ status: 200, data: savedProject, message: 'Success' });
 
 
 }

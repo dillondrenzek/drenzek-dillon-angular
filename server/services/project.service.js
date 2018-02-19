@@ -97,7 +97,8 @@ exports.remove = async function (id) {
   // Delete the Todo
     try{
         var deleted = await Project.remove({_id: id});
-        if(deleted.result.n === 0){
+        console.log(deleted);
+        if(deleted && deleted.result && deleted.result.n === 0){
             throw Error("Project could not be deleted");
         }
         return deleted;

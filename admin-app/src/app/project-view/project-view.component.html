@@ -1,13 +1,51 @@
 <div *ngIf="project">
-  <h3>{{project.title}}</h3>
-  <p>{{project.type}}</p>
-  <img src="http://localhost:3000/{{project.image_src}}" alt="{{project.image_alt}}">
-  <p>{{project.description}}</p>
-  <a href="{{url}}">Url</a>
-  <p>Created:
-    <span>{{project.createdAt}}</span>
-  </p>
-  <p>Modified:
-    <span>{{project.modifiedAt}}</span>
-  </p>
+
+  <div class="col-auto">
+    <div class="btn-group" role="group" aria-label="List item actions">
+      <!-- <button type="button" class="btn btn-sm btn-outline-warning" disabled>Edit</button> -->
+      <button type="button" class="btn btn-sm btn-outline-dark" routerLink="/projects/{{project._id}}/edit">Edit</button>
+      <button type="button" class="btn btn-sm btn-outline-danger" (click)="onClickDelete(project._id)">Delete</button>
+    </div>
+  </div>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>id</td>
+        <td>{{project._id}}</td>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td><h3>{{project.title}}</h3></td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>{{project.type}}</td>
+      </tr>
+      <tr>
+        <td>image_src</td>
+        <td>{{project.image_src}}</td>
+      </tr>
+      <tr>
+        <td>image_alt</td>
+        <td>{{project.image_alt}}</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>{{project.description}}</td>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>{{project.url}}</td>
+      </tr>
+      <tr>
+        <td>createdAt</td>
+        <td>{{project.createdAt | date: 'MMM d, yyyy - hh:mm:ss a'}}</td>
+      </tr>
+      <tr>
+        <td>modifiedAt</td>
+        <td>{{project.modifiedAt | date: 'MMM d, yyyy - hh:mm:ss a'}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

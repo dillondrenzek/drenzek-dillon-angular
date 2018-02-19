@@ -1,10 +1,11 @@
 export class Project {
-  title: string;
-  type: string;
-  image_src: string;
-  image_alt: string;
-  description: string;
-  url: string;
-  createdAt: Date;
-  modifiedAt: Date;
+  _id?: string;
+  createdAt?: Date;
+  modifiedAt?: Date;
+  title: string = null;
+  type: string = null;
+  image_src: string = null;
+  image_alt: string = null;
+  description: string = null;
+  url: string = null;
 }

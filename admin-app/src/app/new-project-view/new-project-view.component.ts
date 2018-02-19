@@ -15,7 +15,7 @@ export class NewProjectViewComponent implements OnInit {
   constructor(private projectService: ProjectService, private router: Router, private route: ActivatedRoute) { }
 
   onClickSave() {
-    this.projectService.createProject(this.project).subscribe((project: Project) => {
+    this.projectService.saveProject(this.project).subscribe((project: Project) => {
       this.router.navigate(['../'], { relativeTo: this.route });
     });
   }

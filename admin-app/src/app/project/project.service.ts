@@ -27,10 +27,22 @@ export class ProjectService {
     );
   }
 
-  createProject(project: Project): Observable<Project> {
-    return this.http.post(this.baseUrl, project).pipe(
-      map((res: Response) => res.json()['data'])
-    )
+  saveProject(project: Project): Observable<Project> {
+
+    if (project._id) {
+      // update existing project
+      return this.http.put(this.baseUrl, project).pipe(
+        map((res: Response) => res.json()['data'])
+      );
+    } else {
+      // save new project
+      return this.http.post(this.baseUrl, project).pipe(
+        map((res: Response) => res.json()['data'])
+      );
+    }
+
+
+
   }
 
   deleteProject(id: string): Observable<void> {

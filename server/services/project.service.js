@@ -61,10 +61,12 @@ exports.create = async function (project) {
 
 // update project
 exports.update = async function (project) {
-  var id = project.id;
+  var oldProject,
+    newProject,
+    id = project.id;
 
   try {
-    var oldProject = await Project.findById(id);
+    oldProject = await Project.findById(id);
   } catch (e) {
     throw Error('Error updating Project');
   }
@@ -76,11 +78,12 @@ exports.update = async function (project) {
   console.log('Updating project:', oldProject);
 
   // update project
-  Object.assign(oldProject, project);
+  newProject = Object.assign(oldProject, project, { modifiedAt: new Date() });
 
 
   try {
-    var savedProject = await oldProject.save();
+    var savedProject = await newProject.save();
+    console.log('Saved Project', savedProject);
     return savedProject;
   } catch (e) {
     throw Error('Error saving updated Project');

@@ -20,6 +20,7 @@ app.use('/static', express.static(__dirname + '/static'));
 app.use('/vendor', express.static(__dirname + '/vendor'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
+app.use('/admin', express.static(__dirname + '/admin-app/src/index.html'));
 
 // GET '/resume'
 app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));

@@ -1,7 +1,9 @@
 var ProjectService = require('../services/project.service');
 
 
-exports.getProject = async function (req, res, next) {
+exports.getProject = _getProject;
+
+async function _getProject(req, res, next) {
     var id = req.params.id;
 
     try {
@@ -53,6 +55,39 @@ exports.createProject = async function (req, res, next) {
 
 
 // no update yet
+exports.updateProject = async function (req, res, next) {
+  var fetchedProject,
+    updateProject,
+    savedProject,
+    id = req.body._id;
+
+  console.log('Updating Project with body:', req.body)
+
+  if (id) {
+    try {
+      fetchedProject = await ProjectService.get(id);
+      console.log('Fetched Project with _id', fetchedProject);
+      if (fetchedProject) {
+        updateProject = Object.assign(fetchedProject, req.body);
+        savedProject = await ProjectService.update(updateProject);
+      } else {
+        savedProject = await ProjectService.create(req.body)
+      }
+
+    } catch (e) {
+      return res.status(400).json({ status: 400, message: e.message });
+    }
+  } else {
+    // create if no _id property
+    try {
+      savedProject = await ProjectService.create(req.body);
+    } catch (e) {
+      return res.status(400).json({ status: 400, message: e.message });
+    }
+  }
+
+
+}
 
 
 // remove project

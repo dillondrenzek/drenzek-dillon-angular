@@ -14,7 +14,6 @@ import { ProjectFormComponent } from './project-form/project-form.component';
 import { NewProjectViewComponent } from './new-project-view/new-project-view.component';
 import { EditProjectViewComponent } from './edit-project-view/edit-project-view.component';
 
-
 const appRoutes: Routes = [
   { path:'accounts',      component: AccountListComponent },
   { path:'projects/new',  component: NewProjectViewComponent },

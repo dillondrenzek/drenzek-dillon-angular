@@ -19,12 +19,16 @@
   "watch": {
     "serve": "server.js",
     "build:scss": {
-      "patterns": ["src/style"],
+      "patterns": [
+        "src/style"
+      ],
       "extensions": "scss",
       "quiet": false
     },
     "build:bootstrap": {
-      "patterns": ["src/style/bootstrap"],
+      "patterns": [
+        "src/style/bootstrap"
+      ],
       "extensions": "scss",
       "quiet": false
     }
@@ -55,6 +59,7 @@
     "pug": "2.0.0-rc.1"
   },
   "devDependencies": {
+    "@angular/cli": "1.7.0",
     "concurrently": "3.4.0",
     "npm-watch": "0.1.9"
   }

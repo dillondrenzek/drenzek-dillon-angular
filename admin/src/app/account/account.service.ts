@@ -10,7 +10,7 @@ import { Cursor } from '../core/cursor';
 @Injectable()
 export class AccountService {
 
-  baseUrl: string = 'http://localhost:3000/api/accounts';
+  baseUrl = 'http://localhost:3000/api/accounts';
 
   constructor(private http: Http) { }
 

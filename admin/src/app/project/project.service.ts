@@ -9,7 +9,7 @@ import { Cursor } from '../core/cursor';
 @Injectable()
 export class ProjectService {
 
-  baseUrl: string = 'http://localhost:3000/api/projects/';
+  baseUrl = 'http://localhost:3000/api/projects/';
 
   constructor(private http: Http) { }
 

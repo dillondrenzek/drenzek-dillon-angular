@@ -15,12 +15,12 @@ import { NewProjectViewComponent } from './new-project-view/new-project-view.com
 import { EditProjectViewComponent } from './edit-project-view/edit-project-view.component';
 
 const appRoutes: Routes = [
-  { path:'accounts',      component: AccountListComponent },
-  { path:'projects/new',  component: NewProjectViewComponent },
-  { path:'projects/:id/edit',  component: EditProjectViewComponent },
-  { path:'projects/:id',  component: ProjectViewComponent },
-  { path:'projects',      component: ProjectListComponent },
-  { path: '',   redirectTo: '/projects', pathMatch: 'full' }
+  { path: 'accounts', component: AccountListComponent },
+  { path: 'projects/new', component: NewProjectViewComponent },
+  { path: 'projects/:id/edit', component: EditProjectViewComponent },
+  { path: 'projects/:id', component: ProjectViewComponent },
+  { path: 'projects', component: ProjectListComponent },
+  { path: '', redirectTo: '/projects', pathMatch: 'full' }
 ];
 
 

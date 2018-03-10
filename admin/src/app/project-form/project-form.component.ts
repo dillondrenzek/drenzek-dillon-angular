@@ -11,7 +11,7 @@ export class ProjectFormComponent implements OnInit {
 
   @Input() model: Project;
 
-  @Input() showMetadata: boolean = true;
+  @Input() showMetadata = true;
 
   constructor() { }
 

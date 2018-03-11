@@ -4,17 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { AccountListComponent } from './account-list/account-list.component';
-import { AccountService } from './account/account.service';
-
 import { ProjectsModule } from './projects/projects.module';
+import { AccountsModule } from './accounts/accounts.module';
+
+import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
-  { path: 'accounts', component: AccountListComponent },
   { path: '', redirectTo: '/projects', pathMatch: 'full' }
 ];
-
 
 @NgModule({
   imports: [
@@ -24,14 +21,12 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    ProjectsModule
+    ProjectsModule,
+    AccountsModule
   ],
-  providers: [
-    AccountService
-  ],
+  providers: [],
   declarations: [
-    AppComponent,
-    AccountListComponent
+    AppComponent
   ],
   bootstrap: [AppComponent]
 })

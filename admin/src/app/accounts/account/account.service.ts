@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Account } from './account.model';
-import { Cursor } from '../core/cursor';
+import { Cursor } from '../../core/cursor';
 
 
 @Injectable()

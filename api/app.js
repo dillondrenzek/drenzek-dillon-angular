@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 var bluebird = require('bluebird');
 var mongoose = require('mongoose');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var api = require('./routes/api');
+var routes = require('./routes');
+// var users = require('./routes/users');
+// var api = require('./routes/api');
 
 var app = express();
 
@@ -34,11 +34,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', routes);
-app.use('/users', users);
-
 // Api routes
-app.use('/api', api);
+app.use('/', routes);
 
 // database connection
 mongoose.Promise = bluebird;

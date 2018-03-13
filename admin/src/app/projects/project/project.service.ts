@@ -1,17 +1,20 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Project } from './project.model';
 import { Cursor } from '../../core/cursor';
+import { APP_CONFIG, AppConfig } from '../../core/appConfig';
 
 @Injectable()
 export class ProjectService {
 
-  baseUrl = 'http://localhost:3000/api/projects/';
+  baseUrl: string;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, @Inject(APP_CONFIG) private appConfig: AppConfig) {
+    this.baseUrl = appConfig.apiBaseUrl + 'projects/';
+  }
 
   getProject(id: string): Observable<Project> {
     const url = this.baseUrl + id;
@@ -40,9 +43,6 @@ export class ProjectService {
         map((res: Response) => res.json()['data'])
       );
     }
-
-
-
   }
 
   deleteProject(id: string): Observable<void> {

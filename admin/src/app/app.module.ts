@@ -8,6 +8,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { AccountsModule } from './accounts/accounts.module';
 
 import { AppComponent } from './app.component';
+import { appConfigProvider } from './core/appConfig';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/projects', pathMatch: 'full' }
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
     ProjectsModule,
     AccountsModule
   ],
-  providers: [],
+  providers: [
+    appConfigProvider
+  ],
   declarations: [
     AppComponent
   ],

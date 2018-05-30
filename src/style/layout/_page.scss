@@ -14,11 +14,20 @@
   overflow: auto;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+
+  background: transparent;
+  a {
+    color: rgba(255,255,255,0.6);
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 .page {
-
-  width: 100%;
-  height: 100%;
-
   font-size: .875rem;
   letter-spacing: .0264285em;
 }

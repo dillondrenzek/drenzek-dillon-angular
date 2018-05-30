@@ -5,15 +5,24 @@ block body
     include ../components/nav
 
   .page-frame
-    .page
+    .page.w-100.h-100
       .row.h-100.align-items-center.justify-content-center
         .col-6
           
           #landing-content
-            .row
-              .col-12.text-center
+            .row.text-center
+              .col-12
                 h1 Dillon Drenzek
-              .col-12.text-center
+                h2 Software Developer
+                p Seattle, WA
+              .col-12
+              .col-12
                 a(href="/resume").btn Download Resume
+              .col-12
+                h2 Visit Me:
+                ul
+                  li LinkedIn
+                  li Github
+                  li Instagram
 
   include ../components/footer

@@ -21,7 +21,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 
 // GET '/resume'
-app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume.pdf'));
+app.use('/resume', express.static(__dirname + '/static/pdf/dillon-drenzek-resume-05-2018.pdf'));
 
 // Index page
 app.get('/', function (req, res) {

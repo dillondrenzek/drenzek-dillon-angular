@@ -4,9 +4,11 @@
 @import 'colors';
 @import 'fonts';
 @import 'text';
+@import 'buttons';
 @import 'bootstrap/variables';
 @import 'components';
 
+@import 'layout/page';
 
 // reset
 h1, p {
@@ -14,39 +16,6 @@ h1, p {
 }
 ul {
   padding: 0;
-}
-
-
-
-
-
-
-
-
-.page {
-  font-size: .875rem;
-  letter-spacing: .0264285em;
-
-  margin-top: 56px;
-}
-
-.photo {
-  height: 350px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-
-  @include media-breakpoint-down(xs) {
-    height: 250px;
-  }
-}
-
-#intro-photo {
-  background-image: url('/static/img/always-wondering.jpg');
-}
-
-#intro {
-  border-bottom: 1px solid $light-1;
 }
 
 

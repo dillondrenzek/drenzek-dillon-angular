@@ -1,0 +1,20 @@
+.fixed-top {
+  height: 56px;
+}
+
+.page-frame {
+  background-image: url('/static/img/20170814-moraine-lakes-morning-1200x900.jpg');
+  background-size: cover;
+
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.page {
+  font-size: .875rem;
+  letter-spacing: .0264285em;
+}

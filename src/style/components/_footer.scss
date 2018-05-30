@@ -1,10 +1,12 @@
+$footer-padding: 10px 15px;
+
 footer {
-  padding: 20px;
-  background: #5C5858;
+  padding: $footer-padding;
+  background: $gray-dark;
   font-size: 0.5rem;
   letter-spacing: 0.5px;
 
   a, a:hover {
-    color: #eaeaea;
+    color: $light-1;
   }
 }

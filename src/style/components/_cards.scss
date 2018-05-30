@@ -1,7 +1,10 @@
-$card-bg: #fff;
-$card-border-color: #eaeaea;
+$card-bg: $white;
+$card-border-color: $light-1;
 $card-shadow-color: rgba(0, 0, 0, .12);
 
+
+
+// Card
 
 .card {
   background-color: $card-bg;

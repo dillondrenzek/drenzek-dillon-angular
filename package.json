@@ -1,33 +1,61 @@
 {
-  "name": "drenzek-dillon-angular",
-  "version": "4.0.2",
+  "name": "dillon-drenzek-com",
+  "version": "5.0.0-alpha.7",
   "description": "The Portfolio Website of Dillon Drenzek, built with Angular",
-  "main": "server.js",
-  "scripts": {
-    "test": "protractor spec/config.js",
-    "start": "node-dev server.js"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dillondrenzek/drenzek-dillon-angular.git"
+    "url": "https://github.com/dillondrenzek/dillon-drenzek-com.git"
+  },
+  "engines": {
+    "node": "7.9.0",
+    "npm": "4.2.0"
   },
   "author": "Dillon Drenzek <dillon@drenzek.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dillondrenzek/drenzek-dillon-angular/issues"
+    "url": "https://github.com/dillondrenzek/dillon-drenzek-com/issues"
   },
-  "homepage": "https://github.com/dillondrenzek/drenzek-dillon-angular",
+  "watch": {
+    "serve": "server.js",
+    "build:scss": {
+      "patterns": ["src/style"],
+      "extensions": "scss",
+      "quiet": false
+    },
+    "build:bootstrap": {
+      "patterns": ["src/style/bootstrap"],
+      "extensions": "scss",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "start:prod": "npm run serve",
+    "start:dev": "npm run watch",
+    "start": "npm run start:dev",
+    "serve": "node server.js",
+    "build:css": "npm run build:scss && npm run build:bootstrap",
+    "build:scss": "node-sass --output-style expanded --source-map true --precision 6 src/style -o static/style",
+    "build:bootstrap": "npm run compile:bootstrap && npm run postcss && npm run minify:bootstrap",
+    "compile:bootstrap": "node-sass --output-style expanded --source-map true --precision 6 src/style/bootstrap -o static/style/bootstrap",
+    "minify:bootstrap": "cleancss --skip-advanced --source-map --output static/style/bootstrap/bootstrap-custom.min.css static/style/bootstrap/bootstrap-custom.css",
+    "postcss": "postcss --config postcss.js --replace static/style/**/*.css -m",
+    "watch": "npm-watch",
+    "postinstall": "npm run build:css"
+  },
   "dependencies": {
-    "express": "^4.13.3",
-    "jade": "^1.11.0",
-    "serve-favicon": "^2.3.0"
+    "autoprefixer": "^6.6.1",
+    "bootstrap": "4.0.0-alpha.6",
+    "express": "4.15.2",
+    "font-awesome": "4.7.0",
+    "node-sass": "^4.1.1",
+    "path": "0.12.7",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "pug": "2.0.0-rc.1"
   },
   "devDependencies": {
-    "gulp-jade": "^1.1.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-shell": "^0.5.1",
-    "gulp-stylus": "^2.1.0",
-    "gulp-watch": "^4.3.5",
-    "node-dev": "^2.7.1"
+    "concurrently": "3.4.0",
+    "npm-watch": "0.1.9"
   }
 }

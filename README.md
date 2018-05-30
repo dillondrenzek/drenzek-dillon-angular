@@ -2,14 +2,23 @@
 The professional portfolio of University of Colorado graduate, Dillon Drenzek. <br>
 **Homepage**: http://dillon.drenzek.com
 
----------
-## Version: `v4.0.2` <br>
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/dillondrenzek/dillon-drenzek-com.svg?columns=all)](https://waffle.io/dillondrenzek/dillon-drenzek-com)
 
-### Version History
-| Version Name      | Version Number    | Date          | Description |
-|-------------------|-----------|---------------|---|
-|                   | 4.1   |   Jan  8 15   | Stable release with Data coming from JSON, app cleaned up & modularized according to edx course |
-|                   | 4.0.2 |   Jan  8 15   | Unused code removed |
-| Gulp              | 4.0.1 |   Jan  4 15   | Reimplement Gulp workflow |
-| Professional      | 4.0   |   Nov 13 15   | Presentable |
-| Angular           | 4     |   Nov  6 15   | Reimplement new interface in Angular |
+## Development
+
+### Push to Staging
+1. `git push origin v5-staging`
+
+## Outlook
+
+### For Beta
+- Display related work experience and education Resume-style
+- Display Work that I've done and am doing (WIP)
+- Links to my social media pages
+  - Include links back
+- Allow download of my resume as a PDF
+- Short "Word from the Author" explaining current situation
+
+### For Release
+- Solid build and deploy process
+  - Travis CI?, front-end testing?, gulp?

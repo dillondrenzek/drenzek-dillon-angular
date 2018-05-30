@@ -15,7 +15,7 @@ var projects = {
 		bulletPoints: [
 			'One of Europe\'s most renowned fashion shops',
 			'Completed Summer of 2015 while studying abroad in Denmark',
-			'Received praise from store\'s owner, local industry professionals'
+			''
 		],
 		imageUrls: [
 			'img/storm.jpg'
@@ -41,7 +41,7 @@ var projects = {
 						primary: "Foreword"
 					},
 					p: "Something came over me as I sat in my parent’s kitchen during my fifth and final Thanksgiving break as an undergrad: “I never studied abroad. What the hell have I been thinking?” Looking to correct the opportunity I nearly missed, I immediately started searching programs through my university and found one at the Danish Institute of Study Abroad in Copenhagen, Denmark that advertised a 7-week Graphic Design studio and my heart told me that’s where I’d be going that summer."
-				}, 
+				},
 
 				{
 					figure: {
@@ -58,7 +58,7 @@ var projects = {
 				},
 
 
-				
+
 				]
 			},
 			{
@@ -140,7 +140,7 @@ var projects = {
 							secondary: "Iconic Colors, Crosswalk Symbolism"
 						},
 						p: "One unique thing about Storm’s current image was his rare use of pink and orange. The colors don’t show up in his store except for in the extremely hot pink and hot orange shopping bags he uses. He explained the choice was a business decision because you can see the bags from a mile away (though he probably said kilometer). I thought that was clever, so I wanted to keep the pink and orange on the bags. My goal was to keep the pink and orange, but introduce another visual element: the stripes from the three crosswalks outside his door."
-					}, 
+					},
 
 					{
 						figure: {
@@ -320,7 +320,7 @@ var projects = {
 			icon: "fa-github-square",
 			url: "https://github.com/dillondrenzek/dm2-team-project",
 			title: "View on GitHub"
-		}, 
+		},
 		// {
 		// 	label: "Play Game",
 		// 	icon: "fa-caret-square-o-right",
@@ -357,8 +357,8 @@ var projects = {
 		"type": 'Website',
 		"skills": ['Angular.js', 'MongoDB', 'Node.js', 'Express.js', 'Stylus'],
 		"bulletPoints": [
-			'Travel Blog built to practice MEAN Stack', 
-			'Built during study abroad trip to Denmark', 
+			'Travel Blog built to practice MEAN Stack',
+			'Built during study abroad trip to Denmark',
 			'Has an Admin interface with authentication'
 		],
 		"imageUrls": [
@@ -425,7 +425,7 @@ var projects = {
 							secondary: "Protected CRUD Operations"
 						},
 						p: "When login was built out, the trick was then to put the Create, Update, and Delete functionality behind an authentication wall. On login and logout, the authentication token is saved and destroyed, respectively. Then, on each protected operation inside of Angular, I simply checked for the presence of the token. After that, it was just a matter of using the ngShow and ngHide directives to show/hide UI elements based on the result of the isLoggedIn() function. Fun stuff!"
-					}, 
+					},
 					{
 						figure: {
 							imgSrc: "img/drenzek-does-denmark-admin.png"
@@ -444,7 +444,7 @@ var projects = {
 		"skills": ['Node.js', 'Express.js', 'Neo4j', 'Jade', 'Stylus'],
 		"bulletPoints": [
 			'Major project in senior Capstone class at CU',
-			'Love at first sight with Node.js', 
+			'Love at first sight with Node.js',
 			'Utilized graph database Neo4j'
 		],
 		"imageUrls": ['img/capstone-portfolio-1.jpg'],

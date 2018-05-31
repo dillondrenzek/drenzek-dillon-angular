@@ -38,9 +38,11 @@ footer {
 
 #landing-content {
   color: #fafafa;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.2);
+  text-shadow: 0.125em 0.125em 0.3em rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(0,0,0,0.05);
 
-  // .text-shadow {
-    text-shadow: 0.125em 0.125em 0.3em rgba(0, 0, 0, 0.3);
-  // }
+  @include media-breakpoint-down(xs) {
+    height: 100%;
+  }
 }

@@ -16,24 +16,11 @@
   "bugs": {
     "url": "https://github.com/dillondrenzek/dillon-drenzek-com/issues"
   },
-  "watch": {
-    "serve": "server.js",
-    "build:scss": {
-      "patterns": ["src/style"],
-      "extensions": "scss",
-      "quiet": false
-    },
-    "build:bootstrap": {
-      "patterns": ["src/style/bootstrap"],
-      "extensions": "scss",
-      "quiet": false
-    }
-  },
   "scripts": {
+    "start": "jekyll serve"
   },
   "dependencies": {
   },
   "devDependencies": {
-    "npm-watch": "0.1.9"
   }
 }

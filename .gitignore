@@ -1,14 +1,3 @@
-.idea
-/node_modules
-.DS_Store
-
-#v5 Project planning
-/_project
-/static/stylesheets/*.css.map
-/static/stylesheets/*.min.css.map
-/static/style
-
-
-!views/*.pug
-test.js
-.env
+_site
+.sass-cache
+.jekyll-metadata

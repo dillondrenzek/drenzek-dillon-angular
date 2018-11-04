@@ -1,0 +1,62 @@
+@mixin temp-ht {
+	height: 500px;
+}
+
+@mixin float-left {
+	float: left;
+}
+
+@mixin coord($top, $left) {
+	top: $top;
+	left: $left;
+}
+
+@mixin Translate($x, $y) {
+	-ms-transform: translate($x,$y); /* IE 9 */
+    -webkit-transform: translate($x,$y); /* Chrome, Safari, Opera */
+    transform: translate($x,$y);
+}
+
+@mixin Transform($x, $y, $scale) {
+	-ms-transform: translate($x,$y) scale($scale,$scale); /* IE 9 */
+    -webkit-transform: translate($x,$y) scale($scale,$scale); /* Chrome, Safari, Opera */
+    transform: translate($x,$y) scale($scale,$scale);
+}
+
+@mixin Scale($x, $y) {
+	-ms-transform: scale($x,$y); /* IE 9 */
+    -webkit-transform: scale($x,$y); /* Chrome, Safari, Opera */
+    transform: scale($x,$y);
+}
+
+@mixin animate($property, $seconds) {
+	-webkit-transition: $property $seconds; /* For Safari 3.1 to 6.0 */
+    transition: $property $seconds;
+}
+
+@mixin light-border {
+	border: 1px solid lighten($black, 80);
+}
+
+@mixin side-border ($width, $style, $color) {
+	border-right: $width $style $color;
+	border-left: $width $style $color;
+}
+
+// Fonts
+@mixin Avenir($spacing) {
+	letter-spacing: $spacing;
+    font-family: "Avenir Next Condensed", sans-serif;
+    font-weight: 200;
+}
+
+@mixin Gradient {
+	background: rgba(0,0,0,0);
+	background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 24%, rgba(0,0,0,0.6) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0)), color-stop(24%, rgba(0,0,0,0.3)), color-stop(100%, rgba(0,0,0,0.6)));
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 24%, rgba(0,0,0,0.6) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 24%, rgba(0,0,0,0.6) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 24%, rgba(0,0,0,0.6) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 24%, rgba(0,0,0,0.6) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+}

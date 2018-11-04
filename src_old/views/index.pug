@@ -1,0 +1,92 @@
+extends layout
+include components/Entry
+include components/projects
+include components/sections
+
+
+      
+  
+
+
+block page
+
+  .photo#intro-photo
+    
+
+  //- Intro
+  +Section#intro
+    .row
+      .col-12.col-lg-10.offset-lg-1
+        .row.no-gutters.justify-content-between.align-items-center
+          .col
+            h1 I'm Dillon
+            p.subtitle Professional Web Developer
+            ul.social-media-links.row.no-gutters
+              each account in socialMedia
+                li.col-auto
+                  a(href=account.url target="_blank" title=account.title)
+                    i(class=`fa-2x ${account.faIconClasses}`)
+          .col-4
+            img.portrait.w-100(src="/static/img/portrait.jpg" alt="Dillon Drenzek")
+
+
+    
+  //- Experience
+  +Section#experience
+  
+    //- Header
+    +SectionHeader Experience
+    
+    //- Entries
+    +EntryList
+      each e in experience.entries
+        +EntryListItem('narrow')
+        
+          //- Experience Entry
+          +Entry
+            +EntryHeader
+              +EntryTitle(e.title, e.duration)
+              +EntrySubtitle(e.location, e.dates)
+            +EntryDescription(e.description)
+    
+    
+    
+    
+    
+  //- Education
+  +Section#education
+  
+    //- Header
+    +SectionHeader Education
+    
+    //- Entries
+    +EntryList
+      each e in education.entries
+        +EntryListItem('narrow')
+        
+          //- Education Entry
+          +Entry
+            +EntryHeader
+              +EntryTitle(e.title, e.dates)
+              +EntrySubtitle(e.location, e.status)
+            +EntryDescription(e.description)
+
+
+
+
+
+  //- Projects
+  +Section#projects
+    
+    //- Header
+    +SectionHeader Projects
+    
+    //- Entries
+    +EntryList
+      each proj in projects.entries
+        +EntryListItem('grid')
+        
+          //- Project Entry
+          +ProjectEntry(proj)
+              
+              

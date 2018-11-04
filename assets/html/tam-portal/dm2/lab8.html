@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- Page Details -->
+
+	<title>Digital Media 2 - Dillon Drenzek</title>
+	
+<!-- Meta Tags -->	
+
+	<!-- <meta name="description" content="Free Web tutorials"> -->
+	<!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"> -->
+	<!-- <meta name="author" content="Hege Refsnes"> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+<!-- Links -->
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/subpages.css" type="text/css">
+	
+	<!-- Media Queries to change stylesheet	 -->
+	<!-- <link href='style.css' media='screen and (min-width:600px)' rel='stylesheet'> -->
+	
+	<!-- Favicon Link -->
+	<!-- <link type="image/png" href="" rel="shortcut icon"> -->
+	
+<!-- Scripts -->
+
+	<!-- jQuery -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="./js/lab8.js"></script>
+	
+	
+	
+	<style type="text/css" media="screen">
+		.drag-box{
+			background: url("./images/hoop.jpg") right no-repeat;
+			border: 1px solid black;
+			height: 350px;
+			width: 350px;
+			display: inline-block;
+			/* position: fixed; */
+		}
+		#ball{
+			height: 100px;
+		}
+		
+		/*
+[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }
+		[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }
+		[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }
+		[touch-action="scroll"],
+		[touch-action="pan-x pan-y"],
+		[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }
+*/
+	</style>
+	<script>
+
+	
+	</script>
+</head>
+
+<body>
+	<!-- Flow Containers on this level -->
+	<div class="site-head stack">
+		<header><a href="http://www.dillondrenzek.com">Dillon Drenzek</a></header>
+		<nav>
+			<a href="./index.html">Home</a>
+			<a href="#">Labs</a>
+			<a href="#">Lab 8</a>
+		</nav>
+	</div>
+	<div class="stack">
+		
+		<div id="hoop"  class="drag-box" ondrop="drop(this,event)" ondragenter="return false" ondragover="return false">
+			
+		</div>
+		
+		<div>
+			<img src="./images/basketball.png" id="ball" alt="ball" ondragstart="drag(this, event)">
+		</div>
+	</div>
+	
+
+</body>
+</html>

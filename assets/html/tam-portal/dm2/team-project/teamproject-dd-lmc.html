@@ -1,0 +1,112 @@
+<html>
+<head>
+	<title>Team Project - by Dillon Drenzek and Logan McCaul</title>
+
+	<!-- jQuery Link -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<style type="text/css">
+		*,
+		*:before,
+		*:after{
+			margin: 0;
+			padding: 0;
+			box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+		}
+
+		html{
+
+		}
+		canvas{
+			/*width: 800px;
+			height: 800px;*/
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			margin: auto;
+			border: 1px solid black;
+		}
+		a{
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<a href="./teamproject-design-spec.txt">Our Phase 3 Design Spec</a>
+	<!-- Draw Canvas -->
+	<canvas id="frame" width="600" height="600" />
+
+
+	<script type="text/javascript">
+		var frame = document.getElementById("frame");
+		var ctx = frame.getContext("2d");
+
+		$(document).ready(function(){
+
+			
+
+
+			// start main function
+			main();
+
+		});
+		// -----------------------------
+		// Beginning of Canvas Functions
+		// -----------------------------
+		function main(){
+			// Global Variables
+			
+
+			var player = new Player();
+
+			player.move(100,100);
+		}
+
+		// Define Object Prototypes
+
+			// player
+			function Player(){
+				// Standard Attributes
+				this.color = "#ff0000";
+				this.radius = 30;
+				this.x = 300;
+				this.y = 300;
+
+				this.init();
+				this.move(100,100);
+			}
+
+				Player.prototype.init = function() {
+
+					// draw player
+					ctx.strokeStyle = '3px solid black';
+					ctx.fillStyle = this.color;
+					ctx.beginPath();
+					ctx.arc(this.x,this.y,this.radius,0,2*Math.PI);
+					ctx.fill();
+					ctx.stroke();
+
+				};
+
+				Player.prototype.move = function(x,y) {
+
+					//translate player
+					ctx = frame.getContext("2d");
+					ctx.translate(x,y);
+				}
+
+
+
+	</script>
+	<a href="./teamproject-design-spec.txt">Our Phase 3 Design Spec</a>
+</body>
+
+</html>

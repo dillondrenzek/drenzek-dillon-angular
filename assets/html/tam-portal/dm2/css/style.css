@@ -1,0 +1,200 @@
+	
+/* UTILITY */
+		
+		
+
+		*,
+		*:before,
+		*:after{
+			box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+			margin: 0;
+		}
+		html{
+			background: #252423;
+			
+			color: #f2f2ee;
+			font-family: "Advent Pro", sans-serif;
+			font-weight: 100;
+			background: url("../images/bg.jpg") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            background: #222;
+		}
+
+		body{
+			font-size: 16px;
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+  			height: 100%;
+  			overflow: hidden;
+		}
+
+		a{
+			text-decoration: none;
+			color: #f2f2ee;
+		}
+
+		.fixed{
+			position: fixed;
+		}
+
+		.x-container{
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;  
+	
+		}
+			.x-column{-webkit-flex-flow: column wrap;}
+			.x-row{-webkit-flex-flow: row nowrap;}
+
+		.x-object{margin: auto;}
+		.hide{display: none;}
+
+		.dark{
+			background: rgba(0,0,0,0.3);
+		}
+
+/* HTML ELEMENTS */
+
+	/*                ** Wrapper **						*/
+	/*			The main, centered container			*/
+	/*			contains header and nav					*/
+
+	.wrapper{
+		/*background: #444;*/
+		/*picture background: */
+		background: url("../images/mountain-lake-bg-color.jpg") no-repeat center center fixed;
+	                -webkit-background-size: cover;
+	                -moz-background-size: cover;
+	                -o-background-size: cover;
+	                background-size: cover;
+        border: 5px solid rgba(0,0,0,0.5);
+        box-shadow: 3px 5px 15px rgba(0,0,0,1);
+		height: 75%;
+		width: 960px;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		top: 50px;
+	}
+	.links-container{
+		background: rgba(0,0,0,0.4);
+		width: 960px;
+		position: relative;
+		margin: 0 auto;
+		height:75px;
+		top:0px;
+	}
+
+		/*The top section in the wrapper, containing my name*/
+		header{
+			/*background: #777;*/
+			text-align: center;
+			-webkit-flex-grow:3;
+			flex-grow:3;
+		}
+			header#banner{
+				position: relative;
+				top:-20%;
+			}
+			header h1{
+				background: #232425;
+				background: url("../images/banner.png") no-repeat center center fixed;
+	                -webkit-background-size: cover;
+	                -moz-background-size: cover;
+	                -o-background-size: cover;
+	                background-size: cover;
+				
+				font-size: 4rem;
+				margin: auto;
+			}
+			header h2{
+				color: rgba(40,40,40,0.8);
+				/*text-shadow: 1px 1px 3px rgba(0,0,0,0.8);*/
+				font-size: 3rem;
+				margin: auto;
+			}
+
+		/*		nav on the same level as header, containing links				*/
+		nav{
+			/*box-shadow: 1px 1px 2px rgba(0,0,0,1);*/
+			width: 100%;}
+
+		/*sections that divide the nav below the header*/
+		section{}
+
+			/*contains the links to labs, projects, team project*/
+			section.categories{height: 100%;}
+
+				/* category links activate an individual bar of links */
+				section.categories div{
+					background: rgba(20,20,20,0.75);
+					cursor: pointer;
+					flex: 1 100%;
+					font-size: 2rem;
+					height: 100%;
+					line-height: 100px;
+					text-align: center;
+					
+					transition: .3s all ease;
+					-webkit-transition: .3s all ease;
+
+				}
+					section.categories div.selected{
+						/*color: rgb(150,70,0);*/
+						background: rgba(150,70,0,0.5);
+						text-shadow: 2px 2px 3px black;
+					}
+					section.categories div:hover{
+						background: rgba(150,70,0,0.6);
+						text-shadow: 2px 2px 3px black;
+					}
+
+			/*contains the links to individual labs, etc.*/
+			/*appears when category clicked*/
+			section.links{transition: .3s all ease;
+					-webkit-transition: .3s all ease;}
+
+				section.links a{
+					background: rgba(20,20,20,0.75);
+					flex: 1 100%;
+					font-size: 2rem;
+					height: 75px;
+					line-height: 75px;
+					text-align: center;
+
+					transition: .3s all ease;
+					-webkit-transition: .3s all ease;
+
+				}
+					section.links a:hover{
+						background: rgba(150,70,0,0.6);
+						text-shadow: 1px 1px 3px black;
+					}
+
+
+
+@media all and (max-width: 960px) {
+	.wrapper{
+		box-shadow: 0px 5px 15px rgba(0,0,0,1);
+		top:0px;
+		width: 100%;
+		height: 90%;
+	}
+
+	.links-container{
+		width: 100%;
+		height: 10%;
+		top: 0px;
+	}
+	section.categories div{
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,18 @@
+include Entry
+include comments
+include cards
+
+
+//- Project Entry
+//- a composition of Entry subcomponents meant to display projects
+//- @param {Project} proj
+mixin ProjectEntry(proj)
+  +Entry.Project-Entry
+    +Card
+      if proj.image
+        +EntryImage(proj.image.src, proj.image.alt, "100%", 180)
+      +EntryHeader
+        +EntryTitle(proj.title)
+        +EntrySubtitle(proj.type)
+    +Comment(proj.description)
+    

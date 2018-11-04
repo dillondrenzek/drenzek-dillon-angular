@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>Dillon Drenzek - DM Portal - V3</title>
+        <meta charset="utf-8">
+        <!--- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Ruda' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(QuicklookTM);
+
+            function QuicklookTM() {
+
+                //setLinkBG();
+
+                /*     Individual Attributes     */
+                var betweenLinks = 8;               /* Like Margin */
+
+
+                /*         Grid Settings         */
+                var numColumns = 3;                 /* Max of 3 */
+                var wrapperHeight = 380;
+                var wrapperWidth = 960;
+                var margin = 8;                    /* Space above and below grid */
+
+
+                /* ---------- END USER FRIENDLINESS -------------- */
+
+
+
+                    // Declarations
+
+                    var linkArray = document.getElementsByClassName("quicklook-link");
+                    var numLinks = linkArray.length;
+                    if (numLinks <= 3){numColumns=numLinks;}
+                    var linksPerColumn = new Array(1,1,1);
+
+                    // Calculations
+                    var linkWidth = (wrapperWidth - ((numColumns-1)*betweenLinks))/numColumns;
+                    
+
+                    var linkHeight;
+                    var modulo = numLinks%numColumns;
+                    numLinks = numLinks - modulo;     // remove remainder to get base number/column
+                    numLinks = numLinks / numColumns;
+
+
+                    if (modulo === 0){
+                        linksPerColumn[0] = numLinks;
+                        linksPerColumn[1] = numLinks;
+                        linksPerColumn[2] = numLinks; 
+                    }
+                    else if (modulo === 1){
+                        linksPerColumn[0] = numLinks+1;
+                        linksPerColumn[1] = numLinks;
+                        linksPerColumn[2] = numLinks; 
+                    }
+                    else if (modulo === 2){
+                        linksPerColumn[0] = numLinks+1;
+                        linksPerColumn[1] = numLinks;
+                        linksPerColumn[2] = numLinks+1; 
+                    }
+
+                    var l = 0; //linkArray counter
+
+                    for (var j = 0; j < numColumns; j++) {
+
+                        // calculate current linkHeight
+                        linkHeight = (wrapperHeight - betweenLinks*(linksPerColumn[j]-1))/linksPerColumn[j];
+
+                        for (var i = 0; i < linksPerColumn[j]; i++) {
+                            var borderSize = parseInt($(linkArray[l]).css("border"));
+                            var padding = parseInt($(linkArray[l]).css("padding"));
+                            var top = (i * betweenLinks) + (i * linkHeight);
+                            var left = (j * betweenLinks) + (j * linkWidth);
+                            var contentHeight = linkHeight - (borderSize*2) - padding*2 + 1;
+                            var contentWidth = linkWidth - (borderSize*2) - padding*2 + 1;
+                            var child = $(linkArray[l]).children(".quicklook-content");
+                            
+
+                            linkHeight = parseInt(linkHeight);
+                            top = parseInt(top);
+                            left = parseInt(left);
+                            contentHeight = parseInt(contentHeight);
+                            contentWidth = parseInt(contentWidth);
+
+                            $(child).css("height", contentHeight);
+                            $(child).css("width", contentWidth);
+                            $(child).css("max-height", contentHeight);
+                            $(child).css("max-width", contentWidth);
+
+                            $(linkArray[l]).css("height", linkHeight);
+                            $(linkArray[l]).css("top", top);
+                            $(linkArray[l]).css("left", left);
+
+                            l++;
+                        }
+                    }  // End of Link Height
+
+                    // Reassign Variables
+                    
+                    $("#quicklook-wrapper").css("height", wrapperHeight);
+                    $("#quicklook-wrapper").css("width", wrapperWidth);
+                    $("#quicklook-wrapper").css("margin-top", margin);
+                    $("#quicklook-wrapper").css("margin-bottom", margin);
+
+                    parseInt(linkWidth);
+                    $(".quicklook-link").css("width", linkWidth);
+                }
+
+        </script>
+
+        <style>
+            
+/* Utility CSS */
+            *, *:before, *:after {
+                box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+            }
+            html {
+                background: url(./images/mountain-lake-bg-color.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            body {
+                margin:0px;
+                font-family:'Bubbler One', sans-serif;
+                font-size: 14px;
+                line-height: 1.4em;
+            }
+            #content-wrapper {
+                margin:0 auto;
+                width:960px;
+            }
+
+/* Header & Footer CSS */
+            
+            header, footer{
+                position:relative;
+                display:block;
+                background-color: rgba(0%,0%,0%,0.45);
+                width: 960px;
+                height: 150px;
+                margin: 0 auto;
+                z-index:9;
+                box-shadow: 3px 3px 5px rgba(0,0,0,1);
+            }
+            #banner {
+                padding: 20px;
+                width: 600px;
+                height: 147px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            footer {
+                position:relative;
+                display:block;
+                background-color: rgba(0%,0%,0%,0.45);
+                width: 960px;
+                height: 150px;
+                margin: 0 auto;
+                z-index:9;
+                box-shadow: 3px 3px 5px black;
+
+            }
+
+            
+/* Quicklook CSS */
+            #quicklook-wrapper {
+                position: relative;
+                display: block;
+                margin: 0 auto;
+            }
+
+            
+            .quicklook-link{
+                position: absolute;
+                padding: 0px;
+                box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                
+                overflow: hidden;
+
+                box-shadow: 3px 3px 5px black;
+
+            }
+            .quicklook-link:hover{
+
+            }
+
+            .quicklook-link:active{
+                box-shadow: 1px 1px 5px black;
+
+            }
+
+            .quicklook-link:active .quicklook-content{
+
+            }
+
+            .quicklook-link:hover .quicklook-content{}
+            .quicklook-link:hover .link-bg{opacity: 1;}
+            .quicklook-link:hover .link-bg#landscape{opacity: 1;}
+            .quicklook-link:active .quicklook-content h2{
+
+                color: rgb(195,55,15);
+                text-shadow: 1px 1px 3px black;}
+
+
+            .quicklook-content{
+                position: absolute;
+                display: table;
+
+                font-family:'Bubbler One', sans-serif;
+                text-align: center;
+ 
+                padding: 0px;
+
+                z-index: 10;
+                overflow: hidden;
+                background: rgba(0,0,0,0.6);
+
+
+            }
+
+            .link-bg{
+                position: absolute;
+                margin: 0 auto;
+                width: 100%;
+                z-index: 9;
+                opacity: 0;
+
+                transition: all .75s ease;
+                -webkit-transition: all .75s ease;
+            }
+            
+            .link-bg#landscape{
+                position: absolute;
+                left: -170px;
+                margin: 0 auto;
+                width: auto;
+                height: 100%;
+                z-index: 9;
+                opacity: 0;
+
+                transition: all .75s ease;
+                -webkit-transition: all .75s ease;
+            }
+
+
+            .quicklook-content h2{
+                position: relative;
+                display: table-cell;
+                margin: auto auto;
+                
+                font-style: bold;
+                z-index: 10;
+                
+                vertical-align: middle;
+
+                font-size: 2.5em;
+                text-align: center;
+                color: rgb(205,205,205);
+                color: white;
+                text-shadow: 3px 3px 3px black;
+                
+            }
+        </style>
+    </head>
+     
+<!-- HTML START -->     
+    <div id="content-wrapper">
+        <body>
+            <header href="index.html">
+                <img href="index.html" id="banner" src="./images/banner.png" width="500px" height="100px" alt="Digital Media 1 by Dillon Drenzek">
+            </header>
+
+            <!-- Quicklook Wrapper -->
+            <div id="quicklook-wrapper">
+                
+               <!-- Quicklook Link --> 
+                <a class="quicklook-link" href="dillondrenzek-belief-1.html">
+                <img class="link-bg" src="images/tib-bg.jpg">
+                <div class="quicklook-content">
+                
+                <h2>This I Believe</h2>
+                
+                </div>
+                </a>
+
+                <!-- Quicklook Link --> 
+               <a class="quicklook-link" href="veghead.html">
+               <img class="link-bg" src="images/veghead.jpg">
+               <div class="quicklook-content">
+                <h2>Veg Head</h2>
+               </div></a>
+
+               <!-- Quicklook Link --> 
+               <a class="quicklook-link" href="tableau.html">
+               <img class="link-bg" src="images/uncle-dill-tableau.jpg">
+               <div class="quicklook-content">
+                <h2>Tableau</h2>
+               </div></a>
+
+               <!-- Quicklook Link --> 
+               <a class="quicklook-link" href="sequential-images.html">
+                <img class="link-bg" id="landscape" src="images/sequential-images.jpg">
+
+                <div class="quicklook-content">
+                <h2>Sequential Images</h2>
+               </div></a>
+
+               <!-- Quicklook Link --> 
+               <a class="quicklook-link" href="audio.html">
+                <!-- <img class="link-bg" id="landscape" src="./images/sequential-images.jpg"> -->
+                <div class="quicklook-content">
+                <h2>Audio</h2>
+               </div></a>
+               
+            </div>
+
+            <footer></footer>
+
+        </body>
+    </div>
+</html>

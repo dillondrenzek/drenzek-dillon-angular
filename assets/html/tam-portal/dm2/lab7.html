@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+
+<!-- Page Details -->
+
+	<title>Digital Media 2 - Dillon Drenzek</title>
+	
+<!-- Meta Tags -->	
+
+	<!-- <meta name="description" content="Free Web tutorials"> -->
+	<!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"> -->
+	<!-- <meta name="author" content="Hege Refsnes"> -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+<!-- Links -->
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Duru+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/subpages.css" type="text/css">
+	
+	<!-- Media Queries to change stylesheet	 -->
+	<!-- <link href='style.css' media='screen and (min-width:600px)' rel='stylesheet'> -->
+	
+	<!-- Favicon Link -->
+	<!-- <link type="image/png" href="" rel="shortcut icon"> -->
+	
+<!-- Scripts -->
+
+	<!-- jQuery -->	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	
+	
+	<style type="text/css" media="screen">
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Flow Containers on this level -->
+	<div class="site-head stack">
+		<header><a href="http://www.dillondrenzek.com">Dillon Drenzek</a></header>
+		<nav>
+			<a href="./index.html">Home</a>
+			<a href="#">Labs</a>
+			<a href="#">Lab 7</a>
+		</nav>
+	</div>
+	<div class="stack">
+		
+		<canvas id="canvas" width="300px" height="300px"></canvas>
+		
+		<script>
+			var canvas = document.getElementById("canvas");
+			var ctx = canvas.getContext("2d");
+			
+			// add gradient
+			var grd_blck = ctx.createRadialGradient(150,150,0,150,150,200);
+			grd_blck.addColorStop(0,"#666666");
+			grd_blck.addColorStop(1,"#101010");
+			
+			// add rectangle
+			ctx.fillStyle = grd_blck;
+			ctx.fillRect(0,0,300,300);
+			
+			// draw circle
+			ctx.beginPath();
+			ctx.arc(150,150,80,0,2*Math.PI);
+			ctx.moveTo(93, 93);
+			ctx.lineTo(207, 207);
+			
+			ctx.strokeStyle = "#f00";
+			ctx.lineWidth = 15;
+			ctx.stroke();
+			
+		</script>
+	</div>
+	
+
+</body>
+</html>

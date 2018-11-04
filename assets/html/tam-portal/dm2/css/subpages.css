@@ -1,0 +1,119 @@
+/* FONTS */
+		
+
+	/* UTILITY */
+			*,
+			*:before,
+			*:after{
+				box-sizing:border-box;
+					-webkit-box-sizing:border-box;
+				margin: 0;
+			}
+			html{
+	            background: #f7f6f2;
+
+	            font-family: "Advent Pro", sans-serif;
+				font-weight: 400;
+
+			}
+
+			body{
+				font-size: 18px;
+				margin: 0;
+				padding: 0;
+			}
+
+			.site-head{
+				background: #222;
+				margin-bottom: 50px;
+				box-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+			}
+			.stack{
+				display: block;
+				float: left;
+				width: 100%;
+
+			}
+
+			
+	/* HEADER */
+
+			/* Header Flow Container */
+			header{
+				background: #f9f9f8;
+				color: #eed;
+				background: transparent;
+				display: block;
+				float: left;
+
+				font-family: "Advent Pro", sans-serif;
+				font-weight: 100;
+				font-size: 2rem;
+				text-align: center;
+				padding: 1rem;
+
+				transition: .3s ease all;
+				-webkit-transition: .3s ease all;
+
+				width: 225px;
+			}
+				header a:link, 
+				header a:visited{
+					height: 100%;
+					color: #333;
+					color: #eed;
+					text-decoration: none;
+					text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+					transition: .3s ease all;
+				-webkit-transition: .3s ease all;
+					
+				}
+				header a:hover{
+
+					color: #eee;
+					text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+				}
+
+					header:hover {
+						background: #a15046;
+						text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+					}
+			
+	/* MENU */
+
+			/* Nav Flow Container */
+			nav{
+				background: #c76f00;
+				background: transparent;
+				color: #1a1a1a;
+				display: block;
+				float: left;
+				font-family: "Advent Pro", sans-serif;
+				font-weight: 100;
+				font-size: 2rem;
+				height: 100%;
+				
+
+				}
+
+			nav a{
+				background: #444;
+				color: #a0a09a;
+				display: block;
+				float: left;
+				font-family: "Advent Pro", sans-serif;
+				font-weight: 100;
+				font-size: 2rem;
+
+				padding: 1rem;
+				text-decoration: none;
+
+				transition: .3s ease all;
+				-webkit-transition: .3s ease all;
+			}
+				nav a:hover{
+					color: #fff;
+					background: #3a3a3a;
+				}
+
+

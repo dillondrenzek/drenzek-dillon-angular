@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(../font/BebasNeue.otf);
+}
+@font-face {
+    font-family: "Avenir Next Condensed";
+    src: url(../font/AvenirNextCondensed.ttc);
+}
+@font-face {
+    font-family: "Lobster";
+    src: url('../font/lobster-webfont.eot');
+    src: url('../font/lobster-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lobster-webfont.woff2') format('woff2'),
+         url('../font/lobster-webfont.woff') format('woff'),
+         url('../font/lobster-webfont.ttf') format('truetype'),
+         url('../font/lobster-webfont.svg#lobster_1.4regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Bakersville";
+    src: url(../font/Bakersville.ttc);
+}
+@font-face {
+    font-family: "Icon";
+    src: url('../font/ss-glyphish-outlined-webfont.eot');
+    src: url('../font/ss-glyphish-outlined-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ss-glyphish-outlined-webfont.woff2') format('woff2'),
+         url('../font/ss-glyphish-outlined-webfont.woff') format('woff'),
+         url('../font/ss-glyphish-outlined-webfont.ttf') format('truetype'),
+         url('../font/ss-glyphish-outlined-webfont.svg#ss_glyphishoutlined') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    position: absolute;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+#logo {
+    display: block;
+    position: relative;
+    z-index: 101;
+    height: $logo-size;
+    width: $logo-size;
+    margin: $logo-margin;
+}
+
+html{
+    background: $white;
+}
+
+header {
+    @include coord(0px, 0px);
+    height: $header-height;
+    width: 100%;
+    background: $black;
+    background: url("../img/dark-stripes.png") repeat;
+    z-index: 2;
+    position: fixed; 
+}
+
+nav {
+    @include coord($header-height, 0px);
+    height: $nav-height + $nav-border-width;
+    width: 100%;
+    background: darken($black, 10);
+    border-bottom: $nav-border-width solid $txt-yel;
+    z-index: 1;
+    position: fixed;
+
+    ul {
+        margin-left: $sidebar-width;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                height: $nav-height;
+                padding: 0 30px;
+                text-decoration: none;
+                color: $white;
+                font-family: "Lobster", sans-serif;
+                font-size: 24px;
+
+                &:hover {
+                    background: lighten($black, 1);
+                }
+            }
+        }
+    }
+}
+
+#sidebar {
+    width: $sidebar-width;
+    height: 100vh;
+    background: $black;
+    z-index: 0;
+    position: fixed;
+    top: $header-height + $nav-height;
+
+    .title {
+        position: relative;
+        height: $sidebar-title-height;
+        width: 100%;
+        background: $black;
+        border-bottom: 1px solid $txt-yel;
+
+        h2 {
+            @include Avenir(3px);
+            font-weight: 400;
+            position: absolute;
+            text-align: right;
+            right: 10px;
+            bottom: 5px;
+            color: $txt-yel;
+        }
+    }
+
+    ul {
+        li {
+            color: $white;
+            @include Avenir(3px);
+            font-weight: 400;
+            padding: 15px;
+            border-bottom: 1px solid lighten($black, 10);
+            cursor: pointer;
+
+            &:hover {
+                background: lighten($black, 10);
+            }
+        }
+
+        .toggle {
+            span {
+                @include animate(left, .3s);
+                position: relative;
+                left:40px;
+                color: lighten($black, 30);
+                &:before {
+                    content: "off";
+                }  
+                &.on {
+                    left:10px;
+                    color: green;
+                    color: $white;
+                    &:before {
+                        content: "on";
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main-page {
+    position: relative;
+    width: $main-page-width;
+    display: block;
+    margin-left: $sidebar-width;
+    top: $nav-border-width + $nav-height + $header-height;
+
+    .interjection {
+        @include float-left;
+        @include light-border;
+        width: 100%;
+        height: 150px;
+        background: rgba(darken($bg-yel, 60), 0.8);
+        background: $white;
+        background: url("../img/stripe-bg.png") repeat;
+        display: table;
+
+        p {
+            font-family: "Lobster", sans-serif;
+            color: $black;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 36px;
+        }
+    }
+}
+
+footer {
+    @include float-left;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: darken($black, 2);
+    border-top: 1px solid $dark-gray;
+    display: table;
+
+    .column {
+        height: 100%;
+        width: 33%;
+        display: table-cell;
+        padding: 20px 40px;
+        border-left: $black 1px solid;
+
+        h3 {
+            @include Avenir(3px);
+            font-size: 24px; 
+            color: $mid-gray;
+        }
+
+        li {
+            list-style-type: none;
+        }
+        a, p {
+            @include Avenir(1px);
+            text-decoration: none;
+            font-size: 18px;
+            color: $dark-gray;
+            margin-left: 10px; 
+        }
+        a:hover {
+            color: $txt-yel;
+        } 
+    }
+}
+
+// M suffixes
+@media screen and (min-width: 480px) and (max-width: 799px)  {
+    header {
+        height: $header-height-M;
+
+        #logo {
+            margin: $logo-margin-M auto;
+            height: $header-height-M - ($logo-margin-M * 2);
+            width: $header-height-M - ($logo-margin-M * 2);
+        }
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #main-page {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav {
+        height: $nav-height-M;
+        top: $header-height-M;
+        ul {
+            margin-left: 0;
+            text-align: center;
+            li {
+                a {
+                    height: $nav-height-M - $nav-border-width;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+// S suffixes
+@media screen and (max-width: 479px) {
+    header {
+        background: transparent;
+        height: $header-height-S;
+        #logo {
+            margin: $logo-margin-S;
+            height: $header-height-S - ($logo-margin-S * 2);
+            width: $header-height-S - ($logo-margin-S * 2);
+        }
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    #main-page {
+        @include coord($header-height-S, 0px);
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav {
+        height: $nav-height-S;
+        top: 0px;
+        ul {
+            margin-left: $header-height-S;
+            text-align: center;
+            li {
+                a {
+                    height: $nav-height-S - $nav-border-width;
+                    padding: 0 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .gallery-item {
+        height: $gallery-item-height-S;
+        width: 100%;
+
+        .title-container {
+            top: $gallery-item-height-S - $gallery-item-title-height;
+            h3 {
+                color: $white;
+            }
+        }
+
+        &:hover {
+            .title-container {
+                top: $gallery-item-height-S;
+            }
+        }
+    }
+
+    .unhide {
+        display: none;
+    }
+}

@@ -1,0 +1,36 @@
+header {
+	height: 50px;
+
+	#logo {
+		height: 120px;
+		width: 120px;
+		margin: 10px 20px;
+	}
+}
+
+nav {
+	@include coord(50px, 0px);
+
+	ul {
+		margin-left: 160px;
+	}
+}
+
+#sidebar {
+	@include coord(105px, 0px);
+	width: 160px;
+}
+
+#main-page {
+	position: absolute;
+    @include coord(105px, 160px);
+    width: calc(100% - $sidebar-width);
+    display: block;
+    margin-left: $sidebar-width;
+    top: 205px;
+}
+
+#main-image {
+	width: 720px;
+}
+

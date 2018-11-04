@@ -1,0 +1,397 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Dillon Drenzek</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,100' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script src="./jquery.scrollTo-1.4.3.1-min.js">
+	$(document).ready(function(){
+    /* This code is executed after the DOM has been completely loaded */
+
+    $('nav a,footer a.up').click(function(e){
+
+        // If a link has been clicked, scroll the page to the link's hash target:
+
+        $.scrollTo( this.hash || 0, 1500);
+        e.preventDefault();
+    });
+
+});</script>	<script type="text/javascript">
+		$(document).ready(function(){
+    /* This code is executed after the DOM has been completely loaded */
+
+    $('.dock a').click(function(e){
+
+        // If a link has been clicked, scroll the page to the link's hash target:
+
+        $.scrollTo( this.hash || 0, 1500);
+        e.preventDefault();
+    });
+
+});
+
+	</script>
+
+	<style>
+/* UTILITY*/
+		*,
+		*:before,
+		*:after{
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+		}
+		html{
+			background: #252423;
+			background: url(./images/tam-bg.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            /*background: #c5c4b3;*/
+		}
+
+		body{
+
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+		}
+
+		.color1{background: rgba(169,24,0,1);}
+		.color2{background: rgba(39,119,150,1);}
+		.color3{background: rgba(214,186,40,1);}
+		.color4{background: rgba(138,21,108,1);}
+
+
+/* WRAPPER */
+		.wrapper{
+			width: 960px;
+			height: 100%;
+			top: 0px;
+			margin: 0 auto;
+			background: white;
+			z-index: 0;
+		}
+
+/* MENU */
+		.menu{
+			/*position: fixed;*/
+			float:left;
+			overflow: hidden;
+			height: 900px;
+			width: 210px;
+			top: 0px;
+			background: transparent;
+		}
+		#dock{
+			position: fixed;
+			width: 210px;
+			/*overflow: hidden;*/
+			height: 280px;
+			top: 0px;
+
+			z-index: 100;
+		}
+		#dock>a{
+
+
+			position: relative;
+			display: block;
+
+			width: 210px;
+			right: 0px;
+			background: rgba(26,25,25,1);
+			z-index: 101;
+			height: 70px;
+
+			text-decoration: none;
+			color: #F2FCF2;
+			font-family: sans-serif;
+			line-height: 70px;
+			font-size: 1.5rem;
+			text-align: center;
+			padding: 0 1rem;
+
+			transition: .35s ease all;
+			-webkit-transition: .35s ease all;
+
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 100;
+		}
+		#dock>a:hover{
+			right:30px;
+			background: rgba(25,25,25,0.75);
+
+		}
+
+
+		#dock>a:active h2.alpha{
+			background: rgba(169,24,0,0.75);
+		}
+		#dock>a:active h2.beta{
+			color:#2a2a2a;
+			background: rgba(39,119,150,0.75);
+		}
+		#dock>a:active h2.gamma{
+			background: rgba(214,186,40,0.75);
+		}
+		#dock>a:active h2.delta{
+			background: rgba(138,21,108,0.75);
+		}
+
+		.dock-icon{
+			position: absolute;
+			width: 30px;
+			height: 70px;
+			right: 0px;
+	
+
+			font-family: sans-serif;
+			color: white;
+			vertical-align: middle;
+			text-align: center;
+			line-height: 70px;
+
+			margin: 0;
+
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 400;
+		}
+
+		#dock>a:hover .dock-icon{
+			
+		}
+
+		.alpha{top: 0px;}
+		.beta{top: 70px;}
+		.gamma{top: 140px;}
+		.delta{top: 210px;}
+
+/* HEADER */
+		.header{
+			position: relative;
+			float: left;
+			width: 710px;
+			height: 500px;
+			background: transparent;
+		}
+
+/* PAGE */
+		#desktop{
+			/*background: #141515;*/
+			border-left: solid 7px #277796;
+			/*opacity: 0.5;*/
+		}
+		#digital-painting{
+			/*background: #141515;*/
+			border-left: solid 7px #CFD6C1;
+			/*opacity: 0.5;*/
+		}
+		#photo{
+			/*background: #141515;*/
+			border-left: solid 7px #D6BA28;
+			/*opacity: 0.5;*/
+			
+		}
+		#motion-picture{
+			/*background: #141515;*/
+			border-left: solid 7px #8A156C;
+			/*opacity: 0.5;*/
+		}
+
+
+		.page{
+			margin: 0 auto;
+			position: relative;
+			float: right;
+			background: #F2FCF2;
+			background:transparent;
+			left: 0px;
+			width: 750px;
+
+			z-index: 0;
+
+			-webkit-transition: .5s ease all;
+			transition: .5s ease all;
+		}
+
+		.page section{
+			display: block;
+			position: relative;
+			background: #292525;
+			background: rgba(26,25,25,1);
+			/*height: 550px;*/
+			margin-bottom: 0px;
+			width: 750px;
+		}
+
+		.page h2{
+			width: 100%;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 400;
+			font-size: 2rem;
+			color: #fafafa;
+			/*background: #050505;*/
+
+
+			padding: 15px;
+			margin: 0;
+		}
+
+		.page h3{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-size: .8rem;
+			color: #292525;
+
+		}
+
+		.page p{
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 400;
+			line-height: 1.5rem;
+			font-size: 1rem;
+			color: #333635;
+			background: #fafafa;
+			height: 100%;
+			padding: 20px;
+			padding-right: 10px;
+			margin-left: 0px;
+			margin: 0;
+		}
+
+		.page img{
+			margin: 0;
+			width: 100%;
+		}
+
+		.page .item{
+			background: white;
+			opacity: 1;
+
+			z-index: 10;
+		}
+
+		.item h4{
+			margin: 0;
+			text-align: center;
+			line-height: 78px;
+			font-family: 'Advent Pro', sans-serif;
+			font-weight: 400;
+			font-size: 36px;
+			border-top: solid 1px #9a9a9a;
+		}
+
+		.item h4 a{
+			text-decoration: none;
+			color: rgba(200,200,200,0.85);
+
+		}
+		.item h4 a:hover{
+			text-decoration: none;
+			color: rgba(169,24,0,1);
+
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<div id="dock">
+				<div class="dock-icon alpha color1">dd</div>
+				<div class="dock-icon beta color2">D</div>
+				<div class="dock-icon gamma color3">P</div>
+				<div class="dock-icon delta color4">M</div>
+
+				<a href="#me-i-guess" class="">Dillon Drenzek</a>
+				<a href="#desktop" class="">Desktop</a>
+				<!-- <a href="#digital-painting" class="">Digital Painting</a> -->
+				<a href="#photo" class="">Photography</a>
+				<a href="#motion-picture" class="">Motion Picture</a>
+
+				
+			</div>
+		</div>
+
+		<div class="page">
+			<section id="me-i-guess">
+				<h2 class="alpha">
+					<img src="./images/banner.png" alt="Dillon Drenzek" style:"height:30px">
+				</h2>
+				<article class="item"  style="height:78px; background: rgba(26,25,25,1); color:white;">
+					<h4><a href="dm1-portal.html">Digital Media 1</a></h4>
+					
+				</article>
+			</section>
+
+			<section id="desktop">
+				<h2 class="beta color2">DESKTOP</h2>
+				<article class="item">
+					<h4>Visiting an Old Friend</h4>
+					<img src="./images/sequential-images.jpg" alt="Mountain Lake by Dillon Drenzek">
+					<p>I heard it said recently that "This Too Shall Pass." That really struck a chord with me, so I decided I'd take that and run with it. The idea with this picture is that on the left, the kid does the graffiti early in his life and then comes back sometime later to see that his graffiti has eroded.</p>
+				</article>
+				<article class="item">
+					<h4>Me in So Many Words</h4>
+					<img src="./images/me-in-so-many-words.jpg" alt="Me In So Many Words by Dillon Drenzek">
+					<p>I just couldn't stop thinking about skiing so I made this composition. Its a collage of quite a few different things. That is me in the upper right, my skis can be seen in the orange/brown region, my name is in the lower right. And, I like to think of myself as a lone wolf (in this case, tree), particularly when I ski. Nothing better than getting and reconnecting with the mountains.</p>
+				</article>
+				<article class="item">
+					<h4>Mountain Lakes, Now in Color</h4>
+					<img src="./images/mountain-lake-bg-color.jpg" alt="Mountain Lake by Dillon Drenzek">
+					<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</section>
+
+
+			<section id="photo">
+				<h2 class="gamma color3">PHOTOGRAPHY</h2>
+
+				<article class="item">
+					<h4>The Stars are Out</h4>
+					<img src="./images/starry-night.jpg" alt="The Stars are Out by Dillon Drenzek">
+					<p>A pretty neat shot I got while out filming for my stop motion project.</p>
+				</article>
+
+			</section>
+
+			<section id="motion-picture">
+
+				<h2 class="delta color4">MOTION PICTURE</h2>
+
+				<article class="item"></article>
+				<article class="item">
+					<iframe width="743px" height="418px" src="http://www.youtube.com/embed/ujJSxH4U8Jc" frameborder="0" allowfullscreen></iframe>
+				</article>
+				<article class="item">
+					<p>A short little clip of an animation I did this summer in a 3D Animation class. Everything modeled by hand in Autodesk Maya</p>
+				</article>
+				<article class="item">
+					<iframe width="743" height="495" src="http://www.youtube.com/embed/7Xrsiteoa1o" frameborder="0" allowfullscreen></iframe>
+				</article>
+				<article class="item">
+					<p>A stop motion project I shot during the fall semester of 2013 at the University of Colorado in Boulder. The video playsback at 24 fps. But each image is 2 frames long, so the resulting fps rate is 12.
+
+Time. What a mysterious force.</p>
+				</article>
+			</section>
+
+			
+
+
+	</div>
+</body>
+
+</html> 

@@ -1,17 +1,25 @@
 ---
 ---
 
-@import 'foundation';
+// @import 'foundation';
+//
+// @import 'fontawesome/fontawesome';
+// @import 'fontawesome/fa-solid';
+// @import 'fontawesome/fa-brands';
+// @import 'bootstrap/bootstrap-custom';
+// @import 'colors';
+// @import 'fonts';
+// @import 'text';
+// @import 'components';
 
-@import 'fontawesome/fontawesome';
-@import 'fontawesome/fa-solid';
-@import 'fontawesome/fa-brands';
-@import 'bootstrap/bootstrap-custom';
-@import 'colors';
-@import 'fonts';
-@import 'text';
-@import 'components';
+@import 'base';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 html {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'News Cycle', sans-serif;
 }
